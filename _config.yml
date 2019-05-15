@@ -1,0 +1,74 @@
+title: Box Critter Modding Community
+description: > # this means to ignore newlines until "baseurl:"
+  Text
+base-url: ""
+url: "https://boxcritters.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+repository: boxcritters/boxcritters.github.io
+
+#favicon: 
+
+collections:
+  mods:
+    output: true
+  texturepacks:
+    output: true
+  tools:
+
+permalink: permalink
+production: true
+
+
+plugins:
+ - jekyll-feed
+ - jekyll-redirect-from
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-avatar
+ - jemoji
+ - jekyll-mentions
+ #- jekyll-include-cache
+
+ # Build settings
+markdown: kramdown
+# theme: minima
+
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM
+  # Disable auto-generated ID's for headings
+  auto_ids: false
+
+excludes:
+  - lib
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - bower.json
+  - "*.sh"
+  - README.md
+  - gulffile.js
+  - package.json
+  - vendor
+  - ".gitignore"
+  - CNAME
+  - icomoon-selection.json
+
+
+
+defaults:
+- scope:
+    path: ""
+  values:
+    image: /favicon.gif
+    layout: basic
+    featured: false
+- scope:
+    path: ""
+    type: mods
+  values:
+    layout: mod
+- scope:
+    path: ""
+    type: texturepacks
+  values:
+    layout: texturepack

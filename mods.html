@@ -1,0 +1,13 @@
+---
+layout: default
+title: Mods
+---
+{% for mod in site.mods %}
+<div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{mod.title}}</h5>
+            <p class="card-text">{{mod.description}}</p>
+            <a href="{{mod.url}}" class="btn btn-primary">Install</a>
+        </div>
+    </div>
+{% endfor %}

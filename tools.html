@@ -1,0 +1,15 @@
+---
+layout: default
+title: Tools
+---
+{% for tool in site.tools %}
+<div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{tool.title}}</h5>
+            <p class="card-text">{{tool.description}}</p>
+            {% for plat in tool.platforms %}
+            <a href="{{plat.install}}" class="browser-{{plat.name}} btn btn-primary">Install {{plat.name}}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

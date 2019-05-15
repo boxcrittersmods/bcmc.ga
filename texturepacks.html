@@ -1,0 +1,13 @@
+---
+layout: default
+title: Texture Packs
+---
+{% for texturepack in site.texturepack %}
+<div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{texturepack.title}}</h5>
+            <p class="card-text">{{texturepack.description}}</p>
+            <a href="{{texturepack.url}}" class="btn btn-primary">Install</a>
+        </div>
+    </div>
+{% endfor %}
