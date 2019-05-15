@@ -1,4 +1,5 @@
 ---
+title: Box critters Texture Pack Selector
 platforms:
 - name: chrome
   install: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
