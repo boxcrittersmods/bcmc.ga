@@ -14,7 +14,7 @@ collections:
     output: true
   tools:
 
-permalink: permalink
+permalink: pretty
 production: true
 
 
