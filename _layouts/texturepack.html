@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="card w-50">
+        <div class="card-body">
+            <h5 class="card-title">{{page.title}}</h5>
+            <p class="card-text">{{page.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Created by <b>{{page.author}}</b></li>
+        </ul>
+    </div>
+    <div class="card w-50">
+        <div class="card-body">
+            <h5 class="card-title">Install</h5>
+            <p class="card-text">
+                <pre><code>{{page.code}}</code></pre>
+            </p>
+        </div>
+    </div>
+</div>
+<span>There will be in update to the  texture pack maganer soon that will let you add texture packs while on this website</span>
+
+{{content}}
