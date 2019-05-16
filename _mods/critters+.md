@@ -6,6 +6,7 @@ install: https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.use
 platforms:
     - Chrome
     - Firefox
+    - Safari
 ---
 ## INSTALLATION INSTRUCTIONS
 
