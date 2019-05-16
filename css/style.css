@@ -39,8 +39,16 @@ html, body {
 }
 
 [class*="browser-"] {
-    display: none;
-  }
+  display: none;
+}
+.browser-list {
+  display: inline;
+}
+.browser-none {
+  display: inline;
+}
+
+
 @media (min-width: 768px) {
     /* show 3 items */
     .carousel-inner .active,
@@ -101,5 +109,9 @@ html, body {
       display: block;
       visibility: visible;
     }
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    fill:#000;
   }
   

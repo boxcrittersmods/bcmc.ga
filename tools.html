@@ -2,14 +2,30 @@
 layout: default
 title: Tools
 ---
+<p class="browser-list">Your browser is
+    <span class="browser-opera">Opera</span>
+    <span class="browser-firefox">Firefox</span>
+    <span class="browser-ie">IE</span>
+    <span class="browser-edge">Edge</span>
+    <span class="browser-chrome">Chrome</span>
+    <span class="browser-blink">Blink</span>
+    <span class="browser-ios">iOS</span>
+    <span class="browser-android">Android</span>
+    <span class="browser-mobile">a Mobile Browser/span>
+    <span class="browser-none">Unknown</span>
+</p>
 {% for tool in site.tools %}
 <div class="card w-100">
-        <div class="card-body">
-            <h5 class="card-title">{{tool.title}}</h5>
-            <p class="card-text">{{tool.description}}</p>
-            {% for plat in tool.platforms %}
-            <a href="{{plat.install}}" class="browser-{{plat.name}} btn btn-primary">Install {{plat.name}}</a>
-            {% endfor %}
-        </div>
+    <div class="card-body">
+        <h5 class="card-title">{{tool.title}}</h5>
+        <p class="card-text">{{tool.description}}</p>
+
     </div>
+    <div class="card-footer text-muted browser-list">
+        {% for plat in tool.platforms %}
+        <a href="{{plat.install}}" class="btn btn-primary browser-{{plat.name}}">Install for {{plat.name}}</a>
+        {% endfor %}
+        <span class="browser-none">This tool is not supported for your browser.</span>
+    </div>
+</div>
 {% endfor %}

@@ -19,26 +19,73 @@ var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.r
 // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-if(isOpera) {
-    $('.browser-opera').show()
-}
+var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-if(isFirefox) {
-    $('.browser-firefox').show()
-}
+var isAndroid = /Android/i.test(navigator.userAgent);
 
-if(isIE) {
-    $('.browser-ie').show()
-}
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-if(isEdge) {
-    $('.browser-edge').show()
-}
+var noneText = '<span class="browser-none">This tool is not supported on your browser.</span>';
 
-if(isChrome) {
-    $('.browser-chrome').show()
-}
+var isBrowser = [
+    isOpera,
+    isFirefox,
+    isSafari,
+    isIE,
+    isEdge,
+    isChrome && !(isOpera|isAndroid),
+    isBlink  && !(isChrome || isOpera),
+    isIOS,
+    isAndroid,
+    isMobile && !(isAndroid|isIOS)
+]
 
-if(isBlink) {
-    $('.browser-blink').show()
-}
+var operaQuery = ".browser-opera";
+var firefoxQuery = ".browser-firefox";
+var safariQuery = ".browser-safari";
+var ieQuery = ".browser-ie";
+var edgeQuery = ".browser-edge";
+var chromeQuery = ".browser-chrome";
+var blinkQuery = ".browser-blink";
+var iosQuery = ".browser-ios";
+var androidQuery = ".browser-android";
+var mobileQuery = ".browser-mobile"
+var noneQuery = ".browser-none";
+
+var browserQuery = [
+    operaQuery,
+    firefoxQuery,
+    safariQuery,
+    ieQuery,
+    edgeQuery,
+    chromeQuery,
+    blinkQuery,
+    iosQuery,
+    androidQuery,
+    mobileQuery
+];
+
+$('.browser-list').each(function(){
+    var bItem = $(this);
+    var browserSupported = browserQuery.map((bQuery,i)=>{
+        var item = bItem.children(bQuery);
+        return {
+            item,
+            supported:isBrowser[i] && item.length >0
+        };
+    });
+    var noneSupported = {
+        item: bItem.children(noneQuery),
+        supported:!browserSupported.map(bs=>bs.supported).reduce((sum,item)=>sum||item)
+    }
+
+    browserSupported.forEach(bs=>{
+        if(bs.supported){
+            bs.item.show();
+        }
+    });
+
+    if(!noneSupported.supported) {
+        noneSupported.item.hide();
+    }
+});
