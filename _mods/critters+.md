@@ -12,7 +12,7 @@ platforms:
 
 ### Chrome:
 
-1) Download Tampermonkey [https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en](/tools/tampermonkey)
+1) Download Tampermonkey [https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en](/tools)
 
 2) Go to this link, and you will be redirected to a Tampermonkey window that will ask for confirmation <https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.user.js>
 
@@ -21,7 +21,7 @@ platforms:
 
 ### Firefox:
 
-1) Download Tampermonkey [https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/](/tools/tampermonkey)
+1) Download Tampermonkey [https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/](/tools)
 
 2) Go to this link, and you will be redirected to a Tampermonkey window that will ask for confirmation <https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.user.js>
 
