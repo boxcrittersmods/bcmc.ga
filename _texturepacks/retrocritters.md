@@ -1,6 +1,7 @@
 ---
 title: RetroCritters
-author: flines
+author:
+- Fl1nns
 description: >
   Experiment 1 is back!
   (There are no items in experiment 1, there are no items here.)

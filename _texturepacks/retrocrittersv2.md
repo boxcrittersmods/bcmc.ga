@@ -1,6 +1,7 @@
 ---
 title: Retro Critters [v2]
-author: flines 
+author:
+- flines 
 description: >
   Experiment 1 is back! - Version 2.1
   Only viking helmet is working
