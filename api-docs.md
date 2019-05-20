@@ -105,7 +105,7 @@ getBCModAPI(function (versionData) {
 #### GET `/cors/data/:url`
 
 ### Feedback Management
-> Created for <https://boxcritters.github.io/feedback>
+> Created for [https://boxcritters.github.io/feedback](https://boxcritters.github.io/feedback)
 #### POST `/feedback/:repo`
 ### Version Description
 > Created for Robert#2583's "Changes Meter"
