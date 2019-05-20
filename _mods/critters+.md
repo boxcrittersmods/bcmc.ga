@@ -7,6 +7,8 @@ platforms:
     - Chrome
     - Firefox
     - Safari
+    - Opera
+    - Edge
 ---
 ## INSTALLATION INSTRUCTIONS
 
