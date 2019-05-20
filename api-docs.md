@@ -9,7 +9,7 @@ This is information on how to get Box Critters Version info.
 #### GET `/`
 Gets information on the current version of box critters.
 
-Example output
+Example output:
 ```json
 {
   "assetsFolder": "https://boxcritters.com/media/53-pickle/",
@@ -20,7 +20,61 @@ Example output
 ```
 
 #### GET `/versions`
-Retrives a list of versions
+Retrives a list of versions.
+
+Example Output:
+```json
+[
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17-EX2",
+  "18-EX2",
+  "19-EX2",
+  "20-party",
+  "22-easter",
+  "23-beep",
+  "24-tech",
+  "25-egghunt",
+  "27-eggstatic",
+  "28-blue",
+  "29-bunny",
+  "30-black",
+  "31-baseball",
+  "32-dark",
+  "33-dark",
+  "34-dark",
+  "36-click",
+  "37-fast",
+  "38-moveit",
+  "39-monk",
+  "40-beaver",
+  "40-test",
+  "41-emit",
+  "44-float",
+  "45-3D",
+  "46-cool",
+  "47-backs",
+  "48-backs",
+  "49-slots",
+  "51-space",
+  "52-exp3",
+  "53-pickle"
+]
+```
 #### GET `/version/:version-name`
 Example Output:
 ```json
@@ -36,7 +90,13 @@ Example Output:
 Helper js files to help you retrive api data
 
 List of Scripts:
-- `/scripts/getapi.js`
+#### `/scripts/getapi.js`
+How to use:
+```js
+getBCModAPI(function (versionData) {
+    console.log("Current Version", versionData.version);
+});
+```
 
 
 ### Cross-Origin Resource Sharins Proxy
@@ -50,3 +110,14 @@ List of Scripts:
 ### Version Description
 > Created for Robert#2583's "Changes Meter"
 #### GET `/description`
+Example Output:
+```
+Welcome to the third Box Critters Experiment!
+This experiment includes the addition of new rooms and critters. To move between rooms please use the command "/join [roomId]". Example: "/join tavern" or "/join bridge". Over the next couple weeks I plan to add more rooms.
+
+Welcome to the second Box Critters Experiment.
+Box Critters is slowly coming together. Experiment two adds inventory and items to the world. I am planning to giveaway a new item every week. You may unlock the item by saying "/FreeItem" in the message box.
+
+Welcome to the first Box Critters Experiment.
+This is a simple experiment, just create an account, login, move around and say hi! Over the next couple weeks I plan to start working on the second experiment. Become a BETA or follow me on Twitter @RocketSnail to learn more.
+```
