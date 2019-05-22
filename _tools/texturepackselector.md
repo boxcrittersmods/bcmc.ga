@@ -6,4 +6,6 @@ platforms:
   install: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
 - name: firefox
   install: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
+- name: opera
+  install: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
 ---
