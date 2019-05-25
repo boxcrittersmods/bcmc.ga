@@ -6,12 +6,15 @@ layout: default
         <div class="card-body">
             <h5 class="card-title">{{page.title}}</h5>
             <p class="card-text">{{page.description}}</p>
-            <a href="#" class="btn btn-primary disabled">One click Install</a>
+            {% if page.install %}
+            <a href="{{ page.install }}" class="btn btn-primary disabled">One click Install</a>
+            {% endif %}
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Created by <b>{{page.author | join: " and " }}</b></li>
         </ul>
     </div>
+    {% if page.code %}
     <div class="card w-50">
         <div class="card-body">
             <h5 class="card-title">Install</h5>
@@ -20,6 +23,7 @@ layout: default
             </p>
         </div>
     </div>
+    {% endif %}
 </div>
 <span>There will be in update to the  texture pack maganer soon that will let you add texture packs while on this website</span>
 

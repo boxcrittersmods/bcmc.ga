@@ -4,4 +4,5 @@ author:
 - Rookie 
 description: This mod lets you play as RocketSnail's critter
 code: eyJ2ZXJzaW9uIjoiMSIsIm5hbWUiOiJSb2NrZXRTbmFpbCBDcml0dGVyIE1vZCIsImF1dGhvciI6IlJvb2tpZSIsImRlc2NyaXB0aW9uIjoiVGhpcyBtb2QgbGV0cyB5b3UgcGxheSBhcyBSb2NrZXRTbmFpbCdzIGNyaXR0ZXIiLCJoYW1zdGVyIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9YMVhRdDVsLnBuZyIsImJlYXZlciI6IiIsInNuYWlsIjoiIiwiaXRlbXMiOiIiLCJ0YXZlblByb3BzIjoiIiwiZGF0ZSI6MTU1Nzk0MzY5Njg0OH0=
+install: https://github.com/TheRookie14/Rookie/raw/master/rocketsnail.bctp.json
 ---
