@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-sb
 ---
 <div class="row">
         <div class="card w-50">
@@ -9,7 +9,7 @@ layout: default
                     <a href="{{ page.install }}" class="btn btn-primary">Install</a>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Created by <b>{{page.author}}</b></li>
+                    <li class="list-group-item">Created by <b><a href="/authors?a={{page.author}}">{{page.author}}</a></b></li>
                 </ul>
             </div>
             {% if page.platforms %}

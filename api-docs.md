@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: How to use the box critters mod api
 ---
 API Url: `https://bc-mod-api.herokuapp.com/`

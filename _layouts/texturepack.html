@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-sb
 ---
 <div class="row">
     <div class="card w-50">
@@ -7,11 +7,11 @@ layout: default
             <h5 class="card-title">{{page.title}}</h5>
             <p class="card-text">{{page.description}}</p>
             {% if page.install %}
-            <a href="{{ page.install }}" class="btn btn-primary">One click Install</a>
+            <a href="{{ page.install }}" target="_blank" class="btn btn-primary">One click Install</a>
             {% endif %}
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Created by <b>{{page.author | join: " and " }}</b></li>
+            <li class="list-group-item">Created by {% for author in page.author%}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<b><a href="/authors?a={{author}}">{{author}}</a></b>{%endfor%}</li>
         </ul>
     </div>
     {% if page.code %}
@@ -25,6 +25,4 @@ layout: default
     </div>
     {% endif %}
 </div>
-<span>There will be in update to the  texture pack maganer soon that will let you add texture packs while on this website</span>
-
 {{content}}
