@@ -1,0 +1,21 @@
+---
+layout: default-sb
+---
+<div class="row">
+    <div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{page.title}}</h5>
+            <p class="card-text">{{page.description}}</p>
+    
+        </div>
+        <div class="card-footer text-muted browser-list">
+            {% for plat in page.platforms %}
+            <a href="{{plat.install}}" class="click btn btn-primary browser-{{plat.name}}">Install for {{plat.name}}</a>
+            {% endfor %}
+            <span class="browser-none">This tool is not supported for your browser.</span>
+        </div>
+    </div>
+</div>
+
+
+{{content}}

@@ -13,6 +13,7 @@ collections:
   texturepacks:
     output: true
   tools:
+    output: true
 
 permalink: pretty
 production: true
@@ -72,3 +73,8 @@ defaults:
     type: texturepacks
   values:
     layout: texturepack
+- scope:
+    path: ""
+    type: tools
+  values:
+    layout: tool
