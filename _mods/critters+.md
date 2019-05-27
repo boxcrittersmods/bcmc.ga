@@ -14,7 +14,7 @@ platforms:
 
 ### Chrome:
 
-1) Download Tampermonkey [https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en](/tools)
+1) Download Tampermonkey [https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en](/tools/tampermonkey/)
 
 2) Go to this link, and you will be redirected to a Tampermonkey window that will ask for confirmation <https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.user.js>
 
