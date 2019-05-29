@@ -19,7 +19,7 @@ title: Texture Packs
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       {% else %}
       <a href="{{item.url}}">
-        <img src="{{item.img | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
+        <img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
       </a>
       {% endif %}
       <div class="carousel-caption d-none d-md-block">
@@ -45,15 +45,6 @@ title: Texture Packs
 <div class="container page-content">
 {% assign tps = site.texturepacks | reverse %}
 {% for texturepack in tps %}
-<div class="card w-100">
-        {% if texturepack.icon %}
-        <img src="{{texturepack.icon}}" class="card-img-top" alt="{{texturepack.title}}">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{texturepack.title}}</h5>
-            <p class="card-text">{{texturepack.description}}</p>
-            <a href="{{texturepack.url}}" class="btn btn-primary">Install</a>
-        </div>
-    </div>
+{% include listing-hor.html item=texturepack %}
 {% endfor %}
 </div>

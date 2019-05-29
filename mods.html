@@ -4,16 +4,8 @@ title: Mods
 ---
 {% include page-header.html %}
 <div class="container page-content">
-{% for mod in site.mods %}
-<div class="card w-100">
-        {% if mod.icon %}
-        <img src="{{mod.icon}}" class="card-img-top" alt="{{mod.title}}">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{mod.title}}</h5>
-            <p class="card-text">{{mod.description}}</p>
-            <a href="{{mod.url}}" class="btn btn-primary">Install</a>
-        </div>
-    </div>
+{% assign mods = site.mods | reverse %}
+{% for mod in mods %}
+{% include listing-hor.html item=mod %}
 {% endfor %}
 </div>

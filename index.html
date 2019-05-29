@@ -20,7 +20,7 @@ layout: default
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       {% else %}
       <a href="{{item.url}}">
-        <img src="{{item.img | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
+        <img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
       </a>
       {% endif %}
       <div class="carousel-caption d-none d-md-block">
@@ -47,65 +47,57 @@ layout: default
 <div class="container page-content">
   <h1>Texture Packs</h1>
   <div class="card-group">
-    {% assign tp = site.texturepacks | sort: "date","last" | reverse %}
-    {% assign l = tp | size %}
-    {% for item in tp | limit: 4 %}
-      <div class="card">
-        {% if item.icon %}
-        <img src="{{item.icon}}" class="card-img-top" alt="{{item.title}}">
-        {% endif %}
-        <div class="card-body">
-          <a href="{{item.url}}">
-            <h5 class="card-title">{{item.title}}</h5>
-          </a>
-          <p class="card-text">{{item.description}}</p>
-          <p class="card-text"><small class="text-muted">{{item.date| date: "%-d %B %Y"}}</small></p>
-        </div>
+    {% assign tps = site.texturepacks | sort: "date","last" | reverse %}
+    {% assign l = tps | size %}
+    {% for tp in tps limit: 4 %}
+    {% include listing-vir.html item=tp %}
+    {% if forloop.last %}
+    {% if l>4 %}
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title w-100">More...</h5>
       </div>
-      {% if forloop.last %}
-      {% if l>4 %}
-      <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">More...</h5>
-          </div>
-          <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
-        </div>
-      {% endif %}
-      {% endif %}
+      <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
+    </div>
+    {% endif %}
+    {% endif %}
     {% endfor %}
 
   </div>
-</div>
-
-<div class="container">
-    <h1>Mods</h1>
-    <div class="card-group">
-      {% assign mod = site.mods | sort: "date","last" | reverse %}
-      {% assign l = mod | size %}
-      {% for item in mod | limit: 4 %}
-        <div class="card">
-          {% if item.icon %}
-          <img src="{{item.icon}}" class="card-img-top" alt="{{item.title}}">
-          {% endif %}
-          <div class="card-body">
-            <a href="{{item.url}}">
-              <h5 class="card-title">{{item.title}}</h5>
-            </a>
-            <p class="card-text">{{item.description}}</p>
-            <p class="card-text"><small class="text-muted">{{item.date| date: "%-d %B %Y"}}</small></p>
-          </div>
-        </div>
-        {% if forloop.last %}
-        {% if l>4 %}
-        <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">More...</h5>
-            </div>
-            <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
-          </div>
-        {% endif %}
-        {% endif %}
-      {% endfor %}
-  
+  <h1>Mods</h1>
+  <div class="card-group">
+    {% assign mods = site.mods | sort: "date","last" | reverse %}
+    {% assign l = mods | size %}
+    {% for mod in mods limit: 4 %}
+    {% include listing-vir.html item=mod %}
+    {% if forloop.last %}
+    {% if l>4 %}
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title w-100">More...</h5>
+      </div>
+      <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
     </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
   </div>
+
+  <h1>Feed</h1>
+  {% assign l = all | size %}
+  {% for thing in all limit: 19 %}
+  {% if thing.collection != "tools" %}
+  {% include listing-hor.html item=thing %}    
+  {% endif %}
+  {% if forloop.last %}
+  {% if l>19 %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">More...</h5>
+    </div>
+    <div class="card-body w-100"><a href="/texturepacks" class="btn btn-primary">-></a></div>
+  </div>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+<div class="card">
+    {% if include.item.icon %}
+    <img src="{{ include.item.icon }}" class="card-img-top" alt="{{ include.item.title }}">
+    {% endif %}
+    <div class="card-body">
+        <a href="{{ include.item.url }}">
+            <h5 class="card-title">{{ include.item.title }}</h5>
+        </a>
+        <p class="card-text">{{ include.item.description }}</p>
+    </div>
+    {% if include.item.date or include.item.author %}
+    <div class="card-footer">
+        <small class="text-muted">
+            created {% if include.item.date %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
+            {% if include.item.author %}by <b><a href="/authors?a={{ include.item.author }}">{{ include.item.author }}</a></b>{% endif %}
+        </small>
+    </div>
+    {% endif %}
+</div>

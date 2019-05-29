@@ -2,6 +2,7 @@
 layout: default
 title: Authors
 ---
+{% include page-header.html %}
 {% for item in site.documents %}
 {% if item.author %}
 {% for author in item.author %}
@@ -15,12 +16,11 @@ title: Authors
 {% endfor %}
 {% endif %}
 {% endfor %}
-
+<div class="container page-content">
 {% if authors %}
 {% assign authors=authors | sort %}
 {% assign authors=authors | uniq %}
 <div class="authors-all">
-    <h1>{{page.title}}</h1>
     <ul class="authors-all">
         {% for author in authors %}
         <li><a href="{{ page.url }}?a={{ author }}">{{ author }}</a></li>
@@ -32,7 +32,7 @@ title: Authors
 
 <div class="authors-{{ author }}">
 
-    <h1 class="page-heading">Mods by {{ author }}</h1>
+    <!-- <h1 class="page-heading">Mods by {{ author }}</h1> -->
 
     {% for item in site.documents %}
     {% if item.author contains  author %}
@@ -67,6 +67,7 @@ title: Authors
         //}{% endif %}{% endfor %} else {
         //	$('.authors-all').show();
         //}
+        $('.page-header h1').text(authorQuery)
         if (authorQuery) {
             $(".authors-" + authorQuery).show();
         } else {
@@ -87,11 +88,9 @@ title: Authors
 {% else %}
 
 <div class="mdl-card mdl-shadow--4dp post-container">
-    <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text post-title">{{ page.title }}</h2>
-    </div>
     <div class="mdl-card__supporting-text post-content">
         There Are no authors
     </div>
 </div>
 {% endif %}
+</div>
