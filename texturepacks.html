@@ -2,7 +2,8 @@
 layout: default
 title: Texture Packs
 ---
-{% for texturepack in site.texturepacks %}
+{% assign tps = site.texturepacks | reverse %}
+{% for texturepack in tps %}
 <div class="card w-100">
         <div class="card-body">
             <h5 class="card-title">{{texturepack.title}}</h5>
