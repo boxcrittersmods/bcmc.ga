@@ -2,11 +2,12 @@
 layout: basic
 ---
 {% include nav.html %}
+{% include page-header.html %}
 <div class="page-body">
-    <div class="container">
+    
+    <div class="container page-content">
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-12 col-md-9">
-        <h1>{{page.title}}</h1>
         {{content}}
         </div>
         <div class="col-6 col-md-3 sidebar-offcanvas">

@@ -4,6 +4,7 @@ author:	slaggo
 description: adds new features to BoxCritters to improve your experience!
 date: 14-04-2019
 install: https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.user.js
+icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
 featured: true
 platforms:
     - Chrome

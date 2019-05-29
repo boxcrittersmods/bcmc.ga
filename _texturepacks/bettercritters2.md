@@ -3,6 +3,8 @@ title: Better Critters 2
 author:
 - codejk
 date: 15-04-2019
-description: the revamped version of a legendary texture pack, made just for you. i reached out to several people in the community so see what they wanted for this pack. it's a good one. enjoy it
+description: the revamped version of a legendary texture pack, made just for you. i reached out to several people in the community so see what they wanted for this pack. it's a good one. enjoy it]
+img: https://cdn.discordapp.com/attachments/567143780755701760/567842970380927018/Screen_Shot_2019-04-16_at_23.43.49.png
+icon: https://gyazo.com/6ae156bc4c25bad38ef0cee3b5236f22
 code: eyJ2ZXJzaW9uIjoiMCIsIm5hbWUiOiJCZXR0ZXJDcml0dGVyc1YyIiwiZGVzY3JpcHRpb24iOiJ0aGUgcmV2YW1wZWQgdmVyc2lvbiBvZiBhIGxlZ2VuZGFyeSB0ZXh0dXJlIHBhY2ssIG1hZGUganVzdCBmb3IgeW91LiBpIHJlYWNoZWQgb3V0IHRvIHNldmVyYWwgcGVvcGxlIGluIHRoZSBjb21tdW5pdHkgc28gc2VlIHdoYXQgdGhleSB3YW50ZWQgZm9yIHRoaXMgcGFjay5pdCdzIGEgZ29vZCBvbmUuIGVuam95IGl0LiIsImhhbXN0ZXIiOiJodHRwczovL2kuaW1ndXIuY29tL29aMm9lekIucG5nIiwic25haWwiOiJodHRwczovL2kuaW1ndXIuY29tLzBIVjVLeWoucG5nIiwiaXRlbXMiOiJodHRwczovL2kuaW1ndXIuY29tL0pLdmd1ZWkucG5nIiwidGF2ZW5Qcm9wcyI6Imh0dHBzOi8vaS5pbWd1ci5jb20vaWlVanNVUS5wbmcifQ
 ---

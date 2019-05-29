@@ -9,7 +9,7 @@ layout: default
   <ol class="carousel-indicators">
     {% assign l = carousel|size|minus:1 %}
     {% for i in (0..l) %}
-      <li data-target="#homeCarousel" data-slide-to="{{i}}" {% if forloop.first %}class="active"{% endif %}></li>
+    <li data-target="#homeCarousel" data-slide-to="{{i}}" {% if forloop.first %}class="active" {% endif %}></li>
     {% endfor %}
   </ol>
   <div class="carousel-inner">
@@ -20,12 +20,12 @@ layout: default
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       {% else %}
       <a href="{{item.url}}">
-        <img src="{{item.img | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100">
+        <img src="{{item.img | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
       </a>
       {% endif %}
       <div class="carousel-caption d-none d-md-block">
         <a href="{{item.url}}">
-          <h3>{{item.title}}</h3>
+          <h3><span class="badge badge-primary badge-pill">{{item.collection}}</span> | {{item.title}}</h3>
           <p>{{item.description}}</p>
         </a>
       </div>
@@ -44,6 +44,68 @@ layout: default
 {% endif %}
 
 
-<div class="container">
-  
+<div class="container page-content">
+  <h1>Texture Packs</h1>
+  <div class="card-group">
+    {% assign tp = site.texturepacks | sort: "date","last" | reverse %}
+    {% assign l = tp | size %}
+    {% for item in tp | limit: 4 %}
+      <div class="card">
+        {% if item.icon %}
+        <img src="{{item.icon}}" class="card-img-top" alt="{{item.title}}">
+        {% endif %}
+        <div class="card-body">
+          <a href="{{item.url}}">
+            <h5 class="card-title">{{item.title}}</h5>
+          </a>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text"><small class="text-muted">{{item.date| date: "%-d %B %Y"}}</small></p>
+        </div>
+      </div>
+      {% if forloop.last %}
+      {% if l>4 %}
+      <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">More...</h5>
+          </div>
+          <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
+        </div>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+
+  </div>
 </div>
+
+<div class="container">
+    <h1>Mods</h1>
+    <div class="card-group">
+      {% assign mod = site.mods | sort: "date","last" | reverse %}
+      {% assign l = mod | size %}
+      {% for item in mod | limit: 4 %}
+        <div class="card">
+          {% if item.icon %}
+          <img src="{{item.icon}}" class="card-img-top" alt="{{item.title}}">
+          {% endif %}
+          <div class="card-body">
+            <a href="{{item.url}}">
+              <h5 class="card-title">{{item.title}}</h5>
+            </a>
+            <p class="card-text">{{item.description}}</p>
+            <p class="card-text"><small class="text-muted">{{item.date| date: "%-d %B %Y"}}</small></p>
+          </div>
+        </div>
+        {% if forloop.last %}
+        {% if l>4 %}
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">More...</h5>
+            </div>
+            <div class="card-body"><a href="/texturepacks" class="btn btn-primary">-></a></div>
+          </div>
+        {% endif %}
+        {% endif %}
+      {% endfor %}
+  
+    </div>
+  </div>
