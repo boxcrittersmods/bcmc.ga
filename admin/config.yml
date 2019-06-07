@@ -3,9 +3,22 @@ backend:
   repo: boxcritters/boxcritters.github.io
   base_url: https://bc-mod-api.herokuapp.com
 media_folder: "uploads"
+show_preview_links: true
 collections:
   - name: 'texturepacks'
     label: Texture Packs
     folder: _texturepacks
+    create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - label: "Authors"
+        name: "author"
+        widget: "list"
+        field: {label: Author, name: author, widget: "text"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Banner", name: "image", widget: "image"}
+      - {label: "Texture Pack Code", name: "code", widget: "string"}
+      - {label: "One Click File", name: "install", widget: "string"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
