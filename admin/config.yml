@@ -1,0 +1,12 @@
+backend:
+  name: github
+  repo: boxcritters/boxcritters.github.io
+  branch: master
+  base_url: https://bc-mod-api.herokuapp.com/admin
+media_folder: "uploads"
+collections:
+  - name: 'hello world'
+    label: Hello World
+    folder: _hello
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
