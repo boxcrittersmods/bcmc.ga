@@ -8,7 +8,7 @@ collections:
   - name: 'featured'
     label: Front Page
     filter: {field: "featured", value: "true"}
-    folder: /
+    folder: .
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean"}
