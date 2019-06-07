@@ -1,8 +1,7 @@
 backend:
   name: github
   repo: boxcritters/boxcritters.github.io
-  branch: master
-  base_url: https://bc-mod-api.herokuapp.com/admin
+  base_url: https://bc-mod-api.herokuapp.com
 media_folder: "uploads"
 collections:
   - name: 'hello world'
