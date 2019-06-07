@@ -59,8 +59,8 @@ collections:
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Banner", name: "image", widget: "image"}
-      - label: "Profile"
-        name: "profile"
+      - label: "Platforms"
+        name: "platforms"
         widget: "object"
         fields:
         - label: "Platform Name"
