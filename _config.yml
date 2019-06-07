@@ -60,7 +60,7 @@ defaults:
 - scope:
     path: ""
   values:
-    image: /favicon.gif
+    image: /favicon.ico
     layout: basic
     featured: false
 - scope:
