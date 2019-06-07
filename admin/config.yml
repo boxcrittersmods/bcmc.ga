@@ -15,12 +15,12 @@ collections:
       - label: "Authors"
         name: "author"
         widget: "list"
-        field: {label: Author, name: author, widget: "text", required: true}
+        field: {label: Author, name: author, widget: "string", required: true}
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Banner", name: "image", widget: "image"}
-      - {label: "Texture Pack Code", name: "code", widget: "string", required: true}
+      - {label: "Texture Pack Code", name: "code", widget: "text", required: true}
       - {label: "One Click File", name: "install", widget: "string"}
       - {label: "Show on Front Page", name: "featured", widget: "boolean"}
   - name: 'mods'
@@ -30,7 +30,7 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Author", name: author, widget: "text", required: true}
+      - {label: "Author", name: author, widget: "string, required: true}
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image"}
