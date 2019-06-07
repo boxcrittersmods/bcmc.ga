@@ -4,8 +4,8 @@ backend:
   base_url: https://bc-mod-api.herokuapp.com
 media_folder: "uploads"
 collections:
-  - name: 'hello world'
-    label: Hello World
-    folder: _hello
+  - name: 'texturepacks'
+    label: Texture Packs
+    folder: _texturepacks
     fields:
       - {label: "Title", name: "title", widget: "string"}
