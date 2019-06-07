@@ -9,6 +9,8 @@ sections:
   label: Texturepacks
   create: all
   match: "**/*"
+  templates:
+  - texture-pack
 - type: directory
   path: _mods
   label: Mods
