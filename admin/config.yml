@@ -30,7 +30,7 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Author", name: author, widget: "string, required: true}
+      - {label: "Author", name: author, widget: "string", required: true }
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image"}
