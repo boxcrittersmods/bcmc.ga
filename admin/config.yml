@@ -7,18 +7,44 @@ show_preview_links: true
 collections:
   - name: 'texturepacks'
     label: Texture Packs
+    label_singular: Texture Pack
     folder: _texturepacks
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Authors"
         name: "author"
         widget: "list"
-        field: {label: Author, name: author, widget: "text"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Date", name: "date", widget: "date"}
+        field: {label: Author, name: author, widget: "text", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Banner", name: "image", widget: "image"}
-      - {label: "Texture Pack Code", name: "code", widget: "string"}
+      - {label: "Texture Pack Code", name: "code", widget: "string", required: true}
       - {label: "One Click File", name: "install", widget: "string"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
+  - name: 'mods'
+    label: Mods
+    label_singular: Mod
+    folder: _mods
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: author, widget: "text", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Banner", name: "image", widget: "image"}
+      - label: "Platforms"
+        name: "platforms"
+        widget: "select"
+        required: true
+        multiple: true
+        options:
+          - { label: "Chrome", value: "chrome" }
+          - { label: "Firefox", value: "firefox" }
+          - { label: "Edge", value: "edge" }
+          - { label: "Safari", value: "safari" }
+          - { label: "Opera", value: "opera" }
+      - {label: "Install URL", name: "install", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean"}

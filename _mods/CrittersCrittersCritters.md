@@ -1,5 +1,5 @@
 ---
-name: CrittersCrittersCritters
+title: CrittersCrittersCritters
 author:	Blackout03
 description: adds new features to BoxCritters to improve your experience!
 install: https://github.com/Blackout03/CrittersCrittersCritters/raw/master/CrittersCrittersCritters.user.js
