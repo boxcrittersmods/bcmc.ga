@@ -48,11 +48,10 @@ collections:
           - { label: "Opera", value: "opera" }
       - {label: "Install URL", name: "install", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean"}
-  - name: 'mods'
-    label: Mods
-    label_singular: Mod
-    folder: _mods
-    create: true
+  - name: 'tools'
+    label: Tools
+    label_singular: Tool
+    folder: _tools
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Author", name: author, widget: "string" }
