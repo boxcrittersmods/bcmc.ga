@@ -1,17 +1,10 @@
 backend:
   name: github
   repo: boxcritters/boxcritters.github.io
-  base_url: https://bc-mod-api.herokuapp.com
+  base_url: https://bc-mod-api.herokuapp.com/admin
 media_folder: "uploads"
 show_preview_links: true
 collections:
-  - name: 'featured'
-    label: Front Page
-    filter: {field: "featured", value: "true"}
-    folder: .
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
   - name: 'texturepacks'
     label: Texture Packs
     label_singular: Texture Pack
