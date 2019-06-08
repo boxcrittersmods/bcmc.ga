@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: boxcritters/boxcritters.github.io
-  base_url: https://bc-mod-api.herokuapp.com/admin
 media_folder: "uploads"
 show_preview_links: true
 collections:
