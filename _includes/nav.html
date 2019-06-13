@@ -1,21 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">{{site.title}}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <a class="navbar-brand" href="/">{{site.title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                {% for nav in site.data.nav %}
-                <li class="nav-item{% if page.url contains nav.href %} active{% endif %}">
-                    <a class="nav-link" href="{{nav.href}}">{{nav.name}} {% if  page.url contains nav.href %}<span class="sr-only">(current)</span>{% endif %}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <form class="form-inline mr-auto my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav  mt-2 mt-lg-0">
+            {% for nav in site.data.nav %}
+            <li class="nav-item{% if page.url contains nav.href %} active{% endif %}">
+                <a class="nav-link" href="{{nav.href}}">{{nav.name}} {% if  page.url contains nav.href %}<span
+                        class="sr-only">(current)</span>{% endif %}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class=" mx-2">
+            <a href="#" class="btn btn-success align-middle"><span>Submit</span>
+            </a>
         </div>
-    </nav>
+    </div>
+    </div>
+</nav>
