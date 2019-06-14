@@ -1,5 +1,6 @@
 {
- "name": "BC Mods",
+ "name": "Box Critters Modding Comminity",
+ "short_name":"BC Mods"
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -37,5 +38,8 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+ ],
+ "background_color":"#53C81D",
+ "display":"standalone",
+ "theme_color":"#53C81D"
 }
