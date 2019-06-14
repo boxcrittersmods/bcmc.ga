@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     display: block;
     overflow-x: hidden;
-    /* background-image: url("/uploads/default.png"); */
+    background-image: url("/uploads/bg.png");
 }
 
 .navbar {
