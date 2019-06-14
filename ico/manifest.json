@@ -40,6 +40,7 @@
   }
  ],
  "background_color":"#53C81D",
- "display":"standalone",
- "theme_color":"#53C81D"
+ "display":"fullscreen",
+ "theme_color":"#53C81D",
+ "start_url":"/"
 }
