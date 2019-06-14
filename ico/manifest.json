@@ -46,7 +46,7 @@
   }
  ],
  "background_color":"#53C81D",
- "display":"fullscreen",
+ "display":"standalone",
  "theme_color":"#53C81D",
  "start_url":"/"
 }
