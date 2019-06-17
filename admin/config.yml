@@ -23,7 +23,7 @@ collections:
       - {label: "Banner", name: "image", widget: "image"}
       - {label: "Texture Pack Code", name: "code", widget: "text", required: true}
       - {label: "One Click File", name: "install", widget: "string"}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: 'mods'
     label: Mods
     label_singular: Mod
@@ -48,7 +48,7 @@ collections:
           - { label: "Safari", value: "safari" }
           - { label: "Opera", value: "opera" }
       - {label: "Install URL", name: "install", widget: "string", required: true}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: 'tools'
     label: Tools
     label_singular: Tool
@@ -77,4 +77,14 @@ collections:
             - { label: "iOS", value: "ios" }
             - { label: "Android", value: "android" }
         - {label: "URL", name: "install", widget: "string", required: true}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+  
+  - label: "Blog"
+    name: "blog"
+    folder: "_posts/blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
