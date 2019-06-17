@@ -1,0 +1,15 @@
+---
+title: Greenscreen
+author:
+  - TumbleGamer
+description: The tavern has a green screen
+date: 2019-06-17T12:35:02.538Z
+logo: /uploads/icon.png
+image: /uploads/screenshot.png
+code: >-
+  eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJHcmVlbiBTY3JlZW4iLCJhdXRob3IiOiJUdW1ibGVHYW1lciIsImRhdGUiOjE1NjA3NzQzMjkyMTksInBhY2tWZXJzaW9uIjoiMC4xIiwiZGVzY3JpcHRpb24iOiJUaGUgdGF2ZXJuIGlzIGEgZ3JlZW4gc2NyZWVuIiwidGF2ZXJuQkciOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHVtYmxlMTk5OS9ib3hjcml0dGVyc1RleHR1cmVQYWNrcy9tYXN0ZXIvZ3JlZW5zY3JlZW4vdGF2ZXJuX2JnLnBuZyIsInVwZGF0ZVVSTCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90dW1ibGUxOTk5L2JveGNyaXR0ZXJzVGV4dHVyZVBhY2tzL21hc3Rlci9ncmVlbnNjcmVlbi9HcmVlblNjcmVlbi5iY3RwLmpzb24ifQ
+install: >-
+  https://github.com/tumble1999/boxcrittersTexturePacks/raw/master/greenscreen/GreenScreen.bctp.json
+featured: false
+---
+
