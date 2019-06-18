@@ -20,7 +20,8 @@ layout: default
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       {% else %}
       <a href="{{item.url}}">
-        <img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}" class="d-block w-100 img-fluid">
+        <img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}"
+          class="d-block w-100 img-fluid">
       </a>
       {% endif %}
       <div class="carousel-caption d-none d-md-block">
@@ -86,8 +87,12 @@ layout: default
   <h1>Feed</h1>
   {% assign l = all | size %}
   {% for thing in all limit: 19 %}
-  {% if thing.collection != "tools" %}
-  {% include listing-hor.html item=thing %}    
+  {% if thing.date != site.time %}
+  {% if thing.collection == "post" %}
+  {% include listing-post.html item=thing %}
+  {% else %}
+  {% include listing-hor.html item=thing %}
+  {% endif %}
   {% endif %}
   {% if forloop.last %}
   {% if l>19 %}

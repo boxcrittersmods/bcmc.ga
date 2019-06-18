@@ -7,6 +7,7 @@ title: Authors
 {% if item.author %}
 {% for author in item.author %}
 {% unless author == "" %}
+{% assign author=author|slugify%}
 {% if authors %}
 {% assign authors=authors | push: author %}
 {% else %}
@@ -20,17 +21,17 @@ title: Authors
 {% if authors %}
 {% assign authors=authors | sort %}
 {% assign authors=authors | uniq %}
-<div class="authors-all">
+<div class="authors-all card card-body">
     <ul class="authors-all">
         {% for author in authors %}
-        <li><a href="{{ page.url }}?a={{ author }}">{{ author }}</a></li>
+        <li><a href="{{ page.url }}?a={{ author|slugify }}">{{ author }}</a></li>
         {% endfor %}
     </ul>
 </div>
 {% for author in authors %}
 
 
-<div class="authors-{{ author }}">
+<div class="authors-{{ author |slugify}}">
 
     <!-- <h1 class="page-heading">Mods by {{ author }}</h1> -->
 
@@ -55,7 +56,7 @@ title: Authors
     $(function () {
         $(".authors-all").hide();
         {% for author in authors %}
-        $(".authors-{{ author }}").hide();
+        $(".authors-{{ author|slugify }}").hide();
         {% endfor %}
         authorQuery = getQueryVariable('a');
         {% for author in authors %}

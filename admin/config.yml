@@ -9,6 +9,7 @@ collections:
   - name: 'texturepacks'
     label: Texture Packs
     label_singular: Texture Pack
+    media_folder: "media/texturepacks/"
     folder: _texturepacks
     create: true
     fields:
@@ -27,6 +28,7 @@ collections:
   - name: 'mods'
     label: Mods
     label_singular: Mod
+    media_folder: "media/mods/"
     folder: _mods
     create: true
     fields:
@@ -52,6 +54,7 @@ collections:
   - name: 'tools'
     label: Tools
     label_singular: Tool
+    media_folder: "media/tools/"
     folder: _tools
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
@@ -78,13 +81,19 @@ collections:
             - { label: "Android", value: "android" }
         - {label: "URL", name: "install", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-  
-  - label: "Blog"
-    name: "blog"
-    folder: "_posts/blog"
+  - name: "posts"
+    label: "Blog"
+    folder: "/_posts/"
+    label_singular: Blog Post
+    media_folder: "media/{{year}}/{{month}}/{{day}}/"
     create: true
-    fields:
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Author", name: "author", widget: "string", default: "BCMC Team"}
+      - {label: "Date", name: "date", widget: "datetime", default: "post"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Tags", name: "categories", widget: "list"}
+      - {label: "Teaser Text", name: "excerpt", widget: "text", required: true}
       - {label: "Body", name: "body", widget: "markdown"}

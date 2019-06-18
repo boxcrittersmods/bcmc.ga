@@ -1,7 +1,12 @@
 ---
 layout: default-sb
 ---
+<div class="alert alert-warning card" role="alert">
+        <h4 class="alert-heading">Importat</h4>
+        <p>To install a texture pack you will first need to install the <a href="/tools/texturepackselector/">Box Critters Texture Pack Manager</a></p>
+      </div>
 <div class="row">
+    
     <div class="card w-50">
         <div class="card-body">
             <h5 class="card-title">{{page.title}}</h5>
@@ -11,7 +16,7 @@ layout: default-sb
             {% endif %}
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Created by {% for author in page.author%}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<b><a href="/authors?a={{author}}">{{author}}</a></b>{%endfor%}</li>
+            <li class="list-group-item">Created by {% for author in page.author%}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<b><a href="/authors?a={{author|slugify}}">{{author}}</a></b>{%endfor%}</li>
         </ul>
     </div>
     {% if page.code %}
