@@ -87,7 +87,7 @@ layout: default
   <h1>Feed</h1>
   {% assign l = all | size %}
   {% for thing in all limit: 19 %}
-  {% if thing.date != site.time %}
+  {% if thing.date %}
   {% if thing.collection == "post" %}
   {% include listing-post.html item=thing %}
   {% else %}
