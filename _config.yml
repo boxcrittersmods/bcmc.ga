@@ -65,28 +65,34 @@ defaults:
     image: /favicon.ico
     layout: basic
     featured: false
+    comments: false
 - scope:
     path: ""
     type: mods
   values:
     layout: mod
+    comments: true
 - scope:
     path: ""
     type: texturepacks
   values:
     layout: texturepack
+    comments: true
 - scope:
     path: ""
     type: tools
   values:
     layout: tool
+    comments: false
 - scope:
     path: ""
     type: posts
   values:
     layout: post
+    comments: true
 - scope:
     path: ""
     type: authors
   values:
     layout: author
+    comments: true
