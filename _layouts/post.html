@@ -5,4 +5,5 @@ layout: default
 <div class="container page-content card card-body">
 <span class="text-muted"><b><a href="/authors?a={{page.author|slugify}}">{{page.author}}</a></b></span>
 {{content}}
+{% include comments.html %}
 </div>
