@@ -1,0 +1,24 @@
+---
+title: CritterMod
+author: sked
+description: >-
+  CritterMod is a mod for Box Critters developed by sked adding multiple extra
+  features and fun/useful commands.
+
+  CritterMod is a mod for Box Critters developed by sked adding multiple extra
+  features and fun/useful commands.
+
+
+  - Current Command List:
+     - /copy [username] -copies a user's outfit
+     - /goto [username] -goes to the exact position of a user
+     - /moveto [x] [y]  -moves to specific coordinates
+date: 2019-06-19T16:51:38.167Z
+logo: /uploads/purplebcl.png
+image: /uploads/purplebcl.png
+platforms:
+  - chrome
+install: >-
+  https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
+---
+
