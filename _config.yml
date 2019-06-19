@@ -65,7 +65,7 @@ defaults:
     image: /favicon.ico
     layout: basic
     featured: false
-    comments: false
+    comments: true
 - scope:
     path: ""
     type: mods
@@ -83,7 +83,7 @@ defaults:
     type: tools
   values:
     layout: tool
-    comments: false
+    comments: true
 - scope:
     path: ""
     type: posts
