@@ -14,7 +14,7 @@ description: >-
      - /goto [username] -goes to the exact position of a user
      - /moveto [x] [y]  -moves to specific coordinates
 date: 2019-06-19T16:51:38.167Z
-logo: /uploads/purplebcl.png
+icon: /uploads/purplebcl.png
 image: /uploads/purplebcl.png
 platforms:
   - chrome
