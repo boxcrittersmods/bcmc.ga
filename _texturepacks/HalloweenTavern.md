@@ -5,7 +5,7 @@ author:
 description: Happy October Box Critters players! Here is the long awaited Halloween background for the Hamster Tavern!
 date: 02-10-2019
 code: eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJIYWxsb3dlZW4gVGF2ZXJuIiwiYXV0aG9yIjoiSWN5IiwiZGVzY3JpcHRpb24iOiJIYXBweSBPY3RvYmVyIEJveCBDcml0dGVycyBwbGF5ZXJzISBIZXJlIGlzIHRoZSBsb25nIGF3YWl0ZWQgSGFsbG93ZWVuIGJhY2tncm91bmQgZm9yIHRoZSBIYW1zdGVyIFRhdmVybiEiLCJ0YXZlcm5CRyI6Imh0dHA6Ly93d3cuYmFja2dyb3VuZHMuYm94Y3JpdHRlcnNsaXZlLmNvbS9IYWxsb3dlZW5UYXZlcm4yMDE5L3RhdmVybl9iZy5wbmciLCJ0YXZlcm5GRyI6Imh0dHA6Ly93d3cuYmFja2dyb3VuZHMuYm94Y3JpdHRlcnNsaXZlLmNvbS9IYWxsb3dlZW5UYXZlcm4yMDE5L3RhdmVybl9zcy5wbmciLCJkYXRlIjoxNTY5OTcxNDg0Njg1LCJwYWNrVmVyc2lvbiI6IjAuMSJ9
-video: https://www.youtube.com/watch?v=v7_Q1wfBfSM
+video: https://www.youtube.com/watch?v=RKNtoUaqRMc
 featured: true
 install: https://github.com/boxcritters/boxcritters.github.io/raw/master/tp/HalloweenTavern.bctp.json
 ---
