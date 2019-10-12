@@ -20,9 +20,10 @@ collections:
         field: {label: Author, name: author, widget: "string", required: true}
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Banner", name: "image", widget: "image"}
-      - {label: "Texture Pack Code", name: "code", widget: "text", required: true}
+      - {label: "Video", name: "icon", widget: "video"}
+      - {label: "Texture Pack Code", name: "code", widget: "text"}
       - {label: "One Click File", name: "install", widget: "string"}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: 'mods'
