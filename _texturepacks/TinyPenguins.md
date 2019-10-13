@@ -4,7 +4,7 @@ description: Miss Club Penguin? Don't think size matters? Then this mod is for y
 date: 5-06-2019
 author:
 - Rookie
-install: https://github.com/TheRookie14/Rookie/raw/master/TinyPenguins.bctp.json
+install: https://raw.githubusercontent.com/TheRookie14/Rookie/master/TinyPenguins.bctp.json
 code: eyJ2ZXJzaW9uIjoiMSIsIm5hbWUiOiJUaW55IFBlbmd1aW5zIiwiYXV0aG9yIjoiUm9va2llIiwiZGF0ZSI6MTU1OTc2MTg1NjEzOCwicGFja1ZlcnNpb24iOiIwLjEiLCJkZXNjcmlwdGlvbiI6Ik1pc3MgQ2x1YiBQZW5ndWluPyBEb24ndCB0aGluayBzaXplIG1hdHRlcnM/IFRoZW4gdGhpcyBtb2QgaXMgZm9yIHlvdSIsImhhbXN0ZXIiOiJodHRwczovL2kuaW1ndXIuY29tL2NPZEcwbU8ucG5nIiwiaXRlbXMiOiJodHRwczovL2kuaW1ndXIuY29tLzZlcFJGd2YucG5nIiwidXBkYXRlVVJMIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1RoZVJvb2tpZTE0L1Jvb2tpZS9tYXN0ZXIvVGlueVBlbmd1aW5zLmJjdHAuanNvbiJ9
 
 ---
