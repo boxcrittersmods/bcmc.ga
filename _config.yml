@@ -16,6 +16,8 @@ collections:
     output: true
   authors:
     output: true
+  projects:
+    output: true
 
 permalink: pretty
 production: true
@@ -95,4 +97,10 @@ defaults:
     type: authors
   values:
     layout: author
+    comments: true
+- scope:
+    path: ""
+    type: projects
+  values:
+    layout: project
     comments: true

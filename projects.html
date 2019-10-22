@@ -1,0 +1,11 @@
+---
+layout: default
+title: Projects
+---
+{% include page-header.html %}
+<div class="container page-content">
+{% assign projects = site.projects | reverse %}
+{% for project in projects %}
+{% include listing-hor.html item=projects%}
+{% endfor %}
+</div>
