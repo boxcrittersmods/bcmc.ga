@@ -88,11 +88,7 @@ layout: default
   {% assign l = all | size %}
   {% for thing in all limit: 19 %}
   {% if thing.date %}
-  {% if thing.collection == "post" %}
-  {% include listing-post.html item=thing %}
-  {% else %}
-  {% include listing-hor.html item=thing %}
-  {% endif %}
+  {% include listing.html item=thing %}
   {% endif %}
   {% if forloop.last %}
   {% if l>19 %}

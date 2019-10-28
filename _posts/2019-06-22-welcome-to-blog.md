@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Welcome to Blog
-author: tumblegamer
+author:
+- TumbleGamer
 date: 2019-06-21T23:00:00.000Z
 category: News
 categories:
-  - ''
+  - 'updates'
 excerpt: Hello world
 ---
 This is some Text

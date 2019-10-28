@@ -3,7 +3,7 @@ title: Blob In Box Critters
 description: Play with blob in Box Critters
 author:
 - Yurixd2
-- Fl1nns
+- Flines
 date: 19-05-2019
 featured: true
 image: https://cdn.discordapp.com/attachments/567143780755701760/579821792336543754/unknown.png

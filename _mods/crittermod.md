@@ -1,6 +1,7 @@
 ---
 title: CritterMod
-author: sked
+author:
+- Sked
 description: >-
   CritterMod is a mod for Box Critters developed by sked adding multiple extra
   features and fun/useful commands.

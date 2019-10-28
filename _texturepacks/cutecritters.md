@@ -1,7 +1,7 @@
 ---
 title: CuteCritters
 author:
-- codejk 
+- Codejk 
 description: >
   this texture pack has been in the making for almost 2 days now. it is my attempt to recreate the pink critter. i hope you enjoy. inspired by Cutiejea's profile picture!
 date: 17-04-2019

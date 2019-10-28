@@ -1,7 +1,7 @@
 ---
 title: Sans
 author:
-- slaggo 
+- Slaggo 
 description: makes hamsters sans
 date: 20-04-2019
 icon: https://cdn.discordapp.com/attachments/567143780755701760/568959251515572230/unknown.png

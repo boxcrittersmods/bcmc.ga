@@ -1,7 +1,7 @@
 ---
 title: Start In Tavern
 author:
-  - TumbleGamer
+- TumbleGamer
 description: Start in the tavern instead of the Bridge
 date: 2019-06-17T17:05:46.362Z
 icon: /uploads/tavern-start/logho.png

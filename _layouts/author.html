@@ -1,10 +1,10 @@
 ---
 layout: page
 ---
-{% for item in site.documents %}
-{% if item.author contains page.title %}
-{% include listing-hor.html item=item  %}
-{% elsif item.author == page.title %}
-{% include listing-post.html item=item %}
+{% for thing in site.documents %}
+{% if thing.author contains page.title %}
+{% include listing.html item=thing %}
+{% elsif thing.author == page.title %}
+{% include listing.html item=thing %}
 {% endif %}
 {% endfor %}

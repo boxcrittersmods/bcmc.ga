@@ -1,7 +1,7 @@
 ---
 title: Greenscreen
 author:
-  - TumbleGamer
+- TumbleGamer
 description: The tavern has a green screen
 date: 2019-06-17T12:35:02.538Z
 icon: /uploads/greenscreen/icon.png

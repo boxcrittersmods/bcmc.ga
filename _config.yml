@@ -31,7 +31,6 @@ plugins:
  - jekyll-avatar
  - jemoji
  - jekyll-mentions
- #- jekyll-include-cache
 
  # Build settings
 markdown: kramdown
@@ -104,3 +103,4 @@ defaults:
   values:
     layout: project
     comments: true
+

@@ -1,4 +1,9 @@
 ---
 title: 'Project: Critality'
+date: 2019-10-14
+author:
+- TumbleGamer
 ---
-VR Clinet for box critters.
+# Aim
+VR Client for box critters.
+# Things Used

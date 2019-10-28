@@ -1,0 +1,8 @@
+
+{% if include.item.collection == "projects" %}
+{% include listing-post.html item=include.item %}
+{% elsif include.item.collection == "posts" %}
+{% include listing-post.html item=include.item %}
+{% else %}
+{% include listing-hor.html item=include.item %}
+{% endif %}
