@@ -19,16 +19,7 @@
         <small class="text-muted">
             created {% if include.item.date %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
             {% if include.item.author %}by 
-            {% for author in include.item.author %}
-            {% if forloop.last %}{% unless forloop.first %}
-                and 
-            {% endunless %}
-            {% endif %}
-            <b><a href="/authors/{{ author|slugify }}">{{ author }}</a></b>
-            {% unless forloop.last %}
-                ,
-            {% endunless %}
-            {% endfor %}
+            {% include author-list.html authors=include.item.author %}
             {% endif %}
         </small>
     </div>

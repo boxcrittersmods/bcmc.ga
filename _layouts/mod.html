@@ -9,7 +9,7 @@ layout: default-sb
                     <a href="{{ page.install }}" class="btn btn-primary">Install</a>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Created by <b><a href="/authors?a={{page.author|slugify}}">{{page.author}}</a></b></li>
+                    <li class="list-group-item">Created by {% include author-list.html authors=page.author %}</li>
                 </ul>
             </div>
             {% if page.platforms %}
