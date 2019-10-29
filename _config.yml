@@ -18,6 +18,8 @@ collections:
     output: true
   projects:
     output: true
+  servers:
+    output: true
 
 permalink: pretty
 production: true
@@ -67,30 +69,35 @@ defaults:
     layout: basic
     featured: false
     comments: true
+    list: false
 - scope:
     path: ""
     type: mods
   values:
     layout: mod
     comments: true
+    list: true
 - scope:
     path: ""
     type: texturepacks
   values:
     layout: texturepack
     comments: true
+    list: true
 - scope:
     path: ""
     type: tools
   values:
     layout: tool
     comments: true
+    list: true
 - scope:
     path: ""
     type: posts
   values:
     layout: post
     comments: true
+    list: true
 - scope:
     path: ""
     type: authors
@@ -103,4 +110,12 @@ defaults:
   values:
     layout: project
     comments: true
+    list: true
+- scope:
+    path: ""
+    type: servers
+  values:
+    layout: server
+    comments: true
+    list: true
 

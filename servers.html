@@ -1,0 +1,11 @@
+---
+layout: default
+title: Servers
+---
+{% include page-header.html %}
+<div class="container page-content">
+{% assign servers = site.servers | reverse %}
+{% for server in servers %}
+{% include listing-server.html item=server %}
+{% endfor %}
+</div>

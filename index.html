@@ -86,11 +86,11 @@ layout: default
 
   <h1>Feed</h1>
   {% assign l = all | size %}
-  {% for thing in all limit: 19 %}
+  {% for thing in all %}
   {% if thing.date %}
   {% include listing.html item=thing %}
   {% endif %}
-  {% if forloop.last %}
+  <!-- {% if forloop.last %}
   {% if l>19 %}
   <div class="card">
     <div class="card-body">
@@ -99,6 +99,6 @@ layout: default
     <div class="card-body w-100"><a href="/texturepacks" class="btn btn-primary">-></a></div>
   </div>
   {% endif %}
-  {% endif %}
+  {% endif %} -->
   {% endfor %}
 </div>

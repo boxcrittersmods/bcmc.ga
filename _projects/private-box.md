@@ -5,11 +5,11 @@ date: 2019-10-14
 author:
 - TumbleGamer
 - Flines
-- slaggo
+- Slaggo
 - Sponix
 - Eribetra
 source: https://github.com/boxcritters/private-box
-url: https://boxcritters.github.io/private-box
+link: https://boxcritters.github.io/private-box
 ---
 # Aim
 Create a Box critters Private server Engine for people to freely use to make their own servers

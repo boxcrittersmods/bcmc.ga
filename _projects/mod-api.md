@@ -1,7 +1,11 @@
 ---
-layout: page
-title: How to use the box critters mod api
+
 ---
+# Aims
+# what was used
+
+
+# How to use
 API Url: `https://bc-mod-api.herokuapp.com/`
 ### Version Info
 This is information on how to get Box Critters Version info.
