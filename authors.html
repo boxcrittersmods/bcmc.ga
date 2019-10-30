@@ -24,7 +24,7 @@ title: Authors
 <div class="authors-all card card-body">
     <ul class="authors-all">
         {% for author in authors %}
-        <li><a href="{{ page.url }}?a={{ author|slugify }}">{{ author }}</a></li>
+        <li><a href="{{ page.url }}/{{ author|slugify }}">{{ author }}</a></li>
         {% endfor %}
     </ul>
 </div>
