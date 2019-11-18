@@ -32,7 +32,8 @@ plugins:
  - jekyll-sitemap
  - jekyll-avatar
  - jemoji
- - jekyll-mentions
+ - jekyll-mention
+ - jekyll-admin
 
  # Build settings
 markdown: kramdown
