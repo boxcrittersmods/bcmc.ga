@@ -1,5 +1,8 @@
 ---
+title: BoxCritters Mod API Server
 date: 2019-04-26
+author:
+- TumbleGamer
 ---
 # Aims
 # what was used

@@ -1,6 +1,6 @@
 ---
 title: 'Box Critters: Private Box'
-summary: Box critters Private server Engine for people to freely use to make their own servers
+description: Box critters Private server Engine for people to freely use to make their own servers
 date: 2019-10-14
 author:
 - TumbleGamer

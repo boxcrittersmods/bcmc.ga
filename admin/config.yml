@@ -4,6 +4,7 @@ backend:
   base_url: https://bc-mod-api.herokuapp.com
 media_folder: "uploads"
 show_preview_links: true
+publish_mode: editorial_workflow
 logo_url: http://boxcritters.github.io/uploads/logo.png
 collections:
   - name: 'texturepacks'
@@ -52,11 +53,11 @@ collections:
           - { label: "Opera", value: "opera" }
       - {label: "Install URL", name: "install", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-  - name: 'tools'
-    label: Tools
-    label_singular: Tool
-    media_folder: "media/tools/"
-    folder: _tools
+  - name: 'projects'
+    label: Projects
+    label_singular: Project
+    media_folder: "media/projects/"
+    folder: _projects
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Author", name: author, widget: "string" }
