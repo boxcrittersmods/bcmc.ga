@@ -33,7 +33,6 @@ plugins:
  - jekyll-avatar
  - jemoji
  - jekyll-mention
- - jekyll-admin
 
  # Build settings
 markdown: kramdown
