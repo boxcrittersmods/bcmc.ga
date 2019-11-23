@@ -19,7 +19,7 @@ collections:
         name: "author"
         widget: "list"
         field: {label: Author, name: author, widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Banner", name: "image", widget: "image"}
@@ -82,6 +82,40 @@ collections:
             - { label: "iOS", value: "ios" }
             - { label: "Android", value: "android" }
         - {label: "URL", name: "install", widget: "string", required: true}
+      - label: "OS"
+        name: "os"
+        widget: "object"
+        fields:
+        - label: "OS Name"
+          name: "name"
+          widget: "select"
+          required: true
+          options:
+            - { label: "Windows", value: "windows" }
+            - { label: "Mac", value: "mac" }
+            - { label: "Linux", value: "linux" }
+            - { label: "iOS", value: "ios" }
+            - { label: "Android", value: "android" }
+        - {label: "URL", name: "install", widget: "string", required: true}
+      - {label: "Source", name: "source", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Discord", name: "discord", widget: "discord"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+  - name: 'projects'
+    label: Projects
+    label_singular: Project
+    media_folder: "media/projects/"
+    folder: _projects
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: author, widget: "string" }
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Banner", name: "image", widget: "image"}
+      - {label: "Source", name: "source", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Discord", name: "discord", widget: "discord"}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: "posts"
     label: "Blog"
