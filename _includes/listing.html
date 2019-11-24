@@ -2,6 +2,8 @@
 {% include listing-post.html item=include.item %}
 {% elsif include.item.collection == "servers" %}
 {% include listing-server.html item=include.item %}
+{% elsif include.item.collection == "authors" %}
+{% include listing-author.html item=include.item %}
 {% elsif include.item.collection == "posts" %}
 {% include listing-post.html item=include.item %}
 {% else %}
