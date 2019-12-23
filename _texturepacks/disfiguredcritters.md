@@ -5,6 +5,9 @@ author:
 description: '"OH BOY!!! Id love to play as a disfigured critter!" - CutieJea'
 date: 2019-12-23T16:26:32.837Z
 icon: /uploads/old.png
+image: /uploads/screenshot.png
+code: >-
+  eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJEaXNmaWd1cmVkQ3JpdHRlcnMiLCJhdXRob3IiOiJUdW1ibGVHYW1lciIsImRhdGUiOjE1NzcxMTU1NzExNTMsInBhY2tWZXJzaW9uIjoiMC4xIiwiZGVzY3JpcHRpb24iOiJcIk9IIEJPWSEhISBJZCBsb3ZlIHRvIHBsYXkgYXMgYSBkaXNmaWd1cmVkIGNyaXR0ZXIhXCIgLSBDdXRpZUplYSIsImhhbXN0ZXIiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYm94Y3JpdHRlcnMvdGV4dHVyZXBhY2stZml4aW5nL21hc3Rlci9jdXRlY3JpdHRlcnMvY3V0ZS5wbmciLCJ1cGRhdGVVUkwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYm94Y3JpdHRlcnMvdGV4dHVyZXBhY2stZml4aW5nL21hc3Rlci9jdXRlY3JpdHRlcnMvZGlzZmlndXJlZGNyaXR0ZXJzLmJjdHAuanNvbiJ9
 install: >-
   https://github.com/boxcritters/texturepack-fixing/raw/master/cutecritters/disfiguredcritters.bctp.json
 ---
