@@ -23,7 +23,7 @@ collections:
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Icon", name: "icon", widget: "image", required: false}
       - {label: "Banner", name: "image", widget: "image", required: false}
-      - {label: "YTVideo", name: "icon", widget: "string", required: false}
+      - {label: "YTVideo", name: "video", widget: "string", required: false}
       - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
       - {label: "One Click File", name: "install", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
