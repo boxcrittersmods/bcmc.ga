@@ -19,13 +19,13 @@ collections:
         name: "author"
         widget: "list"
         field: {label: Author, name: author, widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Icon", name: "icon", widget: "image"}
-      - {label: "Banner", name: "image", widget: "image"}
-      - {label: "Video", name: "icon", widget: "video"}
-      - {label: "Texture Pack Code", name: "code", widget: "text"}
-      - {label: "One Click File", name: "install", widget: "string"}
+      - {label: "Icon", name: "icon", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "YTVideo", name: "icon", widget: "string", required: false}
+      - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
+      - {label: "One Click File", name: "install", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: 'mods'
     label: Mods
@@ -38,8 +38,8 @@ collections:
       - {label: "Author", name: author, widget: "string", required: true }
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Banner", name: "image", widget: "image"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
       - label: "Platforms"
         name: "platforms"
         widget: "select"
@@ -63,8 +63,8 @@ collections:
       - {label: "Author", name: author, widget: "string" }
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Banner", name: "image", widget: "image"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
       - label: "Platforms"
         name: "platforms"
         widget: "object"
