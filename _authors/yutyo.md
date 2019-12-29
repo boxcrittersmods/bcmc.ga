@@ -1,3 +1,3 @@
 ---
-title: yutyo
+title: Yutyo
 ---
