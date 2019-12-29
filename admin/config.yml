@@ -27,6 +27,7 @@ collections:
       - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
       - {label: "One Click File", name: "install", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: 'mods'
     label: Mods
     label_singular: Mod
@@ -56,6 +57,7 @@ collections:
           - { label: "Opera", value: "opera" }
       - {label: "Install URL", name: "install", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: 'projects'
     label: Projects
     label_singular: Project
@@ -107,6 +109,7 @@ collections:
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Discord", name: "discord", widget: "discord"}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: 'projects'
     label: Projects
     label_singular: Project
@@ -127,6 +130,7 @@ collections:
       - {label: "Link", name: "link", widget: "string", required: false}
       - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "posts"
     label: "Blog"
     folder: "/_posts/"
@@ -142,4 +146,4 @@ collections:
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Tags", name: "categories", widget: "list"}
       - {label: "Teaser Text", name: "excerpt", widget: "text", required: true}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
