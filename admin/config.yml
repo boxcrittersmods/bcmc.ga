@@ -112,6 +112,7 @@ collections:
     label_singular: Project
     media_folder: "media/projects/"
     folder: _projects
+    create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Authors"
