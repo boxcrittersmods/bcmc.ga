@@ -125,7 +125,7 @@ collections:
       - {label: "Banner", name: "image", widget: "image", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Link", name: "link", widget: "string", required: false}
-      - {label: "Discord", name: "discord", widget: "discord", required: false}
+      - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
   - name: "posts"
     label: "Blog"
