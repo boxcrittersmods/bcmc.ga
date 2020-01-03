@@ -48,7 +48,7 @@
     {% if page.noindex %}
     <meta name="robots" content="noindex" />
     {% endif %}
-    <title>{{site.title}}</title>
+    <title>{% unless page.title == "Home" %}{{ page.title }} - {% endunless %}{{ site.title }}{% if page.title == "Home" %} - (site.description)}</title>
 
     <!--Stylesheets-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
