@@ -1,7 +1,7 @@
 ---
 title: The Koala Texture
 author:
-  - The Human Target
+  - TheHumanTarget
   - CutieJea
 description: >-
   The idea of this texture pack was created by CutieJea for a Charity Stream and
