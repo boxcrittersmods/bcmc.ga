@@ -1,3 +1,3 @@
 ---
-title: The Human Target
+title: TheHumanTarget
 ---
