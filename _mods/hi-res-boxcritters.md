@@ -1,5 +1,7 @@
 ---
 title: Hi-Res-Boxcritters
+author:
+  - SArpnt
 description: Fixes blurriness
 date: 2020-03-18T23:14:45.628Z
 platforms:
