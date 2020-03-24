@@ -11,7 +11,7 @@ layout: null
   <link>{{site.url}}/{{ collection.label }}</link>
   {% for item in current_collection %}
 <item>
-    <title>{{ item.title }}</title>
+    <title>{{ item.title|slugify }}</title>
     {% for author in item.author %}
 		<author><name>{{ author }}</name></author>
     {% endfor %}
