@@ -17,7 +17,7 @@ layout: null
     {% endfor %}
 		{% if item.date %}<date>{{item.date}}</date>{% endif %}
 		{% if item.excerpt %}<excerpt>
-			{{ itemt.excerpt }}
+			{{ item.excerpt }}
 		</excerpt>{% endif %}
 		<url>{{ item.url }}</url>
 		<content>
