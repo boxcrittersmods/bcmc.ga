@@ -1,0 +1,44 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+{% for collection in site.collections %}
+<channel>
+{% assign current_collection=site[collection.label] %}
+  <title>{{ collection.label }}</title>
+  <link>{{site.url}}/{{ collection.label }}</link>
+  {% for item in current_collection %}
+<item>
+    <title>{{ item.title }}</title>
+    {% for author in item.author %}
+		<author><name>{{ author }}<name></author>
+    {% endfor %}
+		<date>{{item.date}}</date>
+		<excerpt>
+			{{ itemt.excerpt }}
+		</excerpt>
+		<url>{{ item.url }}</url>
+		<content>
+			{{ item.content }}
+		</content>
+  </item>
+{% endfor %}
+{% endfor %}
+  
+  {% endfor %}
+</channel>
+
+
+## {{ collection.label }}
+{% assign current_collection=site[collection.label] %}
+{% for item in current_collection %}
+{% assign start=collection.label %}
+{% capture start_url %}{{ item.url | remove_first: '/' | remove_first: start }}{% endcapture %}
+{% capture word_count %}{{ start_url | split: '/' | size }}{% endcapture %}
+{% assign word_count = word_count | minus: '1' %}
+*  [{{ item.title }}]({{ item.url }})
+{% endfor %}
+{% endfor %}
+</rss>
