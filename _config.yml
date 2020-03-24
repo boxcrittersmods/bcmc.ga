@@ -74,7 +74,7 @@ defaults:
     path: ""
     type: mods
   values:
-    layout: mod
+    layout: project
     comments: true
     list: true
 - scope:

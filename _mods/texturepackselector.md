@@ -5,6 +5,7 @@ author:
 - TumbleGamer
 date: 2019-04-25
 source: https://github.com/boxcritters/bc-texture-pack-manager
+recommend: true
 browser:
 - name: chrome
   install: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
@@ -13,6 +14,9 @@ browser:
 - name: opera
   install: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
 redirect_from:
+  - /projects/texturepackselector/
+  - /projects/texturepackmanager/
+  - /projects/texture-pack-manager/
   - /tools/texturepackselector/
   - /tools/texturepackmanager/
   - /tools/texture-pack-manager/

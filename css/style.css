@@ -72,6 +72,12 @@ height:75vh;
 .carousel-item.video:hover:before {
   display: none;
 }
+carousel-item.video:hover {
+	position: relative;
+}
+.carousel-item.video:hover > .carousel-caption {
+	background-color: black;
+}
 
 .carousel-item.video:hover > .carousel-caption * {
   color:white;

@@ -4,8 +4,9 @@ author:
   - SArpnt
 description: Fixes blurriness
 date: 2020-03-18T23:14:45.628Z
-logo: /uploads/mods/hi-res.png
+icon: /uploads/mods/hi-res.png
 image: /uploads/mods/hi-res.png
+recommend: true
 platforms:
   - chrome
   - firefox

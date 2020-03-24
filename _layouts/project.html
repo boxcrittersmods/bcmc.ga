@@ -1,37 +1,62 @@
 ---
 layout: item
 ---
-<div class="container page-content card card-body">
-    <div class="card-title">
-            <div class="project-info">
-                {% if page.browser %}
-                <div class="text-muted browser-list">
-                    {% for brow in page.browser %}
-                    <a href="{{brow.install}}" class="btn btn-primary browser-{{brow.name}}">Install for {{brow.name}}</a>
-                    {% endfor %}
-                    <span class="browser-none">This tool is not supported for your browser.</span>
-                </div>
-                {% endif %}
-                {% if page.os %}
-                <div class="text-muted os-list">
-                    {% for os in page.os %}
-                    <a href="{{os.install}}" class="btn btn-primary os-{{os.name}}">Install for {{os.name}}</a>
-                    {% endfor %}
-                    <span class="os-none">This tool is not supported for your Operating System.</span>
-                </div>
-                {% endif %}
-                {% if page.link %}<a class="btn btn-lg btn-primary" href="{{page.link}}">Website</a>{% endif %}
-                {% if page.source %}<a class="btn btn-secondary" href="{{page.source}}">Source</a>{% endif %}
-                {% if page.discord %}<a class="btn btn-secondary" href="{{page.discord}}">Discord</a>{% endif %}
-            </div>
-    </div>
-    <div class="card-title">
-        <div class="project-authors">
-            People Involved: {% include author-list.html authors=page.author %}
-        </div>
-    </div>
-	{% if content != "" %}
-	<div class="card">
-	{{content}}
+
+<div class="card">
+	<div class="card-body">
+	  <h5 class="card-title">{{page.title}}</h5>
+	  <p class="card-text">{{page.description}}</p>
 	</div>
-	{% endif %}
+  <div class="list-group list-group-flush">
+    <div class="list-group-item project-authors">
+      People Involved: {% include author-list.html authors=page.author %}
+    </div>
+    {% if page.platforms %}
+    <li class="list-group-item">
+      Supported browsers: {% for plat in page.platforms %}
+      <span>{{plat}}</span>
+      {% endfor %}
+    </li>
+    {% endif %}
+    <div class="list-group-item project-info">
+      {% if page.install %}
+      <a href="{{ page.install }}" class="btn btn-primary">Install</a>
+      {% endif %} {% if page.browser %}
+      <div class="text-muted browser-list">
+        {% for brow in page.browser %}
+        <a href="{{brow.install}}" class="btn btn-primary browser-{{brow.name}}"
+          >Install for {{brow.name}}</a
+        >
+        {% endfor %}
+        <span class="browser-none"
+          >This tool is not supported for your browser.</span
+        >
+      </div>
+      {% endif %} {% if page.os %}
+      <div class="text-muted os-list">
+        {% for os in page.os %}
+        <a href="{{os.install}}" class="btn btn-primary os-{{os.name}}"
+          >Install for {{os.name}}</a
+        >
+        {% endfor %}
+        <span class="os-none"
+          >This tool is not supported for your Operating System.</span
+        >
+      </div>
+      {% endif %} {% if page.link %}<a
+        class="btn btn-lg btn-primary"
+        href="{{page.link}}"
+        >Website</a
+      >{% endif %} {% if page.source %}<a
+        class="btn btn-secondary"
+        href="{{page.source}}"
+        >Source</a
+      >{% endif %} {% if page.discord %}<a
+        class="btn btn-secondary"
+        href="{{page.discord}}"
+        >Discord</a
+      >{% endif %}
+    </div>
+  </div>
+  <div class="card-body">{{content}}</div>
+</div>
