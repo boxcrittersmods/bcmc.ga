@@ -15,10 +15,10 @@ layout: null
     {% for author in item.author %}
 		<author><name>{{ author }}</name></author>
     {% endfor %}
-		<date>{{item.date}}</date>
-		<excerpt>
+		{% if item.date %}<date>{{item.date}}</date>{% endif %}
+		{% if item.excerpt %}<excerpt>
 			{{ itemt.excerpt }}
-		</excerpt>
+		</excerpt>{% endif %}
 		<url>{{ item.url }}</url>
 		<content>
 			{{ item.content }}
