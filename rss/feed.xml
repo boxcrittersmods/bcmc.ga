@@ -13,7 +13,7 @@ layout: null
 <item>
     <title>{{ item.title }}</title>
     {% for author in item.author %}
-		<author><name>{{ author }}<name></author>
+		<author><name>{{ author }}</name></author>
     {% endfor %}
 		<date>{{item.date}}</date>
 		<excerpt>
