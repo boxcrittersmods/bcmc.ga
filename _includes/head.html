@@ -52,8 +52,10 @@
 
     <!--Stylesheets-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="/css/bcmc-style.css">
+	<link rel="stylesheet" href="/css/style.css">
 
     {% capture seo %}
     {% seo %}
@@ -68,7 +70,9 @@
     {% else %}
     {{ seo }}
     {% endif %}
-    <script>const SITE_URL = "{{site.url}}";</script>
-    <script>const PAGE_AUTHOR = "{{page.author}}";</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+	const SITE_URL = "{{site.url}}";
+	const PAGE_AUTHOR = "{{page.author}}";
+	var SCROLL_HEAD_SIZE=0;
+	</script>
 </head>

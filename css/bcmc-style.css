@@ -1,0 +1,276 @@
+/*vars and colors*/
+:root {
+	--bcmc-light-accent: #ccaa55;
+	--bcmc-main: #55cc11;
+	--bcmc-accent: #ffcc00;
+	--bcmc-dark: #223333;
+}
+
+/***************
+Reset and Basics
+****************/
+html {
+	scroll-behavior: smooth;
+}
+html,
+body {
+	display: flex;
+	flex-flow: column;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/***********
+Fundamentals
+************/
+/*HEADERS*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--bcmc-main);
+	font-weight: bold;
+}
+/*LINKS*/
+a:link,
+a:visited {
+	text-decoration: none;
+	color: var(--bcmc-main);
+	font-weight: bold;
+}
+a:hover {
+	color: var(--bcmc-dark);
+}
+/*BUTTONS*/
+button,
+a.bcmc-btn {
+	background-color: var(--bcmc-accent);
+	padding: 16px;
+	color: black;
+	border: none;
+	text-decoration: none;
+	font-weight: bold;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+button:hover,
+a.bcmc-btn:hover {
+	background-color: var(--bcmc-light-accent);
+}
+
+/* Lists*/
+ul.wo-nobullets {
+	list-style-type: none;
+}
+
+.bcmc-sitetitle {
+	position: static;
+    display: block;
+    width: auto;
+}
+.bcmc-container {
+	width:100%;
+	max-width:1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/********
+MOBILE
+*********/
+
+.bcmc-main {
+	flex: 1;
+    background-image: url("/uploads/bg.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.bcmc-footer {
+	background: var(--bcmc-main);
+	color:white;
+	display:flex;
+	align-items: center;
+    height: 60px;
+    line-height: 60px;
+}
+.bcmc-footer a {
+	color:white;
+}
+.bcmc-footer * {
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.bcmc-header {
+    position: fixed;
+	/* background-color: rgba(255, 255, 255, 0.4); */
+	background-color: transparent;
+    z-index: 100;
+	box-shadow: none;
+	width:100%;
+}
+.bcmc-header.fixed,.bcmc-header:hover {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+	background-color: var(--bcmc-main);
+}
+.bcmc-header a,.bcmc-header.fixed {
+	color:white !important;
+}
+
+.bcmc-header .bcmc-logo,
+.bcmc-header.fixed .bcmc-logo-white,
+.bcmc-header:hover .bcmc-logo-white {
+	display: inline;
+}
+.bcmc-header.fixed .bcmc-logo,
+.bcmc-header:hover .bcmc-logo,
+.bcmc-header .bcmc-logo-white {
+	display: none;
+}
+
+
+.bcmc-sitetitle img {
+	max-width: 100%;
+	height:50px;
+}
+
+.bcmc-sitetitle * {
+	font-size: 1.6em;
+	text-align: center;
+}
+
+.page-header {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: black;
+  }
+  
+  .page-header.media {
+	height: 20vh;
+	/*min-height: 25rem;*/
+	transition: height 0.5s;
+  }
+  
+  .page-header .page-header-media {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .page-header .container {
+	position: relative;
+	z-index: 2;
+  }
+  
+  .page-header .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 1;
+	transition: opacity 0.5s;
+  }
+  
+  .page-header.media:hover {
+	height: 75vh;
+  }
+  .page-header.media:hover .overlay {
+	opacity: 0;
+  }
+  
+  .page-header.video:hover .overlay {
+	display: none;
+  }
+  
+  .page-header.video:hover > .container {
+	display: none;
+	color:white;
+	text-shadow: 2px 2px 4px #000000;
+  }
+
+
+
+  .home {
+	max-width:100%;
+	  width: 1466px;
+	  display: flex;
+	  flex:wrap;
+	  margin-left: auto;
+  }
+  
+
+[class*="browser-"] {
+	display: none;
+  }
+  .browser-list {
+	display: inline;
+  }
+  .browser-none {
+	display: inline;
+  }
+
+/********
+TABLET
+*********/
+@media (min-width: 768px) {
+	
+	.sidebar {
+		width: 30%;
+		max-width:100%;
+}
+.home-main {
+	width:69%;
+	max-width:100%;
+}
+.home {
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+
+}
+@media (max-width: 1024px) {
+	
+a.bcmc-sitetitle {
+	position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+}
+
+/**
+PC
+**/
+@media (mid-width: 1024px) {
+}

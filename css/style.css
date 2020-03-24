@@ -1,32 +1,5 @@
 html, body {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: block;
-    overflow-x: hidden;
-    background-image: url("/uploads/bg.png");
 }
-
-.navbar {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
-}
-
-.navbar,.footer {
-  background-color: #53C81D;
-}
-.footer * {
-  color:white;
-}
-
-
-.sidebar * {
-  width:100%
-}
-
 .page-body {
     position: relative;
     min-height: 100vh;
@@ -35,29 +8,19 @@ html, body {
     padding-bottom: 85px;
 }
 
-.footer {
-    position: absolute;
-    left:0;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-  }
 
 .card {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-[class*="browser-"] {
-  display: none;
+.info-head {
+	display: flex;
+	align-items: baseline;
 }
-.browser-list {
-  display: inline;
-}
-.browser-none {
-  display: inline;
+.info-head * {
+	flex: 1;
+	margin: 0 3px;
 }
 
 /* .page-content {
@@ -121,68 +84,21 @@ height:75vh;
 /*==PAGE HEADER==*/
 
 
-.page-header {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 
-.page-header.media {
-  background-color: black;
-  height: 20vh;
-  /*min-height: 25rem;*/
-  transition: height 0.5s;
-}
-
-.page-header .page-header-media {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.page-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-.page-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-  transition: opacity 0.5s;
-}
-
-.page-header.media:hover {
-  height: 75vh;
-}
-.page-header.media:hover .overlay {
-  opacity: 0;
-}
-
-.page-header.video:hover .overlay {
-  display: none;
-}
-
-.page-header.video:hover > .container {
-  display: none;
-  color:white;
-  text-shadow: 2px 2px 4px #000000;
-}
 
 .logged-in {
   display: none;
+}
+
+.content-list {
+	display: flex;
+	align-items: flex-start;
+}
+.content-list >* {
+	flex:1;
+	margin: 4px;
+}
+
+.content-list.row {
+	flex-flow: row;
 }

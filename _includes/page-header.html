@@ -1,6 +1,6 @@
 {% assign defaultimg = '/favicon.ico' %}
-
-<div class="page-header bg-light {%if page.video %}video{% endif%} {% if page.image != defaultimg or page.video %}media{% endif %}">
+<script>SCROLL_HEAD_SIZE += 78</script>
+<div class="page-header {% if page.video %}video{% endif%} {% if page.image != defaultimg or page.video %}media{% endif %}" {% unless page.no-nav %}style="padding-top: 60px;"{% endunless %}>
     {% if page.video %}
     {% if page.video or page.image != 'defaultimg %}<div class="overlay"></div>{%endif%}
     <iframe width="800" height="400" class="page-header-media d-block w-100" src="{{page.video}}" frameborder="0"
@@ -16,7 +16,6 @@
             {%- comment -%}{% if page.video or page.image %}text-white{%endif%}{%- endcomment -%}
             <div class="w-100 {% if page.video or page.image != defaultimg %}text-white{%endif%}">
                 <h1 class="display-3">{{page.title}}</h1>
-                <p class="lead mb-0">{{page.description}}</p>
             </div>
         </div>
     </div>

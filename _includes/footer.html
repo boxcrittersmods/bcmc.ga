@@ -1,3 +1,3 @@
-<div class="footer">
-        <a href="https://discord.gg/D2ZpRUW">BoxCritters Modding Community</a>
-    </div>
+<footer class="bcmc-footer footer">
+	<p>{% for nav in site.data.footer %}<a href="{{nav.href}}">{{nav.name}}</a>{% endfor %}</p>
+</footer>

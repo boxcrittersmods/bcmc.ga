@@ -1,0 +1,40 @@
+{% if carousel %}
+<script>SCROLL_HEAD_SIZE += 725</script>
+<div id="homeCarousel" class=" page-header carousel slide" style="padding-top: 70px;" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% assign l = carousel|size|minus:1 %}
+    {% for i in (0..l) %}
+    <li data-target="#homeCarousel" data-slide-to="{{i}}" {% if forloop.first %}class="active" {% endif %}></li>
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner">
+    {% for item in carousel %}
+    <div class="carousel-item{% if item.video %} video{% endif %}{% if forloop.first %} active{% endif %}">
+      {% if item.video %}
+      <iframe width="800" height="400" class="d-block w-100" src="{{item.video}}" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% else %}
+      <a href="{{item.url}}">
+        <img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}"
+          class="d-block w-100 img-fluid">
+      </a>
+      {% endif %}
+      <div class="carousel-caption d-none d-md-block">
+        <a href="{{item.url}}">
+          <h3><span class="badge badge-primary badge-pill">{{item.collection}}</span> | {{item.title}}</h3>
+          <p>{{item.description}}</p>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endif %}

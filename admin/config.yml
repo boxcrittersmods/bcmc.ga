@@ -10,7 +10,7 @@ collections:
   - name: 'texturepacks'
     label: Texture Packs
     label_singular: Texture Pack
-    media_folder: "media/texturepacks/"
+    media_folder: "/uploads/texturepacks/"
     folder: _texturepacks
     create: true
     fields:
@@ -31,7 +31,7 @@ collections:
   - name: 'mods'
     label: Mods
     label_singular: Mod
-    media_folder: "media/mods/"
+    media_folder: "/uploads/mods/"
     folder: _mods
     create: true
     fields:
@@ -61,7 +61,7 @@ collections:
   - name: 'projects'
     label: Projects
     label_singular: Project
-    media_folder: "media/projects/"
+    media_folder: "/uploads/projects/"
     folder: _projects
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
