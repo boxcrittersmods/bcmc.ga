@@ -1,0 +1,9 @@
+{% if include.card %}
+<div class="card"><div class="card-body {% if page.video %}embed-responsive embed-responsive-16by9{% endif %}">{% endif %}
+	{% if page.video %}
+<iframe src="{{page.video}}" frameborder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% elsif page.image %}
+<img src="{{ page.image }}" class="img-fluid float-right" alt="">
+{% endif %}
+{% if include.card %}</div></div>{% endif %}

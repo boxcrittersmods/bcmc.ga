@@ -65,11 +65,11 @@ defaults:
 - scope:
     path: ""
   values:
-    image: /favicon.ico
     layout: basic
     featured: false
     comments: true
     list: false
+    show-nav: false
 - scope:
     path: ""
     type: mods
@@ -77,6 +77,7 @@ defaults:
     layout: project
     comments: true
     list: true
+    show-nav: true
 - scope:
     path: ""
     type: texturepacks
@@ -84,6 +85,7 @@ defaults:
     layout: texturepack
     comments: true
     list: true
+    show-nav: true
 - scope:
     path: ""
     type: tools
@@ -91,6 +93,7 @@ defaults:
     layout: tool
     comments: true
     list: true
+    show-nav: true
 - scope:
     path: ""
     type: posts
@@ -98,12 +101,14 @@ defaults:
     layout: post
     comments: true
     list: true
+    show-nav: true
 - scope:
     path: ""
     type: authors
   values:
     layout: author
     comments: true
+    show-nav: true
 - scope:
     path: ""
     type: projects
@@ -111,6 +116,7 @@ defaults:
     layout: project
     comments: true
     list: true
+    show-nav: true
 - scope:
     path: ""
     type: servers
@@ -118,4 +124,5 @@ defaults:
     layout: server
     comments: true
     list: true
+    show-nav: true
 

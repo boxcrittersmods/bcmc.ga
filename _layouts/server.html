@@ -1,8 +1,9 @@
 ---
 layout: item
 ---
-<div class="container page-content card card-body">
+<div class="card card-body">
         <div class="card-title">
+			{% include page-thumb.html %}
                 <div class="project-info">
                     {% if page.join %}<a class="btn btn-lg btn-success" href="{{page.join}}">Join</a>{% endif %}
                     {% if page.link %}<a class="btn btn-primary" href="{{page.link}}">Website</a>{% endif %}
