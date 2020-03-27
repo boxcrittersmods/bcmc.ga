@@ -1,30 +1,3 @@
-function getBrowser() {
-	var browser = 'unknown';
-	var agent = agent;
-	if ((agent.indexOf("Opera") || agent.indexOf('OPR')) != -1) {
-	  browser = 'Opera'
-	}
-	else if (agent.indexOf("Edge") != -1) {
-	  browser = 'Edge'
-	}
-	else if (agent.indexOf("Chrome") > -1) {
-	  browser = 'Chrome'
-	}
-	else if (agent.indexOf("Safari") > -1) {
-	  browser = 'Safari'
-	}
-	else if (agent.indexOf("Firefox") > -1) {
-	  browser = 'Firefox'
-	}
-	else if ((agent.indexOf("MSIE") > -1) || (!!document.documentMode == true)) //IF IE > 10
-	{
-	  browser = 'IE'
-	}
-	else {
-	  browser = 'unknown'
-	}
-	return browser;
-  }
 var agent = navigator.userAgent;
 
 // Opera 8.0+
