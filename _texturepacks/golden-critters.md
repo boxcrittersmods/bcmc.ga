@@ -1,0 +1,10 @@
+---
+title: Golden Critters
+author:
+  - Glitched0ut
+description: Turns your hampster golden
+date: 2020-03-27T14:01:07.281Z
+icon: /uploads/texturepacks/8fj2yfkttv9bgaaaaasuvork5cyii.png
+code: >-
+  eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJHb2xkZW4gQ3JpdHRlciIsImF1dGhvciI6IkdsaXRjaGVkMHV0IiwiZGVzY3JpcHRpb24iOiJUdXJucyBZb3VyIEhhbXBzdGVyIEdvbGRlbiEhIiwiaGFtc3RlciI6Imh0dHBzOi8vd3d3Lm1lZGlhZmlyZS5jb20vY29udmtleS9hYmFkL2NxZDFobHdpcWZsc3A2cHpnLmpwZyIsImRhdGUiOjE1ODUzMTMwMjM0NDIsInBhY2tWZXJzaW9uIjoiMC4xIn0=
+---
