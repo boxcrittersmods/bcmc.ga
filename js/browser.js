@@ -1,29 +1,64 @@
+function getBrowser() {
+	var browser = 'unknown';
+	var agent = agent;
+	if ((agent.indexOf("Opera") || agent.indexOf('OPR')) != -1) {
+	  browser = 'Opera'
+	}
+	else if (agent.indexOf("Edge") != -1) {
+	  browser = 'Edge'
+	}
+	else if (agent.indexOf("Chrome") > -1) {
+	  browser = 'Chrome'
+	}
+	else if (agent.indexOf("Safari") > -1) {
+	  browser = 'Safari'
+	}
+	else if (agent.indexOf("Firefox") > -1) {
+	  browser = 'Firefox'
+	}
+	else if ((agent.indexOf("MSIE") > -1) || (!!document.documentMode == true)) //IF IE > 10
+	{
+	  browser = 'IE'
+	}
+	else {
+	  browser = 'unknown'
+	}
+	return browser;
+  }
+var agent = navigator.userAgent;
+
 // Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+var isOpera =
+(!!window.opr && !!opr.addons) ||
+!!window.opera ||
+(agent.indexOf("Opera") ||
+agent.indexOf('OPR')) > -1;
 
 // Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined';
+var isFirefox = typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1;
 
 // Safari 3.0+ "[object HTMLElementConstructor]" 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+var isSafari = 
+/constructor/i.test(window.HTMLElement) |
+(function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 // Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
+var isIE = /*@cc_on!@*/false || !!document.documentMode || agent.indexOf("MSIE") > -1;
 
 // Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
+var isEdge = (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1;
 
 // Chrome 1 - 71
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+var isChrome = (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) || agent.indexOf("Chrome") > -1;
 
 // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+var isIOS = /iPhone|iPad|iPod/i.test(agent);
 
-var isAndroid = /Android/i.test(navigator.userAgent);
+var isAndroid = /Android/i.test(agent);
 
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
 
 var noneText = '<span class="browser-none">This tool is not supported on your browser.</span>';
 
