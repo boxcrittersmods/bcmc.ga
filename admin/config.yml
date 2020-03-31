@@ -84,7 +84,63 @@ collections:
         name: "author"
         widget: "list"
         field: {label: Author, name: author, widget: "string", required: true}
-  - name: "posts"
+
+  - name: 'mods'
+    label: Mods
+    label_singular: Mod
+    media_folder: "/uploads/Mods/"
+    folder: _mods
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - label: "Authors"
+        name: "author"
+        widget: "list"
+        field: {label: Author, name: author, widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
+      - label: "Platforms"
+        name: "platforms"
+        widget: "select"
+        multiple: true
+        options:
+            - { label: "Chrome", value: "chrome" }
+            - { label: "Firefox", value: "firefox" }
+            - { label: "Edge", value: "edge" }
+            - { label: "Safari", value: "safari" }
+            - { label: "Opera", value: "opera" }
+            - { label: "iOS", value: "ios" }
+            - { label: "Android", value: "android" }
+      - label: "Browser Specific Install"
+        name: "browser"
+        widget: "list"
+        fields:
+          - label: "Browser Name"
+            name: "browser"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Chrome", value: "chrome" }
+              - { label: "Firefox", value: "firefox" }
+              - { label: "Edge", value: "edge" }
+              - { label: "Safari", value: "safari" }
+              - { label: "Opera", value: "opera" }
+              - { label: "iOS", value: "ios" }
+              - { label: "Android", value: "android" }
+          - {label: Install URL, name: name, widget: "string", required: true}
+      - {label: "URL", name: "install", widget: "string", required: true}
+      - {label: "Source", name: "source", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Discord", name: "discord", widget: "string"}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
+      - label: "Authors"
+        name: "author"
+        widget: "list"
+        field: {label: Author, name: author, widget: "string", required: true}
+        - name: "posts"
     label: "Blog"
     folder: "/_posts/"
     label_singular: Blog Post
