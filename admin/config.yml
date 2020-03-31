@@ -46,13 +46,9 @@ collections:
       - {label: "Banner", name: "image", widget: "image", required: false}
       - label: "Platforms"
         name: "platforms"
-        widget: "object"
-        fields:
-        - label: "Platform Name"
-          name: "name"
-          widget: "select"
-          required: false
-          options:
+        widget: "select"
+        multiple: true
+        options:
             - { label: "Chrome", value: "chrome" }
             - { label: "Firefox", value: "firefox" }
             - { label: "Edge", value: "edge" }
@@ -60,7 +56,6 @@ collections:
             - { label: "Opera", value: "opera" }
             - { label: "iOS", value: "ios" }
             - { label: "Android", value: "android" }
-        - {label: "URL", name: "install", widget: "string", required: true}
       - label: "Browser Specific Install"
         name: "browser"
         widget: "list"
