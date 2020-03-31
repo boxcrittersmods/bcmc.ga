@@ -9,7 +9,6 @@ description: >-
   (for example turning the sword into a head item, so you can wear another hand
   item with it without any problem)
 date: 2020-03-31T15:43:35.932Z
-platforms:
-  - chrome
-install: 'about:blank'
+browser:
+- firefox: https://addons.mozilla.org/en-US/firefox/addon/bc-multi-item/
 ---
