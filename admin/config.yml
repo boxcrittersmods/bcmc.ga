@@ -29,37 +29,6 @@ collections:
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-  - name: 'mods'
-    label: Mods
-    label_singular: Mod
-    media_folder: "/uploads/mods/"
-    folder: _mods
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-        field: {label: Author, name: author, widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "text", required: true}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Icon", name: "icon", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - label: "Platforms"
-        name: "platforms"
-        widget: "select"
-        required: true
-        multiple: true
-        options:
-          - { label: "Chrome", value: "chrome" }
-          - { label: "Firefox", value: "firefox" }
-          - { label: "Edge", value: "edge" }
-          - { label: "Safari", value: "safari" }
-          - { label: "Opera", value: "opera" }
-      - {label: "Install URL", name: "install", widget: "string", required: true}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: 'projects'
     label: Projects
     label_singular: Project
@@ -82,7 +51,7 @@ collections:
         - label: "Platform Name"
           name: "name"
           widget: "select"
-          required: true
+          required: false
           options:
             - { label: "Chrome", value: "chrome" }
             - { label: "Firefox", value: "firefox" }
@@ -92,48 +61,34 @@ collections:
             - { label: "iOS", value: "ios" }
             - { label: "Android", value: "android" }
         - {label: "URL", name: "install", widget: "string", required: true}
-      - label: "OS"
-        name: "os"
-        widget: "object"
+      - label: "Browser Specific Install"
+        name: "browser"
+        widget: "list"
         fields:
-        - label: "OS Name"
-          name: "name"
-          widget: "select"
-          required: true
-          options:
-            - { label: "Windows", value: "windows" }
-            - { label: "Mac", value: "mac" }
-            - { label: "Linux", value: "linux" }
-            - { label: "iOS", value: "ios" }
-            - { label: "Android", value: "android" }
-        - {label: "URL", name: "install", widget: "string", required: true}
+          - label: "Browser Name"
+            name: "browser"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Chrome", value: "chrome" }
+              - { label: "Firefox", value: "firefox" }
+              - { label: "Edge", value: "edge" }
+              - { label: "Safari", value: "safari" }
+              - { label: "Opera", value: "opera" }
+              - { label: "iOS", value: "ios" }
+              - { label: "Android", value: "android" }
+          - {label: Install URL, name: name, widget: "string", required: true}
+      - {label: "URL", name: "install", widget: "string", required: true}
       - {label: "Source", name: "source", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Discord", name: "discord", widget: "discord"}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-  - name: 'projects'
-    label: Projects
-    label_singular: Project
-    media_folder: "media/projects/"
-    folder: _projects
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Authors"
         name: "author"
         widget: "list"
         field: {label: Author, name: author, widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "text", required: true}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - {label: "Source", name: "source", widget: "string", required: false}
-      - {label: "Link", name: "link", widget: "string", required: false}
-      - {label: "Discord", name: "discord", widget: "string", required: false}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "posts"
     label: "Blog"
     folder: "/_posts/"
