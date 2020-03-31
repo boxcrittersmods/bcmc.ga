@@ -10,6 +10,6 @@ description: >-
   item with it without any problem)
 date: 2020-03-31T15:43:35.932Z
 platforms:
-  - chrome
+  - firefox
 install: 'about:blank'
 ---
