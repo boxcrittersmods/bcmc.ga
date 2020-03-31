@@ -140,7 +140,7 @@ collections:
         name: "author"
         widget: "list"
         field: {label: Author, name: author, widget: "string", required: true}
-        - name: "posts"
+  - name: "posts"
     label: "Blog"
     folder: "/_posts/"
     label_singular: Blog Post
