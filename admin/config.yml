@@ -34,6 +34,7 @@ collections:
     label_singular: Project
     media_folder: "/uploads/projects/"
     folder: _projects
+    create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Authors"
@@ -90,6 +91,7 @@ collections:
     label_singular: Mod
     media_folder: "/uploads/Mods/"
     folder: _mods
+    create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Authors"
