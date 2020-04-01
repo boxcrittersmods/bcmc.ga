@@ -74,7 +74,7 @@ collections:
               - { label: "iOS", value: "ios" }
               - { label: "Android", value: "android" }
           - {label: Install URL, name: name, widget: "string", required: true}
-      - {label: "URL", name: "install", widget: "string", required: true}
+      - {label: "InstallURL", name: "install", widget: "string", required: true}
       - {label: "Source", name: "source", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Discord", name: "discord", widget: "string"}
@@ -89,7 +89,7 @@ collections:
   - name: 'mods'
     label: Mods
     label_singular: Mod
-    media_folder: "/uploads/Mods/"
+    media_folder: "/uploads/mods/"
     folder: _mods
     create: true
     fields:
