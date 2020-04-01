@@ -73,11 +73,11 @@ collections:
               - { label: "Opera", value: "opera" }
               - { label: "iOS", value: "ios" }
               - { label: "Android", value: "android" }
-          - {label: Install URL, name: name, widget: "string", required: true}
-      - {label: "InstallURL", name: "install", widget: "string", required: true}
-      - {label: "Source", name: "source", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Discord", name: "discord", widget: "string"}
+          - {label: "Install URL", name: "install", widget: "string", required: true}
+      - {label: "InstallURL", name: "install", widget: "string", required: false}
+      - {label: "Source", name: "source", widget: "string", required: false}
+      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
@@ -131,10 +131,10 @@ collections:
               - { label: "iOS", value: "ios" }
               - { label: "Android", value: "android" }
           - {label: Install URL, name: name, widget: "string", required: true}
-      - {label: "URL", name: "install", widget: "string", required: true}
-      - {label: "Source", name: "source", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
-      - {label: "Discord", name: "discord", widget: "string"}
+      - {label: "URL", name: "install", widget: "string", required: false}
+      - {label: "Source", name: "source", widget: "string", required: false}
+      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
