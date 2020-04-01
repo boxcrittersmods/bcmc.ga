@@ -49,6 +49,7 @@ collections:
         name: "platforms"
         widget: "select"
         multiple: true
+        required: false
         options:
             - { label: "Chrome", value: "chrome" }
             - { label: "Firefox", value: "firefox" }
@@ -106,6 +107,7 @@ collections:
         name: "platforms"
         widget: "select"
         multiple: true
+        required: false
         options:
             - { label: "Chrome", value: "chrome" }
             - { label: "Firefox", value: "firefox" }
