@@ -3,9 +3,9 @@ title: CrittersBox
 author:
   - Sxip
   - Minad
-description: We wrote the whole server in TypeScript, it will eventually have
-  plugin support. We also added custom name colours, etc to the client as well
-  as a chatbox that shows the recent messages
+description: CritterBox is a server implementation of Box Critters written in
+  TypeScript. The aim of this project is to create a server that is fun,
+  customizable, and easy to use.
 date: 2020-04-12T16:13:19.810Z
 image: /uploads/projects/critterbox.png
 platforms:
