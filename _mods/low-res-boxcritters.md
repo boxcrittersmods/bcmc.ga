@@ -19,6 +19,6 @@ platforms:
   - opera
 install: >-
   https://cdn.discordapp.com/attachments/619915848391589907/694915144857288824/Low-Res_boxcritters.user.js
-featured: true
-recommend: true
+featured: false
+recommend: false
 ---
