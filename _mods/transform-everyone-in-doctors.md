@@ -13,5 +13,5 @@ platforms:
   - opera
   - ios
   - android
-link: "Everyone will be a doctor! #StayHome"
+link: https://greasyfork.org/scripts/401849-transform-everyone-in-doctors/code/Transform%20everyone%20in%20doctors.user.js
 ---
