@@ -4,6 +4,7 @@ author:
   - Gasegamer
 description: "Everyone will be a doctor! #StayHome"
 date: 2020-04-24T20:28:46.913Z
+image: /uploads/mods/bcdoctoreveryone.png
 platforms:
   - chrome
   - firefox
