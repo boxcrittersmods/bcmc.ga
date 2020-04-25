@@ -13,5 +13,4 @@ platforms:
 browser:
   - browser: firefox
     install: https://addons.mozilla.org/en-US/firefox/addon/bc-multi-item/
-install: ""
 ---
