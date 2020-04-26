@@ -8,6 +8,6 @@ date: 23-04-2020
 code:
 install: >-
   https://raw.githubusercontent.com/zizzle8383/TexturePack2/master/PirateIsland.bctp.json
-featured: true
+featured: false
 ---
 
