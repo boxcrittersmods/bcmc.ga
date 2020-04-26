@@ -1,5 +1,4 @@
 {
-  "version": "2",
   "name": "Halloween Tavern",
   "author": "Icy",
   "date": "2019-10-02",
@@ -107,9 +106,9 @@
   "ux": "",
   "bridgeBackground": "",
   "bridgeProps": "",
-  "tavernProps": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_ss.png",
-  "tavernBG": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_bg.png",
-  "tavernFG": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_fg.png",
+  "tavern_sprites": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_ss.png",
+  "tavern_bg": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_bg.png",
+  "tavern_fg": "https://www.backgrounds.boxcritterslive.com/HalloweenTavern2019/tavern_fg.png",
   "critterball_sprites_512x512": "",
   "player_1": "",
   "player_2": "",
