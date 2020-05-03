@@ -1,0 +1,13 @@
+---
+layout: default
+title: Shaders
+---
+{% assign carousel=site.shaders| sort: "date","last" | reverse | where: "featured","true" %}
+{% include home-carousel.html %}
+{% include page-header-noimg.html no-nav=true %}
+<div class="container page-content">
+{% assign tps = site.shaders | reverse %}
+{% for shaders in tps %}
+{% include listing-hor.html item=shaders %}
+{% endfor %}
+</div>

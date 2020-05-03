@@ -29,6 +29,28 @@ collections:
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: 'shaders'
+    label: Shaders
+    label_singular: Shader
+    media_folder: "/uploads/shaders/"
+    folder: _shaders
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - label: "Authors"
+        name: "author"
+        widget: "list"
+        field: {label: Author, name: author, widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Icon", name: "icon", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "YTVideo", name: "video", widget: "string", required: false}
+      - {label: "Shader Console Paste", name: "code", widget: "text", required: false}
+      - {label: "One Click File", name: "install", widget: "string", required: false}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: 'projects'
     label: Projects
     label_singular: Project

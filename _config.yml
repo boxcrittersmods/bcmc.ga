@@ -12,6 +12,8 @@ collections:
     output: true
   texturepacks:
     output: true
+  shaders:
+    output: true
   tools:
     output: true
   authors:
@@ -83,6 +85,14 @@ defaults:
     type: texturepacks
   values:
     layout: texturepack
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: shaders
+  values:
+    layout: shader
     comments: true
     list: true
     show-nav: true
