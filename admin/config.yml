@@ -1,11 +1,11 @@
 backend:
   name: github
   repo: boxcritters/boxcritters.github.io
-  base_url: https://bc-mod-api.herokuapp.com
+  base_url: https://api.boxcritters.ga
 media_folder: "uploads"
 show_preview_links: true
 publish_mode: editorial_workflow
-logo_url: http://boxcritters.github.io/uploads/logo.png
+logo_url: http://boxcrittersmods.ga/uploads/logo.png
 collections:
   - name: 'texturepacks'
     label: Texture Packs
