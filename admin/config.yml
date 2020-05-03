@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: boxcritters/boxcritters.github.io
+  repo: boxcritters/boxcrittersmods.ga
   base_url: https://api.boxcritters.ga
 media_folder: "uploads"
 show_preview_links: true
