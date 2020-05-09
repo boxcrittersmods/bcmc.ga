@@ -117,3 +117,11 @@ collections:
       - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
+  - name: 'authors'
+    label: Authors
+    label_singular: Author
+    media_folder: "/uploads/authors/"
+    folder: _authors
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string", required: true}
