@@ -1,12 +1,15 @@
 ---
 layout: item
 ---
-
+{% if page.tampermonkey %}
+<div class="alert alert-warning card" role="alert">
+    <h4 class="alert-heading">Important</h4>
+    <p>To install thsi mod you will first need to install <a href="/tampermonkey/">Tampermonkey</a></p>
+  </div>
+{% endif %}
 <div class="card">
 	<div class="card-body">
 		{% include page-thumb.html %}
-	
-
 	  <h5 class="card-title">{{page.title}}</h5>
 	  <p class="card-text">{{page.description}}</p>
 	</div>
@@ -14,39 +17,35 @@ layout: item
     <div class="list-group-item project-authors">
       People Involved: {% include author-list.html authors=page.author %}
     </div>
-    {% if page.platforms %}
-    <li class="list-group-item">
-      Supported browsers: {% for plat in page.platforms %}
-      <span>{{plat}}</span>
-      {% endfor %}
-    </li>
-    {% endif %}
     <div class="list-group-item project-info">
       {% if page.install %}
       <a href="{{ page.install }}" class="btn btn-primary">Install</a>
       {% endif %} {% if page.browser %}
       <div class="text-muted browser-list">
-        {% for brow in page.browser %}
-        <a href="{{brow.install}}" class="btn btn-primary browser-{{brow.name}}"
-          >Install for {{brow.name}}</a
-        >
-        {% endfor %}
-        <span class="browser-none"
-          >This tool is not supported for your browser.</span
-        >
+		{% if page.browser.chrome %}
+		<a href="{{page.browser.chrome}}"></a>
+		{% endif %}
+		{% if page.browser.firefox %}
+		<a href="{{page.browser.firefox}}"></a>
+		{% endif %}
+		{% if page.browser.edge %}
+		<a href="{{page.browser.edge}}"></a>
+		{% endif %}
+		{% if page.browser.safari %}
+		<a href="{{page.browser.safari}}"></a>
+		{% endif %}
+		{% if page.browser.opera %}
+		<a href="{{page.browser.opera}}"></a>
+		{% endif %}
+		{% if page.browser.ios %}
+		<a href="{{page.browser.ios}}"></a>
+		{% endif %}
+		{% if page.browser.android %}
+		<a href="{{page.browser.android}}"></a>
+		{% endif %}
+        <span class="browser-none">This project is not supported for your browser.</span>
       </div>
-      {% endif %} {% if page.os %}
-      <div class="text-muted os-list">
-        {% for os in page.os %}
-        <a href="{{os.install}}" class="btn btn-primary os-{{os.name}}"
-          >Install for {{os.name}}</a
-        >
-        {% endfor %}
-        <span class="os-none"
-          >This tool is not supported for your Operating System.</span
-        >
-      </div>
-      {% endif %} {% if page.link %}<a
+      {% endif %}{% if page.link %}<a
         class="btn btn-lg btn-primary"
         href="{{page.link}}"
         >Website</a

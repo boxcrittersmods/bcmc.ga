@@ -8,12 +8,6 @@ install: https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.use
 icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
 featured: false
 recommend: true
-platforms:
-    - Chrome
-    - Firefox
-    - Safari
-    - Opera
-    - Edge
 ---
 ## INSTALLATION INSTRUCTIONS
 

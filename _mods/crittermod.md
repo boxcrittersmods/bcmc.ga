@@ -16,9 +16,6 @@ description: >-
      - /moveto [x] [y]  -moves to specific coordinates
 date: 2019-06-19T16:51:38.167Z
 icon: /uploads/purplebcl.png
-platforms:
-  - chrome
-install: >-
-  https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
+install: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
 ---
 

@@ -11,7 +11,6 @@ date: 2020-03-31T15:43:35.932Z
 platforms:
   - firefox
 browser:
-  - browser: firefox
-    install: https://addons.mozilla.org/en-US/firefox/addon/bc-multi-item/
+  firefox: https://addons.mozilla.org/en-US/firefox/addon/bc-multi-item/
 install: https://greasyfork.org/en/scripts/401102-multi-item-mod
 ---

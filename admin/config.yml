@@ -67,48 +67,24 @@ collections:
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image", required: false}
       - {label: "Banner", name: "image", widget: "image", required: false}
-      - label: "Platforms"
-        name: "platforms"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-            - { label: "Chrome", value: "chrome" }
-            - { label: "Firefox", value: "firefox" }
-            - { label: "Edge", value: "edge" }
-            - { label: "Safari", value: "safari" }
-            - { label: "Opera", value: "opera" }
-            - { label: "iOS", value: "ios" }
-            - { label: "Android", value: "android" }
       - label: "Browser Specific Install"
         name: "browser"
         widget: "list"
         fields:
-          - label: "Browser Name"
-            name: "browser"
-            widget: "select"
-            required: false
-            options:
-              - { label: "Chrome", value: "chrome" }
-              - { label: "Firefox", value: "firefox" }
-              - { label: "Edge", value: "edge" }
-              - { label: "Safari", value: "safari" }
-              - { label: "Opera", value: "opera" }
-              - { label: "iOS", value: "ios" }
-              - { label: "Android", value: "android" }
-          - {label: "Install URL", name: "install", widget: "string", required: true}
+          - { label: "Chrome", value: "chrome" , widget: "string", required: false}
+          - { label: "Firefox", value: "firefox",  widget: "string", required: false}
+          - { label: "Edge", value: "edge",  widget: "string", required: false}
+          - { label: "Safari", value: "safari",  widget: "string", required: false}
+          - { label: "Opera", value: "opera",  widget: "string", required: false}
+          - { label: "iOS", value: "ios",  widget: "string", required: false}
+          - { label: "Android", value: "android",  widget: "string", required: false}
       - {label: "Install URL", name: "install", widget: "string", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
-      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-        field: {label: Author, name: author, widget: "string", required: true}
-
   - name: 'mods'
     label: Mods
     label_singular: Mod
@@ -125,60 +101,21 @@ collections:
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image", required: false}
       - {label: "Banner", name: "image", widget: "image", required: false}
-      - label: "Platforms"
-        name: "platforms"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-            - { label: "Chrome", value: "chrome" }
-            - { label: "Firefox", value: "firefox" }
-            - { label: "Edge", value: "edge" }
-            - { label: "Safari", value: "safari" }
-            - { label: "Opera", value: "opera" }
-            - { label: "iOS", value: "ios" }
-            - { label: "Android", value: "android" }
       - label: "Browser Specific Install"
         name: "browser"
         widget: "list"
         fields:
-          - label: "Browser Name"
-            name: "browser"
-            widget: "select"
-            required: false
-            options:
-              - { label: "Chrome", value: "chrome" }
-              - { label: "Firefox", value: "firefox" }
-              - { label: "Edge", value: "edge" }
-              - { label: "Safari", value: "safari" }
-              - { label: "Opera", value: "opera" }
-              - { label: "iOS", value: "ios" }
-              - { label: "Android", value: "android" }
-          - {label: Install URL, name: "install", widget: "string", required: true}
-      - {label: "URL", name: "install", widget: "string", required: false}
+          - { label: "Chrome", value: "chrome" , widget: "string", required: false}
+          - { label: "Firefox", value: "firefox",  widget: "string", required: false}
+          - { label: "Edge", value: "edge",  widget: "string", required: false}
+          - { label: "Safari", value: "safari",  widget: "string", required: false}
+          - { label: "Opera", value: "opera",  widget: "string", required: false}
+          - { label: "iOS", value: "ios",  widget: "string", required: false}
+          - { label: "Android", value: "android",  widget: "string", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
-      - {label: "Link", name: "link", widget: "string", required: false}
       - {label: "Discord", name: "discord", widget: "string", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-        field: {label: Author, name: author, widget: "string", required: true}
-  - name: "posts"
-    label: "Blog"
-    folder: "/_posts/"
-    label_singular: Blog Post
-    media_folder: "media/{{year}}/{{month}}/{{day}}/"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string", default: "BCMC Team"}
-      - {label: "Date", name: "date", widget: "datetime", default: "post"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Tags", name: "categories", widget: "list"}
-      - {label: "Teaser Text", name: "excerpt", widget: "text", required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: false}

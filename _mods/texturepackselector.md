@@ -7,12 +7,9 @@ date: 2019-04-25
 source: https://github.com/boxcritters/bc-texture-pack-manager
 recommend: true
 browser:
-- name: chrome
-  install: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
-- name: firefox
-  install: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
-- name: opera
-  install: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
+  chrome: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
+  firefox: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
+  opera: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
 redirect_from:
   - /projects/texturepackselector/
   - /projects/texturepackmanager/
