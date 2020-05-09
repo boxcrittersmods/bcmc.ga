@@ -12,5 +12,6 @@ platforms:
   - firefox
 browser:
   firefox: https://addons.mozilla.org/en-US/firefox/addon/bc-multi-item/
+userscript: true
 install: https://greasyfork.org/scripts/401102-multi-item-mod/code/Multi-Item%20mod.user.js
 ---
