@@ -23,25 +23,25 @@ layout: item
       {% endif %} {% if page.browser %}
       <div class="text-muted browser-list">
 		{% if page.browser.chrome %}
-		<a href="{{page.browser.chrome}}"></a>
+		<a href="{{page.browser.chrome}}" class="browser-chrome"></a>
 		{% endif %}
 		{% if page.browser.firefox %}
-		<a href="{{page.browser.firefox}}"></a>
+		<a href="{{page.browser.firefox}}" class="browser-firefox"></a>
 		{% endif %}
 		{% if page.browser.edge %}
-		<a href="{{page.browser.edge}}"></a>
+		<a href="{{page.browser.edge}}" class="browser-edge"></a>
 		{% endif %}
 		{% if page.browser.safari %}
-		<a href="{{page.browser.safari}}"></a>
+		<a href="{{page.browser.safari}}" class="browser-safari"></a>
 		{% endif %}
 		{% if page.browser.opera %}
-		<a href="{{page.browser.opera}}"></a>
+		<a href="{{page.browser.opera}}" class="browser-opera"></a>
 		{% endif %}
 		{% if page.browser.ios %}
-		<a href="{{page.browser.ios}}"></a>
+		<a href="{{page.browser.ios}}" class="browser-ios"></a>
 		{% endif %}
 		{% if page.browser.android %}
-		<a href="{{page.browser.android}}"></a>
+		<a href="{{page.browser.android}}" class="browser-android"></a>
 		{% endif %}
         <span class="browser-none">This project is not supported for your browser.</span>
       </div>
