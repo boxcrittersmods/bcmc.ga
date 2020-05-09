@@ -69,13 +69,13 @@ collections:
         name: "browser"
         widget: "object"
         fields:
-          - { label: "Chrome", value: "chrome" , widget: "string", required: false}
-          - { label: "Firefox", value: "firefox",  widget: "string", required: false}
-          - { label: "Edge", value: "edge",  widget: "string", required: false}
-          - { label: "Safari", value: "safari",  widget: "string", required: false}
-          - { label: "Opera", value: "opera",  widget: "string", required: false}
-          - { label: "iOS", value: "ios",  widget: "string", required: false}
-          - { label: "Android", value: "android",  widget: "string", required: false}
+          - { label: "Chrome", name: "chrome" , widget: "string", required: false}
+          - { label: "Firefox", name: "firefox",  widget: "string", required: false}
+          - { label: "Edge", name: "edge",  widget: "string", required: false}
+          - { label: "Safari", name: "safari",  widget: "string", required: false}
+          - { label: "Opera", name: "opera",  widget: "string", required: false}
+          - { label: "iOS", name: "ios",  widget: "string", required: false}
+          - { label: "Android", name: "android",  widget: "string", required: false}
       - {label: "Install URL", name: "install", widget: "string", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
@@ -102,13 +102,13 @@ collections:
         name: "browser"
         widget: "object"
         fields:
-          - { label: "Chrome", value: "chrome" , widget: "string", required: false}
-          - { label: "Firefox", value: "firefox",  widget: "string", required: false}
-          - { label: "Edge", value: "edge",  widget: "string", required: false}
-          - { label: "Safari", value: "safari",  widget: "string", required: false}
-          - { label: "Opera", value: "opera",  widget: "string", required: false}
-          - { label: "iOS", value: "ios",  widget: "string", required: false}
-          - { label: "Android", value: "android",  widget: "string", required: false}
+          - { label: "Chrome", name: "chrome" , widget: "string", required: false}
+          - { label: "Firefox", name: "firefox",  widget: "string", required: false}
+          - { label: "Edge", name: "edge",  widget: "string", required: false}
+          - { label: "Safari", name: "safari",  widget: "string", required: false}
+          - { label: "Opera", name: "opera",  widget: "string", required: false}
+          - { label: "iOS", name: "ios",  widget: "string", required: false}
+          - { label: "Android", name: "android",  widget: "string", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Discord", name: "discord", widget: "string", required: false}
