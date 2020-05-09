@@ -16,4 +16,6 @@ description: >-
 date: 2019-06-19T16:51:38.167Z
 icon: /uploads/purplebcl.png
 install: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
+browser:
+  chrome: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
 ---
