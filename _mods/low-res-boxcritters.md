@@ -12,7 +12,8 @@ description: >-
 date: 2020-04-01T14:37:29.554Z
 logo: /uploads/mods/untitled.png
 image: /uploads/mods/untitled.png
-install: https://cdn.discordapp.com/attachments/619915848391589907/694915144857288824/Low-Res_boxcritters.user.js
 featured: false
+userscript: true
+install: https://cdn.discordapp.com/attachments/619915848391589907/694915144857288824/Low-Res_boxcritters.user.js
 recommend: false
 ---
