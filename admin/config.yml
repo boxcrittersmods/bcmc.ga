@@ -69,7 +69,7 @@ collections:
       - {label: "Banner", name: "image", widget: "image", required: false}
       - label: "Browser Specific Install"
         name: "browser"
-        widget: "list"
+        widget: "object"
         fields:
           - { label: "Chrome", value: "chrome" , widget: "string", required: false}
           - { label: "Firefox", value: "firefox",  widget: "string", required: false}
@@ -103,7 +103,7 @@ collections:
       - {label: "Banner", name: "image", widget: "image", required: false}
       - label: "Browser Specific Install"
         name: "browser"
-        widget: "list"
+        widget: "object"
         fields:
           - { label: "Chrome", value: "chrome" , widget: "string", required: false}
           - { label: "Firefox", value: "firefox",  widget: "string", required: false}
