@@ -109,6 +109,7 @@ collections:
           - { label: "Opera", name: "opera",  widget: "string", required: false}
           - { label: "iOS", name: "ios",  widget: "string", required: false}
           - { label: "Android", name: "android",  widget: "string", required: false}
+      - {label: "Install URL", name: "install", widget: "string", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Source", name: "source", widget: "string", required: false}
       - {label: "Discord", name: "discord", widget: "string", required: false}
