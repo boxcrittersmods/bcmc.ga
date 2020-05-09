@@ -1,12 +1,13 @@
 ---
 title: CrittersCrittersCritters
 author:
-- Blackout03
+  - Blackout03
 description: adds new features to BoxCritters to improve your experience!
-install: https://github.com/Blackout03/CrittersCrittersCritters/raw/master/CrittersCrittersCritters.user.js
-image: https://cdn.discordapp.com/attachments/572344888327274496/581655977770876934/unknown.png
-icon: https://cdn.discordapp.com/attachments/395187780600201217/570214992100720640/CustomBeaverTwitter.png
 date: 23-4-2019
+userscript: true
+icon: https://cdn.discordapp.com/attachments/395187780600201217/570214992100720640/CustomBeaverTwitter.png
+image: https://cdn.discordapp.com/attachments/572344888327274496/581655977770876934/unknown.png
+install: https://github.com/Blackout03/CrittersCrittersCritters/raw/master/CrittersCrittersCritters.user.js
 ---
 # CrittersCrittersCritters
 Credit to https://github.com/slaggo/CrittersPlus for most of the code I used in this.
