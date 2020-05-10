@@ -5,7 +5,7 @@ author:
 description: "Everyone will be a doctor! #StayHome"
 date: 2020-04-24T20:28:46.913Z
 image: /uploads/mods/anotacao_2020-04-24_175321.png
-unserscript: true
+userscript: true
 platforms:
   - chrome
   - firefox
