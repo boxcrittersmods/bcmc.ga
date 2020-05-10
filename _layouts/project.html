@@ -43,7 +43,9 @@ layout: item
 		{% if page.browser.android %}
 		<a href="{{page.browser.android}}" class="browser-android"></a>
 		{% endif %}
+		{% unless page.install %}
         <span class="browser-none">This project is not supported for your browser.</span>
+		{% endunless %}
       </div>
       {% endif %}{% if page.link %}<a
         class="btn btn-lg btn-primary"
