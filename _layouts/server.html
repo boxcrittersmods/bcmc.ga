@@ -12,9 +12,7 @@ layout: item
                 </div>
         </div>
         <div class="card-title">
-            <div class="project-authors">
-                People Involved: {% include author-list.html authors=page.author %}
-            </div>
+		{% include author-list.html item=page %}
         </div>
 {{content}}
 </div>

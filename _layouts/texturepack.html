@@ -19,9 +19,8 @@ layout: item
         <a href="{{ page.install }}" target="_blank" class="btn btn-primary">One click Install</a>
         {% endif %}
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Created by {% include author-list.html authors=page.author %}</li>
-    </ul>
+	
+	{% include author-list.html item=page %}
 </div>
 {% if page.code %}
 <div class="card">

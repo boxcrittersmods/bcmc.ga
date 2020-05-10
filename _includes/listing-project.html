@@ -22,22 +22,5 @@
         <span class="browser-none">This tool is not supported for your browser.</span>
     </div>
     {% endif %}
-    {% if include.item.os %}
-    <div class="card-footer text-muted os-list">
-        {% for os in include.item.os %}
-        <a href="{{os.install}}" class="btn btn-primary os-{{os.name}}">Install for {{os.name}}</a>
-        {% endfor %}
-        <span class="os-none">This tool is not supported for your Operating System.</span>
-    </div>
-    {% endif %}
-    {% if include.item.date or include.item.author %}
-    <div class="card-footer">
-        <small class="text-muted">
-            created {% if include.item.date %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
-            {% if include.item.author %}by 
-            {% include author-list.html authors=include.item.author %}
-            {% endif %}
-        </small>
-    </div>
-    {% endif %}
+	{% include author-list.html item=include.item %}
 </div>

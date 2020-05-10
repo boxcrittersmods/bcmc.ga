@@ -12,14 +12,5 @@
         </a>
         <p class="card-text">{{ include.item.description }}</p>
     </div>
-    {% if include.item.date or include.item.author %}
-    <div class="card-footer">
-        <small class="text-muted">
-            created {% if include.item.date %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
-            {% if include.item.author %}by 
-            {% include author-list.html authors=include.item.author %}
-            {% endif %}
-        </small>
-    </div>
-    {% endif %}
+	{% include author-list.html item=include.item %}
 </div>

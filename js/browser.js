@@ -89,7 +89,7 @@ $('.browser-list').each(function(){
 
     browserSupported.forEach(bs=>{
         if(bs.supported){
-            bs.item.show();
+            bs.item.attr( "style", "display: inline" );
         }
     });
 

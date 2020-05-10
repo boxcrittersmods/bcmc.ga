@@ -14,34 +14,32 @@ layout: item
 	  <p class="card-text">{{page.description}}</p>
 	</div>
   <div class="list-group list-group-flush">
-    <div class="list-group-item project-authors">
-      People Involved: {% include author-list.html authors=page.author %}
-    </div>
+	{% include author-list.html item=page %}
     <div class="list-group-item project-info">
       {% if page.install %}
       <a href="{{ page.install }}" class="btn btn-primary">Install</a>
-      {% endif %} {% if page.browser %}
+      {% endif %} {% if page.browser.chrome or page.browser.firefox or page.browser.edge or page.browser.safari or page.browser.opera or page.browser.ios or page.browser.android %}
       <div class="text-muted browser-list">
 		{% if page.browser.chrome %}
-		<a href="{{page.browser.chrome}}" class="browser-chrome"></a>
+		<a href="{{page.browser.chrome}}" class="browser-chrome"><img src="/uploads/browser/chrome.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.firefox %}
-		<a href="{{page.browser.firefox}}" class="browser-firefox"></a>
+		<a href="{{page.browser.firefox}}" class="browser-firefox"><img src="/uploads/browser/firefox.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.edge %}
-		<a href="{{page.browser.edge}}" class="browser-edge"></a>
+		<a href="{{page.browser.edge}}" class="browser-edge"><img src="/uploads/browser/edge.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.safari %}
-		<a href="{{page.browser.safari}}" class="browser-safari"></a>
+		<a href="{{page.browser.safari}}" class="browser-safari"><img src="/uploads/browser/ios.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.opera %}
-		<a href="{{page.browser.opera}}" class="browser-opera"></a>
+		<a href="{{page.browser.opera}}" class="browser-opera"><img src="/uploads/browser/opera.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.ios %}
-		<a href="{{page.browser.ios}}" class="browser-ios"></a>
+		<a href="{{page.browser.ios}}" class="browser-ios"><img src="/uploads/browser/ios.png" alt=""></a>
 		{% endif %}
 		{% if page.browser.android %}
-		<a href="{{page.browser.android}}" class="browser-android"></a>
+		<a href="{{page.browser.android}}" class="browser-android"><img src="/uploads/browser/android.png" alt=""></a>
 		{% endif %}
 		{% unless page.install %}
         <span class="browser-none">This project is not supported for your browser.</span>
