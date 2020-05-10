@@ -1,12 +1,11 @@
 ---
 title: Tampermonkey
 description: The world's most popular userscript manager
-layout: project
+layout: mod
 platforms:
   chrome: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
   firefox: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
-- name: edge
-  install: https://www.microsoft.com/store/apps/9NBLGGH5162S
+  edge: https://www.microsoft.com/store/apps/9NBLGGH5162S
   safari: https://safari-extensions.apple.com/details/?id=net.tampermonkey.safari-G3XV72R5TC
   opera: https://addons.opera.com/en/extensions/details/tampermonkey-beta/
   ios: https://safari-extensions.apple.com/details/?id=net.tampermonkey.safari-G3XV72R5TC
