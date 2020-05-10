@@ -14,13 +14,6 @@
             </div>
         </div>
     </div>
-    {% if include.item.browser %}
-    <div class="card-footer text-muted browser-list">
-        {% for brow in include.item.browser %}
-        <a href="{{brow.install}}" class="btn btn-primary browser-{{brow.name}}">Install for {{brow.name}}</a>
-        {% endfor %}
-        <span class="browser-none">This tool is not supported for your browser.</span>
-    </div>
-    {% endif %}
+    {% include install-browser.html item=include.item %}
 	{% include author-list.html item=include.item %}
 </div>
