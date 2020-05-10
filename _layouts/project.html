@@ -14,6 +14,7 @@ layout: item
 	  <p class="card-text">{{page.description}}</p>
 	</div>
   <div class="list-group list-group-flush">
+	{% if page.userscript %}<div class="list-group-item"><img src="https://api.boxcrittersmods.ga/button/{{ page.slug }}" alt="mod-verision"></div>{% endif %}
 	{% include author-list.html item=page %}
     <div class="list-group-item project-info">
       {% if page.install %}
