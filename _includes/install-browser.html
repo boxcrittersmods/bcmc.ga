@@ -21,8 +21,10 @@
 		{% if include.item.browser.android %}
 		<a href="{{include.item.browser.android}}" class="browser-android"><img src="/uploads/browser/android.png" alt=""></a>
 		{% endif %}
-		{% unless include.item.install %}
+		{% if include.item.age.install %}
+	  <a href="{{ page.install }}" class="btn btn-primary">Install</a>
+		{% else %}
         <span class="browser-none">This project is not supported for your browser.</span>
-		{% endunless %}
+		{% endif %}
       </div>
       {% endif %}

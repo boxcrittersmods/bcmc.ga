@@ -17,9 +17,7 @@ layout: item
 	{% if page.userscript %}<div class="list-group-item"><img src="https://api.boxcrittersmods.ga/button/{{ page.slug }}" alt="mod-verision"></div>{% endif %}
 	{% include author-list.html item=page %}
     <div class="list-group-item project-info">
-      {% if page.install %}
-      <a href="{{ page.install }}" class="btn btn-primary">Install</a>
-      {% endif %}{% include install-browser.html item=page %}{% if page.link %}<a
+      {% include install-browser.html item=page %}{% if page.link %}<a
         class="btn btn-lg btn-primary"
         href="{{page.link}}"
         >Website</a
