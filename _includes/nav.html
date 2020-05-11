@@ -1,7 +1,6 @@
 <header class="bcmc-header navbar navbar-expand-lg navbar-dark {% if page.show-nav %}shown{% endif %}">
     <a class="navbar-toggler btn" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-		<i class="fas fa-bars text-white"></i>
 	</button>
 	<a class="bcmc-sitetitle navbar-brand" href="/">
 		<img class="bcmc-logo" src="/uploads/bcmc-logo.png" alt="{{site.title}}">
@@ -41,3 +40,9 @@
 		</div>
 	</span>
 </header>
+
+<nav class="nav fixed-bottom nav-fill nav-primary d-lg-none">
+	<a class="nav-item nav-link btn-success {% if page.url contains 'mods' %}active{% endif %}" href="/mods"><i class="fas fa-wrench"></i>Mods</a>
+	<a class="nav-item nav-link btn-success {% if page.url contains 'texturepacks' %}active{% endif %}" href="/texturepacks"><i class="fas fa-paint-brush"></i>Texture Packs</a>
+	<a class="nav-item nav-link btn-success {% if page.url contains 'shaders' %}active{% endif %}" href="/shaders"><i class="fas fa-eye"></i>Shaders</a>
+</nav>

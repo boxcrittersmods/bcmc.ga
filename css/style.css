@@ -108,3 +108,10 @@ carousel-item.video:hover {
 .content-list.row {
 	flex-flow: row;
 }
+
+
+.nav-item > .fas {
+	font-size: 2em;
+	padding-bottom: 3px;
+	display: block;
+	}
