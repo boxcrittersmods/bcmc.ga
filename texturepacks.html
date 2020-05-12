@@ -2,9 +2,7 @@
 layout: default
 title: Texture Packs
 ---
-{% assign carousel=site.texturepacks | sort: "date","last" | reverse | where: "featured","true" %}
-{% include home-carousel.html %}
-{% include page-header-noimg.html no-nav=true %}
+{% include page-header-noimg.html %}
 <div class="container page-content">
 {% assign tps = site.texturepacks | reverse %}
 {% for texturepack in tps %}
