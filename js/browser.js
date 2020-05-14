@@ -41,11 +41,11 @@ var isBrowser = [
     isSafari,
     isIE,
     isEdge,
-    isChrome && !(isOpera|isAndroid),
-    isBlink  && !(isChrome || isOpera),
+    isChrome,// && !(isOpera|isAndroid),
+    isBlink,//  && !(isChrome || isOpera),
     isIOS,
     isAndroid,
-    isMobile && !(isAndroid|isIOS)
+    isMobile,// && !(isAndroid|isIOS)
 ]
 
 var operaQuery = ".browser-opera";
