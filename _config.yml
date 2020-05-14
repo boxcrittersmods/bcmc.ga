@@ -144,7 +144,3 @@ defaults:
     newcomments: true
     list: true
     show-nav: true
-
-reCaptcha:
-  siteKey: 6LcWstQUAAAAALoGBcmKsgCFbMQqkiGiEt361nK1
-  secret: exactly the same secret as the staticman.yml file
