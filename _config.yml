@@ -70,6 +70,7 @@ defaults:
     layout: basic
     featured: false
     comments: true
+    newcomments: true
     list: false
     show-nav: false
 - scope:
@@ -78,6 +79,7 @@ defaults:
   values:
     layout: project
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -86,6 +88,7 @@ defaults:
   values:
     layout: texturepack
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -94,6 +97,7 @@ defaults:
   values:
     layout: shader
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -102,6 +106,7 @@ defaults:
   values:
     layout: tool
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -110,6 +115,7 @@ defaults:
   values:
     layout: post
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -118,6 +124,7 @@ defaults:
   values:
     layout: author
     comments: true
+    newcomments: true
     show-nav: true
 - scope:
     path: ""
@@ -125,6 +132,7 @@ defaults:
   values:
     layout: project
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 - scope:
@@ -133,6 +141,7 @@ defaults:
   values:
     layout: server
     comments: true
+    newcomments: true
     list: true
     show-nav: true
 
