@@ -4,8 +4,8 @@ var agent = navigator.userAgent;
 var isOpera =
 (!!window.opr && !!opr.addons) ||
 !!window.opera ||
-(agent.indexOf("Opera") ||
-agent.indexOf('OPR')) > -1;
+(agent.indexOf("Opera")>-1) ||
+(agent.indexOf('OPR') > -1);
 
 // Firefox 1.0+
 var isFirefox = typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1;
