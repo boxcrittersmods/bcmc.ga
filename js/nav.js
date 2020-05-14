@@ -12,7 +12,7 @@ $('.navbar-toggler').click(()=>{
 });
 
 var params = new URLSearchParams(location.search);
-var authCode = urlParams.get("code");
+var authCode = params.get("code");
 
 if (authCode)
 {
