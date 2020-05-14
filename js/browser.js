@@ -10,7 +10,7 @@ var isBrowser = [
 typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1,
 // Safari 3.0+ "[object HTMLElementConstructor]" 
 /constructor/i.test(window.HTMLElement) ||
-(function (p) { return p.toString() === "[object SafariRemoteNotification]", })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+(function (p) { return p.toString() === "[object SafariRemoteNotification]"})(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
 // Internet Explorer 6-11
 /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1),
 // Edge 20+
