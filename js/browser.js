@@ -16,7 +16,7 @@ var isSafari =
 (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 // Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode || agent.indexOf("MSIE") > -1;
+var isIE = /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1) || (agent.indexOf("Edg") > -1);
 
 // Edge 20+
 var isEdge = (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1;
