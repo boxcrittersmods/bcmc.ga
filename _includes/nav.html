@@ -23,19 +23,19 @@
 		<a href="/submissions-coming-soon" class="btn align-right"><i class="fas fa-upload text-white"></i></a>
 		<a href="#" class="btn rounded-circle p-1 " data-toggle="dropdown" ole="button" aria-haspopup="true"
 			aria-expanded="false">
-			<img class="mh-100 align-middle rounded-circle" src="/uploads/guest.png" height="40" alt="">
+			<img class="mh-100 align-middle rounded-circle" src="/uploads/guest.png" id="avatar" height="40" alt="">
 		</a>
 		<div class="dropdown-menu dropdown-menu-right">
 			<span class="logged-out">
-				<a class="dropdown-item" href="#">Login</a>
+				<a class="dropdown-item" id="loginout" href="#">Login</a>
 			</span>
 			<span class="logged-in">
-				<a class="dropdown-item" href="#">Submit</a>
+				<a class="dropdown-item" href="/submissions-coming-soon">Submit</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="#">Dashboard</a>
-				<a class="dropdown-item" href="#">My Page</a>
+				<a class="dropdown-item" href="#" id="mypage">My Page</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Log Out</a>
+				<a class="dropdown-item" href="#" id="logout">Log Out</a>
 			</span>
 		</div>
 	</span>

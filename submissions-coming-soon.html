@@ -1,0 +1,45 @@
+---
+layout: page
+title: How to Submit Mods and Texture Packs
+---
+# Mods
+For submit a user script mod, fill the following form:
+<div class="container" id="main">
+	<div class="row justify-content-center">
+		<div class="col col-sm-10 col-md-8 col-lg-6">
+			<div class="form-group">
+				<input class="form-control" placeholder="Mod URL" id="url" autofocus />
+			</div>
+			<div class="form-group">
+				<button id="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  document.getElementById("submit").addEventListener("click", function (event) {
+    var req = new Request("https://api.boxcrittersmods.ga/modsubmit/" + btoa(document.getElementById("url").value), {
+		  method: "GET",
+		  redirect: "follow"
+	  });
+	  fetch(req).then(function (res) {
+  		return res.text();
+  	}).then(function (text) {
+	  	document.getElementById("submit").innerHTML = "Submited succefully!";
+	  }).catch(function (err) {
+      console.log("Error! " + err);
+    });
+  });
+</script>
+
+For other types of mods just DM TumbleGamer#6140 on Discord.
+
+# Texture Packs
+<ol>
+  <li>In the Texture Pack Manager click the hamburger menu and click create</li>
+  <li>2. Insert all the required urls. ([List of Image Hosts](https://mods.boxcritters.wiki/List_of_Image_Hosting_Sites))</li>
+3. Click Download One Click File
+4. Create Repository for your Texture Pack. (https://github.com/new)
+5. Upload your one click file
+6. DM TumbleGamer#6410 asking to submit your texture pack
