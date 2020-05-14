@@ -1,0 +1,18 @@
+comments:
+  allowedFields: ["name", "email", "url", "message", "replying_to", "replying_to_uid"]
+  branch: master
+  commitMessage: "New Comment from {fields.name} on {options.slug}"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  moderation: false
+  filename: "entry{@timestamp}"
+  format: yaml
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "message"]
+  reCaptcha:
+    enabled: true
+    siteKey: 6LcWstQUAAAAALoGBcmKsgCFbMQqkiGiEt361nK1
+    secret: a big encrypted secret (see description above)
