@@ -20,11 +20,11 @@ typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1,
 // Blink engine detection
 (isChrome || isOpera) && !!window.CSS,
 //IOS
-isIOS: /iPhone|iPad|iPod/i.test(agent),
+/iPhone|iPad|iPod/i.test(agent),
 //Androis
-isAndroid: /Android/i.test(agent),
+/Android/i.test(agent),
 //Mobile
-isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent),
+/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent),
 ]
 
 var browserQuery = [
