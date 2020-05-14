@@ -39,9 +39,9 @@ var browserQuery = [
 ".browser-ios",
 ".browser-android",
 ".browser-mobile",
-".browser-none",
 	
 ];
+var noneQuery = ".browser-none"
 
 $('.browser-list').each(function(){
     var bItem = $(this);
