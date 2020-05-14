@@ -3,6 +3,7 @@ var agent = navigator.userAgent;
 
 var noneText = '<span class="browser-none">This tool is not supported on your browser.</span>';
 
+var isIE = /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1);
 var isBrowser = [
 // Opera 8.0+
 (!!window.opr && !!opr.addons) ||!!window.opera ||(agent.indexOf("Opera")>-1) ||(agent.indexOf('OPR') > -1),
@@ -12,7 +13,7 @@ typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1,
 /constructor/i.test(window.HTMLElement) ||
 (function (p) { return p.toString() === "[object SafariRemoteNotification]"})(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
 // Internet Explorer 6-11
-/*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1),
+isIE,
 // Edge 20+
 (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1|| (agent.indexOf("Edg") > -1),
 // Chrome 1 - 71
