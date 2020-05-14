@@ -1,76 +1,45 @@
 var agent = navigator.userAgent;
 
-// Opera 8.0+
-var isOpera =
-(!!window.opr && !!opr.addons) ||
-!!window.opera ||
-(agent.indexOf("Opera")>-1) ||
-(agent.indexOf('OPR') > -1);
-
-// Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1;
-
-// Safari 3.0+ "[object HTMLElementConstructor]" 
-var isSafari = 
-/constructor/i.test(window.HTMLElement) ||
-(function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-
-// Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1);
-
-// Edge 20+
-var isEdge = (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1|| (agent.indexOf("Edg") > -1);
-
-// Chrome 1 - 71
-var isChrome = (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) || agent.indexOf("Chrome") > -1;
-
-// Blink engine detection
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-var isIOS = /iPhone|iPad|iPod/i.test(agent);
-
-var isAndroid = /Android/i.test(agent);
-
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
 
 var noneText = '<span class="browser-none">This tool is not supported on your browser.</span>';
 
 var isBrowser = [
-    isOpera,
-    isFirefox,
-    isSafari,
-    isIE,
-    isEdge,
-    isChrome,// && !(isOpera|isAndroid),
-    isBlink,//  && !(isChrome || isOpera),
-    isIOS,
-    isAndroid,
-    isMobile,// && !(isAndroid|isIOS)
+// Opera 8.0+
+(!!window.opr && !!opr.addons) ||!!window.opera ||(agent.indexOf("Opera")>-1) ||(agent.indexOf('OPR') > -1),
+// Firefox 1.0+
+typeof InstallTrigger !== 'undefined' || agent.indexOf("Firefox") > -1,
+// Safari 3.0+ "[object HTMLElementConstructor]" 
+/constructor/i.test(window.HTMLElement) ||
+(function (p) { return p.toString() === "[object SafariRemoteNotification]", })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+// Internet Explorer 6-11
+/*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1),
+// Edge 20+
+(!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1|| (agent.indexOf("Edg") > -1),
+// Chrome 1 - 71
+(!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) || agent.indexOf("Chrome") > -1,
+// Blink engine detection
+(isChrome || isOpera) && !!window.CSS,
+//IOS
+isIOS: /iPhone|iPad|iPod/i.test(agent),
+//Androis
+isAndroid: /Android/i.test(agent),
+//Mobile
+isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent),
 ]
 
-var operaQuery = ".browser-opera";
-var firefoxQuery = ".browser-firefox";
-var safariQuery = ".browser-safari";
-var ieQuery = ".browser-ie";
-var edgeQuery = ".browser-edge";
-var chromeQuery = ".browser-chrome";
-var blinkQuery = ".browser-blink";
-var iosQuery = ".browser-ios";
-var androidQuery = ".browser-android";
-var mobileQuery = ".browser-mobile"
-var noneQuery = ".browser-none";
-
 var browserQuery = [
-    operaQuery,
-    firefoxQuery,
-    safariQuery,
-    ieQuery,
-    edgeQuery,
-    chromeQuery,
-    blinkQuery,
-    iosQuery,
-    androidQuery,
-    mobileQuery
+".browser-opera",
+".browser-firefox",
+".browser-safari",
+".browser-ie",
+".browser-edge",
+".browser-chrome",
+".browser-blink",
+".browser-ios",
+".browser-android",
+".browser-mobile",
+".browser-none",
+	
 ];
 
 $('.browser-list').each(function(){
