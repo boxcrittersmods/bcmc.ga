@@ -16,10 +16,10 @@ var isSafari =
 (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 // Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1) || (agent.indexOf("Edg") > -1);
+var isIE = /*@cc_on!@*/false || !!document.documentMode || (agent.indexOf("MSIE") > -1);
 
 // Edge 20+
-var isEdge = (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1;
+var isEdge = (!isIE && !!window.StyleMedia) || agent.indexOf("Edge") > -1|| (agent.indexOf("Edg") > -1);
 
 // Chrome 1 - 71
 var isChrome = (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) || agent.indexOf("Chrome") > -1;
