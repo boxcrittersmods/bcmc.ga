@@ -19,7 +19,7 @@ isIE,
 // Chrome 1 - 71
 (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) || agent.indexOf("Chrome") > -1,
 // Blink engine detection
-(isChrome || isOpera) && !!window.CSS,
+//(isChrome || isOpera) && !!window.CSS,
 //IOS
 /iPhone|iPad|iPod/i.test(agent),
 //Androis
