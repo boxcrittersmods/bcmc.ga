@@ -11,7 +11,7 @@ layout: item
 	<div class="card-body">
 		{% include page-thumb.html %}
 	  <h5 class="card-title">{{page.title}}
-		{% ifpage.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ ipage.slug }}" alt="mod-verision">{% endif %}</h5>
+		{% if page.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ page.slug }}" alt="mod-verision">{% endif %}</h5>
 	  <p class="card-text">{{page.description}}</p>
 	</div>
   <div class="list-group list-group-flush">

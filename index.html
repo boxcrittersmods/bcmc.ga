@@ -7,6 +7,17 @@ title: Home
 {% include home-carousel.html %}
 <div class="home container">
 	<div class="home-main">
+
+		<div class="card">
+			<div class="card-header"><h1>Recommended</h1></div>
+		</div>
+		<div class="content-list row">
+			{% assign mods = site.mods | sort: "date","last" | reverse | where: "recommend","true" %}
+			{% assign l = mods | size %}
+			{% for mod in mods limit: 4 %}
+			{% include listing-vir.html item=mod %}
+			{% endfor %}
+		</div>
 		<div class="card">
 			<div class="card-header"><h1>Texture Packs</h1></div>
 		</div>
@@ -29,6 +40,18 @@ title: Home
 			{% for mod in mods limit: 4 %}
 			{% include listing-vir.html item=mod %}
 			{% endfor %}
+		</div>
+		<div class="card">
+			<div class="card-header"><h1>Shaders</h1></div>
+		</div>
+		
+		<div class="content-list row">
+			{% assign shaders = site.shaders | sort: "date","last" | reverse %}
+			{% assign l = shaders | size %}
+			{% for shader in shaders limit: 4 %}
+			{% include listing-vir.html item=shader %}
+			{% endfor %}
+
 		</div>
 	</div>
 	<div class="sidebar">
