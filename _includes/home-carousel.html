@@ -11,13 +11,13 @@
 		{% for item in carousel %}
 		<div class="carousel-item{% if item.video %} video{% endif %}{% if forloop.first %} active{% endif %}">
 			{% if item.video %}
-			<iframe width="800" height="400" class="d-block w-100" src="{{item.video}}" frameborder="0"
+			<iframe width="800" height="400" class="d-block mx-auto h-100" src="{{item.video}}" frameborder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 			{% else %}
 			<a href="{{item.url}}">
 				<img src="{{item.image | default: '/uploads/default.png'}}" alt="{{item.title}}"
-					class="d-block w-100 img-fluid">
+					class="d-block h-100 mx-auto">
 			</a>
 			{% endif %}
 			<div class="carousel-caption d-none d-md-block">
