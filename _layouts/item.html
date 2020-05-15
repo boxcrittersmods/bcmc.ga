@@ -4,11 +4,15 @@ layout: default
 {% include page-header-noimg.html %}
 <div class="container page-content">
 {{content}}
+{% if page.require or page.userscript %}
 <div class="card bg-warn">
 	<div class="card-body">
-	<h2>Requirements</h2>
-</div>
+	<h2>Requirements <small>(Install in order)</small></h2> 
+	</div>
+	<ul class="list-group list-group-flush">
 {% include requirements.html %}
+</ul>
 </div>
+{% endif %}
 {% include comments.html %}
 </div>
