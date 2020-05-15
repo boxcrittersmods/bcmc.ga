@@ -112,9 +112,6 @@ MOBILE
     z-index: 100;
 	background-color: var(--bcmc-main);
 }
-.bcmc-header a,.bcmc-header.fixed {
-	color:white !important;
-}
 
 .bcmc-header .bcmc-logo,
 .bcmc-header.fixed .bcmc-logo-white,
