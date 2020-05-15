@@ -8,7 +8,7 @@
         <div class="col-md-8">
             <div class="card-body">
                 <a href="{{include.item.url}}" class="">
-                    <h2 class="card-title">{{include.item.title}}{% if include.item.userscript %}<img src="https://api.boxcrittersmods.ga/button/{{ include.item.slug }}" alt="mod-verision">{% endif %}</h5>
+                    <h2 class="card-title">{{include.item.title}}{% if include.item.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ include.item.slug }}" alt="mod-verision">{% endif %}</h5>
                 </a>
                 <p class="card-text">{{include.item.description|default:include.item.content}}</p>
             </div>
