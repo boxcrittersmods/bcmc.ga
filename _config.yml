@@ -3,7 +3,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Install mods and texture packs to your favourite game
 base-url: ""
 url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
-repository: boxcritters/boxcritters.github.io
+repository: boxcritters/boxcrittersmods.ga
 
 #favicon: 
 

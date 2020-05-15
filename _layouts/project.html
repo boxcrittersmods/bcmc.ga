@@ -1,12 +1,6 @@
 ---
 layout: item
 ---
-{% if page.userscript %}
-<div class="alert alert-warning card" role="alert">
-    <h4 class="alert-heading">Important</h4>
-    <p>To install this mod, you will first need to install <a href="https://www.tampermonkey.net/">Tampermonkey</a>.</p>
-  </div>
-{% endif %}
 <div class="card">
 	<div class="card-body">
 		{% include page-thumb.html %}
@@ -16,9 +10,10 @@ layout: item
 	</div>
   <div class="list-group list-group-flush">
 	{% include author-list.html item=page %}
-    <div class="list-group-item project-info">
-      {% include link-row.html %}
-    </div>
+     {% include link-row.html %}
   </div>
+  {% assign content = page.content | strip  %}
+  {% unless content == "" %}
   <div class="card-body">{{content}}</div>
+  {% endunless %}
 </div>

@@ -11,5 +11,7 @@ title: Collections
 {% capture word_count %}{{ start_url | split: '/' | size }}{% endcapture %}
 {% assign word_count = word_count | minus: '1' %}
 *  [{{ item.title }}]({{ item.url }})
+
+{% include listing-project.html item=author %}
 {% endfor %}
 {% endfor %}

@@ -1,6 +1,6 @@
 $(window).scroll(function(e){
 	console.log("scroll")
-	if($(this).scrollTop() < SCROLL_HEAD_SIZE) {
+	if( $(this).scrollTop() < $('.page-header').height()) {
 		$('.bcmc-header').removeClass('fixed');
 	} else {
 		$('.bcmc-header').addClass('fixed');
