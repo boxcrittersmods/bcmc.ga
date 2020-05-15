@@ -14,7 +14,7 @@
 {% assign depPage = site.mods | where:"slug", dep | first %}
 <li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
 	<div class="row">
-		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}</h3></a>
+		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %}<img src="https://api.boxcrittersmods.ga/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
 		<div class="col">{% include link-row.html item=depPage %}</div>
 	</div>
 </li>
