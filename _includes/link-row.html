@@ -1,0 +1,44 @@
+{% assign item = include.item | default: page %}
+{% if item.browser.chrome or item.browser.firefox or item.browser.edge or item.browser.safari or item.browser.opera or item.browser.ios or item.browser.android %}
+      <div class="text-muted browser-list">
+		{% if item.browser.chrome %}
+		<a href="{{item.browser.chrome}}" class="browser-chrome"><img src="/uploads/browser/chrome.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.firefox %}
+		<a href="{{item.browser.firefox}}" class="browser-firefox"><img src="/uploads/browser/firefox.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.edge %}
+		<a href="{{item.browser.edge}}" class="browser-edge"><img src="/uploads/browser/edge.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.safari %}
+		<a href="{{item.browser.safari}}" class="browser-safari"><img src="/uploads/browser/ios.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.opera %}
+		<a href="{{item.browser.opera}}" class="browser-opera"><img src="/uploads/browser/opera.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.ios %}
+		<a href="{{item.browser.ios}}" class="browser-ios"><img src="/uploads/browser/ios.png" alt=""></a>
+		{% endif %}
+		{% if item.browser.android %}
+		<a href="{{item.browser.android}}" class="browser-android"><img src="/uploads/browser/android.png" alt=""></a>
+		{% endif %}
+		{% unless item.install %}
+        <span class="browser-none">This project is not supported for your browser.</span>
+		{% endunless %}
+	  </div>
+      {% endif %}
+	  {% if item.install %}
+	  <a href="{{ item.install }}" class="btn btn-primary">Install</a>
+		{% endif %}{% if page.link %}<a
+        class="btn btn-lg btn-primary"
+        href="{{page.link}}"
+        >Website</a
+      >{% endif %} {% if page.source %}<a
+        class="btn btn-secondary"
+        href="{{page.source}}"
+        >Source</a
+      >{% endif %} {% if page.discord %}<a
+        class="btn btn-secondary"
+        href="{{page.discord}}"
+        >Discord</a
+      >{% endif %}

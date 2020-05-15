@@ -17,19 +17,7 @@ layout: item
 	{% if page.userscript %}<div class="list-group-item"><img src="https://api.boxcrittersmods.ga/button/{{ page.slug }}" alt="mod-verision"></div>{% endif %}
 	{% include author-list.html item=page %}
     <div class="list-group-item project-info">
-      {% include install-browser.html item=page %}{% if page.link %}<a
-        class="btn btn-lg btn-primary"
-        href="{{page.link}}"
-        >Website</a
-      >{% endif %} {% if page.source %}<a
-        class="btn btn-secondary"
-        href="{{page.source}}"
-        >Source</a
-      >{% endif %} {% if page.discord %}<a
-        class="btn btn-secondary"
-        href="{{page.discord}}"
-        >Discord</a
-      >{% endif %}
+      {% include link-row.html %}
     </div>
   </div>
   <div class="card-body">{{content}}</div>

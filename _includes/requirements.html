@@ -1,0 +1,24 @@
+<ul class="list-group list-group-flush">
+{% assign item = include.item | default: page %}
+{% for dep in item.require %}
+{% assign depPage = site.mods | where:"slug", dep | first %}
+{% include requirements.html item=depPage %}
+{% assign depPage = site.mods | where:"slug", dep | first %}
+<li class="list-group-item" id="dep-{{depPage.slug}}">
+	<div class="row">
+		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}</h3></a>
+		<div class="col">{% include link-row.html item=depPage %}</div>
+	</div>
+</li>
+{% endfor %}
+{% assign item = include.item | default: page %}
+{% if item.userscript %}
+{% assign depPage = site.pages | where:"slug","tampermonkey" | first %}
+<li class="list-group-item" id="dep-{{depPage.slug}}">
+	<div class="row">
+		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}</h3></a>
+		<div class="col">{% include link-row.html item=depPage %}</div>
+	</div>
+</li>
+{% endif %}
+</ul>
