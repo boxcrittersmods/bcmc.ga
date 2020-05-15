@@ -3,38 +3,39 @@ layout: item
 ---
 {% assign content = page.content | strip_newlines %}
 <div class="alert alert-warning card" role="alert">
-    <h4 class="alert-heading">Important</h4>
-    <p>To install a texture pack you will first need to install the <a href="/projects/texturepackselector/">Box Critters Texture Pack Manager</a></p>
-  </div>
-	  {% include page-thumb.html card=true %}
-	
+	<h4 class="alert-heading">Important</h4>
+	<p>To install a texture pack you will first need to install the <a href="/projects/texturepackselector/">Box
+			Critters Texture Pack Manager</a></p>
+</div>
+{% include page-thumb.html card=true %}
+
 <div class="info-head">
 
 </div>
 <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">{{page.title}}</h5>
-        <p class="card-text">{{page.description}}</p>
-        {% if page.install %}
-        <a href="{{ page.install }}" target="_blank" class="btn btn-primary">One click Install</a>
-        {% endif %}
-    </div>
-	
+	<div class="card-body">
+		<h5 class="card-title">{{page.title}}</h5>
+		<p class="card-text">{{page.description}}</p>
+		{% if page.install %}
+		<a href="{{ page.install }}" target="_blank" class="btn btn-primary">One click Install</a>
+		{% endif %}
+	</div>
+
 	{% include author-list.html item=page %}
 </div>
+
 {% if page.code %}
 <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Install</h5>
-        <p class="card-text">
-            <pre><code>{{page.code}}</code></pre>
-        </p>
-    </div>
+	<div class="card-body">
+		<h5 class="card-title">Install</h5>
+		<p class="card-text">
+		<pre><code>{{page.code}}</code></pre>
+		</p>
+	</div>
 </div>
 {% endif %}
-</div>
 {% if content != "" %}
 <div class="card">
-{{content}}
+	{{content}}
 </div>
 {% endif %}
