@@ -63,8 +63,11 @@ ul.wo-nobullets {
 .bcmc-sitetitle {
 	position: static;
     display: block;
-    width: auto;
+	width: auto;
+	padding-top: 0;
+	padding-bottom: 0;
 }
+
 .bcmc-container {
 	width:100%;
 	max-width:1000px;
