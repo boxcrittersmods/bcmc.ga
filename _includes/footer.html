@@ -1,3 +1,9 @@
-<footer class="bcmc-footer footer">
-	<p>{% for nav in site.data.footer %}<a href="{{nav.href}}">{{nav.name}}</a>{% endfor %}</p>
+<footer class="bcmc-footer footer navbar navbar-expand-lg">
+	<ul class="navbar-nav">
+		{% for nav in site.data.footer %}
+		<li class="nav-item">
+			<a class="nav-link" href="{{nav.href}}">{{nav.name}}</a>
+		</li>
+		{% endfor %}
+	</ul>
 </footer>
