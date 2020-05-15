@@ -4,18 +4,6 @@ title: Projects
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-    <p class="browser-list">Your browser is
-        <span class="browser-opera">Opera</span>
-        <span class="browser-firefox">Firefox</span>
-        <span class="browser-ie">IE</span>
-        <span class="browser-edge">Edge</span>
-        <span class="browser-chrome">Chrome</span>
-        <span class="browser-blink">Blink</span>
-        <span class="browser-ios">iOS</span>
-        <span class="browser-android">Android</span>
-        <span class="browser-mobile">a Mobile Browser/span>
-        <span class="browser-none">Unknown</span>
-    </p>
 {% assign projects = site.projects | reverse %}
 {% for project in projects %}
 {% include listing-project.html item=project %}
