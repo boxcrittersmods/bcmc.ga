@@ -1,5 +1,5 @@
 ---
-title: Hi-Res-Boxcritters
+title: Hi-Res
 author:
   - SArpnt
 description: Fixes blurriness
