@@ -1,5 +1,5 @@
 ---
-title: Low-Res Boxcritters
+title: Low-Res
 author:
   - SArpnt
 description: >-
