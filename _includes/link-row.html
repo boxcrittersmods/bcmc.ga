@@ -1,5 +1,4 @@
 {% assign item = include.item | default: page %}
-{% if item.userscript %}<img src="https://api.boxcrittersmods.ga/button/{{ item.slug }}" alt="mod-verision">{% endif %}
 {% if item.browser.chrome or item.browser.firefox or item.browser.edge or item.browser.safari or item.browser.opera or item.browser.ios or item.browser.android %}
       <div class="text-muted browser-list">
 		{% if item.browser.chrome %}
