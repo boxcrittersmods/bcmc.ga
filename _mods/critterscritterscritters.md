@@ -4,7 +4,7 @@ author:
   - Blackout03
 description: adds new features to BoxCritters to improve your experience!
 date: 23-4-2019
-userscript: false
+userscript: true
 icon: https://cdn.discordapp.com/attachments/395187780600201217/570214992100720640/CustomBeaverTwitter.png
 image: https://cdn.discordapp.com/attachments/572344888327274496/581655977770876934/unknown.png
 install: https://github.com/Blackout03/CrittersCrittersCritters/raw/master/CrittersCrittersCritters.user.js

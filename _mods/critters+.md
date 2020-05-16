@@ -8,6 +8,6 @@ date: 14-04-2019
 featured: false
 userscript: true
 icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
-install: https://github.com/boxcritters/CrittersPlus/raw/master/crittersplus.user.js
+install: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
 recommend: true
 ---
