@@ -65,9 +65,9 @@ defaults:
 - scope:
     path: ""
   values:
-    layout: project
     featured: false
     comments: true
+    layout: project
     newcomments: true
     list: false
     show-nav: false
@@ -75,7 +75,6 @@ defaults:
     path: ""
     type: mods
   values:
-    layout: project
     comments: true
     newcomments: true
     list: true
@@ -84,7 +83,6 @@ defaults:
     path: ""
     type: texturepacks
   values:
-    layout: project
     comments: true
     newcomments: true
     list: true
@@ -95,7 +93,6 @@ defaults:
     path: ""
     type: shaders
   values:
-    layout: project
     comments: true
     newcomments: true
     list: true
@@ -107,7 +104,6 @@ defaults:
     path: ""
     type: authors
   values:
-    layout: author
     comments: true
     newcomments: true
     show-nav: true
@@ -115,7 +111,6 @@ defaults:
     path: ""
     type: projects
   values:
-    layout: project
     comments: true
     newcomments: true
     list: true
@@ -124,7 +119,6 @@ defaults:
     path: ""
     type: servers
   values:
-    layout: project
     comments: true
     newcomments: true
     list: true
