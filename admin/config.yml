@@ -7,7 +7,7 @@ backend:
   base_url: https://api.boxcrittersmods.ga
 media_folder: "uploads"
 show_preview_links: true
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 logo_url: http://boxcrittersmods.ga/uploads/logo.png
 collections:
 {% for type in site.collections %}
