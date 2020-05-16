@@ -2,12 +2,12 @@
 title: Private Box
 author:
   - flines
-  - sarpnt
-  - tumblegamer
-  - slaggo
-  - eribetra
-  - sponix
-  - alvarito050506
+  - SArpnt
+  - TumbleGamer
+  - Slaggo
+  - Eribetra
+  - Aponix
+  - Alvarito050506
 description: Private server
 date: 2019-10-14T00:00:00.000Z
 unfinished: true
