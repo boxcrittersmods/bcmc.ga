@@ -1,21 +1,28 @@
 {% assign item = include.item | default: page %}
-{% if item.userscript %}
-{% assign depPage = site.pages | where:"slug","tampermonkey" | first %}
-<li class="list-group-item" id="dep-{{depPage.slug}}">
-	<div class="row">
-		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}</h3></a>
-		<div class="col">{% include link-row.html item=depPage %}</div>
-	</div>
-</li>
-{% endif %}
+
+{% assign require = '' | split:',' %}
+{% assign require = item.slug | split:',' %}
 {% for dep in item.require %}
+	{% assign depPage = site.mods | where:'slug', dep | first %}
+	{% capture depList %}{% include require-list.html item=depPage %}{% endcapture %}
+{% endfor %}
+{% assign depList = depList | strip | split:',' %}
+{% assign require = depList | concat: require %}
+{% if item.userscript %}
+	{% assign tm =  'tampermonkey' | split:',' %}
+	{% assign require = tm | concat:require |uniq %}
+{% endif %}
+
+{% for dep in require %}
+{% if dep == "tampermonkey" %}
+{% assign depPage = site.pages | where:"slug","tampermonkey" | first %}
+{% else %}
 {% assign depPage = site.mods | where:"slug", dep | first %}
-{% include requirements.html item=depPage %}
-{% assign depPage = site.mods | where:"slug", dep | first %}
-<li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
-	<div class="row">
-		<a class="col" href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
-		<div class="col">{% include link-row.html item=depPage %}</div>
-	</div>
-</li>
+{% endif %}
+	<li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
+			<a href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
+			
+	<div class="list-group list-group-flush">
+		{% include link-row.html item=depPage %}</div>
+	</li>
 {% endfor %}
