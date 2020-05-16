@@ -51,7 +51,7 @@ collections:
         widget: "select"
         required: true
         multiple: true
-        options: [{{site.mods|map:'title'|join:','}}]
+        options: [{{site.mods|map:'slug'|join:','}}]
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
 {% endfor %}
