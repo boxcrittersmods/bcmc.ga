@@ -1,25 +1,22 @@
 ---
-title: 'Private Box'
-description: Private server 
-date: 2019-10-14
+title: Private Box
 author:
-- SArpnt
-- TumbleGamer
-- flines
-- Slaggo
-- Sponix
-- Eribetra
+  - flines
+  - sarpnt
+  - tumblegamer
+  - slaggo
+  - eribetra
+  - sponix
+  - alvarito050506
+description: Private server
+date: 2019-10-14T00:00:00.000Z
 unfinished: true
-primary:
-#- name: Install client
-#  href: /
-#- name: Download Server
-#  href: /
+primary: null
 secondary:
-- name: Test server
-  href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
-- name: Source
-  href: https://github.com/boxcritters/private-box
+  - name: Test server
+    href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
+  - name: Source
+    href: https://github.com/boxcritters/private-box
 ---
 # Aim
 Create a Box critters Private server Engine for people to freely use to make their own servers
