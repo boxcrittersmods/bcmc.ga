@@ -49,7 +49,7 @@ collections:
       - label: "Dependecies"
         name: "require"
         widget: "select"
-        required: true
+        required: false
         multiple: true
         options: [{{site.mods|map:'slug'|join:','}}]
       - {label: "Body", name: "body", widget: "markdown", required: false}
