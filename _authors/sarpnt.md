@@ -21,7 +21,7 @@ href: https://github.com/sarpnt/
 		background: linear-gradient(270deg, #c00, #cc0, #0c0, #0cc, #00c, #c0c,
 		#c00, #cc0, #0c0, #0cc, #00c, #c0c,#c00);
 		background-size: 200% 100%;
-		animation: SArRAA 3s linear infinite;
+		animation: SArRAA 2s linear infinite;
 		-webkit-background-clip: text;
 		-moz-background-clip: text;
 		-o-background-clip: text;
