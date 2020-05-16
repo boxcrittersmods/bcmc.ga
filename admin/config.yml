@@ -24,7 +24,7 @@ collections:
         widget: "select"
         required: true
         multiple: true
-        options: [{{site.authors|map:'title'|join:','}}]
+        options: [{{site.authors|map:'slug'|join:','}}]
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Disclamer", name: "disclaimer", widget: "text", required: false}
       - {label: "Date", name: "date", widget: "date", required: false}
