@@ -1,3 +1,6 @@
+---
+layout: null
+---
 backend:
   name: github
   repo: boxcritters/boxcrittersmods.ga
@@ -7,22 +10,25 @@ show_preview_links: true
 publish_mode: editorial_workflow
 logo_url: http://boxcrittersmods.ga/uploads/logo.png
 collections:
-  - name: 'mods'
-    label: Mods
-    label_singular: Mod
-    media_folder: "/uploads/mods/"
-    folder: _mods
+{% for type in site.collections %}
+  - name: '{{type.label }}'
+    label: {{type.label| capitalize }}
+    label_singular: {{type.label| capitalize }}
+    media_folder: "/uploads/{{type.label }}/"
+    folder: _{{type.label }}
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
+      - label: "Author"
         name: "author"
-        widget: "list"
-        field: {label: Author, name: author, widget: "string", required: true}
+        widget: "select"
+        required: true
+        options: [{{site.authors|map:'title'|join:','}}]
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Date", name: "date", widget: "date", required: true}
       - {label: "Logo", name: "logo", widget: "image", required: false}
       - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
       - {label: "Unfinished", name: "unfinished", widget: "boolean", required: false }
       - label: "Main Links"
         name: "primary"
@@ -40,53 +46,4 @@ collections:
       - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-  - name: 'texturepacks'
-    label: Texture Packs
-    label_singular: Texture Pack
-    media_folder: "/uploads/texturepacks/"
-    folder: _texturepacks
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Icon", name: "icon", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - {label: "YTVideo", name: "video", widget: "string", required: false}
-      - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
-      - {label: "One Click File", name: "install", widget: "string", required: false}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-  - name: 'shaders'
-    label: Shaders
-    label_singular: Shader
-    media_folder: "/uploads/shaders/"
-    folder: _shaders
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Icon", name: "icon", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - {label: "YTVideo", name: "video", widget: "string", required: false}
-      - {label: "Shader Console Paste", name: "code", widget: "text", required: false}
-      - {label: "One Click File", name: "install", widget: "string", required: false}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-  - name: 'authors'
-    label: Authors
-    label_singular: Author
-    media_folder: "/uploads/authors/"
-    folder: _authors
-    create: true
-    fields:
-      - {label: "Name", name: "title", widget: "string", required: true}
+{% endfor %}
