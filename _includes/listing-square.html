@@ -1,12 +1,21 @@
-<div class="card">
+<!-- this code isn't very good, i used style parameters in tags to fix graphical issues lazily-->
+<div class="card" style="height:350px">
 	{% if include.item.recommend %}
-	<div class="card-header bg-warning "><span class="bcmc-recommended"><i class="fa fa-star" aria-hidden="true"></i>
-			Recommended</span></div>
+	<div class="card-header bg-warning ">
+		<span class="bcmc-recommended">
+			<i class="fa fa-star" aria-hidden="true"></i>
+			Recommended
+		</span>
+	</div>
 	{% endif %}
 	{% if include.item.icon %}
-	<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}">
+	<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}" style="max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 95px;
+	width: auto;">
 	{% endif %}
-	<div class="card-body">
+	<div class="card-body" style="overflow: hidden;">
 		<a href="{{include.item.url}}">
 			<h5 class="card-title">{{include.item.title}}</h5>
 		</a>
