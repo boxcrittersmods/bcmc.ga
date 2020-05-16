@@ -1,30 +1,33 @@
 ---
 layout: item
 ---
-{% assign content = page.content | strip_newlines %}
+
 {% include page-thumb.html card=true %}
 <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">{{page.title}}</h5>
-        <p class="card-text">{{page.description}}</p>
-        {% if page.install %}
-        <a href="{{ page.install }}" target="_blank" class="btn btn-primary">One click Install</a>
-        {% endif %}
-    </div>
-	{% include author-list.html item=page %}
+	<div class="card-body">
+		<h5 class="card-title">{{page.title}}
+			{% if page.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ page.slug }}"
+			alt="mod-verision">{% endif %}
+		</h5>
+		<p class="card-text">{{page.description}}</p>
+	</div>
+	<div class="list-group list-group-flush">
+		{% include author-list.html item=page %}
+		{% include link-row.html %}
+	</div>
+	{% assign content = page.content | strip %}
+	{% unless content == "" %}
+	<div class="card-body">{{content}}</div>
+	{% endunless %}
 </div>
+
 {% if page.code %}
 <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Install</h5>
-        <p class="card-text">
-            <pre><code>{{page.code}}</code></pre>
-        </p>
-    </div>
-</div>
-{% endif %}
-{% if content != "" %}
-<div class="card">
-{{content}}
+	<div class="card-body">
+		<h5 class="card-title">Install</h5>
+		<p class="card-text">
+		<pre><code>{{page.code}}</code></pre>
+		</p>
+	</div>
 </div>
 {% endif %}
