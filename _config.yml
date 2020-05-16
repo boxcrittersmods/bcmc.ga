@@ -65,7 +65,7 @@ defaults:
 - scope:
     path: ""
   values:
-    layout: basic
+    layout: project
     featured: false
     comments: true
     newcomments: true
