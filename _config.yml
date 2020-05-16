@@ -84,7 +84,7 @@ defaults:
     path: ""
     type: texturepacks
   values:
-    layout: texturepack
+    layout: project
     comments: true
     newcomments: true
     list: true
@@ -95,7 +95,7 @@ defaults:
     path: ""
     type: shaders
   values:
-    layout: shader
+    layout: project
     comments: true
     newcomments: true
     list: true
@@ -124,7 +124,7 @@ defaults:
     path: ""
     type: servers
   values:
-    layout: server
+    layout: project
     comments: true
     newcomments: true
     list: true
