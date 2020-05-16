@@ -104,6 +104,7 @@ defaults:
     path: ""
     type: authors
   values:
+    layout: author
     comments: true
     newcomments: true
     show-nav: true

@@ -15,11 +15,13 @@ layout: item
 		{% include author-list.html item=page %}
 		{% include link-row.html %}
 	</div>
-	{% assign content = page.content | strip %}
-	{% unless content == "" %}
-	<div class="card-body">{{content}}</div>
+	{% assign longDescription = page.content | strip %}
+	{% unless longDescription == "" %}
+	<div class="card-body">{{longDescription}}</div>
 	{% endunless %}
 </div>
+
+{{content}}
 
 {% if page.code %}
 <div class="card">

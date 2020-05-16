@@ -31,7 +31,7 @@
 {% endfor %}
 {% endcapture %}
 
-{% capture content %}
+{% capture fullRow %}
 {{primaryHTML}}
 {{secondaryHTML}}
 
@@ -60,9 +60,9 @@
 {% endif %}
 {% endcapture %}
 
-{% assign temp = content | strip %}
+{% assign temp = fullRow | strip %}
 {% if temp != "" %}
 <div class="list-group-item project-info">
-	{{content}}
+	{{fullRow}}
 </div>
 {% endif %}
