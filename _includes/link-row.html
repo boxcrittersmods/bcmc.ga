@@ -1,7 +1,7 @@
 {% assign item = include.item | default: page %}
 
-{% assign primary = "install,join" | split: "," %}
-{% assign primaryName = "Install,Join" | split: "," %}
+{% assign primary = "install,join,linkPrimary,sourcePrimary" | split: "," %}
+{% assign primaryName = "Install,Join,Link,Source" | split: "," %}
 {% assign secondary = "link,source,discord" | split: "," %}
 {% assign secondaryName = "Link,Source,Discord" | split: "," %}
 {% assign browsers = "chrome,firefox,edge,safari,opera,ios,android" | split: "," %}
@@ -22,18 +22,22 @@
 {% for i in browsers %}
 {% if item.browser[i] %}<a href="{{item.browser[i]}}" class="browser-{{i}}"><img src="/uploads/browser/{{i}}.png" alt=""></a>{% endif %}
 {% endfor %}
+{% if item.unfinished %}
+<span class="browser-none">This project is not finished.</span>
+{% else %}
 {% if primaryHTML | strip == "" %}
 <span class="browser-none">This project is not supported for your browser.</span>
+{% endif %}
 {% endif %}
 {% endcapture %}
 
 <div class="list-group-item project-info">
+	{{primaryHTML}}
+	{{secondaryHTML}}
+
 	{% if browser | strip %}
 	<div class="text-muted browser-list">
 		{{browser}}
 	</div>
 	{% endif %}
-
-	{{primaryHTML}}
-	{{secondaryHTML}}
 </div>

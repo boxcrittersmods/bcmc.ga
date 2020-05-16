@@ -1,15 +1,16 @@
 ---
-title: 'Box Critters: Private Box'
-description: Box critters Private server Engine for people to freely use to make their own servers
+title: 'Private Box'
+description: Private server 
 date: 2019-10-14
 author:
+- SArpnt
 - TumbleGamer
 - Flines
 - Slaggo
 - Sponix
 - Eribetra
-source: https://github.com/boxcritters/private-box
-website: https://boxcritters.github.io/private-box
+unfinished: true
+sourcePrimary: https://github.com/boxcritters/private-box
 ---
 # Aim
 Create a Box critters Private server Engine for people to freely use to make their own servers
@@ -18,4 +19,4 @@ Create a Box critters Private server Engine for people to freely use to make the
 # Outcomes
 The creation of this aided the development of [[Project: Critality]]
 and the client was used in the creation of [[Project:LearnToCode]].
-Other creations used with this is pumkin paradice by flines and Sponix, which is a pumpkin themed box critters private server and also clone critters by Eribetra .
+Other creations used with this is pumkin paradice by flines and Sponix, which is a pumpkin themed box critters private server and also clone critters by Eribetra.
