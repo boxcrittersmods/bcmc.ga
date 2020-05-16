@@ -4,9 +4,4 @@ title: Shaders
 listing: shaders
 ---
 {% include page-header-noimg.html %}
-<div class="container page-content">
-	{% assign items = site[page.listing] | reverse %}
-	{% for item in items %}
-	{% include listing-project.html item=item %}
-	{% endfor %}
-</div>
+{% include list.html %}
