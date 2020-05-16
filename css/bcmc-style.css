@@ -91,7 +91,7 @@ MOBILE
 	display:flex;
 	align-items: center;
     height: 60px;
-    line-height: 60px;
+    line-height: 100%;
 }
 .bcmc-footer a {
 	color:white;
