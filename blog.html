@@ -1,10 +1,7 @@
 ---
 layout: default
 title: Blog
+listing: posts
 ---
 {% include page-header-noimg.html %}
-<div class="container page-content">
-{% for post in site.posts %}
-{% include listing-post.html item=post %}
-{% endfor %}
-</div>
+{% include list.html %}

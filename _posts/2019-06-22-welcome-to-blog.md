@@ -7,6 +7,6 @@ date: 2019-06-21T23:00:00.000Z
 category: News
 categories:
   - 'updates'
-excerpt: Hello world
+description: Hello world
 ---
 This is some Text

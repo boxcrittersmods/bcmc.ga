@@ -12,6 +12,6 @@ title: Collections
 {% assign word_count = word_count | minus: '1' %}
 *  [{{ item.title }}]({{ item.url }})
 
-{% include listing-project.html item=author %}
+{% include listing.html item=author %}
 {% endfor %}
 {% endfor %}

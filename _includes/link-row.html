@@ -26,10 +26,28 @@
 
 {% capture browser %}
 {% for i in browsers %}
-{% if item.browser[i] %}<a href="{{item.browser[i]}}" class="browser-{{i}}"><img src="/uploads/browser/{{i}}.png" alt=""></a>{% endif %}
+{% if item.browser[i] %}<a href="{{item.browser[i]}}" class="browser-{{i}}"><img src="/uploads/browser/{{i}}.png"
+		alt=""></a>{% endif %}
 {% endfor %}
+{% endcapture %}
+
+{% capture content %}
+{{primaryHTML}}
+{{secondaryHTML}}
+
+{% assign temp = browser | strip %}
+{% if temp != "" %}
+<div class="text-muted browser-list">
+	{{browser}}
+</div>
+{% endif %}
+
 {% if item.disclaimer %}
 <span class="browser-none">{{item.disclaimer}}</span>
+{% elsif item.collection == "authors" or item.collection == "posts" %}
+{% if item.unfinished %}
+<span class="browser-none">This page is not finished.</span>
+{% endif %}
 {% else %}
 {% if item.unfinished %}
 <span class="browser-none">This project is not finished.</span>
@@ -42,13 +60,9 @@
 {% endif %}
 {% endcapture %}
 
+{% assign temp = content | strip %}
+{% if temp != "" %}
 <div class="list-group-item project-info">
-	{{primaryHTML}}
-	{{secondaryHTML}}
-
-	{% if browser | strip %}
-	<div class="text-muted browser-list">
-		{{browser}}
-	</div>
-	{% endif %}
+	{{content}}
 </div>
+{% endif %}

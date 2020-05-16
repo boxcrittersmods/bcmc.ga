@@ -15,7 +15,7 @@ title: Home
 			{% assign mods = site.mods | sort: "date","last" | reverse | where: "recommend","true" %}
 			{% assign l = mods | size %}
 			{% for mod in mods limit: 4 %}
-			{% include listing-vir.html item=mod %}
+			{% include listing-square.html item=mod %}
 			{% endfor %}
 		</div>
 		<div class="card">
@@ -26,7 +26,7 @@ title: Home
 			{% assign tps = site.texturepacks | sort: "date","last" | reverse %}
 			{% assign l = tps | size %}
 			{% for tp in tps limit: 4 %}
-			{% include listing-vir.html item=tp %}
+			{% include listing-square.html item=tp %}
 			{% endfor %}
 
 		</div>
@@ -38,7 +38,7 @@ title: Home
 			{% assign mods = site.mods | sort: "date","last" | reverse %}
 			{% assign l = mods | size %}
 			{% for mod in mods limit: 4 %}
-			{% include listing-vir.html item=mod %}
+			{% include listing-square.html item=mod %}
 			{% endfor %}
 		</div>
 		<div class="card">
@@ -49,7 +49,7 @@ title: Home
 			{% assign shaders = site.shaders | sort: "date","last" | reverse %}
 			{% assign l = shaders | size %}
 			{% for shader in shaders limit: 4 %}
-			{% include listing-vir.html item=shader %}
+			{% include listing-square.html item=shader %}
 			{% endfor %}
 
 		</div>
