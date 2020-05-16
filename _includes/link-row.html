@@ -34,7 +34,8 @@
 {% if item.unfinished %}
 <span class="browser-none">This project is not finished.</span>
 {% else %}
-{% if primaryHTML | strip == "" %}
+{% assign temp = primaryHTML | strip %}
+{% if temp == "" %}
 <span class="browser-none">This project is not supported for your browser.</span>
 {% endif %}
 {% endif %}

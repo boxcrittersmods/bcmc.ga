@@ -1,11 +1,20 @@
+{% capture info %}
+Created {% if include.item.date == null %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
+{% for author in include.item.author %}
+{% if forloop.first %}
+by
+{% else %}
+{% if forloop.last %} and{% else %},{% endif %}
+{% endif %}
+<b><a href="/authors/{{author}}">{{author}}</a></b>
+{% endfor %}
+{% endcapture %}
 
-{% if include.item.date or include.item.author %}
-    <div class="card-footer">
-        <small class="text-muted">
-           created {% if include.item.date %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
-        {% if include.item.author %}by 
-        {% for author in include.item.author %}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<b><a href="/authors/{{author|slugify}}">{{author}}</a></b>{%endfor%}
-        {% endif %}
-    </small>
+{% assign temp = info | strip %}
+{% if temp != "Created" %}
+<div class="card-footer">
+	<small class="text-muted">
+		{{info}}
+	</small>
 </div>
 {% endif %}
