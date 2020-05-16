@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Texture Packs
+listing: texturepacks
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-{% assign tps = site.texturepacks | reverse %}
-{% for texturepack in tps %}
-{% include listing-project.html item=texturepack %}
-{% endfor %}
+	{% assign items = site[page.listing] | reverse %}
+	{% for item in items %}
+	{% include listing-project.html item=item %}
+	{% endfor %}
 </div>

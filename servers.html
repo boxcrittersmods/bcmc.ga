@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Servers
+listing: servers
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-{% assign servers = site.servers | reverse %}
-{% for server in servers %}
-{% include listing-server.html item=server %}
-{% endfor %}
+	{% assign items = site[page.listing] | reverse %}
+	{% for item in items %}
+	{% include listing-project.html item=item %}
+	{% endfor %}
 </div>

@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Projects
+listing: projects
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-{% assign projects = site.projects | reverse %}
-{% for project in projects %}
-{% include listing-project.html item=project %}
-{% endfor %}
+	{% assign items = site[page.listing] | reverse %}
+	{% for item in items %}
+	{% include listing-project.html item=item %}
+	{% endfor %}
 </div>

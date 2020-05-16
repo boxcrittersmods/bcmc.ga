@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Shaders
+listing: shaders
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-{% assign shaders = site.shaders | reverse %}
-{% for shader in shaders %}
-{% include listing-project.html item=shader %}
-{% endfor %}
+	{% assign items = site[page.listing] | reverse %}
+	{% for item in items %}
+	{% include listing-project.html item=item %}
+	{% endfor %}
 </div>
