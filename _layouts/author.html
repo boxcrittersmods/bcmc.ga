@@ -3,6 +3,8 @@ layout: project
 ---
 {% for thing in site.documents %}
 {% if thing.author contains page.title or thing.author == page.title %}
+{% unless page.hideCredit contains thing.title %}
 {% include listing.html item=thing %}
+{% endunless %}
 {% endif %}
 {% endfor %}

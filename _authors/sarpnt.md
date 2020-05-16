@@ -8,6 +8,8 @@ author:
 primary:
 - name: Github
 href: https://github.com/sarpnt/
+hideCredit:
+- SArpnt
 ---
 <style>
 	.page-header>*>*>*>* {
