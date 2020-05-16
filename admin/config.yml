@@ -7,6 +7,39 @@ show_preview_links: true
 publish_mode: editorial_workflow
 logo_url: http://boxcrittersmods.ga/uploads/logo.png
 collections:
+  - name: 'mods'
+    label: Mods
+    label_singular: Mod
+    media_folder: "/uploads/mods/"
+    folder: _mods
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - label: "Authors"
+        name: "author"
+        widget: "list"
+        field: {label: Author, name: author, widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "Unfinished", name: "unfinished", widget: "boolean", required: false }
+      - label: "Main Links"
+        name: "primary"
+        widget: "list"
+        fields:
+          - {label: "Link name", name: "name", widget: "string", required: true}
+          - {label: "URL", name: "href", widget: "string", required: true}
+      - label: "Other Links"
+        name: "primary"
+        widget: "list"
+        fields:
+          - {label: "Link Name", name: "name", widget: "string", required: true}
+          - {label: "URL", name: "href", widget: "string", required: true}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
   - name: 'texturepacks'
     label: Texture Packs
     label_singular: Texture Pack
@@ -49,74 +82,6 @@ collections:
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-  - name: 'projects'
-    label: Projects
-    label_singular: Project
-    media_folder: "/uploads/projects/"
-    folder: _projects
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-        field: {label: Author, name: author, widget: "string", required: true}
-      - {label: "Description", name: "description", widget: "text", required: true}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - label: "Browser Specific Install"
-        name: "browser"
-        widget: "object"
-        fields:
-          - { label: "Chrome", name: "chrome" , widget: "string", required: false}
-          - { label: "Firefox", name: "firefox",  widget: "string", required: false}
-          - { label: "Edge", name: "edge",  widget: "string", required: false}
-          - { label: "Safari", name: "safari",  widget: "string", required: false}
-          - { label: "Opera", name: "opera",  widget: "string", required: false}
-          - { label: "iOS", name: "ios",  widget: "string", required: false}
-          - { label: "Android", name: "android",  widget: "string", required: false}
-      - {label: "Install URL", name: "install", widget: "string", required: false}
-      - {label: "Source", name: "source", widget: "string", required: false}
-      - {label: "Website", name: "website", widget: "string", required: false}
-      - {label: "Discord", name: "discord", widget: "string", required: false}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-  - name: 'mods'
-    label: Mods
-    label_singular: Mod
-    media_folder: "/uploads/mods/"
-    folder: _mods
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - label: "Authors"
-        name: "author"
-        widget: "list"
-      - {label: "Description", name: "description", widget: "text", required: true}
-      - {label: "Date", name: "date", widget: "date", required: true}
-      - {label: "Logo", name: "logo", widget: "image", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
-      - label: "Browser Specific Install"
-        name: "browser"
-        widget: "object"
-        fields:
-          - { label: "Chrome", name: "chrome" , widget: "string", required: false}
-          - { label: "Firefox", name: "firefox",  widget: "string", required: false}
-          - { label: "Edge", name: "edge",  widget: "string", required: false}
-          - { label: "Safari", name: "safari",  widget: "string", required: false}
-          - { label: "Opera", name: "opera",  widget: "string", required: false}
-          - { label: "iOS", name: "ios",  widget: "string", required: false}
-          - { label: "Android", name: "android",  widget: "string", required: false}
-      - {label: "Install URL", name: "install", widget: "string", required: false}
-      - {label: "Website", name: "website", widget: "string", required: false}
-      - {label: "Source", name: "source", widget: "string", required: false}
-      - {label: "Discord", name: "discord", widget: "string", required: false}
-      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
-      - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
   - name: 'authors'
     label: Authors
     label_singular: Author
