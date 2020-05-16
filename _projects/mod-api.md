@@ -1,7 +1,8 @@
 ---
 title: BoxCritters Mod API Server
 author:
-  - TumbleGamer
+  - tumblegamer
+  - alvarito050506
 date: 2019-04-26T00:00:00.000Z
 primary:
   - name: Link
