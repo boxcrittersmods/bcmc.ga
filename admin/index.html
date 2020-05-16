@@ -9,5 +9,14 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <!-- <script src="https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/netlify-cms@latest/dist/netlify-cms.js"></script>
+  <script>
+	  import CMS from 'netlify-cms-app';
+		import { br,pt,es,fr } from 'netlify-cms-locales';
+
+		CMS.registerLocale('br', br);
+		CMS.registerLocale('pt', pt);
+		CMS.registerLocale('es', es);
+		CMS.registerLocale('fr', fr);
+  </script>
 </body>
 </html>
