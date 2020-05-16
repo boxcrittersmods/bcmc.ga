@@ -46,6 +46,12 @@ collections:
           - {label: "URL", name: "href", widget: "string", required: true}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
+      - label: "Dependecies"
+        name: "require"
+        widget: "select"
+        required: true
+        multiple: true
+        options: [{{site.mods|map:'title'|join:','}}]
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
 {% endfor %}
