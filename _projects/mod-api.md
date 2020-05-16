@@ -3,8 +3,12 @@ title: BoxCritters Mod API Server
 date: 2019-04-26
 author:
 - TumbleGamer
-linkPrimary: https://bc-mod-api.herokuapp.com/
-source: https://github.com/boxcritters/bc-mod-api
+primary:
+- name: Link
+  href: https://bc-mod-api.herokuapp.com/
+secondary:
+- name: Source
+  href: https://github.com/boxcritters/bc-mod-api
 ---
 # Aims
 # what was used

@@ -1,8 +1,12 @@
 ---
-title: 'Project: Learn To Code'
+title: 'Learn To Code'
 date: 2019-10-27
 author:
 - TumbleGamer
-source: https://github.com/boxcritters/learntocode
-website: https://boxcritters.github.io/learntocode
+primary:
+- name: Link
+  href: https://boxcritters.github.io/learntocode
+secondary:
+- name: Source
+  href: https://github.com/boxcritters/learntocode
 ---

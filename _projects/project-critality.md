@@ -3,8 +3,11 @@ title: 'Project: Critality'
 date: 2019-10-14
 author:
 - TumbleGamer
-source: https://github.com/boxcritters/Project-Critality
-description:  VR Client for box critters.
+secondary:
+- name: Source
+  href: https://github.com/boxcritters/Project-Critality
+description: VR Client for box critters.
+unfinished: true
 ---
 # Aim
 VR Client for box critters.

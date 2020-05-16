@@ -8,5 +8,7 @@ description: CritterBox is a server implementation of Box Critters written in
   customizable, and easy to use.
 date: 2020-04-12T16:13:19.810Z
 image: /uploads/projects/critterbox.png
-source: https://github.com/crittersbox/critters
+primary:
+- name: Source
+  href: https://github.com/crittersbox/critters
 ---

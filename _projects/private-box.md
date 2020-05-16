@@ -11,13 +11,15 @@ author:
 - Eribetra
 unfinished: true
 primary:
-#- name: Install (client)
+#- name: Install client
 #  href: /
-- name: Source
-  href: https://github.com/boxcritters/private-box
+#- name: Download Server
+#  href: /
 secondary:
 - name: Test server
   href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
+- name: Source
+  href: https://github.com/boxcritters/private-box
 ---
 # Aim
 Create a Box critters Private server Engine for people to freely use to make their own servers
