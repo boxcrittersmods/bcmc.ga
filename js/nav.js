@@ -1,11 +1,12 @@
-$(window).scroll(function(e){
-	console.log("scroll")
+function updateNav(e) {
 	if( $(this).scrollTop() < $('.page-header').height()) {
 		$('.bcmc-header').removeClass('fixed');
 	} else {
 		$('.bcmc-header').addClass('fixed');
 	}
-});
+}
+updateNav
+$(window).scroll(updateNav);
 
 $('.navbar-toggler').click(()=>{
 	$('.bcmc-header').addClass('fixed');
