@@ -2,7 +2,8 @@
 layout: project
 ---
 {% for thing in site.documents %}
-{% if thing.author contains page.title or thing.author == page.title %}
+{% assign pageTitle = page.title | downcase %}
+{% if thing.author contains pageTitle or thing.author == pageTitle %}
 {% include listing.html item=thing %}
 {% endif %}
 {% endfor %}

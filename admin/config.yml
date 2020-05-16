@@ -19,6 +19,7 @@ collections:
     media_folder: "/uploads/{{type.label }}/"
     folder: _{{type.label }}
     create: true
+    preview_path: /{{type.label}}/{{ "{{ slug "}}}}
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - label: "Author"
