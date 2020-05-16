@@ -2,8 +2,8 @@
 title: BCMacro API
 author:
   - TumbleGamer
-description: Adds Macro API
-date: 14-04-2019
+description: Adds an API that lets mods create specific actions that can we bound to buttons or keys.
+date: 16-05-2020
 featured: false
 userscript: true
 install: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
