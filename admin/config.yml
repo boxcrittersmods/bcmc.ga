@@ -27,7 +27,7 @@ collections:
         options: [{{site.authors|map:'title'|join:','}}]
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Disclamer", name: "disclaimer", widget: "text", required: false}
-      - {label: "Date", name: "date", widget: "date", required: true}
+      - {label: "Date", name: "date", widget: "date", required: false}
       - {label: "Logo", name: "logo", widget: "image", required: false}
       - {label: "Banner", name: "image", widget: "image", required: false}
       - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
