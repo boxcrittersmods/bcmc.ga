@@ -10,7 +10,14 @@ author:
 - Sponix
 - Eribetra
 unfinished: true
-sourcePrimary: https://github.com/boxcritters/private-box
+primary:
+#- name: Install (client)
+#  href: /
+- name: Source
+  href: https://github.com/boxcritters/private-box
+secondary:
+- name: Test server
+  href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
 ---
 # Aim
 Create a Box critters Private server Engine for people to freely use to make their own servers

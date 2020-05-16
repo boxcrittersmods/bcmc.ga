@@ -4,7 +4,7 @@
   href: /texturepacks
 - name: Shaders
   href: /shaders
-# - name: Private Servers
-#   href: /servers
 - name: Projects
   href: /projects
+- name: Servers
+  href: /servers
