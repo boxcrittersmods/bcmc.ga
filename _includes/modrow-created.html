@@ -1,5 +1,5 @@
 {% capture info %}
-{% if include.item.date == null %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
+{% if include.item.date == "" %}on {{ include.item.date | date: "%-d %B %Y"}}{% endif %}
 {% for author in include.item.author %}{% if forloop.first %}by{% else %}{% if forloop.last %} and{% else %},{% endif %}
 {% endif %}
 <b><a href="/authors/{{author}}">{{author}}</a></b>{% endfor %}{% endcapture %}
