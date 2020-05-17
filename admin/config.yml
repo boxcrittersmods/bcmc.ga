@@ -4,13 +4,13 @@ layout: null
 backend:
   name: github
   repo: boxcritters/boxcrittersmods.ga
-  base_url: https://api.boxcrittersmods.ga
+  base_url: https://{{site.bc-mod-api}}
 local: 'en'
 media_folder: "uploads"
 show_preview_links: true
 publish_mode: editorial_workflow
-display_url: https://boxcrittersmods.ga
-logo_url: http://boxcrittersmods.ga/uploads/logo.png
+display_url: {{site.url}}
+logo_url: {{site.url}}/uploads/logo.png
 collections:
 {% for type in site.collections %}
   - name: '{{type.label }}'
