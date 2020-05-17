@@ -1,5 +1,5 @@
 ---
-layout: default-sb
+layout: default
 title: Home
 ---
 {% assign all=site.documents | sort: "date","last" | reverse %}
@@ -18,10 +18,10 @@ title: Home
 			{% include listing-square.html item=mod %}
 			{% endfor %}
 		</div>
+
 		<div class="card">
 			<div class="card-header"><h1>Texture Packs</h1></div>
 		</div>
-		
 		<div class="content-list row">
 			{% assign tps = site.texturepacks | sort: "date","last" | reverse %}
 			{% assign l = tps | size %}
@@ -41,10 +41,10 @@ title: Home
 			{% include listing-square.html item=mod %}
 			{% endfor %}
 		</div>
+
 		<div class="card">
 			<div class="card-header"><h1>Shaders</h1></div>
 		</div>
-		
 		<div class="content-list row">
 			{% assign shaders = site.shaders | sort: "date","last" | reverse %}
 			{% assign l = shaders | size %}
@@ -55,10 +55,6 @@ title: Home
 		</div>
 	</div>
 	<div class="sidebar">
-		{% include sidebar.html %}
-		{% include sidebar.html %}
-		{% include sidebar.html %}
-		{% include sidebar.html %}
-		{% include sidebar.html %}
+		{% include home-sidebar.html %}
 	</div>
 </div>

@@ -3,18 +3,18 @@
 		<img class="bcmc-logo" src="/uploads/bcmc-logo.png" alt="{{site.title}}">
 		<img class="bcmc-logo-white" src="/uploads/bcmc-white.png" alt="{{site.title}}">
 	</a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav  mt-2 mt-lg-0">
-            {% for nav in site.data.nav %}
-            <li class="nav-item{% if page.url contains nav.href %} active{% endif %}">
-                <a class="nav-link" href="{{nav.href}}">{{nav.name}} {% if  page.url contains nav.href %}<span
-                        class="sr-only">(current)</span>{% endif %}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		<ul class="navbar-nav  mt-2 mt-lg-0">
+			{% for nav in site.data.nav %}
+			<li class="nav-item{% if page.url contains nav.href %} active{% endif %}">
+				<a class="nav-link" href="{{nav.href}}">{{nav.name}} {% if  page.url contains nav.href %}<span
+						class="sr-only">(current)</span>{% endif %}</a>
+			</li>
+			{% endfor %}
+		</ul>
+
 	</div>
-	
+
 	<span class="dropdown">
 		<a href="https://create.boxcrittersmods.ga" class="btn align-right"><i class="fas fa-edit text-white"></i></a>
 		<a href="/submissions-coming-soon" class="btn align-right"><i class="fas fa-upload text-white"></i></a>
@@ -39,7 +39,10 @@
 </header>
 
 <nav class="nav fixed-bottom nav-fill nav-primary d-lg-none">
-	<a class="nav-item nav-link btn-success {% if page.url contains 'mods' %}active{% endif %}" href="/mods"><i class="fas fa-wrench"></i>Mods</a>
-	<a class="nav-item nav-link btn-success {% if page.url contains 'texturepacks' %}active{% endif %}" href="/texturepacks"><i class="fas fa-paint-brush"></i>Texture Packs</a>
-	<a class="nav-item nav-link btn-success {% if page.url contains 'shaders' %}active{% endif %}" href="/shaders"><i class="fas fa-eye"></i>Shaders</a>
+	<a class="nav-item nav-link btn-success {% if page.url contains 'mods' %}active{% endif %}" href="/mods"><i
+			class="fas fa-wrench"></i>Mods</a>
+	<a class="nav-item nav-link btn-success {% if page.url contains 'texturepacks' %}active{% endif %}"
+		href="/texturepacks"><i class="fas fa-paint-brush"></i>Texture Packs</a>
+	<a class="nav-item nav-link btn-success {% if page.url contains 'shaders' %}active{% endif %}" href="/shaders"><i
+			class="fas fa-eye"></i>Shaders</a>
 </nav>

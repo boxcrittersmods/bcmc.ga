@@ -9,11 +9,26 @@
 	</div>
 	{% endif %}
 	{% if include.item.icon %}
-	<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}" style="max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 95px;
-	width: auto;">
+	<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}">
+	<script>
+		{
+			let script = document.currentScript;
+			window.addEventListener('load', function () {
+				var card = script.parentElement;
+				var cardsize = card.getBoundingClientRect();
+				var img = card.getElementsByTagName('img')[0];
+				if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
+					img.height = 100;
+					img.style.width = "auto";
+					img.style.marginLeft = "auto";
+					img.style.marginRight = "auto";
+				} else {
+					img.width = cardsize.width;
+					img.style.height = "auto";
+				}
+			})
+		}
+	</script>
 	{% endif %}
 	<div class="card-body" style="overflow: hidden;">
 		<a href="{{include.item.url}}">
@@ -21,5 +36,5 @@
 		</a>
 		<p class="card-text">{{include.item.description}}</p>
 	</div>
-	{% include author-list.html item=include.item %}
+	{% include modrow-created.html item=include.item %}
 </div>

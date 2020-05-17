@@ -12,8 +12,8 @@ layout: item
 		<p class="card-text">{{page.description}}</p>
 	</div>
 	<div class="list-group list-group-flush">
-		{% include author-list.html item=page %}
-		{% include link-row.html %}
+		{% include modrow-created.html item=page %}
+		{% include modrow-buttons.html %}
 	</div>
 	{% assign longDescription = page.content | strip %}
 	{% unless longDescription == "" %}
@@ -21,7 +21,9 @@ layout: item
 	{% endunless %}
 </div>
 
-{{content}}
+{% if page.collection == "authors" %}
+{% include get-author-projects.html %}
+{% endif %}
 
 {% if page.code %}
 <div class="card">

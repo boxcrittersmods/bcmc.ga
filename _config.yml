@@ -1,6 +1,6 @@
 title: Box Critters Modding Community
 description: > # this means to ignore newlines until "baseurl:"
-  Install mods and texture packs to your favourite game
+  Install mods and other add-ons to Box Critters
 base-url: ""
 url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
 repository: boxcritters/boxcrittersmods.ga
@@ -19,6 +19,8 @@ collections:
   projects:
     output: true
   servers:
+    output: true
+  other:
     output: true
 
 permalink: pretty
@@ -66,8 +68,7 @@ defaults:
     path: ""
   values:
     featured: false
-    layout: project
-    content: ""
+    layout: listing-page
     list: false
     show-nav: false
 - scope:
@@ -100,7 +101,6 @@ defaults:
     path: ""
     type: authors
   values:
-    layout: author
     comments: true
     show-nav: true
 - scope:
@@ -113,6 +113,13 @@ defaults:
 - scope:
     path: ""
     type: servers
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: other
   values:
     comments: true
     list: true

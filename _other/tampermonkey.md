@@ -1,8 +1,6 @@
 ---
 title: Tampermonkey
 description: The world's most popular userscript manager
-layout: project
-slug: tampermonkey
 browser:
   chrome: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
   firefox: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
