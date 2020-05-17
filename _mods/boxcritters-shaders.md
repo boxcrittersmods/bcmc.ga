@@ -5,7 +5,9 @@ author:
   - SArpnt
 description: Create shaders for boxcritters
 date: 2020-04-29T23:00:00.000Z
-install: https://github.com/boxcritters/bc-shaders/raw/master/bc-shaders.user.js
+primary:
+- name: install
+  href: https://github.com/boxcritters/bc-shaders/raw/master/bc-shaders.user.js
 featured: false
 userscript: true
 recommend: true

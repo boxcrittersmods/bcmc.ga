@@ -8,6 +8,8 @@ image: /uploads/mods/hi-res.png
 featured: true
 userscript: true
 icon: /uploads/mods/hi-res.png
-install: https://greasyfork.org/scripts/398178-hi-res-boxcritters/code/Hi-Res%20boxcritters.user.js
+primary:
+- name: Install
+  href: https://greasyfork.org/scripts/398178-hi-res-boxcritters/code/Hi-Res%20boxcritters.user.js
 recommend: true
 ---

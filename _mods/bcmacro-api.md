@@ -6,6 +6,8 @@ description: Adds an API that lets mods create specific actions that can be boun
 date: 16-05-2020
 featured: false
 userscript: true
-install: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
+primary:
+- name: Install
+  href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
 recommend: false
 ---
