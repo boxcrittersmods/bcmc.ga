@@ -40,12 +40,13 @@
 
 {% capture fullRow %}
 	{{primaryHTML}}
-	{{secondaryHTML}}
 
 	{% assign temp = browser | strip %}
 	{% if temp != "" %}
 		{{browser}}
 	{% endif %}
+
+	{{secondaryHTML}}
 
 	{% if item.disclaimer %}
 		<span class="text-muted">{{item.disclaimer}}</span>
