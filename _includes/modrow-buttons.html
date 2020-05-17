@@ -32,7 +32,7 @@
 	{% for i in browsers %}
 		{% if item.browser[i] %}
 			<a href="{{item.browser[i]}}" class="browser-{{i}}">
-				<img src="/uploads/browser/{{i}}.png" alt="">
+				<img src="/uploads/browser/{{i}}.png" alt="{{i}}">
 			</a>
 		{% endif %}
 	{% endfor %}
@@ -68,7 +68,7 @@
 
 {% assign temp = fullRow | strip %}
 {% if temp != "" %}
-	<div class="list-group-item project-info">
+	<div class="list-group-item modrow-buttons">
 		{{fullRow}}
 	</div>
 {% endif %}
