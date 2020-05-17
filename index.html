@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-sb
 title: Home
 ---
 {% assign all=site.documents | sort: "date","last" | reverse %}
@@ -55,6 +55,10 @@ title: Home
 		</div>
 	</div>
 	<div class="sidebar">
+		{% include sidebar.html %}
+		{% include sidebar.html %}
+		{% include sidebar.html %}
+		{% include sidebar.html %}
 		{% include sidebar.html %}
 	</div>
 </div>
