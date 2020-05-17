@@ -13,5 +13,4 @@ primary:
   - name: Website
     href: https://tumble1999.github.io/
 userscript: false
-require:
 ---

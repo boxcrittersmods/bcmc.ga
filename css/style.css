@@ -1,17 +1,18 @@
 html, body {
+
 }
 .page-body {
-    position: relative;
-    min-height: 100vh;
+	position: relative;
+	min-height: 100vh;
 }
 .page-body > .container {
-    padding-bottom: 85px;
+	padding-bottom: 85px;
 }
 
 
 .card {
-    margin-top: 10px;
-    margin-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .info-head {
@@ -24,49 +25,49 @@ html, body {
 }
 
 /* .page-content {
-  background: #fff;
+	background: #fff;
 } */
 
 
 pre {
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .carousel-item,.carousel-item > img,.carousel-item > iframe, .carousel-inner {
-  /* width:100%; */
-  /* height: 500px !important; */
-height:40vh;
+	/* width:100%; */
+	/* height: 500px !important; */
+	height:40vh;
 }
 
 /* .page-header {
-  height: 50vh;
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+	height: 50vh;
+	min-height: 500px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 } */
 
 
 
 .carousel-item:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgb(0, 0, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgb(0, 0, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */   
-
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgb(0, 0, 0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgb(0, 0, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 }
+
 .carousel-caption a {
-  color:white;
+	color:white;
 }
 
 .carousel-item.video:hover:before {
@@ -80,27 +81,22 @@ carousel-item.video:hover {
 }
 
 .carousel-item.video:hover > .carousel-caption * {
-  color:white;
-  text-shadow: 2px 2px 4px #000000;
+	color:white;
+	text-shadow: 2px 2px 4px #000000;
 }
-
-
 
 
 /*==PAGE HEADER==*/
 
-
-
-
 .logged-in {
-  display: none;
+	display: none;
 }
 
 .content-list {
 	display: flex;
 	align-items: flex-start;
 }
-.content-list >* {
+.content-list > * {
 	flex:1;
 	margin: 4px;
 }
@@ -114,6 +110,4 @@ carousel-item.video:hover {
 	font-size: 2em;
 	padding-bottom: 3px;
 	display: block;
-	}
-
-	
+}
