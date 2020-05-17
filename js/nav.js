@@ -1,5 +1,5 @@
 function updateNav(e) {
-	if( window.scrollY <= $('.page-header').outerHeight() - $('.bcmc-header').outerHeight()) {
+	if (window.scrollY <= $('.page-header').outerHeight() - $('.bcmc-header').outerHeight()) {
 		$('.bcmc-header').removeClass('fixed');
 	} else {
 		$('.bcmc-header').addClass('fixed');
@@ -8,37 +8,32 @@ function updateNav(e) {
 updateNav();
 $(window).scroll(updateNav);
 
-$('.navbar-toggler').click(()=>{
+$('.navbar-toggler').click(() => {
 	$('.bcmc-header').addClass('fixed');
 });
 
 var params = new URLSearchParams(location.search);
 var authCode = params.get("code");
 
-if (authCode)
-{
+if (authCode) {
 	fetch(`https://auth.boxcrittersmods.ga/user/${authCode}`).then((res) => {
 		return res.text();
 	}).then((body) => {
 		var parsed = JSON.parse(body);
-		if (parsed.scope == "read:user")
-		{
+		if (parsed.scope == "read:user") {
 			sessionStorage.setItem("tmp_tok", parsed.access_token);
 			login();
 		}
 	});
-} else if (sessionStorage.getItem("tmp_tok"))
-{
+} else if (sessionStorage.getItem("tmp_tok")) {
 	login();
-} else
-{
+} else {
 	$("#loginout").click((event) => {
 		location.href = "https://github.com/login/oauth/authorize?client_id=1731af4285015be120e7&scope=read:user";
 	});
 }
 
-function login()
-{
+function login() {
 	fetch("https://api.github.com/user", {
 		"headers": {
 			"Accept": "application/json",
@@ -57,8 +52,7 @@ function login()
 	});
 }
 
-function logout()
-{
+function logout() {
 	sessionStorage.clear();
 	$("#avatar").src = `/uploads/guest.png`;
 	$("#loginout").innerHTML = "Log Out";
