@@ -1,6 +1,6 @@
 ---
 title: Greesemonkey
-description: The world's most popular userscript manager
+description: Customize the way a web page displays or behaves, by using small bits of JavaScript.
 author: Aaron Boodman
 date: 28-03-2005
 source: https://github.com/greasemonkey/greasemonkey
