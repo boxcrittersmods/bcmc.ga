@@ -1,5 +1,5 @@
 function updateNav(e) {
-	if( $(this).scrollTop() < $('.page-header').height()) {
+	if( window.scrollY <= $('.page-header').outerHeight() - $('.bcmc-header').outerHeight()) {
 		$('.bcmc-header').removeClass('fixed');
 	} else {
 		$('.bcmc-header').addClass('fixed');
