@@ -109,7 +109,7 @@ MOBILE
 	box-shadow: none;
 	width:100%;
 }
-.bcmc-header.fixed,.bcmc-header:hover.bcmc-header.shown {
+.bcmc-header.fixed,.bcmc-header:hover,.bcmc-header.shown {
     position: fixed;
     top: 0;
     z-index: 100;
