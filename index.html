@@ -22,7 +22,8 @@ title: Home
 		{% for collection in site.collections %}
 		{% if collection.home %}
 		<div class="card">
-			<div class="card-header"><h1>{{collection.title|capitalize|default:collection.label}}</h1></div>
+			{% assign normalTitle=collection.label|capitalize %}
+			<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
 		</div>
 		
 		<div class="content-list row">
