@@ -103,7 +103,7 @@ MOBILE
 
 .bcmc-header {
     position: fixed;
-	/* background-color: rgba(255, 255, 255, 0.4); */
+	background-color: rgba(255, 255, 255, 0.4);
 	background-color: transparent;
     z-index: 100;
 	box-shadow: none;
@@ -244,10 +244,7 @@ TABLET
 @media (max-width: 1024px) {
 	
 a.bcmc-sitetitle {
-	position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+	padding-left: 1%;
 }
 }
 
