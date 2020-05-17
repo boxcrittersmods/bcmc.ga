@@ -18,7 +18,7 @@ For submit a user script mod, fill the following form:
 
 <script>
   document.getElementById("submit").addEventListener("click", function (event) {
-    var req = new Request("https://api.boxcrittersmods.ga/modsubmit/" + btoa(document.getElementById("url").value), {
+    var req = new Request("https://{{site.bc-mod-api}}/modsubmit/" + btoa(document.getElementById("url").value), {
 		  method: "GET",
 		  redirect: "follow"
 	  });

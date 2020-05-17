@@ -23,7 +23,7 @@
 {% assign depPage = site.mods | where:"slug", dep | first %}
 {% endif %}
 	<li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
-			<a href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://api.boxcrittersmods.ga/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
+			<a href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://{{site.bc-mod-api}}/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
 			
 	<div class="list-group list-group-flush">
 		{% include modrow-buttons.html item=depPage %}</div>

@@ -5,6 +5,7 @@ base-url: ""
 url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
 repository: boxcritters/boxcrittersmods.ga
 
+bc-mod-api: api.boxcrittersmods.ga
 show-mod-versions: true
 
 #favicon: 
