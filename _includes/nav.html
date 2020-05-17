@@ -5,7 +5,7 @@
 	</a>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		<ul class="navbar-nav mt-2 mt-lg-0">
-			{% for nav in site.data.nav %}
+			{% for nav in site.data.menus.nav %}
 			<li class="nav-item {% if page.url contains nav.href %} active{% endif %}">
 				<a class="nav-link {% if nav.color %}text-{{nav.color}}{% endif %}" href="{{nav.href}}">{{nav.name}} {% if page.url contains nav.href %}<span
 						class="sr-only">(current)</span>{% endif %}</a>
@@ -27,10 +27,9 @@
 				<a class="dropdown-item" id="loginout" href="#">Login</a>
 			</span>
 			<span class="logged-in">
-				<a class="dropdown-item" href="/submissions-coming-soon">Submit</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Dashboard</a>
-				<a class="dropdown-item" href="#" id="mypage">My Page</a>
+				{% for nav in site.data.menus.user %}
+				<a class="dropdown-item" href="{{nav.href|default:#}}">{{nav.name}}</a>
+				{% endfor %}
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="#" id="logout">Log Out</a>
 			</span>
@@ -39,10 +38,8 @@
 </header>
 
 <nav class="nav fixed-bottom nav-fill nav-primary d-lg-none">
-	<a class="nav-item nav-link btn-success {% if page.url contains 'mods' %}active{% endif %}" href="/mods"><i
-			class="fas fa-wrench"></i>Mods</a>
-	<a class="nav-item nav-link btn-success {% if page.url contains 'texturepacks' %}active{% endif %}"
-		href="/texturepacks"><i class="fas fa-paint-brush"></i>Texture Packs</a>
-	<a class="nav-item nav-link btn-success {% if page.url contains 'shaders' %}active{% endif %}" href="/shaders"><i
-			class="fas fa-eye"></i>Shaders</a>
+	{% for nav in site.data.menus.mobile %}
+	<a class="nav-item nav-link btn-success {% if page.url contains nav.href %}active{% endif %}" href="/mods"><i
+			class="fas fa-{{nav.icon|default:star}}"></i>{{nav.name}}</a>
+	{% endfor %}
 </nav>

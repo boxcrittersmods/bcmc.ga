@@ -5,7 +5,7 @@ function updateNav(e) {
 		$('.bcmc-header').addClass('fixed');
 	}
 }
-updateNav
+updateNav();
 $(window).scroll(updateNav);
 
 $('.navbar-toggler').click(()=>{
