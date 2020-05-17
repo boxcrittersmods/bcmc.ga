@@ -14,15 +14,4 @@ primary:
     href: https://tumble1999.github.io/
 userscript: false
 require:
-  - critters+
-  - test
-  - critterscritterscritters
-  - texturepackselector
-  - crittermod
-  - hi-res
-  - multi-item-mod
-  - low-res
-  - transform-everyone-in-doctors
-  - boxcritters-shaders
-  - bcmacro-api
 ---
