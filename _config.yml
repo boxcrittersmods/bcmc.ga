@@ -78,7 +78,7 @@ defaults:
     layout: listing-page
     list: false
     show-nav: false
-    author: anonymous
+#    author: Anonymous
 - scope:
     path: ""
     type: mods
