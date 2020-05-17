@@ -10,16 +10,23 @@ repository: boxcritters/boxcrittersmods.ga
 collections:
   mods:
     output: true
+    home: true
   texturepacks:
+    title: Texture Packs
     output: true
+    home: true
   shaders:
     output: true
+    home: true
   authors:
     output: true
+    home: false
   projects:
-    output: true
+    output: false
+    home: true
   servers:
     output: true
+    home: false
 
 permalink: pretty
 production: true
