@@ -40,6 +40,6 @@
 <nav class="nav fixed-bottom nav-fill nav-primary d-lg-none">
 	{% for nav in site.data.menus.mobile %}
 	<a class="nav-item nav-link btn-success {% if page.url contains nav.href %}active{% endif %}" href="/mods"><i
-			class="fas fa-{{nav.icon}}"></i>{{nav.name}}</a>
+			class="fas fa-{{nav.icon|default:star}}"></i>{{nav.name}}</a>
 	{% endfor %}
 </nav>
