@@ -23,7 +23,7 @@ collections:
     home: false
   projects:
     output: false
-    home: true
+    home: false
   servers:
     output: true
     home: false
@@ -33,7 +33,6 @@ collections:
 
 permalink: pretty
 production: true
-
 
 plugins:
  - jekyll-feed
@@ -79,6 +78,7 @@ defaults:
     layout: listing-page
     list: false
     show-nav: false
+    author: anonymous
 - scope:
     path: ""
     type: mods
