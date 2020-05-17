@@ -109,20 +109,23 @@ MOBILE
 	box-shadow: none;
 	width:100%;
 }
-.bcmc-header.fixed,.bcmc-header:hover,.bcmc-header.shown {
+.bcmc-header.fixed,
+/*.bcmc-header:hover,*/
+.bcmc-header.shown {
 	position: fixed;
 	top: 0;
 	z-index: 100;
 	background-color: var(--bcmc-main);
 }
 
-.bcmc-header .bcmc-logo,
+
 .bcmc-header.fixed .bcmc-logo-white,
-.bcmc-header:hover .bcmc-logo-white {
+/*.bcmc-header:hover .bcmc-logo-white,*/
+.bcmc-header .bcmc-logo {
 	display: inline;
 }
 .bcmc-header.fixed .bcmc-logo,
-.bcmc-header:hover .bcmc-logo,
+/*.bcmc-header:hover .bcmc-logo,*/
 .bcmc-header .bcmc-logo-white {
 	display: none;
 }
