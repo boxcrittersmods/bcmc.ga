@@ -67,6 +67,7 @@ defaults:
   values:
     featured: false
     layout: project
+    content: ""
     list: false
     show-nav: false
 - scope:
