@@ -11,7 +11,7 @@
 {% if item[i] %}<a href="{{item[i]}}" class="btn btn-primary">{{primaryName[forloop.index0]}}</a>{% endif %}
 {% endfor %}
 {% for i in item.primary %}
-<a href="{{i.href}}" class="btn btn-primary">{{i.name}}</a>
+<a href="{{i.href}}" class="btn btn-primary" {% if i.color%}style="background-color:{{i.color}};border-color:{{i.color}};"{% endif %}>{{i.name}}</a>
 {% endfor %}
 {% endcapture %}
 
@@ -20,7 +20,7 @@
 {% if item[i] %}<a href="{{item[i]}}" class="btn btn-sm btn-secondary">{{secondaryName[forloop.index0]}}</a>{% endif %}
 {% endfor %}
 {% for i in item.secondary %}
-<a href="{{i.href}}" class="btn btn-sm btn-secondary">{{i.name}}</a>
+<a href="{{i.href}}" class="btn btn-sm btn-secondary" {% if i.color%}style="background-color:{{i.color}};border-color:{{i.color}};"{% endif %}>{{i.name}}</a>
 {% endfor %}
 {% endcapture %}
 
