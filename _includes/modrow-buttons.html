@@ -10,10 +10,12 @@
 
 {% capture primaryHTML %}
 	{% for i in primary %}
-	{% if item[i] %}<a href="{{item[i]}}" class="btn btn-primary">{{primaryName[forloop.index0]}}</a>{% endif %}
+		{% if item[i] %}
+			<a href="{{item[i]}}" class="btn btn-primary">{{primaryName[forloop.index0]}}</a>
+		{% endif %}
 	{% endfor %}
-	{% for i in item.primary %}
-	<a href="{{i.href}}" class="btn btn-primary" {% if i.color%}style="background-color:{{i.color}};border-color:{{i.color}};"{% endif %}>{{i.name}}</a>
+	{% for button in item.primary %}
+		{% include modbutton.html button=button type="primary" %}
 	{% endfor %}
 {% endcapture %}
 
@@ -23,12 +25,12 @@
 			<a href="{{item[i]}}" class="btn btn-sm btn-secondary">{{secondaryName[forloop.index0]}}</a>
 		{% endif %}
 	{% endfor %}
-	{% for i in item.secondary %}
-		<a href="{{i.href}}" class="btn btn-sm btn-secondary" {% if i.color%}style="background-color:{{i.color}};border-color:{{i.color}};"{% endif %}>{{i.name}}</a>
+	{% for button in item.secondary %}
+		{% include modbutton.html button=button type="secondary" %}
 	{% endfor %}
 {% endcapture %}
 
-{% capture browser %}
+{% capture browserHTML %}
 	{% for i in browsers %}
 		{% if item.browser[i] %}
 			<a href="{{item.browser[i]}}" class="browser-{{i}}">
@@ -40,12 +42,7 @@
 
 {% capture fullRow %}
 	{{primaryHTML}}
-
-	{% assign temp = browser | strip %}
-	{% if temp != "" %}
-		{{browser}}
-	{% endif %}
-
+	{{browserHTML}}
 	{{secondaryHTML}}
 
 	{% if item.disclaimer %}
