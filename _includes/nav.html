@@ -4,10 +4,10 @@
 		<img class="bcmc-logo-white" src="/uploads/bcmc-white.png" alt="{{site.title}}">
 	</a>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-		<ul class="navbar-nav  mt-2 mt-lg-0">
+		<ul class="navbar-nav mt-2 mt-lg-0">
 			{% for nav in site.data.nav %}
-			<li class="nav-item{% if page.url contains nav.href %} active{% endif %}">
-				<a class="nav-link" href="{{nav.href}}">{{nav.name}} {% if  page.url contains nav.href %}<span
+			<li class="nav-item {% if page.url contains nav.href %} active{% endif %}">
+				<a class="nav-link {% if nav.color %}text-{{nav.color}}{% endif %}" href="{{nav.href}}">{{nav.name}} {% if page.url contains nav.href %}<span
 						class="sr-only">(current)</span>{% endif %}</a>
 			</li>
 			{% endfor %}

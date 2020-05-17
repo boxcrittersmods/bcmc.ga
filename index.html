@@ -12,47 +12,28 @@ title: Home
 			<div class="card-header"><h1>Recommended</h1></div>
 		</div>
 		<div class="content-list row">
-			{% assign mods = site.mods | sort: "date","last" | reverse | where: "recommend","true" %}
-			{% assign l = mods | size %}
-			{% for mod in mods limit: 4 %}
-			{% include listing-square.html item=mod %}
+			{% assign items = site.documents | sort: "date","last" | reverse | where: "recommend","true" %}
+			{% assign l = items| size %}
+			{% for item in items limit: 4 %}
+			{% include listing-square.html item=item %}
 			{% endfor %}
 		</div>
 
+		{% for collection in site.collections %}
+		{% if collection.home %}
 		<div class="card">
-			<div class="card-header"><h1>Texture Packs</h1></div>
+			{% assign normalTitle=collection.label|capitalize %}
+			<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
 		</div>
 		<div class="content-list row">
-			{% assign tps = site.texturepacks | sort: "date","last" | reverse %}
-			{% assign l = tps | size %}
-			{% for tp in tps limit: 4 %}
-			{% include listing-square.html item=tp %}
-			{% endfor %}
-
-		</div>
-
-		<div class="card">
-			<div class="card-header"><h1>Mods</h1></div>
-		</div>
-		<div class="content-list row">
-			{% assign mods = site.mods | sort: "date","last" | reverse %}
-			{% assign l = mods | size %}
-			{% for mod in mods limit: 4 %}
-			{% include listing-square.html item=mod %}
+			{% assign items = site[collection.label] | sort: "date","last" | reverse %}
+			{% assign l = items | size %}
+			{% for item in items limit: 4 %}
+			{% include listing-square.html item=item %}
 			{% endfor %}
 		</div>
-
-		<div class="card">
-			<div class="card-header"><h1>Shaders</h1></div>
-		</div>
-		<div class="content-list row">
-			{% assign shaders = site.shaders | sort: "date","last" | reverse %}
-			{% assign l = shaders | size %}
-			{% for shader in shaders limit: 4 %}
-			{% include listing-square.html item=shader %}
-			{% endfor %}
-
-		</div>
+		{% endif %}
+		{% endfor %}
 	</div>
 	<div class="sidebar">
 		{% include home-sidebar.html %}

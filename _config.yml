@@ -10,18 +10,26 @@ repository: boxcritters/boxcrittersmods.ga
 collections:
   mods:
     output: true
+    home: true
   texturepacks:
+    title: Texture Packs
     output: true
+    home: true
   shaders:
     output: true
+    home: true
   authors:
     output: true
+    home: false
   projects:
-    output: true
+    output: false
+    home: true
   servers:
     output: true
+    home: false
   other:
     output: true
+    home: false
 
 permalink: pretty
 production: true
@@ -86,23 +94,17 @@ defaults:
     list: true
     show-nav: true
     require:
-    - texturepackselector
+    - texture-pack-manager
 - scope:
     path: ""
     type: shaders
   values:
     comments: true
     list: true
-    show-nav: 
-    require:
-    - texturepackselector
-    - boxcritters-shaders
-- scope:
-    path: ""
-    type: authors
-  values:
-    comments: true
     show-nav: true
+    require:
+    - texture-pack-manager
+    - boxcritters-shaders
 - scope:
     path: ""
     type: projects
@@ -113,6 +115,13 @@ defaults:
 - scope:
     path: ""
     type: servers
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: authors
   values:
     comments: true
     list: true

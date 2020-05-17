@@ -1,9 +1,12 @@
 - name: Mods
   href: /mods
+  color: danger
 - name: Texture Packs
   href: /texturepacks
+  color: warning
 - name: Shaders
   href: /shaders
+  color: primary
 - name: Projects
   href: /projects
 - name: Servers
