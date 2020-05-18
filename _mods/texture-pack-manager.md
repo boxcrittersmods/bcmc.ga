@@ -4,12 +4,20 @@ description: This extention lets you easily switch between different themes, add
 author:
 - TumbleGamer
 date: 2019-04-25
-source: https://github.com/boxcritters/bc-texture-pack-manager
 recommend: true
-browser:
-  chrome: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
-  firefox: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
-  opera: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
+buttons:
+- browser: chrome
+  img: /uploads/browser/chrome.png
+  href: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
+- browser: firefox
+  img: /uploads/browser/firefox.png
+  href: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
+- browser: opera
+  img: /uploads/browser/opera.png
+  href: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
+- type: 1
+  name: Source
+  href: https://github.com/boxcritters/bc-texture-pack-manager
 redirect_from:
   - /projects/texturepackselector/
   - /projects/texturepackmanager/
