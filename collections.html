@@ -1,17 +1,20 @@
 ---
 layout: default
 title: Collections
+listing: collections
 ---
 {% include page-header-noimg.html %}
-<div class="container page-content">
+<div class="page-content">
 {% for collection in site.collections %}
 {% assign normalTitle=collection.label|capitalize %}
 <div class="card">
 	{% assign normalTitle=collection.label|capitalize %}
 	<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
 </div>
+<div class="container">
 {% for thing in site[collection.label] %}
 {% include listing.html item=thing %}
 {% endfor %}
+</div>
 {% endfor %}
 </div>
