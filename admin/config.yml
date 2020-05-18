@@ -15,8 +15,8 @@ collections:
 {% for type in site.collections %}
 {% assign normalTitle=collection.label|capitalize %}
   - name: '{{ type.label }}'
-    label: {{collection.title|default:normalTitle}}
-    label_singular: {{type.singular|default:normalTitle }}
+    label: '{{collection.title|default:normalTitle}}'
+    label_singular: '{{type.singular|default:normalTitle }}'
     media_folder: "/uploads/{{type.label }}/"
     folder: _{{type.label }}
     create: true
