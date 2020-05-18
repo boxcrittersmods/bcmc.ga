@@ -2,7 +2,7 @@
 title: Tampermonkey
 description: The world's most popular userscript manager
 author: Jan Biniok
-date: 01-05-2010
+date: 2010-05-01
 browser:
   chrome: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
   firefox: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
