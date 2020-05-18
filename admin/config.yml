@@ -55,6 +55,7 @@ collections:
             widget: "select"
             default: 0
             options:
+            - { label: "Manual", value: "-1" }
             - { label: "Primary", value: "0" }
             - { label: "Secondary", value: "1" }
           - {label: "Class, name: "style", widget: "string", required: false}
