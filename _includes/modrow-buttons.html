@@ -21,16 +21,14 @@
 
 	{% if item.disclaimer %}
 		<span class="text-muted">{{item.disclaimer}}</span>
-	{% elsif item.collection == "authors" or item.collection == "posts" %}
-		{% if item.unfinished %}
-			<span class="text-muted">This page is not finished.</span>
-		{% endif %}
 	{% else %}
+		{% assign type = site.collections | where:"label",item.collection | first %}
+		{% assign typeName = type.singular | downcase %}
 		{% if item.unfinished %}
-			<span class="text-muted">This project is not finished.</span>
+			<span class="text-muted">This {{typeName}} is not finished.</span>
 		{% else %}
-			{% unless primaryExists %}
-				<span class="text-muted browser-none">This project is not supported for your browser.</span>
+			{% unless primaryExists or item.collection == "authors" or item.collection == "posts" %}
+				<span class="text-muted browser-none">This {{typeName}} is not supported for your browser.</span>
 			{% endunless %}
 		{% endif %}
 	{% endif %}
