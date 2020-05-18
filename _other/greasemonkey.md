@@ -7,10 +7,10 @@ buttons:
 - img: /uploads/browser/firefox.png
   browser: firefox
   href: https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
-- type: 2
+- type: 1
   name: Website
   href: http://www.greasespot.net/
-- type: 2
+- type: 1
   name: Source
   href: https://github.com/greasemonkey/greasemonkey
 ---
