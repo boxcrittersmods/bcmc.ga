@@ -3,7 +3,7 @@ title: BoxCritters.org
 author:
 - "Jake4"
 date: 2019-02-13
-primary:
+buttons:
 - name: Join
   href: http://boxcritters.org
 unfinished: true
