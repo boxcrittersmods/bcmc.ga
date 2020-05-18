@@ -175,7 +175,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string", required: false}
-              - {label: "URL", name: "href", widget: "text", required: false}{% if m=="mobile" %}
+              - {label: "URL", name: "href", widget: "string", required: false}{% if m=="mobile" %}
               - {label: "Icon", name: "icon", widget: "string", required: false}{% endif %}{% if m=="nav" %}
               - {label: "Color", name: "color", widget: "string", required: false}{% endif %}{% endfor %}
          
