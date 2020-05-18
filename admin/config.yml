@@ -58,7 +58,7 @@ collections:
             - { label: "Manual", value: "-1" }
             - { label: "Primary", value: "0" }
             - { label: "Secondary", value: "1" }
-          - {label: "Class, name: "style", widget: "string", required: false}
+          - {label: "Class", name: "style", widget: "string", required: false}
           - {label: "Style", name: "style", widget: "text", required: false}
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}

@@ -5,9 +5,9 @@ author:
 - TumbleGamer
 - flines
 unfinished: true
-primary:
-- name: Source
-  href: https://github.com/boxcritters/bcml
+buttons:
+  - name: Source
+    href: https://github.com/boxcritters/bcml
 ---
 The Box critters mod loader is an easy way for people to interface with the client script.
 

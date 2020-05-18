@@ -1,46 +1,50 @@
 {% assign item = include.item | default: page %}
 
 {% assign primary = "install,join,linkPrimary,sourcePrimary" | split: "," %}
-{% assign primaryName = "Install,Join,Link,Source" | split: "," %}
-
 {% assign secondary = "link,source,discord" | split: "," %}
-{% assign secondaryName = "Link,Source,Discord" | split: "," %}
 
 {% assign browsers = "chrome,firefox,edge,safari,opera,ios,android" | split: "," %}
+
+{% assign primaryExists = false %}
+
+{% capture buttons %}
+	{% for button in item.buttons %}
+		{% include modbutton.html button=button %}
+	{% endfor %}
+{% endcapture %}
 
 {% capture primaryHTML %}
 	{% for i in primary %}
 		{% if item[i] %}
-			<a href="{{item[i]}}" class="btn btn-primary">{{primaryName[forloop.index0]}}</a>
+			(very-old-primary {{i}})
 		{% endif %}
 	{% endfor %}
 	{% for button in item.primary %}
-		{% include modbutton.html button=button type="primary" %}
+		(old-primary {{button.name}})
 	{% endfor %}
 {% endcapture %}
 
 {% capture secondaryHTML %}
 	{% for i in secondary %}
 		{% if item[i] %}
-			<a href="{{item[i]}}" class="btn btn-sm btn-secondary">{{secondaryName[forloop.index0]}}</a>
+			(very-old-secondary {{i}})
 		{% endif %}
 	{% endfor %}
 	{% for button in item.secondary %}
-		{% include modbutton.html button=button type="secondary" %}
+		(old-secondary {{button.name}})
 	{% endfor %}
 {% endcapture %}
 
 {% capture browserHTML %}
 	{% for i in browsers %}
 		{% if item.browser[i] %}
-			<a href="{{item.browser[i]}}" class="browser-{{i}}">
-				<img src="/uploads/browser/{{i}}.png" alt="{{i}}">
-			</a>
+			(old-browser {{i}})
 		{% endif %}
 	{% endfor %}
 {% endcapture %}
 
 {% capture fullRow %}
+	{{buttons}}
 	{{primaryHTML}}
 	{{browserHTML}}
 	{{secondaryHTML}}
@@ -55,10 +59,9 @@
 		{% if item.unfinished %}
 			<span class="text-muted">This project is not finished.</span>
 		{% else %}
-			{% assign temp = primaryHTML | strip %}
-			{% if temp == "" %}
+			{% unless primaryExists %}
 				<span class="text-muted browser-none">This project is not supported for your browser.</span>
-			{% endif %}
+			{% endunless %}
 		{% endif %}
 	{% endif %}
 {% endcapture %}

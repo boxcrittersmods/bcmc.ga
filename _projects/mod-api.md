@@ -4,11 +4,11 @@ author:
   - TumbleGamer
   - Alvarito050506
 date: 2019-04-26T00:00:00.000Z
-primary:
+buttons:
   - name: Link
     href: https://api.boxcrittersmods.ga
-secondary:
-  - name: Source
+  - type: 1
+    name: Source
     href: https://github.com/boxcritters/bc-mod-api
 ---
 # Aims
