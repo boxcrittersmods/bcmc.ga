@@ -13,10 +13,10 @@
 	<script>
 		{
 			let script = document.currentScript;
-			window.addEventListener('load', function () {
-				var card = script.parentElement;
-				var cardsize = card.getBoundingClientRect();
-				var img = card.getElementsByTagName('img')[0];
+			let card = script.parentElement;
+			let img = card.getElementsByTagName('img')[0];
+			img.addEventListener('load', function () {
+				let cardsize = card.getBoundingClientRect();
 				if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
 					img.height = 100;
 					img.style.width = "auto";
