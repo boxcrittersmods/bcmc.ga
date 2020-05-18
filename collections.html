@@ -4,7 +4,10 @@ title: Collections
 ---
 {% for collection in site.collections %}
 {% assign normalTitle=collection.label|capitalize %}
-<h2> {{collection.title|default:normalTitle}}</h2>
+<div class="card">
+	{% assign normalTitle=collection.label|capitalize %}
+	<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
+</div>
 {% for thing in site[collection.label] %}
 {% include listing.html item=thing %}
 {% endfor %}
