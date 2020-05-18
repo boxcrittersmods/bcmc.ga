@@ -175,4 +175,5 @@ collections:
       - label: "Admin"
         name: "admin"
         file: "admin/config-test.yml"
+        fields:
          
