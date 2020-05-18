@@ -1,7 +1,7 @@
 {% assign i = include.button %}
 
 {% capture class %}
-	{% unless type == -1 %}
+	{% unless type == -1 or i.img %}
 		btn
 		{% unless i.type > 0 %}
 			btn-primary
@@ -13,6 +13,10 @@
 		{% if i.type == 1 %}
 			btn-sm
 		{% endif %}
+	{% endunless %}
+
+	{% unless i.type > 0 %}
+		primary
 	{% endunless %}
 
 	{% if i.browser %}
