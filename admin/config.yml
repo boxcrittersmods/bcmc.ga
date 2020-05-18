@@ -22,11 +22,11 @@ collections:
     create: true
     preview_path: /{{type.label}}/{{ "{{ slug "}}}}
     fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Title", name: "title", widget: "string", required: false}
       - label: "Author"
         name: "author"
         widget: "select"
-        required: true
+        required: false
         multiple: true
         options: [{{site.authors|map:'title'|join:','}}]
       - {label: "Description", name: "description", widget: "text", required: false}
@@ -40,8 +40,8 @@ collections:
         name: "buttons"
         widget: "list"
         fields:
-          - {label: "Name", name: "name", widget: "string", required: true}
-          - {label: "URL", name: "href", widget: "string", required: true}
+          - {label: "Name", name: "name", widget: "string", required: false}
+          - {label: "URL", name: "href", widget: "string", required: false}
           - {label: "Color", name: "color", widget: "string", required: false}
           - {label: "Image", name: "image", widget: "image", required: false}
           - label: "Browser"
@@ -79,12 +79,12 @@ collections:
         name: "site"
         file: "_config.yml"
         fields:
-          - {label: "Title", name: "title", widget: "string", required: true}
+          - {label: "Title", name: "title", widget: "string", required: false}
           - {label: "Description", name: "description", widget: "text", required: false}
-          - {label: "Base URL", name: "base-url", widget: "string", required: true}
-          - {label: "URL", name: "url", widget: "string", required: true}
-          - {label: "Repo", name: "repository", widget: "string", required: true}
-          - {label: "API", name: "bc-mod-api", widget: "string", required: true}
+          - {label: "Base URL", name: "base-url", widget: "string", required: false}
+          - {label: "URL", name: "url", widget: "string", required: false}
+          - {label: "Repo", name: "repository", widget: "string", required: false}
+          - {label: "API", name: "bc-mod-api", widget: "string", required: false}
           - {label: "Show Mod Versions", name: "show-mod-versions", widget: "boolean", required: false}
           - label: "Collections"
             name: collections
@@ -104,21 +104,21 @@ collections:
           - label: "Permalink"
             name: "permalink"
             widget: "select"
-            required: true
+            required: false
             options: [date,pretty,ordinal,weekdate,none]
-          - {label: "Production", name: "production", widget: "boolean", required: true}
+          - {label: "Production", name: "production", widget: "boolean", required: false}
           - label: "Plugins"
             name: "plugins"
             widget: "list"
           - label: "Markdown"
             name: "markdown"
             widget: "select"
-            required: true
+            required: false
             options: [kramdown]
           - label: "Theme"
             name: "theme"
             widget: "select"
-            required: true
+            required: false
             options: [minma]
           - label: "Kramdown"
             name: kramdown
