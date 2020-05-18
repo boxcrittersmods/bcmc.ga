@@ -36,11 +36,11 @@ collections:
       - {label: "Banner", name: "image", widget: "image", required: false}
       - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
       - {label: "Unfinished", name: "unfinished", widget: "boolean", required: false }
-      - label: "Main Links"
-        name: "primary"
+      - label: "Buttons"
+        name: "buttons"
         widget: "list"
         fields:
-          - {label: "Link name", name: "name", widget: "string", required: true}
+          - {label: "Name", name: "name", widget: "string", required: true}
           - {label: "URL", name: "href", widget: "string", required: true}
           - {label: "Color", name: "color", widget: "string", required: false}
           - {label: "Image", name: "href", widget: "image", required: false}
@@ -50,12 +50,13 @@ collections:
             required: false
             multiple: false
             options: [chrome,firefox,edge,safari,opera,ios,android]
-      - label: "Other Links"
-        name: "secondary"
-        widget: "list"
-        fields:
-          - {label: "Link Name", name: "name", widget: "string", required: true}
-          - {label: "URL", name: "href", widget: "string", required: true}
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            default: 0
+            options:
+            - { label: "Primary", value: "0" }
+            - { label: "Secondary", value: "1" }
       - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
       - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
       - label: "Dependecies"
