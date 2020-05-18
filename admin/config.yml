@@ -93,6 +93,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                 fields:
                   - {label: "Title", name: "title", widget: "string", required: false}
                   - {label: "Singular", name: "singular", widget: "string", required: false}
+                  - {label: "URL", name: "url", widget: "string", required: false,default:"/{{type.label}}"}
                   - {label: "Home", name: "home", widget: "boolean", required: false}
                   - {label: "Output", name: "output", widget: "boolean", required: false}{% endfor %}
           - label: "Permalink"
