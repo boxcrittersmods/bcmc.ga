@@ -8,7 +8,7 @@
 	</ol>
 	<div class="carousel-inner">
 		{% for item in carousel %}
-		{% assign col=site.collections[item.collection] %}
+		{% assign col=site.collections where:"label",item.collection|first %}
 		{% assign colName=col.label|capitalize %}
 		<div class="carousel-item{% if item.video %} video{% endif %}{% if forloop.first %} active{% endif %}">
 			{% if item.video %}
