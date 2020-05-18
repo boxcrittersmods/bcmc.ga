@@ -114,7 +114,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
             name: "theme"
             widget: "select"
             required: false
-            options: [minma]
+            options: [minima]
           - label: "Kramdown"
             name: kramdown
             widget: "object"
