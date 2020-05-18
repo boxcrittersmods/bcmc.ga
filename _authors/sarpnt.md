@@ -5,9 +5,9 @@ disclaimer: This person is not supported for your browser.
 description: i always have to fix everything
 author:
 - SArpnt
-primary:
+buttons:
 - name: Github
-href: https://github.com/sarpnt/
+  href: https://github.com/sarpnt/
 hideCredit:
 - SArpnt
 ---
