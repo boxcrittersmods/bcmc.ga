@@ -125,7 +125,6 @@ collections:
             widget: "object"
             fields:
             - {label: "Auto IDs", name: "auto-ids", widget: "boolean", required: false}
-            - {label: "Coderay", name: "coderay", widget: "object", required: false}
             - {label: "Entity output", name: "entity-output", widget: "string", required: false}
             - {label: "Footnote starting Number", name: "footnote-nr", widget: "string", required: false}
             - {label: "GitHub MD Quirks", name: "gfm-quirks", widget: "string", required: false}
