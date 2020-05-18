@@ -8,6 +8,9 @@
 	</ol>
 	<div class="carousel-inner">
 		{% for item in carousel %}
+		{% assign col=site.collections[item.collection] }
+		{% assign colName=col.label|capitalize %}
+		{% assign colName=col.title|default:colName %}
 		<div class="carousel-item{% if item.video %} video{% endif %}{% if forloop.first %} active{% endif %}">
 			{% if item.video %}
 			<iframe width="800" height="400" class="d-block mx-auto h-100" src="{{item.video}}" frameborder="0"
@@ -21,7 +24,7 @@
 			{% endif %}
 			<div class="carousel-caption d-none d-md-block">
 				<a href="{{item.url}}">
-					<h3><span class="badge badge-primary badge-pill">{{item.collection}}</span> | {{item.title}}</h3>
+					<h3><span class="badge badge-primary badge-pill"></span> | {{item.title}}</h3>
 					<p>{{item.description}}</p>
 				</a>
 			</div>

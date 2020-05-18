@@ -12,7 +12,7 @@ layout: item
 		<p class="card-text">{{page.description}}</p>
 	</div>
 	<div class="list-group list-group-flush">
-		{% include modrow-created.html item=page %}
+		{% include modrow-created.html %}
 		{% include modrow-buttons.html %}
 	</div>
 	{% assign longDescription = page.content | strip %}
