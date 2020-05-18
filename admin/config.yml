@@ -11,9 +11,7 @@ show_preview_links: true
 publish_mode: editorial_workflow
 display_url: {{site.url}}
 logo_url: {{site.url}}/uploads/logo.png
-collections:
-{% for type in site.collections %}
-{% assign normalTitle=type.label|capitalize %}
+collections:{% for type in site.collections %}{% assign normalTitle=type.label|capitalize %}
   - name: '{{ type.label }}'
     label: '{{type.title|default:normalTitle}}'
     label_singular: '{{type.singular|default:normalTitle }}'
@@ -70,8 +68,7 @@ collections:
         options: [{{site.mods|map:'slug'|join:','}}]
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - {label: "Permalink", name: "permalink", widget: "string", required: false}
-{% endfor %}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}{% endfor %}
   - label: "Settings"
     name: "settings"
     files:
@@ -89,9 +86,7 @@ collections:
           - label: "Collections"
             name: collections
             widget: "object"
-            fields:
-            {% for type in site.collections %}
-            {% assign normalTitle=type.label|capitalize %}
+            fields:{% for type in site.collections %}{% assign normalTitle=type.label|capitalize %}
               - label: "{{type.title|default:normalTitle}}"
                 name: {{type.label}}
                 widget: "object"
@@ -99,8 +94,7 @@ collections:
                   - {label: "Title", name: "title", widget: "string", required: false}
                   - {label: "Singular", name: "singular", widget: "string", required: false}
                   - {label: "Home", name: "home", widget: "boolean", required: false}
-                  - {label: "Output", name: "output", widget: "boolean", required: false}
-            {% endfor %}
+                  - {label: "Output", name: "output", widget: "boolean", required: false}{% endfor %}
           - label: "Permalink"
             name: "permalink"
             widget: "select"
@@ -171,4 +165,16 @@ collections:
                   required: false
                   multiple: true
                   options: [{{site.mods|map:'slug'|join:','}}]
+      - label: "Menus"
+        name: "menus"
+        file: "_data/menus.yml"
+        fields:{% assign menus = "nav,user,mobile"|split:"," %}{% for m in menus %}
+          - label: "{{m|capitalize}}"
+            name: {{m}}
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string", required: false}
+              - {label: "URL", name: "href", widget: "text", required: false}{% if m=="mobile" %}
+              - {label: "Icon", name: "icon", widget: "string", required: false}{% endif %}{% if m=="nav" %}
+              - {label: "Color", name: "color", widget: "string", required: false}{% endif %}{% endfor %}
          
