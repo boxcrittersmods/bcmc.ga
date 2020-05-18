@@ -13,20 +13,15 @@ collections:
     title: Mods
     singular: Mod
   texturepacks:
-    title: Texture Packs
     output: true
     home: true
+    title: Texture Packs
     singular: Texture Pack
   shaders:
     output: true
     home: true
     title: Shaders
     singular: Shader
-  authors:
-    output: true
-    home: false
-    title: Authors
-    singular: Author
   projects:
     output: true
     home: false
@@ -37,15 +32,21 @@ collections:
     home: false
     title: Servers
     singular: Server
+  authors:
+    output: true
+    home: false
+    title: Authors
+    singular: Author
+  posts:
+    output: true
+    home: false
+    title: Blog
+    singular: Post
   other:
     output: true
     home: false
     title: Other
     singular: Other
-  posts:
-    title: Posts
-    singular: Post
-    home: false
 permalink: pretty
 production: true
 plugins:
@@ -135,6 +136,13 @@ defaults:
   - scope:
       path: ""
       type: authors
+    values:
+      comments: true
+      list: true
+      show-nav: true
+  - scope:
+      path: ""
+      type: posts
     values:
       comments: true
       list: true
