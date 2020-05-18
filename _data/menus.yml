@@ -5,7 +5,7 @@ nav:
   - name: Texture Packs
     href: /texturepacks
     color: warning
-  - name: ":eye: Shaders"
+  - name: Shaders
     href: /shaders
     color: primary
   - name: Projects
