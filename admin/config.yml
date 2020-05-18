@@ -41,6 +41,14 @@ collections:
         fields:
           - {label: "Link name", name: "name", widget: "string", required: true}
           - {label: "URL", name: "href", widget: "string", required: true}
+          - {label: "Color", name: "color", widget: "string", required: false}
+          - {label: "Image", name: "href", widget: "image", required: false}
+          - label: "Browser"
+            name: "browser"
+            widget: "select"
+            required: false
+            multiple: false
+            options: [chrome,firefox,edge,safari,opera,ios,android]
       - label: "Other Links"
         name: "secondary"
         widget: "list"
