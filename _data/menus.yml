@@ -1,38 +1,38 @@
 nav:
-- name: Mods
-  href: /mods
-  color: danger
-- name: Texture Packs
-  href: /texturepacks
-  color: warning
-- name: Shaders
-  href: /shaders
-  color: primary
-- name: Projects
-  href: /projects
-- name: Servers
-  href: /servers
-- name: Authors
-  href: /authors
+  - name: Mods
+    href: /mods
+    color: danger
+  - name: Texture Packs
+    href: /texturepacks
+    color: warning
+  - name: ":eye: Shaders"
+    href: /shaders
+    color: primary
+  - name: Projects
+    href: /projects
+  - name: Servers
+    href: /servers
+  - name: Authors
+    href: /authors
 user:
-- name: Submit
-  href: /submissions-coming-soon
-- name: Dashboard
-- name: My Page
+  - name: Submit
+    href: /submissions-coming-soon
+  - name: Dashboard
+  - name: My Page
 mobile:
-- name: Mods
-  href: /mods
-  icon: wrench
-- name: Texture Packs
-  href: /texturepacks
-  icon: paint-brush
-- name: Shaders
-  href: /shaders
-  icon: eye
+  - name: Mods
+    href: /mods
+    icon: wrench
+  - name: Texture Packs
+    href: /texturepacks
+    icon: paint-brush
+  - name: Shaders
+    href: /shaders
+    icon: eye
 footer:
-- name: Wiki
-  href: https://mods.boxcritters.wiki
-- name: Discord
-  href: https://discord.gg/D2ZpRUW
-- name: Admin
-  href: /admin
+  - name: Wiki
+    href: https://mods.boxcritters.wiki
+  - name: Discord
+    href: https://discord.gg/D2ZpRUW
+  - name: Admin
+    href: /admin
