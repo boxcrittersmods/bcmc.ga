@@ -6,11 +6,11 @@ author:
   - Kinju
   - TumbleGamer
 description: >-
-  Makes the the instruments in the tavern functional.
+  Makes the instruments in the tavern functional.
 date: 2020-02-17T22:02:47.775Z
 buttons:
 - type: 1
   name: Source
   href: 'https://github.com/boxcritters/project-sarpnt'
-unfinished: true
+disclaimer: Project archived, planned to be restarted eventually.
 ---
