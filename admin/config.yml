@@ -185,10 +185,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
         fields:
           - {label: "Enable Drafts", name: "drafts", widget: "boolean", required: false}
           - {label: "Enable Preview", name: "preview", widget: "boolean", required: false}
-          - label: "Widgets"
-            name: "Widgets"
-            widget: "list"{% if site.data.admin.widgets %}
-            field: {% include admin/field.yml name="name" %}
+          - {% include admin/field.yml name="widgets" widget="list" %}{% if site.data.admin.widgets %}
           - label: "Item Properties"
             name: "items"
             widget: "list"
