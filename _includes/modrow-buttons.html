@@ -16,41 +16,8 @@
 	{% endfor %}
 {% endcapture %}
 
-{% capture primaryHTML %}
-	{% for i in primary %}
-		{% if item[i] %}
-			(very-old-primary {{i}})
-		{% endif %}
-	{% endfor %}
-	{% for button in item.primary %}
-		(old-primary {{button.name}})
-	{% endfor %}
-{% endcapture %}
-
-{% capture secondaryHTML %}
-	{% for i in secondary %}
-		{% if item[i] %}
-			(very-old-secondary {{i}})
-		{% endif %}
-	{% endfor %}
-	{% for button in item.secondary %}
-		(old-secondary {{button.name}})
-	{% endfor %}
-{% endcapture %}
-
-{% capture browserHTML %}
-	{% for i in browsers %}
-		{% if item.browser[i] %}
-			(old-browser {{i}})
-		{% endif %}
-	{% endfor %}
-{% endcapture %}
-
 {% capture fullRow %}
 	{{buttons}}
-	{{primaryHTML}}
-	{{browserHTML}}
-	{{secondaryHTML}}
 
 	{% if item.disclaimer %}
 		<span class="text-muted">{{item.disclaimer}}</span>
