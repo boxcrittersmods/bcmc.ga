@@ -56,7 +56,6 @@ plugins:
   - jekyll-avatar
   - jemoji
   - jekyll-mention
-  - jemoji
 markdown: kramdown
 theme: minima
 kramdown:
