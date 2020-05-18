@@ -1,0 +1,138 @@
+title: Box Critters Modding Community
+description: > # this means to ignore newlines until "baseurl:"
+  Install mods and other add-ons to Box Critters
+base-url: ""
+url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
+repository: boxcritters/boxcrittersmods.ga
+
+bc-mod-api: api.boxcrittersmods.ga
+show-mod-versions: true
+
+#favicon: 
+
+collections:
+  mods:
+    output: true
+    home: true
+  texturepacks:
+    title: Texture Packs
+    output: true
+    home: true
+  shaders:
+    output: true
+    home: true
+  authors:
+    output: true
+    home: false
+  projects:
+    output: true
+    home: false
+  servers:
+    output: true
+    home: false
+  other:
+    output: true
+    home: false
+
+permalink: pretty
+production: true
+
+plugins:
+ - jekyll-feed
+ - jekyll-redirect-from
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-avatar
+ - jemoji
+ - jekyll-mention
+
+ # Build settings
+markdown: kramdown
+theme: minima
+
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM
+  # Disable auto-generated ID's for headings
+  auto_ids: false
+
+excludes:
+  - lib
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - bower.json
+  - "*.sh"
+  - README.md
+  - gulffile.js
+  - package.json
+  - vendor
+  - ".gitignore"
+  - CNAME
+  - icomoon-selection.json
+
+
+
+defaults:
+- scope:
+    path: ""
+  values:
+    featured: false
+    layout: listing-page
+    list: false
+    show-nav: false
+#    author: Anonymous
+- scope:
+    path: ""
+    type: mods
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: texturepacks
+  values:
+    comments: true
+    list: true
+    show-nav: true
+    require:
+    - texture-pack-manager
+- scope:
+    path: ""
+    type: shaders
+  values:
+    comments: true
+    list: true
+    show-nav: true
+    require:
+    - texture-pack-manager
+    - boxcritters-shaders
+- scope:
+    path: ""
+    type: projects
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: servers
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: authors
+  values:
+    comments: true
+    list: true
+    show-nav: true
+- scope:
+    path: ""
+    type: other
+  values:
+    comments: true
+    list: true
+    show-nav: true
