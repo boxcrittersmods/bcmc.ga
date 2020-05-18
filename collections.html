@@ -2,6 +2,8 @@
 layout: default
 title: Collections
 ---
+<div class="container page-content"></div>
+{% include page-header-noimg.html %}
 {% for collection in site.collections %}
 {% assign normalTitle=collection.label|capitalize %}
 <div class="card">
@@ -12,3 +14,4 @@ title: Collections
 {% include listing.html item=thing %}
 {% endfor %}
 {% endfor %}
+</div>
