@@ -57,7 +57,7 @@ plugins:
   - jemoji
   - jekyll-mention
 markdown: kramdown
-theme: minma
+theme: minima
 kramdown:
   math-engine: mathjax
   auto_ids: false
