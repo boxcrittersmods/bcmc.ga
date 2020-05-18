@@ -194,8 +194,8 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
             widget: "list"
             required: false
             fields:
-              {% include admin/field.yml name="name" %}
-              {% include admin/field.yml name="label" %}
+              - {% include admin/field.yml name="name" %}
+              - {% include admin/field.yml name="label" %}
               - label: "Widget"
                 name: "widget"
                 widget: "select"
@@ -203,20 +203,20 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                 multiple: true
                 default: "text"
                 options: [{{site.data.admin.widgets|join:","}}]
-              {% include admin/field.yml name="default" %}
-              {% include admin/field.yml name="multiple" widget="boolean" %}
+              - {% include admin/field.yml name="default" %}
+              - {% include admin/field.yml name="multiple" widget="boolean" %}
               - label: "Options"
                 name: "options"
                 widget: "list"
                 fields:
-                  {% include admin/field.yml name="label" %}
-                  {% include admin/field.yml name="value" %}
+                  - {% include admin/field.yml name="label" %}
+                  - {% include admin/field.yml name="value" %}
               - label: "Field(s)"
                 name: "fields"
                 widget: "list"
                 fields:
-                {% include admin/field.yml name="name" %}
-                {% include admin/field.yml name="field" %}
+                - {% include admin/field.yml name="name" %}
+                - {% include admin/field.yml name="field" %}
                 - label: "Widget"
                   name: "widget"
                   widget: "select"
@@ -229,8 +229,6 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                   name: "options"
                   widget: "list"
                   fields:
-                    {% include admin/field.yml name="label" %}
-                    {% include admin/field.yml name="value" %}
-
-                  
+                    - {% include admin/field.yml name="label" %}
+                    - {% include admin/field.yml name="value" %}
                 {% endif %}

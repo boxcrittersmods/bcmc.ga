@@ -1,1 +1,1 @@
-{% assign label=include.name|capitalize %}- {label: "{{include.label|default:label}}", name: "{{include.name}}", widget: "{{ include.widget|default:string}}", required: false}
+{% assign label=include.name|capitalize %}{label: "{{include.label|default:label}}", name: "{{include.name}}", widget: "{{ include.widget|default:"string"}}", required: false}
