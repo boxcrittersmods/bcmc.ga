@@ -72,3 +72,107 @@ collections:
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
       - {label: "Permalink", name: "permalink", widget: "string", required: false}
 {% endfor %}
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "site"
+        name: "site"
+        file: "_config.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string", required: true}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - {label: "Base URL", name: "base-url", widget: "string", required: true}
+          - {label: "URL", name: "url", widget: "string", required: true}
+          - {label: "Repo", name: "repository", widget: "string", required: true}
+          - {label: "API", name: "bc-mod-api", widget: "string", required: true}
+          - {label: "Show Mod Versions", name: "show-mod-versions", widget: "boolean", required: false}
+          - label: "Collections"
+            name: collections
+            widget: "object"
+            fields:
+            {% for type in site.collections %}
+            {% assign normalTitle=type.label|capitalize %}
+              - label: "{{type.title|default:normalTitle}}"
+                name: {{type.label}}
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string", required: false}
+                  - {label: "Singular", name: "singular", widget: "string", required: false}
+                  - {label: "Home", name: "home", widget: "boolean", required: false}
+                  - {label: "Output", name: "output", widget: "boolian", required: false}
+            {% endfor %}
+          - label: "Permalink"
+            name: "permalink"
+            widget: "select"
+            required: true
+            options: [date,pretty,ordinal,weekdate,none]
+          - {label: "Production", name: "production", widget: "boolean", required: true}
+          - label: "Plugins"
+            name: "plugins"
+            widget: "list"
+          - label: "Markdown"
+            name: "markdown"
+            widget: "select"
+            required: true
+            options: [kramdown]
+          - label: "Theme"
+            name: "theme"
+            widget: "select"
+            required: true
+            options: [minma]
+          - label: "Kramdown"
+            name: kramdown
+            widget: "object"
+            fields:
+            - {label: "Auto IDs", name: "auto-ids", widget: "boolean", required: false}
+            - {label: "Coderay", name: "coderay", widget: "object", required: false}
+            - {label: "Entity output", name: "entity-output", widget: "string", required: false}
+            - {label: "Footnote starting Number", name: "footnote-nr", widget: "string", required: false}
+            - {label: "GitHub MD Quirks", name: "gfm-quirks", widget: "string", required: false}
+            - {label: "Hard Wrap", name: "hard-wrap", widget: "boolean", required: false}
+            - {label: "MD Type", name: "input", widget: "string", required: false}
+            - {label: "Math engine", name: "math-engine", widget: "string", required: false}
+            - {label: "Show Warnings", name: "show-warnings", widget: "boolean", required: false}
+            - {label: "Smart Quotes", name: "smart-quotes", widget: "string", required: false}
+            - {label: "Syntax Highlighter", name: "syntax-highlighter", widget: "string", required: false}
+            - label: "Syntax Highlighter Options"
+              name: syntax-highlighter-opts
+              widget: "object"
+              fields:
+                - {label: "Default Language", name: "default-lang", widget: "string", required: false}
+            - {label: "Template", name: "template", widget: "string", required: false}
+            - {label: "Table of Contents Levels", name: "toc-levels", widget: "string", required: false}
+          - label: "Excludes"
+            name: "excludes"
+            widget: "list"
+          - label: "Defaults"
+            name: "defaults"
+            widget: "list"
+            fields:
+              - label: "Scope"
+                name: scope
+                widget: "object"
+                fields:
+                - {label: "Path", name: "path", widget: "string", required: false}
+                - label: "Type"
+                  name: "type"
+                  widget: "select"
+                  required: false
+                  options: [{{site.collections|map:'label'|join:','}},]
+              - label: "Values"
+                name: values
+                widget: "object"
+                fields:
+                - {label: "Comments", name: "comments", widget: "boolean", required: false}
+                - {label: "List", name: "list", widget: "boolean", required: false}
+                - {label: "Show Nav", name: "show-nav", widget: "boolean", required: false}
+                - label: "Dependecies"
+                  name: "require"
+                  widget: "select"
+                  required: false
+                  multiple: true
+                  options: [{{site.mods|map:'slug'|join:','}}]
+      - label: "Admin"
+        name: "admin"
+        file: "admin/config-test.yml"
+         

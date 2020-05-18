@@ -1,0 +1,74 @@
+---
+layout: null
+---
+backend:
+  name: github
+  repo: boxcritters/boxcrittersmods.ga
+  base_url: https://{{site.bc-mod-api}}
+local: 'en'
+media_folder: "uploads"
+show_preview_links: true
+publish_mode: editorial_workflow
+display_url: {{site.url}}
+logo_url: {{site.url}}/uploads/logo.png
+collections:
+{% for type in site.collections %}
+{% assign normalTitle=type.label|capitalize %}
+  - name: '{{ type.label }}'
+    label: '{{type.title|default:normalTitle}}'
+    label_singular: '{{type.singular|default:normalTitle }}'
+    media_folder: "/uploads/{{type.label }}/"
+    folder: _{{type.label }}
+    create: true
+    preview_path: /{{type.label}}/{{ "{{ slug "}}}}
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - label: "Author"
+        name: "author"
+        widget: "select"
+        required: true
+        multiple: true
+        options: [{{site.authors|map:'title'|join:','}}]
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Disclamer", name: "disclaimer", widget: "text", required: false}
+      - {label: "Date", name: "date", widget: "date", required: false}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "Texture Pack Code", name: "code", widget: "text", required: false}
+      - {label: "Unfinished", name: "unfinished", widget: "boolean", required: false }
+      - label: "Buttons"
+        name: "buttons"
+        widget: "list"
+        fields:
+          - {label: "Name", name: "name", widget: "string", required: true}
+          - {label: "URL", name: "href", widget: "string", required: true}
+          - {label: "Color", name: "color", widget: "string", required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Browser"
+            name: "browser"
+            widget: "select"
+            required: false
+            multiple: false
+            options: [chrome,firefox,edge,safari,opera,ios,android]
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            default: 0
+            options:
+            - { label: "Manual", value: "-1" }
+            - { label: "Primary", value: "0" }
+            - { label: "Secondary", value: "1" }
+          - {label: "Class, name: "style", widget: "string", required: false}
+          - {label: "Style", name: "style", widget: "text", required: false}
+      - {label: "Show on Front Page", name: "featured", widget: "boolean", required: false}
+      - {label: "Is a Userscript", name: "userscript", widget: "boolean", required: false}
+      - label: "Dependecies"
+        name: "require"
+        widget: "select"
+        required: false
+        multiple: true
+        options: [{{site.mods|map:'slug'|join:','}}]
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+{% endfor %}
