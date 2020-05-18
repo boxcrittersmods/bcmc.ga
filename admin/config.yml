@@ -65,5 +65,5 @@ collections:
         options: [{{site.mods|map:'slug'|join:','}}]
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Recommend", name: "recommend", widget: "boolean", required: false}
-      - {label: "Permalink", name: "permalink", widget: "text", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
 {% endfor %}
