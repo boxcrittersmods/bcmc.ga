@@ -44,7 +44,7 @@ for (let i in isBrowser)
 $(".modrow-buttons").each(function () {
 	var bItem = $(this);
 	for (let i in isBrowser) {
-		if (isBrowser[i] && bItem.children(i).length > 0) {
+		if (isBrowser[i] && bItem.children(`${i}.primary`).length > 0) {
 			bItem.children(".browser-none").hide();
 			break;
 		}
