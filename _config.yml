@@ -10,24 +10,41 @@ collections:
   mods:
     output: true
     home: true
+    title: Mods
+    singular: Mod
   texturepacks:
     title: Texture Packs
     output: true
     home: true
+    singular: Texture Pack
   shaders:
     output: true
     home: true
+    title: Shaders
+    singular: Shader
   authors:
     output: true
     home: false
+    title: Authors
+    singular: Author
   projects:
     output: true
     home: false
+    title: Projects
+    singular: Project
   servers:
     output: true
     home: false
+    title: Servers
+    singular: Server
   other:
     output: true
+    home: false
+    title: Other
+    singular: Other
+  posts:
+    title: Posts
+    singular: Post
     home: false
 permalink: pretty
 production: true
