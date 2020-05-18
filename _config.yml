@@ -1,15 +1,11 @@
 title: Box Critters Modding Community
-description: > # this means to ignore newlines until "baseurl:"
+description: |
   Install mods and other add-ons to Box Critters
 base-url: ""
-url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://boxcrittersmods.ga
 repository: boxcritters/boxcrittersmods.ga
-
 bc-mod-api: api.boxcrittersmods.ga
 show-mod-versions: true
-
-#favicon: 
-
 collections:
   mods:
     output: true
@@ -33,29 +29,30 @@ collections:
   other:
     output: true
     home: false
-
 permalink: pretty
 production: true
-
 plugins:
- - jekyll-feed
- - jekyll-redirect-from
- - jekyll-seo-tag
- - jekyll-sitemap
- - jekyll-avatar
- - jemoji
- - jekyll-mention
-
- # Build settings
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mention
 markdown: kramdown
-theme: minima
-
+theme: minma
 kramdown:
-  # Enable GitHub Flavored Markdown (fenced code blocks)
-  input: GFM
-  # Disable auto-generated ID's for headings
+  math-engine: mathjax
   auto_ids: false
-
+  input: GFM
+  entity-output: as_char
+  footnote-nr: "1"
+  toc-levels: 1..6
+  gfm-quirks: paragraph_end
+  syntax-highlighter-opts:
+    default-lang: plaintext
+  syntax-highlighter: rouge
+  smart-quotes: lsquo,rsquo,ldquo,rdquo
 excludes:
   - lib
   - Gemfile
@@ -67,72 +64,68 @@ excludes:
   - gulffile.js
   - package.json
   - vendor
-  - ".gitignore"
+  - .gitignore
   - CNAME
   - icomoon-selection.json
-
-
-
 defaults:
-- scope:
-    path: ""
-  values:
-    featured: false
-    layout: listing-page
-    list: false
-    show-nav: false
-#    author: Anonymous
-- scope:
-    path: ""
-    type: mods
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: texturepacks
-  values:
-    comments: true
-    list: true
-    show-nav: true
-    require:
-    - texture-pack-manager
-- scope:
-    path: ""
-    type: shaders
-  values:
-    comments: true
-    list: true
-    show-nav: true
-    require:
-    - texture-pack-manager
-    - boxcritters-shaders
-- scope:
-    path: ""
-    type: projects
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: servers
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: authors
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: other
-  values:
-    comments: true
-    list: true
-    show-nav: true
+  - scope:
+      path: ""
+    values:
+      featured: false
+      layout: listing-page
+      list: false
+      show-nav: false
+  - scope:
+      path: ""
+      type: mods
+    values:
+      comments: true
+      list: true
+      show-nav: true
+  - scope:
+      path: ""
+      type: texturepacks
+    values:
+      comments: true
+      list: true
+      show-nav: true
+      require:
+        - texture-pack-manager
+  - scope:
+      path: ""
+      type: shaders
+    values:
+      comments: true
+      list: true
+      show-nav: true
+      require:
+        - texture-pack-manager
+        - boxcritters-shaders
+  - scope:
+      path: ""
+      type: projects
+    values:
+      comments: true
+      list: true
+      show-nav: true
+  - scope:
+      path: ""
+      type: servers
+    values:
+      comments: true
+      list: true
+      show-nav: true
+  - scope:
+      path: ""
+      type: authors
+    values:
+      comments: true
+      list: true
+      show-nav: true
+  - scope:
+      path: ""
+      type: other
+    values:
+      comments: true
+      list: true
+      show-nav: true
