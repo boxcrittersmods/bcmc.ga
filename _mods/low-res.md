@@ -9,9 +9,10 @@ logo: /uploads/mods/untitled.png
 image: /uploads/mods/untitled.png
 featured: false
 userscript: true
-primary:
+buttons:
 - name: install very nice
   href: https://cdn.discordapp.com/attachments/619915848391589907/694915144857288824/Low-Res_boxcritters.user.js
+  style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
 recommend: false
 ---
 box critters mod that gives very high quality luxury box critters, experience

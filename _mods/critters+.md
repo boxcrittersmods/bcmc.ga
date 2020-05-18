@@ -10,7 +10,7 @@ userscript: true
 require:
 - 'bcmacro-api'
 icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
-primary:
+buttons:
 - name: Install
   href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
 recommend: true
