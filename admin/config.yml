@@ -172,8 +172,4 @@ collections:
                   required: false
                   multiple: true
                   options: [{{site.mods|map:'slug'|join:','}}]
-      - label: "Admin"
-        name: "admin"
-        file: "admin/config-test.yml"
-        fields:
          
