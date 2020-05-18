@@ -181,7 +181,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
               - {label: "Color", name: "color", widget: "string", required: false}{% endif %}{% endfor %} 
       - label: "Admin CMS"
         name: "admin"
-        file: "_data/page"
+        file: "_data/admin.yml"
         fields:
           - {label: "Enable Drafts", name: "drafts", widget: "boolean", required: false}
           - {label: "Enable Preview", name: "preview", widget: "boolean", required: false}
