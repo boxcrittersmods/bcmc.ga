@@ -14,87 +14,81 @@ widgets:
   - list
   - hidden
   - markdown
-documents:
-  - collections:
-      - authors
-      - mods
-      - other
-      - projects
-      - servers
-      - shaders
-      - texturepacks
-      - lists
-      - posts
-      - pages
+fields:
+  - widget: string
+    name: title
+  - widget: select
+    multiple: true
+    collection: authors
+    map: title
+    name: author
+  - widget: text
+    name: description
+  - widget: text
+    name: disclamer
+  - widget: datetime
+    name: date
+  - widget: image
+    name: logo
+  - widget: image
+    name: banner
+  - widget: code
+    name: code
+    label: Texture Pack Code
+  - widget: boolean
+    name: unfinished
+  - widget: list
+    name: buttons
     fields:
       - widget: string
-        name: title
-      - widget: select
-        multiple: true
-        collection: authors
-        map: title
-        name: author
-      - widget: markdown
-        name: description
-      - widget: markdown
-        name: disclamer
-      - widget: datetime
-        name: date
-      - widget: image
-        name: logo
-      - widget: image
-        name: banner
-      - widget: code
-        name: code
-        label: Texture Pack Code
-      - widget: boolean
-        name: unfinished
-      - widget: list
-        name: buttons
-        fields:
-          - widget: string
-            name: name
-          - widget: string
-            name: href
-            label: URL
-          - widget: string
-            name: color
-          - name: image
-            widget: image
-          - widget: select
-            name: browser
-            multiple: false
-            options:
-              - value: chrome
-              - value: firefox
-              - value: edge
-              - value: safari
-              - value: ios
-              - value: android
-          - widget: select
-            name: type
-            options:
-              - label: Manual
-                value: -1
-              - value: 0
-                label: Primary
-              - value: 1
-                label: Secondary
-          - widget: text
-            name: style
-      - widget: boolean
-        label: Show on front page
-        name: featured
-      - widget: boolean
-        name: userscript
-        label: Is it a userscript
-      - widget: select
-        name: require
-        multiple: true
-        label: Dependencies
-        collection: mods
-      - widget: markdown
-        name: content
-        label: Body
+        name: name
       - widget: string
-        name: permalink
+        name: href
+        label: URL
+      - widget: string
+        name: color
+      - name: image
+        widget: image
+      - widget: select
+        name: browser
+        multiple: false
+        options:
+          - value: chrome
+          - value: firefox
+          - value: edge
+          - value: safari
+          - value: ios
+          - value: android
+      - widget: select
+        name: type
+        options:
+          - label: Manual
+            value: -1
+          - value: 0
+            label: Primary
+          - value: 1
+            label: Secondary
+      - widget: text
+        name: style
+  - widget: boolean
+    label: Show on front page
+    name: featured
+  - widget: boolean
+    name: userscript
+    label: Is it a userscript
+  - widget: select
+    name: require
+    multiple: true
+    label: Dependencies
+    collection: mods
+  - widget: markdown
+    name: content
+    label: Body
+  - widget: string
+    name: permalink
+static:
+  - widget: string
+    name: name
+  - widget: markdown
+    name: content
+    label: Body
