@@ -7,8 +7,8 @@ backend:
   base_url: https://{{site.bc-mod-api}}
 local: "en"
 media_folder: "uploads"
-show_preview_links: true
-publish_mode: editorial_workflow
+show_preview_links: {{site.data.admin.preview}}
+{% if site.data.admin.drafts %}publish_mode: editorial_workflow{% endif %}
 site_url: {{site.url}}
 display_url: {{site.url}}
 logo_url: {{site.url}}/uploads/logo.png
