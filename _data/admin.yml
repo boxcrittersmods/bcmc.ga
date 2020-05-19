@@ -17,9 +17,12 @@ widgets:
 items:
   - widget: string
     name: title
-  - widget: string
+  - widget: select
+    multiple: true
+    collection: authors
+    map: title
     name: author
-  - widget: string
+  - widget: text
     name: description
   - widget: text
     name: disclamer
@@ -44,15 +47,18 @@ items:
         label: URL
       - widget: string
         name: color
+      - name: image
+        widget: image
       - widget: select
         name: browser
+        multiple: false
         options:
-          - value: chrome
-          - value: firefox
-          - value: edge
-          - value: safari
-          - value: ios
-          - value: android
+          - value: "chrome"
+          - value: "firefox"
+          - value: "edge"
+          - value: "safari"
+          - value: "ios"
+          - value: "android"
       - widget: select
         name: type
         options:
@@ -70,12 +76,12 @@ items:
   - widget: boolean
     name: userscript
     label: Is it a userscript
-  - widget: text
+  - widget: select
     name: require
     multiple: true
     label: Dependencies
     collection: mods
-  - widget: text
+  - widget: markdown
     name: body
   - widget: string
     name: permalink
