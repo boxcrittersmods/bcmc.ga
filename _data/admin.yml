@@ -64,7 +64,6 @@ items:
             label: Secondary
       - widget: text
         name: style
-    options: []
   - widget: boolean
     label: Show on front page
     name: featured
