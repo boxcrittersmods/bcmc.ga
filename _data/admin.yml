@@ -1,16 +1,1 @@
-widgets:
-  - string
-  - text
-  - code
-  - boolean
-  - number
-  - datetime
-  - image
-  - file
-  - select
-  - list
-  - object
-  - hidden
-fields: []
-drafts: true
-preview: true
+''

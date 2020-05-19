@@ -183,9 +183,9 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
         name: "admin"
         file: "_data/admin.yml"
         fields:
-          - {label: "Enable Drafts", name: "drafts", widget: "boolean", required: false}
-          - {label: "Enable Preview", name: "preview", widget: "boolean", required: false}
-          - {% include admin/field.yml name="widgets" widget="list" %}{% if site.data.admin.widgets and side.data.admin.widgets.size>0 %}
+          - {% include admin/field.yml name="widgets" label="Enable Drafts" widget="boolean" %}
+          - {% include admin/field.yml name="preview" label="Enable Preview" widget="boolean" %}
+          - {% include admin/field.yml name="widgets" widget="list" %}
           - label: "Item Properties"
             name: "items"
             widget: "list"
@@ -228,4 +228,3 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                   fields:
                     - {% include admin/field.yml name="label" %}
                     - {% include admin/field.yml name="value" %}
-                {% endif %}
