@@ -97,17 +97,3 @@ documents:
         name: body
       - widget: string
         name: permalink
-  - collections:
-      - pages
-    fields:
-      - widget: hidden
-        collection: text
-        name: layout
-        default: page
-      - widget: string
-        collection: text
-        name: title
-      - widget: markdown
-        collection: text
-        name: content
-        label: Body
