@@ -197,7 +197,6 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                 name: "widget"
                 widget: "select"
                 required: false
-                multiple: true
                 default: "text"
                 options: [{{site.data.admin.widgets|join:","}}]
               - {% include admin/field.yml name="default" %}
@@ -206,7 +205,6 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                 name: "collection"
                 widget: "select"
                 required: false
-                multiple: true
                 default: "text"
                 options: [{{site.collections|map:'label'|join:","}}]
               - label: "Options"
@@ -225,7 +223,6 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                   name: "widget"
                   widget: "select"
                   required: false
-                  multiple: true
                   default: "text"
                   options: [{{site.data.admin.widgets|join:","}}]
                 - {% include admin/field.yml name="multiple" widget="boolean" %}
