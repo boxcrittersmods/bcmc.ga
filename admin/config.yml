@@ -20,7 +20,7 @@ collections: {% for type in site.collections %}
     folder: _{{type.label }}
     create: true
     preview_path: /{{type.label}}/{{ "{{ slug "}}}}
-    fields: {% for field in site.data.admin.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+    fields: {% for field in site.data.admin.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
         hint: {{field.hint}}
@@ -34,7 +34,7 @@ collections: {% for type in site.collections %}
         hint: {{field.hint}}
         widget: list
         required: false
-        fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+        fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
             hint: {{field.hint}}
@@ -51,7 +51,7 @@ collections: {% for type in site.collections %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
-        fields: {% for field in site.data.admin.fields  %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+        fields: {% for field in site.data.admin.fields  %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
             hint: {{field.hint}}
@@ -65,7 +65,7 @@ collections: {% for type in site.collections %}
             hint: {{field.hint}}
             widget: list
             required: false
-            fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+            fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
               - name: {{field.name}}
                 label: {% include admin/label.yml name=field.name label=field.label %}
                 hint: {{field.hint}}
@@ -82,7 +82,7 @@ collections: {% for type in site.collections %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
-        fields: {% for field in site.data.admin.static  %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+        fields: {% for field in site.data.admin.static  %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
             hint: {{field.hint}}
@@ -96,7 +96,7 @@ collections: {% for type in site.collections %}
             hint: {{field.hint}}
             widget: list
             required: false
-            fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+            fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
               - name: {{field.name}}
                 label: {% include admin/label.yml name=field.name label=field.label %}
                 hint: {{field.hint}}

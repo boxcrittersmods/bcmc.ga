@@ -20,7 +20,6 @@ fields:
   - widget: select
     multiple: true
     collection: authors
-    map: title
     name: author
   - widget: text
     name: description
