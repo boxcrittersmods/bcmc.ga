@@ -94,6 +94,7 @@ documents:
         label: Dependencies
         collection: mods
       - widget: markdown
-        name: body
+        name: content
+        label: Body
       - widget: string
         name: permalink
