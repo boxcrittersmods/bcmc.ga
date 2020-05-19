@@ -12,7 +12,8 @@ display_url: {{site.url}}{% endif %}
 {% if site.data.admin.drafts %}publish_mode: editorial_workflow{% endif %}
 site_url: {{site.url}}
 logo_url: {{site.data.admin.logo}}
-collections: {% for documentFields in site.data.admin.documents %}{% for collection in documentFields.collections %}{% assign type=site.collections|where:"label",collection|first %}
+collections: {% for documentFields in site.data.admin.documents %}{% for collection in documentFields.collections %}{% if collection=="pages"}
+{% else %}{% assign type=site.collections|where:"label",collection|first %}
   - name: "{{ type.label }}"
     label: "{% include admin/label.yml name=type.label label=type.title %}"
     label_singular: "{% include admin/label.yml name=type.label label=type.singular %}"
@@ -20,6 +21,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
     folder: _{{type.label }}
     create: true
     preview_path: /{{type.label}}/{{ "{{ slug "}}}}
+    {% endif %}
     fields: {% for field in documentFields.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
