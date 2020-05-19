@@ -1,6 +1,6 @@
 logo: /uploads/logo.png
-drafts: false
-preview: false
+drafts: true
+preview: true
 widgets:
   - string
   - text
