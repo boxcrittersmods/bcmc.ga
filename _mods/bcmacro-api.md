@@ -1,7 +1,7 @@
 ---
 title: BCMacro API
 author:
-  - tumblegamer
+  - TumbleGamer
 description: Adds an API that lets mods create specific actions that can be
   bound to buttons or keys.
 date: 16-05-2020
