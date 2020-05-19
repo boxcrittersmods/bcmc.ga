@@ -1,7 +1,9 @@
 ---
 title: Tampermonkey
 description: The world's most popular userscript manager
-author: Jan Biniok
+author:
+  - custom: true
+    name: Jan Biniok
 date: 2010-05-01
 buttons:
 - browser: chrome

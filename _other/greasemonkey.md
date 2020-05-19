@@ -1,7 +1,9 @@
 ---
 title: Greasemonkey
 description: Customize the way a web page displays or behaves, by using small bits of JavaScript.
-author: Aaron Boodman
+author:
+  - custom: true
+    name: Aaron Boodman
 date: 2005-03-28
 buttons:
 - img: /uploads/browser/firefox.png
