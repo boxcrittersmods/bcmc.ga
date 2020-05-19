@@ -159,7 +159,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
         file: "_data/admin.yml"
         fields:
           - {% include admin/field.yml name="logo" widget="image" %}
-          - {% include admin/field.yml name="drafts" label="Enable Drafts" widget="boolean" %}
+          - {% include admin/field.yml name="drafts" label="Enable Drafts" hint="Enable the system where you set documents as ready before you can publish" widget="boolean" %}
           - {% include admin/field.yml name="preview" label="Enable Preview" widget="boolean" %}
           - {% include admin/field.yml name="widgets" widget="list" %}
           - label: "Documents"
