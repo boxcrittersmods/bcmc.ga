@@ -1,17 +1,17 @@
 ---
 title: Critters+
 author:
-  - Slaggo
-  - TumbleGamer
+  - tumblegamer
+  - slaggo
 description: adds new features to BoxCritters to improve your experience!
 date: 14-04-2019
+buttons:
+  - name: Install
+    href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
 featured: false
 userscript: true
 require:
-- 'bcmacro-api'
+  - bcmacro-api
 icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
-buttons:
-- name: Install
-  href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
 recommend: true
 ---
