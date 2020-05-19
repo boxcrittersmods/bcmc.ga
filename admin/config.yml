@@ -41,7 +41,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
             options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
               - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
           - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% endfor %}{% else %}
-      - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}
+      - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}{% endfor %}
   - label: "Settings"
     name: "settings"
     files:
