@@ -221,7 +221,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                   multiple: true
                   default: "text"
                   options: [{{site.data.admin.widgets|join:","}}]
-                {% include admin/field.yml name="multiple" widget="boolean" %}
+                - {% include admin/field.yml name="multiple" widget="boolean" %}
                 - label: "Options"
                   name: "options"
                   widget: "list"
