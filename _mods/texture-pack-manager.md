@@ -1,7 +1,7 @@
 ---
 title: Box Critters Texture Pack Manager
 author:
-  - tumblegamer
+  - TumbleGamer
 description: This extention lets you easily switch between different themes, add
   new themes and create new themes.
 date: 2019-04-25T00:00:00.000Z
