@@ -1,19 +1,24 @@
 {% assign item = include.item | default: page %}
+
 {% capture info %}
-{% if item.date == "" %}on {{ item.date | date: "%-d %B %Y"}}{% endif %}
-{% for author in item.author %}{% if forloop.first %}by{% else %}{% if forloop.last %} and{% else %},{% endif %}
-{% endif %}
-<!-- THIS  LINK IS BASED ON SLUGS -->
-<!-- <b><a href="/authors/{{author}}">{{author}}</a></b>{% endfor %} -->
-{% assign AUTHOR = site.authors | where:"title", author | first %}
-<b><a href="{{AUTHOR.url}}">{{AUTHOR.title}}</a></b>
+	{% if item.date == "" %}on {{ item.date | date: "%-d %B %Y"}}{% endif %}
+	{% for author in item.author %}{% if forloop.first %}by{% else %}{% if forloop.last %} and{% else %},{% endif %}
+	{% endif %}
+	<!-- THIS LINK IS BASED ON SLUGS -->
+	<!-- <b><a href="/authors/{{author}}">{{author}}</a></b> -->
+	{% assign AUTHOR = site.authors | where:"title", author | first %}
+	<b>
+		{% if AUTHOR %}<a href="{{AUTHOR.url}}">{{AUTHOR.title}}</a>
+		{% else %}<span style="color:red">{{author}}</span>{% endif %}
+	</b>
+	{% endfor %}
 {% endcapture %}
 
 {% assign temp = info | strip %}
 {% if temp != "" %}
-<div class="card-footer">
-	<small class="text-muted">
-		Created {{temp}}
-	</small>
-</div>
+	<div class="card-footer">
+		<small class="text-muted">
+			Created {{temp}}
+		</small>
+	</div>
 {% endif %}
