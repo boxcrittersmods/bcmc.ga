@@ -16,3 +16,34 @@ items:
     name: title
   - widget: text
     name: author
+  - widget: text
+    name: description
+  - widget: text
+    name: disclamer
+  - widget: text
+    name: date
+  - widget: text
+    name: logo
+  - widget: text
+    name: banner
+  - widget: text
+    name: code
+    label: Texture Pack Code
+  - widget: text
+    name: unfinished
+  - widget: text
+    name: buttons
+  - widget: text
+    label: Show on front page
+    name: featured
+  - widget: text
+    name: userscript
+    label: Is it a userscript
+  - widget: text
+    name: require
+    multiple: true
+    label: Dependencies
+  - widget: text
+    name: body
+  - widget: text
+    name: permalink
