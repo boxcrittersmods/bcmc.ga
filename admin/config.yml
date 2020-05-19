@@ -26,7 +26,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
         widget: select
         required: false
         multiple: {{field.multiple}}
-        options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
+        options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
               - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
