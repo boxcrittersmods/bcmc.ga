@@ -3,7 +3,11 @@
 {% if item.date == "" %}on {{ item.date | date: "%-d %B %Y"}}{% endif %}
 {% for author in item.author %}{% if forloop.first %}by{% else %}{% if forloop.last %} and{% else %},{% endif %}
 {% endif %}
-<b><a href="/authors/{{author}}">{{author}}</a></b>{% endfor %}{% endcapture %}
+<!-- THIS  LINK IS BASED ON SLUGS -->
+<!-- <b><a href="/authors/{{author}}">{{author}}</a></b>{% endfor %} -->
+{% assign AUTHOR = site.authors | where:"title", author | first %}
+<b><a href="{{AUTHOR.url}}">{{AUTHOR.title}}</a></b>
+{% endcapture %}
 
 {% assign temp = info | strip %}
 {% if temp != "" %}
