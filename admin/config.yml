@@ -183,7 +183,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
         name: "admin"
         file: "_data/admin.yml"
         fields:
-          - {% include admin/field.yml name="widgets" label="Enable Drafts" widget="boolean" %}
+          - {% include admin/field.yml name="drafts" label="Enable Drafts" widget="boolean" %}
           - {% include admin/field.yml name="preview" label="Enable Preview" widget="boolean" %}
           - {% include admin/field.yml name="widgets" widget="list" %}
           - label: "Item Properties"
