@@ -4,7 +4,7 @@
 {{include.indent}}        hint: {{field.hint}}
 {{include.indent}}        widget: select
 {{include.indent}}        required: false
-{{include.indent}}       multiple: {{field.multiple}}
+{{include.indent}}        multiple: {{field.multiple}}
 {{include.indent}}        options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
 {{include.indent}}          - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
 {{include.indent}}      - name: {{field.name}}
