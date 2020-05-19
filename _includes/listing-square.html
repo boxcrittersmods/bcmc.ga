@@ -15,7 +15,7 @@
 			let script = document.currentScript;
 			let card = script.parentElement;
 			let img = card.getElementsByTagName('img')[0];
-			img.addEventListener('load', function () {
+			let imgLoad = function () {
 				let cardsize = card.getBoundingClientRect();
 				if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
 					img.height = 100;
@@ -26,7 +26,11 @@
 					img.width = cardsize.width;
 					img.style.height = "auto";
 				}
-			})
+			}
+			if (img.complete)
+				imgLoad();
+			else
+				img.addEventListener('load', imgLoad);
 		}
 	</script>
 	{% endif %}
