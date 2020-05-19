@@ -14,4 +14,10 @@ widgets:
   - list
   - hidden
   - markdown
-documents: []
+documents:
+  - collections:
+      - mods
+    fields:
+      - widget: text
+        collection: text
+        name: title
