@@ -6,12 +6,12 @@ backend:
   repo: {{site.repository}}
   base_url: https://{{site.bc-mod-api}}
 local: "en"
-media_folder: "uploads"
-show_preview_links: {{site.data.admin.preview}}
+media_folder: "uploads"{% if site.data.admin.preview %}
+show_preview_links: true
+display_url: {{site.url}}{% endif %}
 {% if site.data.admin.drafts %}publish_mode: editorial_workflow{% endif %}
 site_url: {{site.url}}
-display_url: {{site.url}}
-logo_url: {{site.url}}/uploads/logo.png
+logo_url: {{site.data.admin.logo}}
 collections:{% for type in site.collections %}{% assign normalTitle=type.label|capitalize %}
   - name: "{{ type.label }}"
     label: "{{type.title|default:normalTitle}}"
@@ -183,6 +183,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
         name: "admin"
         file: "_data/admin.yml"
         fields:
+          - {% include admin/field.yml name="logo" widget="image" %}
           - {% include admin/field.yml name="drafts" label="Enable Drafts" widget="boolean" %}
           - {% include admin/field.yml name="preview" label="Enable Preview" widget="boolean" %}
           - {% include admin/field.yml name="widgets" widget="list" %}

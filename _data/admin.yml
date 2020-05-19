@@ -1,5 +1,6 @@
 drafts: true
-preview: false
+preview: true
+logo: /uploads/logo.png
 widgets:
   - string
   - text
