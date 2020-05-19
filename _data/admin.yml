@@ -11,4 +11,6 @@ widgets:
   - list
   - hidden
 preview: true
-items: []
+items:
+  - widget: text
+    name: title
