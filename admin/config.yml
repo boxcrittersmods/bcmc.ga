@@ -12,15 +12,15 @@ display_url: {{site.url}}{% endif %}
 {% if site.data.admin.drafts %}publish_mode: editorial_workflow{% endif %}
 site_url: {{site.url}}
 logo_url: {{site.data.admin.logo}}
-collections:{% for type in site.collections %}{% assign normalTitle=type.label|capitalize %}
+collections: {% for documentFields in site.data.admin.documents %}{% for collection in documentFields.collections %}{% assign type=site.collections|where:"label",collection|first %}
   - name: "{{ type.label }}"
     label: "{% include admin/label.yml name=type.label label=type.title %}"
-    label_singular: "{{type.singular|default:normalTitle }}"
+    label_singular: "{% include admin/label.yml name=type.label label=type.singular %}"
     media_folder: "/uploads/{{type.label }}/"
     folder: _{{type.label }}
     create: true
     preview_path: /{{type.label}}/{{ "{{ slug "}}}}
-    fields:{% for field in site.data.admin.items %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+    fields: {% for field in documentFields.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
         widget: select
@@ -40,10 +40,8 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
             multiple: {{field.multiple}}
             options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
               - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
-          - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}      
-      {% endcase %}{% endfor %}{% else %}
-      - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}      
-      {% endcase %}{% endfor %}{% endfor %}
+          - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% endfor %}{% else %}
+      - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}
   - label: "Settings"
     name: "settings"
     files:
@@ -161,49 +159,60 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
           - {% include admin/field.yml name="drafts" label="Enable Drafts" widget="boolean" %}
           - {% include admin/field.yml name="preview" label="Enable Preview" widget="boolean" %}
           - {% include admin/field.yml name="widgets" widget="list" %}
-          - label: "Item Properties"
-            name: "items"
+          - label: "Documents"
+            name: "documents"
             widget: "list"
             required: false
             fields:
-              - {% include admin/field.yml name="name" %}
-              - {% include admin/field.yml name="label" %}
-              - label: "Widget"
-                name: "widget"
+              - label: "Collections"
+                name: "collections"
                 widget: "select"
                 required: false
-                default: "text"
-                options: [{{site.data.admin.widgets|join:","}}]
-              - {% include admin/field.yml name="default" %}
-              - {% include admin/field.yml name="multiple" widget="boolean" %}
-              - label: "Collection"
-                name: "collection"
-                widget: "select"
-                required: false
-                default: "text"
-                options: [{{site.collections|map:'label'|join:","}}]
-              - label: "Options"
-                name: "options"
-                widget: "list"
-                fields:
-                  - {% include admin/field.yml name="label" %}
-                  - {% include admin/field.yml name="value" %}
-              - label: "Field(s)"
+                multiple: true
+                options: [{{site.collections|map:'label'|join:","}},pages]
+              - label: "Fields"
                 name: "fields"
                 widget: "list"
+                required: false
                 fields:
-                - {% include admin/field.yml name="name" %}
-                - {% include admin/field.yml name="label" %}
-                - label: "Widget"
-                  name: "widget"
-                  widget: "select"
-                  required: false
-                  default: "text"
-                  options: [{{site.data.admin.widgets|join:","}}]
-                - {% include admin/field.yml name="multiple" widget="boolean" %}
-                - label: "Options"
-                  name: "options"
-                  widget: "list"
-                  fields:
+                  - {% include admin/field.yml name="name" %}
+                  - {% include admin/field.yml name="label" %}
+                  - label: "Widget"
+                    name: "widget"
+                    widget: "select"
+                    required: false
+                    default: "text"
+                    options: [{{site.data.admin.widgets|join:","}}]
+                  - {% include admin/field.yml name="default" %}
+                  - {% include admin/field.yml name="multiple" widget="boolean" %}
+                  - label: "Collection"
+                    name: "collection"
+                    widget: "select"
+                    required: false
+                    default: "text"
+                    options: [{{site.collections|map:'label'|join:","}}]
+                  - label: "Options"
+                    name: "options"
+                    widget: "list"
+                    fields:
+                      - {% include admin/field.yml name="label" %}
+                      - {% include admin/field.yml name="value" %}
+                  - label: "Field(s)"
+                    name: "fields"
+                    widget: "list"
+                    fields:
+                    - {% include admin/field.yml name="name" %}
                     - {% include admin/field.yml name="label" %}
-                    - {% include admin/field.yml name="value" %}
+                    - label: "Widget"
+                      name: "widget"
+                      widget: "select"
+                      required: false
+                      default: "text"
+                      options: [{{site.data.admin.widgets|join:","}}]
+                    - {% include admin/field.yml name="multiple" widget="boolean" %}
+                    - label: "Options"
+                      name: "options"
+                      widget: "list"
+                      fields:
+                        - {% include admin/field.yml name="label" %}
+                        - {% include admin/field.yml name="value" %}
