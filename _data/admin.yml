@@ -9,7 +9,6 @@ widgets:
   - file
   - select
   - list
-  - object
   - hidden
 preview: true
 items: []
