@@ -12,10 +12,10 @@ display_url: {{site.url}}{% endif %}
 {% if site.data.admin.drafts %}publish_mode: editorial_workflow{% endif %}
 site_url: {{site.url}}
 logo_url: {{site.data.admin.logo}}
-collections: {% for documentFields in site.data.admin.documents %}{% for collection in documentFields.collections %}{% if collection=="pages" %}{% assign noExt = "xml,yml,txt,scss" | split: "," %}
+collections: {% for documentFields in site.data.admin.documents %}{% for collection in documentFields.collections %}{% if collection=="pages" %}{% assign yesExt = "md,html" | split: "," %}
   - label: "Pages"
     name: "Pages"
-    files: {% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% unless noExt contains ext %}{% assign name=page.path | split: "." | first %}
+    files: {% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% if yesExt contains ext %}{% assign name=page.path | split: "." | first %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
@@ -43,7 +43,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
                 options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
                   - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
               - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}
-          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% else %}[]{% endfor %}{% endunless %}{% else %}[]{% endfor %}{% else %}{% assign type=site.collections|where:"label",collection|first %}
+          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% else %}[]{% endfor %}{% endif %}{% else %}[]{% endfor %}{% else %}{% assign type=site.collections|where:"label",collection|first %}
   - name: "{{ type.label }}"
     label: "{% include admin/label.yml name=type.label label=type.title %}"
     label_singular: "{% include admin/label.yml name=type.label label=type.singular %}"
