@@ -15,51 +15,36 @@ widgets:
   - hidden
   - markdown
 items:
-  - widget:
-      - string
+  - widget: string
     name: title
-  - widget:
-      - string
+  - widget: string
     name: author
-  - widget:
-      - string
+  - widget: string
     name: description
-  - widget:
-      - text
+  - widget: text
     name: disclamer
-  - widget:
-      - datetime
+  - widget: datetime
     name: date
-  - widget:
-      - image
+  - widget: image
     name: logo
-  - widget:
-      - image
+  - widget: image
     name: banner
-  - widget:
-      - code
+  - widget: code
     name: code
     label: Texture Pack Code
-  - widget:
-      - boolean
+  - widget: boolean
     name: unfinished
-  - widget:
-      - list
+  - widget: list
     name: buttons
     fields:
-      - widget:
-          - string
+      - widget: string
         name: name
-      - widget:
-          - string
+      - widget: string
         name: href
-        field: URL
-      - widget:
-          - string
+        label: URL
+      - widget: string
         name: color
-        field: Color
-      - widget:
-          - select
+      - widget: select
         name: browser
         options:
           - value: chrome
@@ -68,37 +53,30 @@ items:
           - value: safari
           - value: ios
           - value: android
-      - widget:
-          - select
+      - widget: select
         name: type
         options:
           - label: Manual
-            value: "-1"
-          - value: "0"
+            value: -1
+          - value: 0
             label: Primary
-          - value: "1"
+          - value: 1
             label: Secondary
-      - widget:
-          - text
+      - widget: text
         name: style
     options: []
-  - widget:
-      - boolean
+  - widget: boolean
     label: Show on front page
     name: featured
-  - widget:
-      - boolean
+  - widget: boolean
     name: userscript
     label: Is it a userscript
   - widget: text
     name: require
     multiple: true
     label: Dependencies
-    collection:
-      - mods
-  - widget:
-      - text
+    collection: mods
+  - widget: text
     name: body
-  - widget:
-      - string
+  - widget: string
     name: permalink

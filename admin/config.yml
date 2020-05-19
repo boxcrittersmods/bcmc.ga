@@ -219,7 +219,7 @@ collections:{% for type in site.collections %}{% assign normalTitle=type.label|c
                 widget: "list"
                 fields:
                 - {% include admin/field.yml name="name" %}
-                - {% include admin/field.yml name="field" %}
+                - {% include admin/field.yml name="label" %}
                 - label: "Widget"
                   name: "widget"
                   widget: "select"
