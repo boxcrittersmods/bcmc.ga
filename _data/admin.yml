@@ -34,9 +34,9 @@ documents:
         collection: authors
         map: title
         name: author
-      - widget: text
+      - widget: markdown
         name: description
-      - widget: text
+      - widget: markdown
         name: disclamer
       - widget: datetime
         name: date
