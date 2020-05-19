@@ -1,5 +1,5 @@
 drafts: true
-preview: true
+preview: false
 widgets:
   - string
   - text
