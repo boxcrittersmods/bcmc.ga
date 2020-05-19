@@ -23,6 +23,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
     fields: {% for field in documentFields.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
+        hint: {{field.hint}}
         widget: select
         required: false
         multiple: {{field.multiple}}
@@ -30,18 +31,20 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
               - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
       - name: {{field.name}}
         label: {% include admin/label.yml name=field.name label=field.label %}
+        hint: {{field.hint}}
         widget: list
         required: false
         fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}
+            hint: {{field.hint}}
             widget: select
             required: false
             multiple: {{field.multiple}}
             options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
               - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
-          - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% endfor %}{% else %}
-      - {% include admin/field.yml name=field.name label=field.label widget=field.widget %}{% endcase %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}{% endfor %}
+          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}
+      - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% else %}[]{% endfor %}{% else %}[]{% endfor %}{% endfor %}
   - label: "Settings"
     name: "settings"
     files:
@@ -177,11 +180,12 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
                 fields:
                   - {% include admin/field.yml name="name" %}
                   - {% include admin/field.yml name="label" %}
+                  - {% include admin/field.yml name="hint" %}
                   - label: "Widget"
                     name: "widget"
                     widget: "select"
                     required: false
-                    default: "text"
+                    default: "string"
                     options: [{{site.data.admin.widgets|join:","}}]
                   - {% include admin/field.yml name="default" %}
                   - {% include admin/field.yml name="multiple" widget="boolean" %}
@@ -193,6 +197,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
                     options: [{{site.collections|map:'label'|join:","}}]
                   - label: "Options"
                     name: "options"
+                    hint: "Only used with Select widgets"
                     widget: "list"
                     fields:
                       - {% include admin/field.yml name="label" %}
@@ -200,6 +205,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
                   - label: "Field(s)"
                     name: "fields"
                     widget: "list"
+                    hint: "Only used with List widgets"
                     fields:
                     - {% include admin/field.yml name="name" %}
                     - {% include admin/field.yml name="label" %}
@@ -212,6 +218,7 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
                     - {% include admin/field.yml name="multiple" widget="boolean" %}
                     - label: "Options"
                       name: "options"
+                      hint: "Only used with Select widgets"
                       widget: "list"
                       fields:
                         - {% include admin/field.yml name="label" %}
