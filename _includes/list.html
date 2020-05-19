@@ -1,5 +1,5 @@
 <div class="container page-content">
-	{% assign items = site[page.listing] | reverse %}
+	{% assign items = site[include.list] | reverse %}
 	{% for item in items %}
 	{% include listing.html item=item %}
 	{% endfor %}

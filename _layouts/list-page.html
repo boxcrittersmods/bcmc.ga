@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% include page-header-noimg.html %}
+{% assign list = page.list | default: page.slug %}
+{% include list.html list=list %}

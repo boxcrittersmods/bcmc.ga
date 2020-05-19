@@ -7,6 +7,9 @@ repository: boxcritters/boxcrittersmods.ga
 bc-mod-api: api.boxcrittersmods.ga
 show-mod-versions: true
 collections:
+  lists:
+    output: true
+    permalink: /:name
   mods:
     output: true
     home: true
@@ -93,6 +96,11 @@ defaults:
       layout: listing-page
       list: false
       show-nav: false
+  - scope:
+      path: ""
+      type: lists
+    values:
+      layout: list-page
   - scope:
       path: ""
       type: mods

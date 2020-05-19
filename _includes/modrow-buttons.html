@@ -1,10 +1,5 @@
 {% assign item = include.item | default: page %}
 
-{% assign primary = "install,join,linkPrimary,sourcePrimary" | split: "," %}
-{% assign secondary = "link,source,discord" | split: "," %}
-
-{% assign browsers = "chrome,firefox,edge,safari,opera,ios,android" | split: "," %}
-
 {% assign primaryExists = false %}
 
 {% capture buttons %}
@@ -27,7 +22,7 @@
 		{% if item.unfinished %}
 			<span class="text-muted">This {{typeName}} is not finished.</span>
 		{% else %}
-			{% unless primaryExists or item.collection == "authors" or item.collection == "posts" %}
+			{% unless primaryExists or item.collection == "authors" or item.collection == "posts" or item.collection == "lists" %}
 				<span class="text-muted browser-none">This {{typeName}} is not supported for your browser.</span>
 			{% endunless %}
 		{% endif %}
