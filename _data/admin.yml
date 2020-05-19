@@ -23,6 +23,9 @@ documents:
       - servers
       - shaders
       - texturepacks
+      - lists
+      - posts
+      - pages
     fields:
       - widget: string
         name: title
