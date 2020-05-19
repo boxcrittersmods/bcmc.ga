@@ -20,62 +20,14 @@ collections: {% for type in site.collections %}
     folder: _{{type.label }}
     create: true
     preview_path: /{{type.label}}/{{ "{{ slug "}}}}
-    fields: {% for field in site.data.admin.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
-      - name: {{field.name}}
-        label: {% include admin/label.yml name=field.name label=field.label %}
-        hint: {{field.hint}}
-        widget: select
-        required: false
-        multiple: {{field.multiple}}
-        options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
-          - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
-      - name: {{field.name}}
-        label: {% include admin/label.yml name=field.name label=field.label %}
-        hint: {{field.hint}}
-        widget: list
-        required: false
-        fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
-          - name: {{field.name}}
-            label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-            hint: {{field.hint}}
-            {% endif %}widget: select
-            required: false
-            multiple: {{field.multiple}}
-            options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
-              - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
-          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}
-      - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% else %}[]{% endfor %}{% endfor %}
+    fields: {% include admin/fields.yml %}{% endfor %}
   - name: "pages"
     label: "Pages"
     files: {% assign yesExt = "md,html" | split: "," %}{% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% if yesExt contains ext %}{% assign name=page.path | split: "." | first %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
-        fields: {% for field in site.data.admin.fields  %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
-          - name: {{field.name}}
-            label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-            hint: {{field.hint}}
-            {% endif %}widget: select
-            required: false
-            multiple: {{field.multiple}}
-            options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
-                  - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
-          - name: {{field.name}}
-            label: {% include admin/label.yml name=field.name label=field.label %}
-            hint: {{field.hint}}
-            widget: list
-            required: false
-            fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
-              - name: {{field.name}}
-                label: {% include admin/label.yml name=field.name label=field.label %}
-                hint: {{field.hint}}
-                widget: select
-                required: false
-                multiple: {{field.multiple}}
-                options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
-                  - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
-              - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}
-          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% else %}[]{% endfor %}{% endif %}{% else %}[]{% endfor %}
+        fields: {% include admin/fields.yml indent="  " %}{% endif %}{% else %}[]{% endfor %}
   - name: "static"
     label: "Static"
     files: {% for page in site.static_files %}{% assign name=page.path | split: "." | first %}
