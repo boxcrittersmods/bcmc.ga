@@ -10,40 +10,93 @@ widgets:
   - select
   - list
   - hidden
+  - markdown
 preview: true
 items:
-  - widget: text
+  - widget:
+      - string
     name: title
-  - widget: text
+  - widget:
+      - string
     name: author
-  - widget: text
+  - widget:
+      - string
     name: description
-  - widget: text
+  - widget:
+      - text
     name: disclamer
-  - widget: text
+  - widget:
+      - datetime
     name: date
-  - widget: text
+  - widget:
+      - image
     name: logo
-  - widget: text
+  - widget:
+      - image
     name: banner
-  - widget: text
+  - widget:
+      - code
     name: code
     label: Texture Pack Code
-  - widget: text
+  - widget:
+      - boolean
     name: unfinished
-  - widget: text
+  - widget:
+      - list
     name: buttons
-  - widget: text
+    fields:
+      - widget:
+          - string
+        name: name
+      - widget:
+          - string
+        name: href
+        field: URL
+      - widget:
+          - string
+        name: color
+        field: Color
+      - widget:
+          - select
+        name: browser
+        options:
+          - value: chrome
+          - value: firefox
+          - value: edge
+          - value: safari
+          - value: ios
+          - value: android
+      - widget:
+          - select
+        name: type
+        options:
+          - label: Manual
+            value: "-1"
+          - value: "0"
+            label: Primary
+          - value: "1"
+            label: Secondary
+      - widget:
+          - text
+        name: style
+    options: []
+  - widget:
+      - boolean
     label: Show on front page
     name: featured
-  - widget: text
+  - widget:
+      - boolean
     name: userscript
     label: Is it a userscript
   - widget: text
     name: require
     multiple: true
     label: Dependencies
-  - widget: text
+    collection:
+      - mods
+  - widget:
+      - text
     name: body
-  - widget: text
+  - widget:
+      - string
     name: permalink
