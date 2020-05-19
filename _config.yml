@@ -9,7 +9,7 @@ show-mod-versions: true
 collections:
   lists:
     output: true
-    permalink: /:name
+    permalink: /:name/
   mods:
     output: true
     home: true
