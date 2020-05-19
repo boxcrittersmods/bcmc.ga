@@ -18,8 +18,8 @@ collections: {% for documentFields in site.data.admin.documents %}{% for collect
     files: {% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% unless noExt contains ext %}{% assign name=page.path | split: "." | first %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
-         file: "{{page.path}}"
-         fields: {% for field in documentFields.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
+        file: "{{page.path}}"
+        fields: {% for field in documentFields.fields %}{% case field.widget %}{% when "select" %}{% assign map=widget|default:"slug" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}
             hint: {{field.hint}}
