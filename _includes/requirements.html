@@ -4,7 +4,7 @@
 
 
 {% for dep in item.require %}
-	{% assign depPage = site.mods | where:'title', dep | first %}
+	{% assign depPage = site.mods | where:'slug', dep | first %}
 	{% capture depList %}{% include require-list.html item=depPage %}{% endcapture %}
 {% endfor %}
 
@@ -17,11 +17,11 @@
 {% endif %}
 
 {% for dep in require %}
-{% if dep == "tampermonkey" %}
-{% assign depPage = site.other | where:"slug","tampermonkey" | first %}
-{% else %}
-{% assign depPage = site.mods | where:"title", dep | first %}
-{% endif %}
+	{% if dep == "tampermonkey" %}
+		{% assign depPage = site.other | where:"slug","tampermonkey" | first %}
+	{% else %}
+		{% assign depPage = site.mods | where:"slug", dep | first %}
+	{% endif %}
 	<li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
 			<a href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://{{site.bc-mod-api}}/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
 			
