@@ -6,7 +6,14 @@
 	{% endif %}
 	{% for author in item.author %}
 		{% if forloop.first %}
-			by{% else %}{% if forloop.last %} and{% else %},{% endif %}
+			by 
+		{% else %}
+			{% if forloop.length > 2 %}
+				, 
+			{% endif %}
+			{% if forloop.last %}
+				 and 
+			{% endif %}
 		{% endif %}
 
 		{% if author.name or author.nickname %}
@@ -36,7 +43,7 @@
 {% if temp != "" %}
 	<div class="card-footer">
 		<small class="text-muted">
-			Created {{temp}}
+			Created {{temp | strip_newlines | replace: "	",""}}
 		</small>
 	</div>
 {% endif %}
