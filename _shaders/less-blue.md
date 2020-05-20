@@ -1,7 +1,7 @@
 ---
 title: Less Blue
 author:
-  - tumblegamer
+  - TumbleGamer
 description: Reduces the amount of blue in the game
 date: 2020-05-14T15:55:30.763Z
 buttons:
