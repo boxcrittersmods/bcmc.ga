@@ -12,6 +12,8 @@ description: Private server
 date: 2019-10-14T00:00:00.000Z
 unfinished: true
 buttons:
+  - name: Install (client)
+    href: https://github.com/boxcritters/private-box/raw/master/private-box%20client.user.js
   - type: 1
     name: Test server
     href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
