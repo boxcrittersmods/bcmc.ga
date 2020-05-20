@@ -1,8 +1,8 @@
 ---
 title: BoxCritters Shaders
 author:
-  - tumblegamer
-  - sarpnt
+  - TumbleGamer
+  - SArpnt
 description: Create shaders for boxcritters
 date: 2020-04-29T23:00:00.000Z
 buttons:
