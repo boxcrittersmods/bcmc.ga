@@ -1,8 +1,8 @@
 ---
 title: GameBoy
 author:
-  - tumblegamer
-  - sarpnt
+  - TumbleGamer
+  - SArpnt
 description: Make it look like a GameBoy
 date: 2020-05-14T15:53:56.974Z
 buttons:
