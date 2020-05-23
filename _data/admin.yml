@@ -85,6 +85,11 @@ fields:
     label: Body
   - widget: string
     name: permalink
+  - widget: boolean
+    collection: text
+    name: working
+    label: Works?
+    default: "false"
 static:
   - widget: string
     name: name
