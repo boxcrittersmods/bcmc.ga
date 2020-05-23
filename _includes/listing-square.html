@@ -15,7 +15,7 @@
 			let script = document.currentScript;
 			let card = script.parentElement;
 			let img = card.getElementsByTagName('img')[0];
-			let imgLoad = function () {
+			let imgResize = function () {
 				let cardsize = card.getBoundingClientRect();
 				if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
 					img.height = 100;
@@ -28,9 +28,12 @@
 				}
 			}
 			if (img.complete)
-				imgLoad();
+				imgResize();
 			else
-				img.addEventListener('load', imgLoad);
+				img.addEventListener('load', imgResize);
+			new MutationObserver((m)=>{
+				imgResize();
+			}).observe(card, {attributes: true});
 		}
 	</script>
 	{% endif %}
