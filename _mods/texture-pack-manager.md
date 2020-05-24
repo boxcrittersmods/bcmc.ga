@@ -26,4 +26,5 @@ redirect_from:
   - /tools/texturepackselector/
   - /tools/texturepackmanager/
   - /tools/texture-pack-manager/
+working: true
 ---
