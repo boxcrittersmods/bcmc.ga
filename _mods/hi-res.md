@@ -10,6 +10,6 @@ userscript: true
 icon: /uploads/mods/hi-res.png
 buttons:
 - name: Install
-  href: https://greasyfork.org/scripts/398178-hi-res-boxcritters/code/Hi-Res%20boxcritters.user.js
+  href: https://github.com/boxcritters/Hi-Res/raw/master/Hi-Res.user.js
 recommend: true
 ---
