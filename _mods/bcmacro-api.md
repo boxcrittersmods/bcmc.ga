@@ -10,5 +10,6 @@ buttons:
     href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
 featured: false
 userscript: true
+working: true
 recommend: false
 ---
