@@ -12,6 +12,7 @@ featured: false
 userscript: true
 require:
   - bcmacro-api
+working: true
 icon: https://raw.githubusercontent.com/slaggo/CrittersPlus/master/icon.png
 recommend: true
 ---
