@@ -16,4 +16,3 @@ buttons:
   href: https://raw.githubusercontent.com/boxcritters/boxcrittersmods.ga/master/tp/CuteCritters.bctp.json
 featured: true
 ---
-
