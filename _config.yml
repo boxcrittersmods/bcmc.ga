@@ -102,6 +102,7 @@ defaults:
       type: lists
     values:
       layout: list-page
+      comments: true
   - scope:
       path: ""
       type: mods
