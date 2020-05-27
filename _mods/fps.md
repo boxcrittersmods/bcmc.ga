@@ -8,5 +8,6 @@ logo: /uploads/mods/screenshot.png
 buttons:
   - name: Install
     href: https://github.com/boxcritters/fps/raw/master/fps.user.js
+userscript: true
 working: true
 ---
