@@ -10,8 +10,6 @@ nav:
     color: primary
   - name: Projects
     href: /projects
-  - name: Servers
-    href: /servers
   - name: Authors
     href: /authors
 user:
