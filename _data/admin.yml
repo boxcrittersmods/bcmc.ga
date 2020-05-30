@@ -89,7 +89,7 @@ fields:
     label: Dependencies
     collection: mods
   - widget: markdown
-    name: content
+    name: body
     label: Body
   - widget: string
     name: permalink
