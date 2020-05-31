@@ -12,6 +12,7 @@ featured: false
 userscript: true
 working: true
 content: ""
+recommended: true
 recommend: false
 ---
 # BCMacro API
