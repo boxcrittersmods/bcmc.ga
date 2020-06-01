@@ -102,15 +102,16 @@ defaults:
       type: lists
     values:
       layout: list-page
-      comments: true
       list: false
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: listing-page
   - scope:
       path: ""
       type: texturepacks
     values:
-      comments: true
-      list: true
-      show-nav: true
       require:
         - texture-pack-manager
   - scope:
