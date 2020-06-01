@@ -103,6 +103,7 @@ defaults:
     values:
       layout: list-page
       comments: true
+      list: false
   - scope:
       path: ""
       type: texturepacks
