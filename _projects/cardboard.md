@@ -3,8 +3,7 @@ title: Cardboard
 author:
   - SArpnt
 description: Modding api
-#date: 2020-06-01T00:00:00.000Z # date will probably be this time
-unfinished: true
+date: 2020-06-01T00:00:00.000Z
 buttons:
   - name: Source
     href: https://github.com/boxcritters/cardboard
