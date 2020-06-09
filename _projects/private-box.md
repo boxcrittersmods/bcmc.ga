@@ -13,10 +13,10 @@ date: 2019-10-14T00:00:00.000Z
 unfinished: true
 buttons:
   - name: Install (client)
-    href: https://github.com/boxcritters/private-box/raw/master/private-box%20client.user.js
+    href: https://github.com/boxcrittersmods/private-box/raw/master/private-box%20client.user.js
   - type: 1
     name: Test server
-    href: https://boxcritters.com/play/index.html?ip=https%3A//sa-critters.herokuapp.com/
+    href: https://play.boxcritters.com/?ip=https://sa-critters.herokuapp.com/
   - type: 1
     name: Source
     href: https://github.com/boxcritters/private-box
