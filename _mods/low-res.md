@@ -7,7 +7,7 @@ date: 2020-04-01T14:37:29.554Z
 logo: /uploads/mods/untitled.png
 buttons:
   - name: install very nice
-    href: https://cdn.discordapp.com/attachments/619915848391589907/694915144857288824/Low-Res_boxcritters.user.js
+    href: https://github.com/SArpnt/Low-Res/raw/master/Low-Res.user.js
     style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
 featured: false
 userscript: true
