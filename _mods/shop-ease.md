@@ -2,7 +2,7 @@
 title: Shop ease
 author:
   - SArpnt
-description: Makes shop opening and closing look nicer
+description: Makes shop/chat log opening and closing look nicer
 date: 2020-06-17T7:37:20.000Z
 buttons:
   - name: Install
