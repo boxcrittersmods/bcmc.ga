@@ -9,6 +9,10 @@ buttons:
   - name: install very nice
     href: https://github.com/SArpnt/Low-Res/raw/master/Low-Res.user.js
     style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
+  - type: 1
+    name: Sorse
+    href: https://github.com/SArpnt/Low-Res/
+    style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
 featured: false
 userscript: true
 working: true
