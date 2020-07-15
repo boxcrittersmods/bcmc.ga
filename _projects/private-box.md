@@ -16,7 +16,7 @@ buttons:
     href: https://github.com/boxcrittersmods/private-box/raw/master/private-box%20client.user.js
   - type: 1
     name: Test server
-    href: https://play.boxcritters.com/?ip=https://sa-critters.herokuapp.com/
+    href: https://boxcritters.com/play/?ip=https://sa-critters.herokuapp.com/
   - type: 1
     name: Source
     href: https://github.com/boxcritters/private-box
