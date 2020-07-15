@@ -7,7 +7,7 @@ layout: item
 	<div class="card-body">
 		<h5 class="card-title">{{page.title}}
 			{% if page.userscript and site.show-mod-versions %} <img src="https://{{site.bc-mod-api}}/button/{{ page.slug }}"
-				alt="mod-version">{% endif %}
+				onerror="this.style.display='none'">{% endif %}
 		</h5>
 		<p class="card-text">{{page.description}}</p>
 	</div>
