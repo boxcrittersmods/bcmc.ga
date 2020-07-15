@@ -1,7 +1,9 @@
 ---
 title: boxcrittersmods.ga
 author:
+  - TumbleGamer
   - SArpnt
+  - Alvarito050506
 description: Box Critters Modding Community website
 date: 2009-05-15T00:00:00.000Z
 buttons:
