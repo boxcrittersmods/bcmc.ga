@@ -7,6 +7,9 @@ date: 2020-07-13T13:0:00.000Z
 buttons:
   - name: Install
     href: https://github.com/SArpnt/Big-screen/raw/master/Big%20screen.user.js
+  - type: 1
+    name: Source
+    href: https://github.com/SArpnt/Big-screen/
 userscript: true
 working: true
 recommend: true
