@@ -7,6 +7,9 @@ date: 2020-06-17T7:37:20.000Z
 buttons:
   - name: Install
     href: https://github.com/SArpnt/Shop-ease/raw/master/Shop%20ease.user.js
+  - type: 1
+    name: Source
+    href: https://github.com/SArpnt/Shop-ease/
 userscript: true
 working: true
 recommend: true
