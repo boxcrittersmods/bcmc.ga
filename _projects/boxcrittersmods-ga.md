@@ -11,5 +11,4 @@ buttons:
     name: Source
     href: https://github.com/boxcrittersmods/boxcrittersmods.ga
 ---
-# boxcrittersmods.ga
 You're here!
