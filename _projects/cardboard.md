@@ -11,5 +11,4 @@ buttons:
     name: Install
     href: https://github.com/SArpnt/cardboard/raw/master/script.user.js
 ---
-# Cardboard
 modding api that can be `@require`d in userscript header (no install neccecary)
