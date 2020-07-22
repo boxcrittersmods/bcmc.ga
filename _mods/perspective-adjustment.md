@@ -9,7 +9,7 @@ buttons:
     href: https://raw.githubusercontent.com/p1-BCMC/PerspectiveAdjustment/master/PerspectiveAdjustment.user.js
   - type: 1
     name: Source
-    href: https://raw.githubusercontent.com/p1-BCMC/PerspectiveAdjustment/
+    href: https://github.com/p1-BCMC/PerspectiveAdjustment/
 userscript: true
 working: true
 recommend: true
