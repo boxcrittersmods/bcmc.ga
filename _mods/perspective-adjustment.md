@@ -1,5 +1,6 @@
 ---
 title: Perspective Adjustment
+icon: https://media.discordapp.net/attachments/567030108003631108/735628561292984350/PerspectiveAdjustment.png
 author:
   - p1
 description: Adding perspective to Box Critters!
