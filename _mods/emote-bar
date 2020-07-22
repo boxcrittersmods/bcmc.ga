@@ -1,0 +1,20 @@
+---
+title: Emote Bar
+icon: https://media.discordapp.net/attachments/567030108003631108/735623502773878874/EmoteBar.png
+author:
+  - p1
+description: Creates an emote bar at the bottom of the screen while there isn't one implemented in the game yet!
+date: 2020-07-22T23:0:00.000Z
+buttons:
+  - name: Install
+    href: https://raw.githubusercontent.com/p1-BCMC/EmoteBar/master/EmoteBar.user.js
+  - type: 1
+    name: Source
+    href: https://github.com/p1-BCMC/EmoteBar
+userscript: true
+working: true
+recommend: false
+---
+Having trouble remembering all those /emote codes? They are a thing of the past! Just click on the emote you want to send, and done!
+Automatically becomes semitransparent when not needed, and fully opaque when hovered over with the mouse!
+disclaimer: Slight overlapping issues *may* occur when used in combination with Big Screen mod.
