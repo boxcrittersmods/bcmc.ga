@@ -3,6 +3,7 @@ title: Emote Bar
 icon: https://media.discordapp.net/attachments/567030108003631108/735623502773878874/EmoteBar.png
 author:
   - p1
+  - Blinking Berry
 description: Creates an emote bar at the bottom of the screen while there isn't one implemented in the game yet!
 date: 2020-07-22T23:0:00.000Z
 buttons:
