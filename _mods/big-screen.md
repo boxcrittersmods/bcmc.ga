@@ -3,7 +3,7 @@ title: Big screen
 author:
   - SArpnt
 description: Game fills entire screen
-icon: https://github.com/SArpnt/Big-screen/raw/master/icon.256.png
+icon: https://github.com/SArpnt/Big-screen/raw/master/icon256.png
 date: 2020-07-13T13:0:00.000Z
 buttons:
   - name: Install
