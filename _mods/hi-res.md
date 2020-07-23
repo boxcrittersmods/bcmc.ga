@@ -14,6 +14,5 @@ featured: true
 userscript: true
 working: true
 icon: /uploads/mods/hi-res.png
-image: /uploads/mods/hi-res.png
 recommend: true
 ---
