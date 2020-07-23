@@ -14,7 +14,7 @@ buttons:
     href: https://github.com/p1-BCMC/EmoteBar
 userscript: true
 working: true
-recommend: false
+recommend: true
 ---
 Having trouble remembering all those /emote codes? They are a thing of the past! Just click on the emote you want to send, and done!
 The emote bar automatically becomes semitransparent when not needed, and fully opaque when hovered over with the mouse!
