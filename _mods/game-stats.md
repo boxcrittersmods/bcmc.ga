@@ -5,7 +5,7 @@ icon: https://github.com/p1-BCMC/GameStats/raw/master/GameStats.png
 author:
   - p1
 description: Generates some useful stats in the right top corner of the game, showing Frames per Second (FPS), Ping to the server (PING), Critters in current Room (CIR), and Total Amount of Critters online (ON)!
-date: 2020-07-24T23:30:00.000Z
+date: 2020-07-24T23:0:00.000Z
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/GameStats/master/GameStats.user.js
