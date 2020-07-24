@@ -1,4 +1,3 @@
-
 ---
 title: Game Stats
 icon: https://github.com/p1-BCMC/GameStats/raw/master/GameStats.png
