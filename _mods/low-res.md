@@ -4,6 +4,7 @@ author:
   - SArpnt
 description: very high quality luxury box critters
 date: 2020-04-01T14:37:29.554Z
+icon: https://github.com/SArpnt/Low-Res/raw/master/icon16.png
 logo: /uploads/mods/untitled.png
 buttons:
   - name: install very nice
