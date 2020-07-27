@@ -19,3 +19,4 @@ This mod adds a display with useful stats in the top right of the screen, in the
 The stats update continuously (FPS and CIR immediately; PING and ON every 15 seconds when active or every 60 seconds when inactive for more than 5 minutes).
 It adds the functionality that clicking either the coins or the stats will make both almost transparent (until clicked again).
 Special thanks to SArpnt and to TumbleGamer, whose "FPS" mod is included inside the stats!
+UPDATE: GameStats now makes your game run at the same framerate as your screen!
