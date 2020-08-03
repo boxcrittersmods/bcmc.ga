@@ -217,7 +217,7 @@ TABLET
 *********/
 @media (min-width: 768px) {
 	.sidebar {
-		padding-left: 15px;
+		margin: 10px 0 10px 10px;
 		width: 30%;
 	}
 	.home-main {
