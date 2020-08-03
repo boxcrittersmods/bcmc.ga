@@ -11,10 +11,6 @@ layout: default
 				<h1>{{collection.title|default:normalTitle}}</h1>
 			</div>
 		</div>
-		<div class="container">
-			{% for thing in site[collection.label] %}
-				{% include listing.html item=thing %}
-			{% endfor %}
-		</div>
+		{% include list.html list=collection.label %}
 	{% endfor %}
 </div>

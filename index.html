@@ -11,28 +11,28 @@ title: Home
 		<div class="card">
 			<div class="card-header"><h1>Recommended</h1></div>
 		</div>
-		<div class="content-list row">
+		<div class="content-list row justify-content-center align-items-stretch mx-0" style="max-height: 350px">
 			{% assign items = site.documents | sort: "date","last" | reverse | where: "recommend","true" %}
 			{% assign l = items| size %}
 			{% for item in items limit: 4 %}
-			{% include listing-square.html item=item %}
+				{% include listing-square.html item=item %}
 			{% endfor %}
 		</div>
 
 		{% for collection in site.collections %}
-		{% if collection.home %}
-		<div class="card">
-			{% assign normalTitle=collection.label|capitalize %}
-			<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
-		</div>
-		<div class="content-list row">
-			{% assign items = site[collection.label] | sort: "date","last" | reverse %}
-			{% assign l = items | size %}
-			{% for item in items limit: 4 %}
-			{% include listing-square.html item=item %}
-			{% endfor %}
-		</div>
-		{% endif %}
+			{% if collection.home %}
+				<div class="card">
+					{% assign normalTitle=collection.label|capitalize %}
+					<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
+				</div>
+				<div class="content-list row justify-content-center align-items-stretch mx-0" style="max-height: 350px">
+					{% assign items = site[collection.label] | sort: "date","last" | reverse %}
+					{% assign l = items | size %}
+					{% for item in items limit: 4 %}
+						{% include listing-square.html item=item %}
+					{% endfor %}
+				</div>
+			{% endif %}
 		{% endfor %}
 	</div>
 	<div class="sidebar">

@@ -17,12 +17,12 @@ layout: item
 	</div>
 	{% assign longDescription = page.content | strip %}
 	{% unless longDescription == "" %}
-	<div class="card-body">{{longDescription}}</div>
+		<div class="card-body">{{longDescription}}</div>
 	{% endunless %}
 </div>
 
 {% if page.collection == "authors" %}
-{% include get-author-projects.html %}
+	{% include get-author-projects.html %}
 {% endif %}
 
 {% if page.code %}
@@ -30,7 +30,7 @@ layout: item
 	<div class="card-body">
 		<h5 class="card-title">Install</h5>
 		<p class="card-text">
-		<pre><code>{{page.code}}</code></pre>
+			<pre><code>{{page.code}}</code></pre>
 		</p>
 	</div>
 </div>

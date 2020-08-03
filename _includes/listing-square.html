@@ -1,41 +1,38 @@
-<!-- this code isn't very good, i used style parameters in tags to fix graphical issues lazily-->
-<div class="card" style="height:350px">
+<div class="card" style="min-width: 250px; max-width: 350px">
 	{% if include.item.recommend %}
-	<div class="card-header bg-warning ">
-		<span class="bcmc-recommended">
-			<i class="fa fa-star" aria-hidden="true"></i>
-			Recommended
-		</span>
-	</div>
+		<div class="card-header bg-warning ">
+			<span class="bcmc-recommended">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				Recommended
+			</span>
+		</div>
 	{% endif %}
 	{% if include.item.icon %}
-	<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}">
-	<script>
-		{
-			let script = document.currentScript;
-			let card = script.parentElement;
-			let img = card.getElementsByTagName('img')[0];
-			let imgResize = function () {
-				let cardsize = card.getBoundingClientRect();
-				if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
-					img.height = 100;
-					img.style.width = "auto";
-					img.style.marginLeft = "auto";
-					img.style.marginRight = "auto";
-				} else {
-					img.width = cardsize.width;
-					img.style.height = "auto";
+		<img src="{{include.item.icon}}" class="card-img-top" alt="{{include.item.title}}">
+		<script>
+			{
+				let script = document.currentScript;
+				let card = script.parentElement;
+				let img = card.getElementsByTagName('img')[0];
+				let imgResize = function () {
+					let cardsize = card.getBoundingClientRect();
+					if (img.naturalWidth / img.naturalHeight < cardsize.width / 100) {
+						img.height = 100;
+						img.style.width = "auto";
+						img.style.marginLeft = "auto";
+						img.style.marginRight = "auto";
+					} else {
+						img.width = cardsize.width;
+						img.style.height = "auto";
+					}
 				}
+				if (img.complete)
+					imgResize();
+				else
+					img.addEventListener('load', imgResize);
+				new MutationObserver(_ => imgResize()).observe(card, {attributes: true});
 			}
-			if (img.complete)
-				imgResize();
-			else
-				img.addEventListener('load', imgResize);
-			new MutationObserver((m)=>{
-				imgResize();
-			}).observe(card, {attributes: true});
-		}
-	</script>
+		</script>
 	{% endif %}
 	<div class="card-body" style="overflow: hidden;">
 		<a href="{{include.item.url}}">
