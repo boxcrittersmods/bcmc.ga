@@ -24,8 +24,8 @@ buttons:
 # Aim
 Create a Box critters private server engine for people to freely make their own servers
 # Things used
-[boxcritters.org](https://boxcritters.org) - We used boxcritters.org as the first client and built the server from scratch using any socket information we could get from the client script.
-[boxcritters.com/play](https://boxcritters.com/play) - Later in development boxcritters.com was used as the intended client, with the help of a userscript to connect to the server.
+- [boxcritters.org](https://boxcritters.org) - We used boxcritters.org as the first client and built the server from scratch using any socket information we could get from the client script.
+- [boxcritters.com/play](https://boxcritters.com/play) - Later in development boxcritters.com was used as the intended client, with the help of a userscript to connect to the server.
 # Outcomes
 - The creation of this aided the development of [[Project: Critality]]
 - The [boxcritters.org](https://boxcritters.org) client was used in the creation of [[Project:LearnToCode]].
