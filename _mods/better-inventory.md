@@ -2,6 +2,7 @@
 title: Better Inventory
 author:
   - SArpnt
+  - Blinking Berry
 description: More items on inventory pages, resizable critter, and sorting
 date: 2020-08-15T16:45:00.000Z
 buttons:
