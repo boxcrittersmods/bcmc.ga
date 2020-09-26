@@ -1,7 +1,7 @@
 {% for field in site.data.admin.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
 {{include.indent}}      - name: {{field.name}}
-{{include.indent}}        label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-{{include.indent}}        hint: {{field.hint}}{% endif %}
+{{include.indent}}        label: {% include admin/label.yml name=field.name label=field.label %}
+{{include.indent}}        hint: "{{field.hint}}"
 {{include.indent}}        widget: select
 {{include.indent}}        required: false
 {{include.indent}}        multiple: {{field.multiple}}
@@ -9,13 +9,13 @@
 {{include.indent}}          - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
 {{include.indent}}      - name: {{field.name}}
 {{include.indent}}        label: {% include admin/label.yml name=field.name label=field.label %}
-{{include.indent}}        hint: {{field.hint}}
+{{include.indent}}        hint: "{{field.hint}}"
 {{include.indent}}        widget: list
 {{include.indent}}        required: false
 {{include.indent}}        fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
 {{include.indent}}          - name: {{field.name}}
-{{include.indent}}            label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-{{include.indent}}            hint: {{field.hint}}{% endif %}
+{{include.indent}}            label: {% include admin/label.yml name=field.name label=field.label %}
+{{include.indent}}            hint: "{{field.hint}}"
 {{include.indent}}            widget: select
 {{include.indent}}            required: false
 {{include.indent}}            multiple: {{field.multiple}}
