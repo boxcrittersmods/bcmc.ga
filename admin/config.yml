@@ -37,8 +37,8 @@ collections: {% for type in site.collections %}
         fields: {% for field in site.data.admin.static  %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
           - name: {{field.name}}
             label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-            hint: {{field.hint}}
-            {% endif %}widget: select
+            hint: {{field.hint}}{% endif %}
+            widget: select
             required: false
             multiple: {{field.multiple}}
             options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
@@ -51,8 +51,8 @@ collections: {% for type in site.collections %}
             fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
               - name: {{field.name}}
                 label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
-                hint: {{field.hint}}
-            {% endif %}widget: select
+                hint: {{field.hint}}{% endif %}
+                widget: select
                 required: false
                 multiple: {{field.multiple}}
                 options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
