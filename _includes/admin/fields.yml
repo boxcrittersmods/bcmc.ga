@@ -14,9 +14,9 @@
 {{include.indent}}        required: false
 {{include.indent}}        fields: {% for field in field.fields %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
 {{include.indent}}          - name: {{field.name}}
-{{include.indent}}            label: {% include admin/label.yml name=field.name label=field.label %}
+{{include.indent}}            label: {% include admin/label.yml name=field.name label=field.label %}{% if field.hint %}
 {{include.indent}}            hint: {{field.hint}}
-{{include.indent}}            widget: select
+{% endif %}{{include.indent}}            widget: select
 {{include.indent}}            required: false
 {{include.indent}}            multiple: {{field.multiple}}
 {{include.indent}}            options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
