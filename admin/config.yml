@@ -23,14 +23,14 @@ collections: {% for type in site.collections %}
     fields: {% include admin/fields.yml %}{% endfor %}
   - name: "pages"
     label: "Pages"
-    files: {% assign yesExt = "md,html" | split: "," %}{% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% if yesExt contains ext %}{% assign name=page.path | split: "." | first %}
+    files: {% assign yesExt = "md,html" | split: "," %}{% for page in site.pages %}{% assign ext=page.path | split: "." | last %}{% if yesExt contains ext %}{% assign name=page.path | split: "." | first %}{%if name=="redirect" %} {% continue %}{% endif %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
         fields: {% include admin/fields.yml indent="  " %}{% endif %}{% else %}[]{% endfor %}
   - name: "static"
     label: "Static"
-    files: {% for page in site.static_files %}{% assign name=page.path | split: "." | first %}
+    files: {% for page in site.static_files %}{% assign name=page.path | split: "." | first %}{% assign ext=page.path | split: "." | last %}{% if ext=="png" %}{% continue %}{% endif %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
@@ -40,7 +40,7 @@ jekyll adm            label: {% include admin/label.yml name=field.name label=fi
             hint: "{{field.hint}}"
             widget: select
             required: false
-            multiple: {{field.multiple}}
+            multiple: {{field.multiple |default:false}}
             options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
                   - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
           - name: {{field.name}}
@@ -54,7 +54,7 @@ jekyll adm            label: {% include admin/label.yml name=field.name label=fi
                 hint: "{{field.hint}}"
                 widget: select
                 required: false
-                multiple: {{field.multiple}}
+                multiple: {{field.multiple|default:false}}
                 options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
                   - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
               - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}

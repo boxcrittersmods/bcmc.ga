@@ -4,7 +4,7 @@
 {{include.indent}}        hint: "{{field.hint}}"
 {{include.indent}}        widget: select
 {{include.indent}}        required: false
-{{include.indent}}        multiple: {{field.multiple}}
+{{include.indent}}        multiple: {{field.multiple|default:false}}
 {{include.indent}}        options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]{% else %}{% for option in field.options %}
 {{include.indent}}          - {% include admin/option.yml label=option.value value=option.value %}{% endfor %}{% endif %}{% when "list" %}
 {{include.indent}}      - name: {{field.name}}
@@ -18,7 +18,7 @@
 {{include.indent}}            hint: "{{field.hint}}"
 {{include.indent}}            widget: select
 {{include.indent}}            required: false
-{{include.indent}}            multiple: {{field.multiple}}
+{{include.indent}}            multiple: {{field.multiple|default:false}}
 {{include.indent}}            options: {% if field.collection %}[{{site[field.collection]|map:map|join:","}}]]{% else %}{% for option in field.options %}
 {{include.indent}}              - {% include admin/option.yml label=option.label value=option.value %}{% endfor %}{% endif %}{% else %}
 {{include.indent}}          - {% include admin/field.yml name=field.name label=field.label widget=field.widget hint=option.hint %}{% endcase %}{% endfor %}{% else %}

@@ -52,12 +52,12 @@ fields:
         name: browser
         multiple: false
         options:
-          - value: chrome
-          - value: firefox
-          - value: edge
-          - value: safari
-          - value: ios
-          - value: android
+          - value: "chrome"
+          - value: "firefox"
+          - value: "edge"
+          - value: "safari"
+          - value: "ios"
+          - value: "android"
       - widget: select
         name: type
         options:
