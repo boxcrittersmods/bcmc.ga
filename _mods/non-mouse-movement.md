@@ -19,5 +19,4 @@ recommend: true
 Move with the arrow keys, settings can be changed in the userscript (there's 4 consts, default settings are already fine)
 
 Known issues / Incomplete features:
-* Controller movement isn't implemented yet
 * Direction of critter very often doesn't match movement
