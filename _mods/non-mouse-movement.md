@@ -16,7 +16,8 @@ userscript: true
 working: true
 recommend: true
 ---
-Move with the arrow keys or main joystick, settings can be changed in the userscript (there's 6 consts, default settings are already fine)
+Move with the arrow keys, WASD, or main joystick.\
+Settings can be changed in the userscript (there's 6 consts, default settings are already fine)
 
 Known issues / Incomplete features:
 * Direction of critter very often doesn't match movement
