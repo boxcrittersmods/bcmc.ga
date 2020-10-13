@@ -2,7 +2,7 @@
 title: Ctrl Panel
 author:
   - SArpnt
-description: button api
+description: Button api
 date: 2020-10-12T00:00:00.000Z
 buttons:
   - name: Source
@@ -11,4 +11,4 @@ buttons:
     name: Install
     href: https://github.com/SArpnt/ctrl-panel/raw/master/script.user.js
 ---
-button api that can be `@require`d in userscript header (no install neccecary)
+Button api that can be `@require`d in userscript header (no install neccecary)
