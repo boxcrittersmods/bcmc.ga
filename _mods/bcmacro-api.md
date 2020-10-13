@@ -8,6 +8,10 @@ date: 16-05-2020
 buttons:
   - name: Install
     href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
+  - name: Documentation
+    href: http://docs.boxcrittersmods.ga/bcmacros
+    browser: null
+    type: "1"
 featured: false
 userscript: true
 working: true
