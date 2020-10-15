@@ -1,15 +1,15 @@
 ---
 title: SArpnt
-icon: https://cdn.discordapp.com/avatars/206515852663717888/20318025c98dc7d59232588f73670351.png
+icon: https://avatars.githubusercontent.com/u/36542932
 disclaimer: This person is not supported for your browser.
 description: i always have to fix everything
 author:
-- SArpnt
+  - SArpnt
 buttons:
-- name: Github
-  href: https://github.com/sarpnt/
+  - name: Github
+    href: https://github.com/sarpnt/
 hideCredit:
-- SArpnt
+  - SArpnt
 ---
 <style>
 	.page-header>*>*>*>* {
