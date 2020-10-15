@@ -1,6 +1,3 @@
-html, body {
-
-}
 .page-body {
 	position: relative;
 	min-height: 100vh;
@@ -24,9 +21,9 @@ html, body {
 	margin: 0 3px;
 }
 
-/* .page-content {
-	background: #fff;
-} */
+/*.page-content {
+	background: white;
+}*/
 
 
 pre {
@@ -37,18 +34,18 @@ pre {
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .carousel-item,.carousel-item > img,.carousel-item > iframe, .carousel-inner {
-	/* width: 100%; */
-	/* height: 500px !important; */
+	/*width: 100%;
+	height: 500px !important;*/
 	height:40vh;
 }
 
-/* .page-header {
+/*.page-header {
 	height: 50vh;
 	min-height: 500px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-} */
+}*/
 
 
 
@@ -71,7 +68,7 @@ pre {
 }
 
 .carousel-item.video:hover:before {
-  display: none;
+	display: none;
 }
 carousel-item.video:hover {
 	position: relative;
@@ -85,8 +82,6 @@ carousel-item.video:hover {
 	text-shadow: 2px 2px 4px #000000;
 }
 
-
-/*==PAGE HEADER==*/
 
 .logged-in {
 	display: none;
