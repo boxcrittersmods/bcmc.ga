@@ -111,3 +111,7 @@ carousel-item.video:hover {
 	padding-bottom: 3px;
 	display: block;
 }
+
+.utterances {
+	max-width: none !important;
+}
