@@ -1,30 +1,27 @@
 {% assign item = include.item | default: page %}
 
-{% assign primaryExists = false %}
-
-{% capture buttons %}
+{% capture fullRow %}
+	{% assign primaryExists = false %}
 	{% for button in item.buttons %}
 		{% include modbutton.html button=button %}
 		{% unless button.type > 0 or button.type < 0 %}
 			{% assign primaryExists = true %}
 		{% endunless %}
 	{% endfor %}
-{% endcapture %}
-
-{% capture fullRow %}
-	{{buttons}}
 
 	{% if item.disclaimer %}
-		<span class="text-muted">{{item.disclaimer}}</span>
-	{% else %}
-		{% assign type = site.collections | where:"label",item.collection | first %}
-		{% assign typeName = type.singular | downcase %}
-		{% if item.unfinished %}
-			<span class="text-muted">This {{typeName}} is not finished.</span>
+		{% if item.disclaimer == true %}
+			{% assign type = site.collections | where:"label",item.collection | first %}
+			{% assign typeName = type.singular | downcase %}
+			{% if item.unfinished %}
+				<span class="text-muted">This {{typeName}} is not finished.</span>
+			{% else %}
+				{% unless primaryExists %}
+					<span class="text-muted browser-none">This {{typeName}} is not supported for your browser.</span>
+				{% endunless %}
+			{% endif %}
 		{% else %}
-			{% unless primaryExists or item.collection == "authors" or item.collection == "posts" or item.collection == "lists" %}
-				<span class="text-muted browser-none">This {{typeName}} is not supported for your browser.</span>
-			{% endunless %}
+			<span class="text-muted">{{item.disclaimer}}</span>
 		{% endif %}
 	{% endif %}
 {% endcapture %}

@@ -1,9 +1,26 @@
 ---
-layout: page
+layout: item
 title: Submit test
+comments: false
+maincard:
+  title: false
 ---
 <form action="http://static.tumblenet.ga/submit" method="post">
-	<label for="discordid">Discord ID</label><input type="text" name="id" id="discordid">
-	<label for="discordid">Listing Info</label><input type="text" name="info" id="listinginfo">
-	<button type="submit">Submit</button>
+	<div class="form-group row">
+		<label for="discordid" class="col-sm-2 col-form-label">Discord ID</label>
+		<div class="col">
+			<input type="text" name="id" id="discordid" class="form-control" placeholder="Name#0000">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="listinginfo" class="col-sm-2 col-form-label">Listing Info</label>
+		<div class="col">
+			<input type="text" name="info" id="listinginfo" class="form-control">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</div>
 </form>

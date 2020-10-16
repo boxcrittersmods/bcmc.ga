@@ -2,57 +2,68 @@
 layout: default
 ---
 {% include page-thumb.html card=true %}
-
-{% if page.maincard %}
-	<div class="card">
-		<div class="card-body">
-			<h5 class="card-title">{{page.title}}
-				{% if page.userscript and site.show-mod-versions %}
-				<img src="https://{{site.bc-mod-api}}/button/{{page.slug}}" onerror="this.style.display='none'">
-				{% endif %}
-			</h5>
-			<p class="card-text">{{page.description}}</p>
+<div class="page-content container">
+	{% if page.maincard %}
+		<div class="card">
+			{% if page.maincard.body or page.maincard == true %}
+				<div class="card-body">
+					{% if page.maincard.title or page.maincard == true %}
+						<h5 class="card-title">{{page.title}}
+							{% if page.userscript and site.show-mod-versions %}
+								<img src="https://{{site.bc-mod-api}}/button/{{page.slug}}" onerror="this.style.display='none'">
+							{% endif %}
+						</h5>
+					{% endif %}
+					{% if page.maincard.description or page.maincard == true %}
+						<p class="card-text">{{page.description}}</p>
+					{% endif %}
+				</div>
+			{% endif %}
+			<div class="list-group list-group-flush">
+				{% include modrow-created.html %}
+				{% include modrow-buttons.html %}
+			</div>
+			{% assign longDescription = page.content | strip %}
+			{% unless longDescription == "" %}
+				<div class="card-body">{{longDescription}}</div>
+			{% endunless %}
 		</div>
-		<div class="list-group list-group-flush">
-			{% include modrow-created.html %}
-			{% include modrow-buttons.html %}
-		</div>
-		{% assign longDescription = page.content | strip %}
-		{% unless longDescription == "" %}
-			<div class="card-body">{{longDescription}}</div>
-		{% endunless %}
-	</div>
-{% endif %}
+	{% endif %}
 
-{% if page.code %}
-	<div class="card">
-		<div class="card-body">
-			<h5 class="card-title">Install</h5>
-			<p class="card-text">
-				<pre><code>{{page.code}}</code></pre>
-			</p>
+	{% if page.code %} <!-- this should be removed at some point -->
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Install</h5>
+				<p class="card-text">
+					<pre><code>{{page.code}}</code></pre>
+				</p>
+			</div>
 		</div>
-	</div>
-{% endif %}
+	{% endif %}
 
-{% if page.require or page.userscript %}
-	<div class="card bg-warning">
-		<div class="card-body bg-warning">
-			<h2>Requirements <small>(Install in order)</small></h2>
+	{% if page.require or page.userscript %}
+		<div class="card bg-warning">
+			<div class="card-body bg-warning">
+				<h2>Requirements <small>(Install in order)</small></h2>
+			</div>
+			<ul class="list-group list-group-flush">
+				{% include requirements.html %}
+			</ul>
 		</div>
-		<ul class="list-group list-group-flush">
-			{% include requirements.html %}
-		</ul>
-	</div>
-{% endif %}
+	{% endif %}
 
-{% if page.list %}
-	<div class="content-list row flex-wrap justify-content-center align-items-stretch">
-		{% if page.list == true %}
-			{% assign list = page.slug %}
-		{% else %}
-			{% assign list = page.list %}
-		{% endif %}
-		{% include list.html list=list filters=page.filters %}
-	</div>
-{% endif %}
+	{% if page.list %}
+		<div class="content-list row flex-wrap justify-content-center align-items-stretch">
+			{% if page.list == true %}
+				{% assign list = page.slug %}
+			{% else %}
+				{% assign list = page.list %}
+			{% endif %}
+			{% include list.html list=list filters=page.filters %}
+		</div>
+	{% endif %}
+
+	{% if page.comments %}
+		{% include comments.html %}
+	{% endif %}
+</div>

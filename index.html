@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Home
+header: false
 ---
-{% assign all = site.documents | sort: "date","last" | reverse %}
-{% assign carousel = all | where: "featured","true" %}
-{% include home-carousel.html %}
+{% assign carousel = site.documents | where: "featured","true" | sort: "date","last" | reverse %}
+{% include home-carousel.html items=carousel %}
 <div class="home container">
 	<div class="home-main">
 		{% assign homelists = site.lists | sort: "home" %}

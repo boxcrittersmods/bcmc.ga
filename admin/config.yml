@@ -149,7 +149,7 @@ jekyll adm            label: {% include admin/label.yml name=field.name label=fi
                 fields:
                 - {label: "Comments", name: "comments", widget: "boolean", required: false}
                 - {label: "List", name: "list", widget: "boolean", required: false}
-                - {label: "Show Nav", name: "show-nav", widget: "boolean", required: false}
+                - {label: "Show Nav", name: "showNav", widget: "boolean", required: false}
                 - label: "Dependecies"
                   name: "require"
                   widget: "select"

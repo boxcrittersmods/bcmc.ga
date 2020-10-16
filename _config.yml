@@ -6,18 +6,6 @@ repository: boxcritters/boxcrittersmods.ga
 bc-mod-api: api.boxcrittersmods.ga
 show-mod-versions: true
 collections:
-  authors:
-    output: true
-    title: Authors
-    singular: Author
-  shaders:
-    output: true
-    title: Shaders
-    singular: Shader
-  servers:
-    output: true
-    title: Servers
-    singular: Server
   other:
     output: true
     title: Other
@@ -26,6 +14,26 @@ collections:
     output: true
     title: Mods
     singular: Mod
+  texturepacks:
+    output: true
+    title: Texture Packs
+    singular: Texture Pack
+  shaders:
+    output: true
+    title: Shaders
+    singular: Shader
+  projects:
+    output: true
+    title: Projects
+    singular: Project
+  servers:
+    output: true
+    title: Servers
+    singular: Server
+  authors:
+    output: true
+    title: Authors
+    singular: Author
   posts:
     output: true
     title: Blog
@@ -35,14 +43,6 @@ collections:
     title: Lists
     singular: List
     permalink: /:name/
-  projects:
-    output: true
-    title: Projects
-    singular: Project
-  texturepacks:
-    output: true
-    title: Texture Packs
-    singular: Texture Pack
 permalink: pretty
 production: true
 plugins:
@@ -86,20 +86,44 @@ defaults:
       path: ""
     values:
       layout: item
-      featured: false
+      showNav: true
+      header: true
       maincard: true
+      disclaimer: false
       list: false
       filters: []
       home: 0
-      show-nav: true
       comments: true
   - scope:
       path: ""
-      type: lists
+      type: mods
     values:
-      maincard: false
-      list: true
-      comments: false
+      disclaimer: true
+  - scope:
+      path: ""
+      type: texturepacks
+    values:
+      disclaimer: true
+      require:
+        - texture-pack-manager
+  - scope:
+      path: ""
+      type: shaders
+    values:
+      disclaimer: true
+      require:
+        - boxcritters-shaders
+        - texture-pack-manager
+  - scope:
+      path: ""
+      type: servers
+    values:
+      disclaimer: true
+  - scope:
+      path: ""
+      type: projects
+    values:
+      disclaimer: true
   - scope:
       path: ""
       type: authors
@@ -121,14 +145,8 @@ defaults:
     values: {}
   - scope:
       path: ""
-      type: texturepacks
+      type: lists
     values:
-      require:
-        - texture-pack-manager
-  - scope:
-      path: ""
-      type: shaders
-    values:
-      require:
-        - boxcritters-shaders
-        - texture-pack-manager
+      maincard: false
+      list: true
+      comments: false
