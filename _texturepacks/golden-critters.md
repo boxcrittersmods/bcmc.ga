@@ -1,7 +1,7 @@
 ---
 title: Golden Critters
 author:
-  - Glitched0ut
+  - glitched0ut
 description: Turns your hamster golden
 date: 2020-03-27T14:01:07.281Z
 icon: /uploads/texturepacks/8fj2yfkttv9bgaaaaasuvork5cyii.png
