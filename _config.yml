@@ -1,6 +1,5 @@
 title: Box Critters Modding Community
-description: |
-  Install mods and other add-ons to Box Critters
+description: Install mods and other add-ons to Box Critters
 base-url: ""
 url: https://boxcrittersmods.ga
 repository: boxcritters/boxcrittersmods.ga
@@ -92,22 +91,22 @@ defaults:
   - scope:
       path: ""
     values:
+      layout: item
       featured: false
-      layout: listing-page
-      list: true
+      maincard: true
+      list: false
       show-nav: true
       comments: true
   - scope:
       path: ""
       type: lists
     values:
-      layout: list-page
-      list: false
+      maincard: false
+      list: true
+      comments: false
   - scope:
       path: ""
       type: posts
-    values:
-      layout: listing-page
   - scope:
       path: ""
       type: texturepacks
@@ -118,9 +117,6 @@ defaults:
       path: ""
       type: shaders
     values:
-      comments: true
-      list: true
-      show-nav: true
       require:
-        - texture-pack-manager
         - boxcritters-shaders
+        - texture-pack-manager

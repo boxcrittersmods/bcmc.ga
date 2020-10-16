@@ -1,8 +1,6 @@
-<div class="container page-content">
-	<div class="content-list row flex-wrap justify-content-center align-items-stretch">
-		{% assign items = site[include.list] | reverse %}
-		{% for item in items %}
-			{% include listing-square.html item=item %}
-		{% endfor %}
-	</div>
+<div class="content-list row flex-wrap justify-content-center align-items-stretch">
+	{% assign items = site[include.list] | reverse %}
+	{% for item in items %}
+		{% include listing-square.html item=item %}
+	{% endfor %}
 </div>

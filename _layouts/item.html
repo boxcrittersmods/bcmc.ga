@@ -3,7 +3,50 @@ layout: default
 ---
 {% include page-header-noimg.html %}
 <div class="container page-content">
-	{{content}}
+	{% include page-thumb.html card=true %}
+
+	{% if page.maincard %}
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">{{page.title}}
+					{% if page.userscript and site.show-mod-versions %} <img src="https://{{site.bc-mod-api}}/button/{{ page.slug }}"
+						onerror="this.style.display='none'">{% endif %}
+				</h5>
+				<p class="card-text">{{page.description}}</p>
+			</div>
+			<div class="list-group list-group-flush">
+				{% include modrow-created.html %}
+				{% include modrow-buttons.html %}
+			</div>
+			{% assign longDescription = page.content | strip %}
+			{% unless longDescription == "" %}
+				<div class="card-body">{{longDescription}}</div>
+			{% endunless %}
+		</div>
+	{% endif %}
+
+	{% if page.collection == "authors" %}
+		{% include get-author-projects.html %}
+	{% elsif page.list %}
+		{% if page.list == true %}
+			{% assign list = page.slug %}
+		{% else %}
+			{% assign list = page.list %}
+		{% endif %}
+		{% include list.html list=list %}
+	{% endif %}
+
+	{% if page.code %}
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Install</h5>
+				<p class="card-text">
+					<pre><code>{{page.code}}</code></pre>
+				</p>
+			</div>
+		</div>
+	{% endif %}
+
 	{% if page.require or page.userscript %}
 	<div class="card bg-warning">
 		<div class="card-body bg-warning">

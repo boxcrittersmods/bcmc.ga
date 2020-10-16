@@ -1,5 +1,6 @@
 ---
 layout: default
+description: all but it's sorted
 ---
 {% include page-header-noimg.html %}
 <div class="page-content">
@@ -11,6 +12,8 @@ layout: default
 				<h1>{{collection.title|default:normalTitle}}</h1>
 			</div>
 		</div>
-		{% include list.html list=collection.label %}
+		<div class="container page-content">
+			{% include list.html list=collection.label %}
+		</div>
 	{% endfor %}
 </div>
