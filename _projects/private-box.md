@@ -9,7 +9,7 @@ author:
   - Sponix
   - Alvarito050506
 description: Private server
-date: 2019-10-14T00:00:00.000Z
+date: 2019-10-14
 unfinished: true
 buttons:
   - name: Install (client)
@@ -21,12 +21,14 @@ buttons:
     name: Source
     href: https://github.com/boxcritters/private-box
 ---
-# Aim
+### Aim
 Create a Box critters private server engine for people to freely make their own servers
-# Things used
+
+### Things used
 - [boxcritters.org](https://boxcritters.org) - We used boxcritters.org as the first client and built the server from scratch using any socket information we could get from the client script.
 - [boxcritters.com/play](https://boxcritters.com/play) - Later in development boxcritters.com was used as the intended client, with the help of a userscript to connect to the server.
-# Outcomes
+
+### Outcomes
 - The creation of this aided the development of [[Project: Critality]]
 - The [boxcritters.org](https://boxcritters.org) client was used in the creation of [[Project:LearnToCode]].
 - pumkin paradice (a pumpkin themed server) by flines and Sponix

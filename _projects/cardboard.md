@@ -3,7 +3,7 @@ title: Cardboard
 author:
   - SArpnt
 description: Modding api
-date: 2020-06-01T00:00:00.000Z
+date: 2020-06-01
 buttons:
   - name: Source
     href: https://github.com/SArpnt/cardboard

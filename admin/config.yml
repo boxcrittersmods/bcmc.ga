@@ -34,7 +34,7 @@ collections: {% for type in site.collections %}
       - name: "{{name}}"
         label: "{% include admin/label.yml name=name %}"
         file: "{{page.path}}"
-        fields: {% for field in site.data.admin.static  %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
+        fields: {% for field in site.data.admin.static %}{% case field.widget %}{% when "select" %}{% assign map=field.map|default:"title" %}
           - name: {{field.name}}
 jekyll adm            label: {% include admin/label.yml name=field.name label=field.label %}
             hint: "{{field.hint}}"

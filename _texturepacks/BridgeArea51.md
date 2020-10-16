@@ -8,6 +8,6 @@ code: eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJCcmlkZ2VBcmVhNTEiLCJhdXRob3IiOiJJY3kiLCJkZX
 video: https://www.youtube.com/embed/v7_Q1wfBfSM
 featured: false
 buttons:
-- name: Install
-  href: https://raw.githubusercontent.com/boxcritters/boxcritters.github.io/master/tp/BridgeArea51.bctp.json
+  - name: Install
+    href: https://raw.githubusercontent.com/boxcritters/boxcritters.github.io/master/tp/BridgeArea51.bctp.json
 ---

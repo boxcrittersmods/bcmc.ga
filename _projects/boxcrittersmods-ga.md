@@ -4,7 +4,7 @@ author:
   - TumbleGamer
   - SArpnt
 description: Box Critters Modding Community website
-date: 2009-05-15T00:00:00.000Z
+date: 2009-05-15
 buttons:
   - name: Website
     href: https://boxcrittersmods.ga/

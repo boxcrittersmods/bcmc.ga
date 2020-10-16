@@ -17,29 +17,29 @@ For submit a user script mod, fill the following form:
 </div>
 
 <script>
-  document.getElementById("submit").addEventListener("click", function (event) {
-    var req = new Request("https://{{site.bc-mod-api}}/modsubmit/" + btoa(document.getElementById("url").value), {
-		  method: "GET",
-		  redirect: "follow"
-	  });
-	  fetch(req).then(function (res) {
-  		return res.text();
-  	}).then(function (text) {
-	  	document.getElementById("submit").innerHTML = "Submited succefully!";
-	  }).catch(function (err) {
-      console.log("Error! " + err);
-    });
-  });
+	document.getElementById("submit").addEventListener("click", function (event) {
+		var req = new Request("https://{{site.bc-mod-api}}/modsubmit/" + btoa(document.getElementById("url").value), {
+			method: "GET",
+			redirect: "follow"
+		});
+		fetch(req)
+			.then(res => res.text())
+			.then(text => {
+				document.getElementById("submit").innerHTML = "Submited succefully!";
+			}).catch(err => {
+				console.warn("Submit request error!", err);
+			});
+	});
 </script>
 
 For other types of mods just DM TumbleGamer#6140 on Discord.
 
 <h1>Texture Packs</h1>
 <ol>
-  <li>In the Texture Pack Manager click the hamburger menu and click create</li>
-  <li>Insert all the required urls. (<a href="https://mods.boxcritters.wiki/List_of_Image_Hosting_Sites">List of Image Hosts</a>)</li>
-  <li>Click Download One Click File</li>
-  <li>Create Repository for your Texture Pack. <a href="https://github.com/new">https://github.com/new</a></li>
-  <li>Upload your one click file</li>
-  <li>DM TumbleGamer#6410 asking to submit your texture pack</li>
+	<li>In the Texture Pack Manager click the hamburger menu and click create</li>
+	<li>Insert all the required urls. (<a href="https://mods.boxcritters.wiki/List_of_Image_Hosting_Sites">List of Image Hosts</a>)</li>
+	<li>Click Download One Click File</li>
+	<li>Create Repository for your Texture Pack. <a href="https://github.com/new">https://github.com/new</a></li>
+	<li>Upload your one click file</li>
+	<li>DM TumbleGamer#6410 asking to submit your texture pack</li>
 <ol>

@@ -1,14 +1,14 @@
 ---
 title: Retro Critters
 author:
-- flines
+  - flines
 description: >
   Experiment 1 is back! - Version 2.1
   Only viking helmet is working
-date: 05-05-2019
+date: 2019-05-05
 image: https://cdn.discordapp.com/attachments/572157373779542017/581630819257548821/unknown.png
 code: eyJ2ZXJzaW9uIjoiMSIsIm5hbWUiOiJSZXRybyBDcml0dGVycyBbdjJdIiwiYXV0aG9yIjoiZmxpbmVzIiwiZGVzY3JpcHRpb24iOiJFeHBlcmltZW50IDEgaXMgYmFjayEgLSBWZXJzaW9uIDIuMSIsImhhbXN0ZXIiOiJodHRwczovL2Nkbi5kaXNjb3JkYXBwLmNvbS9hdHRhY2htZW50cy81NjcwMzAxMDgwMDM2MzExMDgvNTc0NDE4ODQyOTQ0NjY3NjY4L3JldHJvaGFzbXRlci5wbmciLCJiZWF2ZXIiOiJodHRwczovL2JveGNyaXR0ZXJzLmNvbS9tZWRpYS80MC1iZWF2ZXIvY3JpdHRlcnMvYmVhdmVyLnBuZyIsInNuYWlsIjoiaHR0cHM6Ly9ib3hjcml0dGVycy5jb20vbWVkaWEvNDAtYmVhdmVyL2NyaXR0ZXJzL3NuYWlsLnBuZyIsIml0ZW1zIjoiaHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNTY3MDMwMTA4MDAzNjMxMTA4LzU3NDQxODgzMzU4NzA0NDM2Mi9yZXRyb2l0ZW1zLnBuZyIsInRhdmVuUHJvcHMiOiJodHRwczovL2JveGNyaXR0ZXJzLmNvbS9tZWRpYS9yb29tcy9IYW1UYXZlcm5fU00ucG5nIn0
 buttons:
-- name: Install
-  href: https://raw.githubusercontent.com/Fl1nns/experiment1mod/master/RetroCritters%5Bv3%5D.bctp.json
+  - name: Install
+    href: https://raw.githubusercontent.com/Fl1nns/experiment1mod/master/RetroCritters%5Bv3%5D.bctp.json
 ---

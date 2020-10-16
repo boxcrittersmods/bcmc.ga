@@ -107,6 +107,7 @@ defaults:
   - scope:
       path: ""
       type: posts
+    values: {}
   - scope:
       path: ""
       type: texturepacks

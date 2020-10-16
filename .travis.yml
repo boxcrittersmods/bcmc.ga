@@ -1,23 +1,23 @@
 language: ruby
 rvm:
- - 2.4.2
- - 2.4.3
+  - 2.4.2
+  - 2.4.3
 
 bundler_args: --without production
 
 before_script:
- - chmod +x ./travis/cibuild # or do this locally and commit
+  - chmod +x ./travis/cibuild # or do this locally and commit
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
 script: ./travis/cibuild
 
 gemfile:
- - travis/Gemfile
+  - travis/Gemfile
 
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 notifications:
   email: false

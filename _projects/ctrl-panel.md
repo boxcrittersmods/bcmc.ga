@@ -3,7 +3,7 @@ title: Ctrl Panel
 author:
   - SArpnt
 description: Button api
-date: 2020-10-12T00:00:00.000Z
+date: 2020-10-12
 buttons:
   - name: Source
     href: https://github.com/SArpnt/ctrl-panel

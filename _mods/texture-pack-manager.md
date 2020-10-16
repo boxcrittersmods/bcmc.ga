@@ -9,7 +9,7 @@ recommend: true
 buttons:
   - browser: chrome
     img: /uploads/browser/chrome.png
-    href: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg?hl=en-GB&gl=GB
+    href: https://chrome.google.com/webstore/detail/box-critters-texture-pack/okfakaikglajegjgjnaamcigadmfccmg
   - browser: firefox
     img: /uploads/browser/firefox.png
     href: https://addons.mozilla.org/en-GB/firefox/addon/bc-texture-pack-manager/
