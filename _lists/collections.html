@@ -5,11 +5,9 @@ description: all but it's sorted
 {% include page-header-noimg.html %}
 <div class="page-content">
 	{% for collection in site.collections %}
-		{% assign normalTitle=collection.label|capitalize %}
 		<div class="card">
-			{% assign normalTitle=collection.label|capitalize %}
 			<div class="card-header">
-				<h1>{{collection.title|default:normalTitle}}</h1>
+				<h1>{{collection.title}}</h1>
 			</div>
 		</div>
 		<div class="container page-content content-list flex-row flex-wrap justify-content-center align-items-stretch">
