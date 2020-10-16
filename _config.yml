@@ -8,45 +8,39 @@ show-mod-versions: true
 collections:
   authors:
     output: true
-    home: false
     title: Authors
     singular: Author
   shaders:
     output: true
-    home: true
     title: Shaders
     singular: Shader
   servers:
     output: true
-    home: false
     title: Servers
     singular: Server
   other:
     output: true
-    home: false
     title: Other
     singular: Other
   mods:
     output: true
-    home: true
     title: Mods
     singular: Mod
   posts:
     output: true
-    home: false
     title: Blog
     singular: Post
   lists:
     output: true
+    title: Lists
+    singular: List
     permalink: /:name/
   projects:
     output: true
-    home: false
     title: Projects
     singular: Project
   texturepacks:
     output: true
-    home: true
     title: Texture Packs
     singular: Texture Pack
 permalink: pretty
@@ -95,6 +89,8 @@ defaults:
       featured: false
       maincard: true
       list: false
+      filters: []
+      home: 0
       show-nav: true
       comments: true
   - scope:
@@ -104,6 +100,21 @@ defaults:
       maincard: false
       list: true
       comments: false
+  - scope:
+      path: ""
+      type: authors
+    values:
+      list: documents
+      filters:
+        - type: match
+          properties:
+            - "{{item.author}}"
+            - "{{page.title}}"
+        - type: match
+          not: true
+          properties:
+            - "{{page.hideCredit}}"
+            - "{{item.title}}"
   - scope:
       path: ""
       type: posts

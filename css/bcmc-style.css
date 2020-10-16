@@ -139,6 +139,10 @@ Platforms
 	background-color: black;
 }
 
+.page-header-text {
+	color: white;
+}
+
 .page-header.media {
 	height: 20vh;
 	/*min-height: 25rem;*/

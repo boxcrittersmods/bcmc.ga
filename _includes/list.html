@@ -1,6 +1,64 @@
-<div class="content-list row flex-wrap justify-content-center align-items-stretch">
-	{% assign items = site[include.list] | reverse %}
-	{% for item in items %}
-		{% include listing-square.html item=item %}
+{% assign items = site[include.list] | reverse %}
+{% assign finishedItems = 0 %}
+{% for item in items %}
+	{% assign passedFilter = true %}
+	{% for filter in include.filters %} <!-- item filter -->
+		{% assign prop = "" | split: "" %}
+		{% for p in filter.properties %}
+			{% if (p | slice: 0,2) == "{{" and (p | slice: -2,2) == "}}" %} <!-- var from string -->
+				{% assign var = p | remove: "{{" | remove: "}}" | split: "." %}
+				{% for seg in var %}
+					{% if forloop.first %}
+						{% if seg == "item" %} <!-- initial variable names -->
+							{% assign val = item %}
+						{% elsif seg == "page" %}
+							{% assign val = page %}
+						{% elsif seg == "site" %}
+							{% assign val = site %}
+						{% elsif seg == "include" %}
+							{% assign val = include %}
+						{% endif %}
+					{% else %}
+						{% assign val = val[seg] %}
+					{% endif %}
+				{% endfor %}
+				{% assign prop = prop | push: val %}
+			{% else %}
+				{% assign prop = prop | push: p %}
+			{% endif %}
+		{% endfor %}
+
+		{% if "exists" == "exists" %} <!-- filter types -->
+			{% unless prop[0] %}
+				{% assign passedFilter = false %}
+			{% endunless %}
+		{% elsif filter.type == "match" %}
+			{% unless prop[0] == prop[1] or prop[0] contains prop[1] %}
+				{% assign passedFilter = false %}
+			{% endunless %}
+		{% else %}
+			<h1>invalid list filter</h1>
+			{% break %}
+		{% endif %}
+
+		{% if filter.not %}
+			{% if passedFilter %}
+				{% assign passedFilter = false %}
+			{% else %}
+				{% assign passedFilter = true %}
+			{% endif %}
+		{% endif %}
+		{% unless passedFilter %}
+			{% break %}
+		{% endunless %}
 	{% endfor %}
-</div>
+
+	{% if passedFilter %}
+		{% include listing-square.html item=item %}
+		{% assign finishedItems = finishedItems | plus: 1 %}
+	{% endif %}
+
+	{% if finishedItems >= include.limit %}
+		{% break %}
+	{% endif %}
+{% endfor %}

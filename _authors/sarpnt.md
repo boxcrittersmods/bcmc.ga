@@ -3,17 +3,13 @@ title: SArpnt
 icon: https://avatars.githubusercontent.com/u/36542932
 disclaimer: This person is not supported for your browser.
 description: i always have to fix everything
-author:
-  - SArpnt
 buttons:
   - name: Github
     href: https://github.com/sarpnt/
-hideCredit:
-  - SArpnt
 ---
 <style>
-	.page-header>*>*>*>* {
-		color: #f0f;
+	.page-header-text {
+		color: magenta;
 	}
 
 	.SArRA {

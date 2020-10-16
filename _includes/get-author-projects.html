@@ -1,9 +1,0 @@
-<div class="content-list row flex-wrap justify-content-center align-items-stretch">
-	{% for thing in site.documents %}
-		{% if thing.author contains page.title or thing.author == page.title %}
-			{% unless page.hideCredit contains thing.title %}
-				{% include listing-square.html item=thing %}
-			{% endunless %}
-		{% endif %}
-	{% endfor %}
-</div>

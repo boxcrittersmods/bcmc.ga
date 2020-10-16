@@ -1,23 +1,23 @@
 {% assign defaultimg = '/favicon.ico' %}
 <div
-	class="page-header {% if page.video %}video{% endif%} {% if page.image != defaultimg or page.video %}media{% endif %}"
-	{% unless page.no-nav %}style="padding-top: 60px;" {% endunless %}>
+	class="
+		page-header
+		{% if page.video %}video{% endif%}
+		{% if page.image != defaultimg or page.video %}media{% endif %}
+		"
+	{% unless page.no-nav %}style="padding-top: 60px;"{% endunless %}
+>
 	{% if page.video %}
-	{% if page.video or page.image != 'defaultimg %}<div class="overlay"></div>{%endif%}
-	<iframe width="800" height="400" class="page-header-media d-block w-100" src="{{page.video}}" frameborder="0"
-		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		{% if page.image != 'defaultimg' %}
+			<div class="overlay"></div>
+		{% endif %}
+		<iframe width="800" height="400" class="page-header-media d-block w-100" src="{{page.video}}" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	{% elsif page.image != defaultimg %}
-	<div class="overlay"></div>
-	<img src="{{ page.image }}" class="page-header-media img-fluid" alt="page-header-image">
-
-	{% else %}
+		<div class="overlay"></div>
+		<img src="{{ page.image }}" class="page-header-media img-fluid" alt="page-header-image">
 	{% endif %}
-	<div class="container h-100">
-		<div class="d-flex h-100 text-center align-items-center">
-			{%- comment -%}{% if page.video or page.image %}text-white{%endif%}{%- endcomment -%}
-			<div class="w-100 text-white">
-				<h1 class="display-3">{{page.title}}</h1>
-			</div>
-		</div>
+	<div class="d-flex h-100 text-center align-items-center">
+		<h1 class="display-3 mx-auto page-header-text">{{page.title}}</h1>
 	</div>
 </div>
