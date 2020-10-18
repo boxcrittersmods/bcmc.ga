@@ -110,3 +110,7 @@ carousel-item.video:hover {
 .utterances {
 	max-width: none !important;
 }
+
+.bg-lightgrey {
+	background-color: hsl(208, 7%, 75%)!important;
+}

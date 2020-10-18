@@ -4,7 +4,7 @@ author:
   - Slaggo
   - TumbleGamer
 description: adds new features to BoxCritters to improve your experience!
-date: 14-04-2019
+date: 2019-04-14
 buttons:
   - name: Install
     href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js

@@ -6,7 +6,7 @@ author:
     custom: true
   - name: tophf
     custom: true
-date: 2013-09-3
+date: 2013-09-03
 buttons:
   - browser: chrome
     img: /uploads/browser/chrome.png

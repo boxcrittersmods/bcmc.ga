@@ -6,7 +6,7 @@ description: >
   this texture pack has been in the making for almost 2 days now. it is my
   attempt to recreate the pink critter. i hope you enjoy. inspired by Cutiejea's
   profile picture!
-date: 17-04-2019
+date: 2019-04-17
 icon: https://cdn.discordapp.com/attachments/567143780755701760/568109590697476106/Screen_Shot_2019-04-17_at_17.20.46.png
 image: https://cdn.discordapp.com/attachments/567143780755701760/568109759715344394/Screen_Shot_2019-04-17_at_17.16.58.png
 video: https://www.youtube.com/embed/4hdAJ6C1N4U

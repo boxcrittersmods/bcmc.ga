@@ -2,7 +2,7 @@
 title: Better Critters 2
 author:
   - Codejk
-date: 15-04-2019
+date: 2019-04-15
 description: the revamped version of a legendary texture pack, made just for you. i reached out to several people in the community so see what they wanted for this pack. it's a good one. enjoy it
 image: https://cdn.discordapp.com/attachments/567143780755701760/567842970380927018/Screen_Shot_2019-04-16_at_23.43.49.png
 icon: https://gyazo.com/6ae156bc4c25bad38ef0cee3b5236f22
