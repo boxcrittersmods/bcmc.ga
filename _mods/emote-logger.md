@@ -12,7 +12,6 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/EmoteLogger
 userscript: true
-working: true
 recommend: false
 ---
 Ever wondered what emotes someone sent, besides text?

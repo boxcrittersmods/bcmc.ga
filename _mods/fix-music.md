@@ -12,7 +12,6 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/FixMusic
 userscript: true
-working: true
 recommend: true
 ---
 This mod fixes music playback across all browsers; most notably Safari where it would not play at all. 

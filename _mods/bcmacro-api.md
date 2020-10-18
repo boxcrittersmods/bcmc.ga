@@ -16,7 +16,6 @@ buttons:
     type: 1
 featured: false
 userscript: true
-working: true
 content: ""
 recommended: true
 recommend: false

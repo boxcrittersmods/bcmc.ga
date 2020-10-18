@@ -12,7 +12,6 @@ buttons:
     name: Source
     href: https://github.com/SArpnt/Big-screen/
 userscript: true
-working: true
 recommend: true
 customData:
   cardboard: required

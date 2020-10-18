@@ -10,7 +10,6 @@ buttons:
   - browser: chrome
     img: /uploads/browser/chrome.png
     href: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
-working: true
 ---
 - Current Command List:
   - /copy [username] -copies a user's outfit

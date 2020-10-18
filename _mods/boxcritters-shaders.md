@@ -10,6 +10,5 @@ buttons:
     href: https://github.com/boxcritters/bc-shaders/raw/master/bc-shaders.user.js
 featured: false
 userscript: true
-working: true
 recommend: true
 ---

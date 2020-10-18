@@ -13,7 +13,6 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/EmoteBar
 userscript: true
-working: true
 recommend: true
 ---
 Having trouble remembering all those /emote codes? They are a thing of the past! Just click on the emote you want to send, and done!

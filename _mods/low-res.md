@@ -16,7 +16,6 @@ buttons:
     style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
 featured: false
 userscript: true
-working: true
 image: /uploads/mods/untitled.png
 recommend: false
 ---

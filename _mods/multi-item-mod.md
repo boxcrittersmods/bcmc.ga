@@ -11,5 +11,4 @@ buttons:
     href: https://greasyfork.org/scripts/401102-multi-item-mod/code/Multi-Item%20mod.user.js
     type: 0
 userscript: true
-working: true
 ---

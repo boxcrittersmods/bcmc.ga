@@ -13,7 +13,6 @@ buttons:
     href: https://github.com/SArpnt/non-mouse-movement/
 featured: false
 userscript: true
-working: true
 recommend: true
 customData:
   cardboard: optional

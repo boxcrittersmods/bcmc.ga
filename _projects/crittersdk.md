@@ -12,7 +12,6 @@ buttons:
   - name: Documentation
     type: null
     href: https://sdk.boxcrittersmods.ga/
-working: true
 recommended: true
 ---
 # CritterSDK

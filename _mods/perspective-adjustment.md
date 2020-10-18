@@ -12,7 +12,6 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/PerspectiveAdjustment/
 userscript: true
-working: true
 recommend: true
 ---
 Adjusts the size of all players depending on how far away they are in a room. Makes the room feel more 3D.

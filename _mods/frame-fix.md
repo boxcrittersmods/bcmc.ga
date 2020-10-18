@@ -12,6 +12,5 @@ buttons:
     name: Source
     href: https://github.com/SArpnt/Frame-fix/
 userscript: true
-working: true
 recommend: true
 ---

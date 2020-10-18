@@ -12,7 +12,6 @@ buttons:
     href: https://github.com/SArpnt/Hi-Res/
 featured: true
 userscript: true
-working: true
 icon: /uploads/mods/hi-res.png
 recommend: true
 customData:
