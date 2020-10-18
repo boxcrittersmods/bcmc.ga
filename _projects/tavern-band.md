@@ -6,7 +6,7 @@ author:
   - Kinju
   - TumbleGamer
 description: Makes the instruments in the tavern functional.
-date: 2020-02-17T22:02:47.775Z
+date: 2019-02-17
 buttons:
   - type: 1
     name: Source
