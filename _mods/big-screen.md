@@ -14,5 +14,7 @@ buttons:
 userscript: true
 working: true
 recommend: true
+customData:
+  cardboard: required
 ---
 Compatible with Hi-res mod, doesn't obscure chat or delete any page elements

@@ -4,7 +4,7 @@ author:
   - TumbleGamer
 description: Adds an API that lets mods create specific actions that can be
   bound to buttons or keys.
-date: 16-05-2020
+date: 2020-05-16
 buttons:
   - name: Install
     href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
@@ -20,4 +20,14 @@ working: true
 content: ""
 recommended: true
 recommend: false
+customData:
+  ctrlPanel: required
+  cardboard: optional
+
+list: documents
+filters:
+  - type: match
+    params:
+      - "{{item.customData.bcmacro-api}}"
+      - required
 ---

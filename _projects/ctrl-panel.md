@@ -10,5 +10,14 @@ buttons:
   - type: 1
     name: Install
     href: https://github.com/SArpnt/ctrl-panel/raw/master/script.user.js
+customData:
+  cardboard: optional
+
+list: documents
+filters:
+  - type: match
+    params:
+      - "{{item.customData.ctrlPanel}}"
+      - required
 ---
 Button api that can be `@require`d in userscript header (no install neccecary)

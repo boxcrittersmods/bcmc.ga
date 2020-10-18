@@ -15,4 +15,6 @@ userscript: true
 working: true
 icon: /uploads/mods/hi-res.png
 recommend: true
+customData:
+  cardboard: required
 ---

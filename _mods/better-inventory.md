@@ -15,6 +15,8 @@ featured: true
 userscript: true
 working: true
 recommend: true
+customData:
+  cardboard: required
 ---
 in the userscript you can edit the item button size, size of the critter, and the sorting method
 properties are named `scale`, `critterScale`, and `sortMethod`

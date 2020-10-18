@@ -4,7 +4,7 @@ icon: https://github.com/p1-BCMC/FixMusic/raw/master/FixMusic.png
 author:
   - p1
 description: Enables ingame music playback as intended on *ALL* browsers!
-date: 2020-07-26T22:0:00.000Z
+date: 2020-07-26T22:00:00.000Z
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/FixMusic/master/FixMusic.user.js

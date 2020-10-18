@@ -13,4 +13,6 @@ buttons:
 userscript: true
 working: true
 recommend: true
+customData:
+  cardboard: required
 ---

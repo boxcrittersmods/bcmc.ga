@@ -20,6 +20,8 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/boxcritters/private-box
+customData:
+  cardboard: required
 ---
 ### Aim
 Create a Box critters private server engine for people to freely make their own servers

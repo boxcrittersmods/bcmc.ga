@@ -5,7 +5,7 @@ author:
   - p1
   - Blinking Berry
 description: Creates an emote bar at the bottom of the screen while there isn't one implemented in the game yet!
-date: 2020-07-22T23:0:00.000Z
+date: 2020-07-22T23:00:00.000Z
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/EmoteBar/master/EmoteBar.user.js

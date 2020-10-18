@@ -4,7 +4,7 @@ icon: https://github.com/p1-BCMC/PerspectiveAdjustment/raw/master/PerspectiveAdj
 author:
   - p1
 description: Adding perspective to Box Critters!
-date: 2020-07-22T21:0:00.000Z
+date: 2020-07-22T21:00:00.000Z
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/PerspectiveAdjustment/master/PerspectiveAdjustment.user.js

@@ -15,6 +15,8 @@ featured: false
 userscript: true
 working: true
 recommend: true
+customData:
+  cardboard: optional
 ---
 Move with the arrow keys, WASD, or main joystick.\
 Settings can be changed in the userscript (there's 6 consts, default settings are already fine)

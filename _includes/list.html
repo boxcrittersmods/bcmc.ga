@@ -5,7 +5,9 @@
 	{% for filter in include.filters %} <!-- item filter -->
 		{% assign params = "" | split: "" %}
 		{% for p in filter.params %}
-			{% if (p | slice: 0,2) == "{{" and (p | slice: -2,2) == "}}" %} <!-- var from string -->
+			{% assign s = p | slice: 0,2 %}
+			{% assign e = p | slice: -2,2 %}
+			{% if s == "{{" and e == "}}" %} <!-- var from string -->
 				{% assign var = p | remove: "{{" | remove: "}}" | split: "." %}
 				{% for seg in var %}
 					{% if forloop.first %}
