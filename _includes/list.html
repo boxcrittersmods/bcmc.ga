@@ -3,8 +3,8 @@
 {% for item in items %}
 	{% assign passedFilter = true %}
 	{% for filter in include.filters %} <!-- item filter -->
-		{% assign prop = "" | split: "" %}
-		{% for p in filter.properties %}
+		{% assign params = "" | split: "" %}
+		{% for p in filter.params %}
 			{% if (p | slice: 0,2) == "{{" and (p | slice: -2,2) == "}}" %} <!-- var from string -->
 				{% assign var = p | remove: "{{" | remove: "}}" | split: "." %}
 				{% for seg in var %}
@@ -22,18 +22,18 @@
 						{% assign val = val[seg] %}
 					{% endif %}
 				{% endfor %}
-				{% assign prop = prop | push: val %}
+				{% assign params = params | push: val %}
 			{% else %}
-				{% assign prop = prop | push: p %}
+				{% assign params = params | push: p %}
 			{% endif %}
 		{% endfor %}
 
-		{% if "exists" == "exists" %} <!-- filter types -->
-			{% unless prop[0] %}
+		{% if filter.type == "exists" %} <!-- filter types -->
+			{% unless params[0] %}
 				{% assign passedFilter = false %}
 			{% endunless %}
 		{% elsif filter.type == "match" %}
-			{% unless prop[0] == prop[1] or prop[0] contains prop[1] %}
+			{% unless params[0] == params[1] or params[0] contains params[1] %}
 				{% assign passedFilter = false %}
 			{% endunless %}
 		{% else %}

@@ -4,6 +4,6 @@ home: 1
 description: the very extreme good
 filters:
   - type: exists
-    properties:
+    params:
       - "{{item.recommend}}"
 ---
