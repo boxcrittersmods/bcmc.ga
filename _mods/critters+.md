@@ -3,7 +3,7 @@ title: Critters+
 author:
   - Slaggo
   - TumbleGamer
-description: adds new features to BoxCritters to improve your experience!
+description: Adds new features to BoxCritters to improve your experience!
 date: 2019-04-14
 buttons:
   - name: Install

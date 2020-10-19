@@ -3,13 +3,18 @@ title: Antenna
 author:
   - TumbleGamer
 description: 3D Web-based peer to peer voice chat
-date: 2020-10-18T23:57:17.591Z
-unfinished: true
+date: 2020-10-18 23:57:17
 buttons:
-  - name: Source
+  - name: Install
+    href: https://github.com/tumble1999/antenna/raw/master/Antenna.user.js
+  - type: 1
+    name: Source
     href: https://github.com/tumble1999/antenna
-    type: "1"
+unfinished: true
 userscript: false
-require:
-  - BCMacro API
+#require:
+#  - BCMacro API
+customData:
+  bcmacro-api: required
+  cardboard: required
 ---
