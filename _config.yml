@@ -153,3 +153,4 @@ defaults:
 greyed:
   - broken
   - unfinished
+userscriptManager: tampermonkey

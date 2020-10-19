@@ -9,7 +9,7 @@
 {% endfor %}
 
 {% if item.userscript %}
-	{% assign require = 'tampermonkey' | concat: require %}
+	{% assign require = site.userscriptManager | concat: require %}
 {% endif %}
 
 {{require | uniq | join:','}}
