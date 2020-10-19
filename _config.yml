@@ -150,3 +150,6 @@ defaults:
       maincard: false
       list: true
       comments: false
+greyed:
+  - broken
+  - unfinished

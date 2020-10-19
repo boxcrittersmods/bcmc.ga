@@ -3,7 +3,17 @@
 {% assign working = "" | split: "" %}
 {% assign broken = "" | split: "" %}
 {% for item in items %}
-	{% if item.broken %}
+	{% if item.greyed == nil %}
+		{% assign greyed = false %}
+		{% for g in site.greyed %}
+			{% if item[g] %}
+				{% assign greyed = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	{% if greyed %}
 		{% assign broken = broken | push: item %}
 	{% else %}
 		{% assign working = working | push: item %}
@@ -14,16 +24,16 @@
 {% assign finishedItems = 0 %}
 {% for item in items %}
 	{% assign passedFilter = true %}
-	{% for filter in include.filters %} <!-- item filter -->
+	{% for filter in include.filters %} {%comment%}item filter{%endcomment%}
 		{% assign params = "" | split: "" %}
 		{% for p in filter.params %}
 			{% assign s = p | slice: 0,2 %}
 			{% assign e = p | slice: -2,2 %}
-			{% if s == "{{" and e == "}}" %} <!-- var from string -->
+			{% if s == "{{" and e == "}}" %} {%comment%}var from string{%endcomment%}
 				{% assign var = p | remove: "{{" | remove: "}}" | split: "." %}
 				{% for seg in var %}
 					{% if forloop.first %}
-						{% if seg == "item" %} <!-- initial variable names -->
+						{% if seg == "item" %} {%comment%}initial variable names{%endcomment%}
 							{% assign val = item %}
 						{% elsif seg == "page" %}
 							{% assign val = page %}
@@ -42,7 +52,7 @@
 			{% endif %}
 		{% endfor %}
 
-		{% if filter.type == "exists" %} <!-- filter types -->
+		{% if filter.type == "exists" %} {%comment%}filter types{%endcomment%}
 			{% unless params[0] %}
 				{% assign passedFilter = false %}
 			{% endunless %}
@@ -51,7 +61,7 @@
 				{% assign passedFilter = false %}
 			{% endunless %}
 		{% else %}
-			<h1>invalid list filter</h1>
+			<h2 style="color:red">invalid list filter</h2>
 			{% break %}
 		{% endif %}
 
@@ -68,7 +78,13 @@
 	{% endfor %}
 
 	{% if passedFilter %}
-		{% include listing-square.html item=item %}
+		{% assign ws = working | size %} {%comment%}this only works because of the sorting{%endcomment%}
+		{% if forloop.index0 >= ws %}
+			{% assign greyed = true %}
+		{% else %}
+			{% assign greyed = false %}
+		{% endif %}
+		{% include listing-square.html item=item greyed=greyed %}
 		{% assign finishedItems = finishedItems | plus: 1 %}
 	{% endif %}
 
