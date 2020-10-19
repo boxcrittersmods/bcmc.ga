@@ -12,7 +12,6 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/EmoteLogger
 userscript: true
-recommend: false
 ---
 Ever wondered what emotes someone sent, besides text?
 Emote Logger now logs all emotes alongside chat in the console, and even tells you the sender's type of critter!

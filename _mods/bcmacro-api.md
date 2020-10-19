@@ -14,11 +14,9 @@ buttons:
   - name: Documentation
     href: http://docs.boxcrittersmods.ga/bcmacros
     type: 1
-featured: false
 userscript: true
 content: ""
-recommended: true
-recommend: false
+recommend: true
 customData:
   ctrlPanel: required
   cardboard: optional

@@ -14,10 +14,8 @@ buttons:
     name: Sorse
     href: https://github.com/SArpnt/Low-Res/
     style: "font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: normal;"
-featured: false
 userscript: true
 image: /uploads/mods/untitled.png
-recommend: false
 ---
 box critters mod that gives very high quality luxury box critters, experience
 call now and get additional high ,quality box critters mod free low framerate

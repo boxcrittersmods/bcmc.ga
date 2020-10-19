@@ -11,7 +11,6 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/SArpnt/non-mouse-movement/
-featured: false
 userscript: true
 recommend: true
 customData:

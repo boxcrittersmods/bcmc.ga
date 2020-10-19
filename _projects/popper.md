@@ -16,19 +16,16 @@ filters:
       - "{{item.customData.popper}}"
       - required
 ---
-
-```javascript
+```js
 // @require      https://github.com/tumble1999/popper/raw/master/popper.js
 ```
-
-```javascript
-var modal = new Popper();
-
+```js
+let modal = new Popper();
 // or
 modal.setContent("Body");
 // or
 modal.setContent("Header","Body","Footer");
-//or
+// or
 modal.setContent({
 header:"Header",
 body:"Body",
@@ -41,4 +38,5 @@ modal.getBodyNode()
 modal.getFooterNode()
 
 modal.show()
-modal.hide() 
+modal.hide()
+```

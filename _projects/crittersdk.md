@@ -12,7 +12,6 @@ buttons:
   - name: Documentation
     type: null
     href: https://sdk.boxcrittersmods.ga/
-recommended: true
 ---
 # CritterSDK
 [![npm package version](https://img.shields.io/npm/v/crittersdk)](https://npmjs.org/package/crittersdk)

@@ -8,7 +8,6 @@ date: 2019-04-14
 buttons:
   - name: Install
     href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
-featured: false
 userscript: true
 require:
   - bcmacro-api

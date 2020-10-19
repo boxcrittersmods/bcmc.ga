@@ -10,5 +10,4 @@ code: eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJHcmVlbiBTY3JlZW4iLCJhdXRob3IiOiJUdW1ibGVHYW
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/tumble1999/boxcrittersTexturePacks/master/greenscreen/GreenScreen.bctp.json
-featured: false
 ---

@@ -9,5 +9,4 @@ code: eyJ2ZXJzaW9uIjoyLCJuYW1lIjoiRVBGIFNlY3JldCBIUSIsImF1dGhvciI6IlppenpsZSIsIm
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/zizzle8383/TexturePack2/master/PirateIsland.bctp.json
-featured: false
 ---

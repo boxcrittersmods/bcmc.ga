@@ -11,7 +11,6 @@ buttons:
     name: Source
     href: https://github.com/SArpnt/Shop-ease/
 userscript: true
-recommend: false
 broken: true
 customData:
   cardboard: required
