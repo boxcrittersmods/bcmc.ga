@@ -1,19 +1,15 @@
 {% assign item = include.item | default: page %}
 
-{% assign require = '' | split:',' %}
 {% assign require = item.slug | split:',' %}
 
 {% for dep in item.require %}
-	{% assign depPage = site.mods | where:'slug', dep | first %}
+	{% assign depPage = site.documents | where:'slug', dep | first %}
 	{% capture depList %}{% include require-list.html item=depPage %}{% endcapture %}
+	{% assign require = depList | strip | split:',' | concat: require %}
 {% endfor %}
 
-{% assign depList = depList | strip | split:',' %}
-{% assign require = depList | concat: require %}
-
 {% if item.userscript %}
-	{% assign tm = 'tampermonkey' | split:',' %}
-	{% assign require = tm | concat: require %}
+	{% assign require = 'tampermonkey' | concat: require %}
 {% endif %}
 
 {{require | uniq | join:','}}

@@ -1,31 +1,21 @@
 {% assign item = include.item | default: page %}
 
-{% assign require = '' | split:',' %}
-
-
-{% for dep in item.require %}
-	{% assign depPage = site.mods | where:'slug', dep | first %}
-	{% capture depList %}{% include require-list.html item=depPage %}{% endcapture %}
-{% endfor %}
-
-{% assign depList = depList | strip | split:',' %}
-{% assign require = depList | concat: require %}
-
-{% if item.userscript %}
-	{% assign tm = 'tampermonkey' | split:',' %}
-	{% assign require = tm | concat: require | uniq %}
-{% endif %}
+{% capture depList %}{% include require-list.html item=item %}{% endcapture %}
+{% assign require = depList | strip | split:',' %}
 
 {% for dep in require %}
-	{% if dep == "tampermonkey" %}
-		{% assign depPage = site.other | where:"slug","tampermonkey" | first %}
-	{% else %}
-		{% assign depPage = site.mods | where:"slug", dep | first %}
-	{% endif %}
+	{% assign depPage = site.documents | where:"slug", dep | first %}
 	<li class="list-group-item" id="dep-{{item.slug}}-{{depPage.slug}}">
-			<a href="{{depPage.url}}"><h3>{{depPage.title}}{% if depPage.userscript %} <img src="https://{{site.bc-mod-api}}/button/{{ depPage.slug }}" alt="mod-verision">{% endif %}</h3></a>
-			
-	<div class="list-group list-group-flush">
-		{% include modrow-buttons.html item=depPage %}</div>
+		<a href="{{depPage.url}}">
+			<h3>
+				{{depPage.title}}
+				{% if depPage.userscript %}
+					<img src="https://{{site.bc-mod-api}}/button/{{depPage.slug}}">
+				{% endif %}
+			</h3>
+		</a>
+		<div class="list-group list-group-flush">
+			{% include modrow-buttons.html item=depPage %}
+		</div>
 	</li>
 {% endfor %}
