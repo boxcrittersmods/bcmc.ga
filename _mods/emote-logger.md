@@ -4,7 +4,7 @@ icon: https://github.com/p1-BCMC/EmoteLogger/raw/master/EmoteLogger.png
 author:
   - p1
 description: Logs all emotes sent ingame in console!
-date: 2020-07-24T14:00:00.000Z
+date: 2020-07-24 14:00:00
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/EmoteLogger/master/EmoteLogger.user.js

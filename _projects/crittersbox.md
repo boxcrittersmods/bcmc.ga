@@ -6,7 +6,7 @@ author:
 description: CritterBox is a server implementation of Box Critters written in
   TypeScript. The aim of this project is to create a server that is fun,
   customizable, and easy to use.
-date: 2020-04-12T16:13:19.810Z
+date: 2020-04-12 16:13:19
 image: /uploads/projects/critterbox.png
 buttons:
   - name: Source

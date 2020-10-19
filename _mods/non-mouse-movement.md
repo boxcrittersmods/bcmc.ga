@@ -3,7 +3,7 @@ title: Non-mouse Movement
 author:
   - SArpnt
 description: Move with keyboard or controller
-date: 2020-10-03T22:48:00.000Z
+date: 2020-10-03 22:48:00
 icon: https://github.com/SArpnt/non-mouse-movement/raw/master/icon.png
 buttons:
   - name: Install

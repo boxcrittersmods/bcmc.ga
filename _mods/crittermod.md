@@ -4,7 +4,7 @@ author:
   - Sked
 description: CritterMod is a mod for Box Critters developed by sked adding
   multiple extra features and fun/useful commands.
-date: 2019-06-19T16:51:38.167Z
+date: 2019-06-19 16:51:38
 icon: /uploads/purplebcl.png
 buttons:
   - browser: chrome

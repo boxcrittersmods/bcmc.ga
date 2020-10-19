@@ -1,4 +1,16 @@
-{% assign items = site[include.list] | reverse | sort: "broken" %}
+{% assign items = site[include.list] | sort: "date" | reverse %}
+
+{% assign working = "" | split: "" %}
+{% assign broken = "" | split: "" %}
+{% for item in items %}
+	{% if item.broken %}
+		{% assign broken = broken | push: item %}
+	{% else %}
+		{% assign working = working | push: item %}
+	{% endif %}
+{% endfor %}
+{% assign items = working | concat: broken %}
+
 {% assign finishedItems = 0 %}
 {% for item in items %}
 	{% assign passedFilter = true %}

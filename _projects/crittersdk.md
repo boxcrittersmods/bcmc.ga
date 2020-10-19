@@ -4,7 +4,7 @@ author:
   - Alvarito050506
 description: A Box Critters Software Development Kit.
 disclamer: ""
-date: 2020-05-12T11:35:09.718Z
+date: 2020-05-12 11:35:09
 buttons:
   - name: Source
     type: 1

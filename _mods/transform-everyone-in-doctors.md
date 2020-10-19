@@ -3,7 +3,7 @@ title: Transform everyone in doctors
 author:
   - Gasegamer
 description: "Everyone will be a doctor! #StayHome"
-date: 2020-04-24T20:28:46.913Z
+date: 2020-04-24 20:28:46
 image: /uploads/mods/anotacao_2020-04-24_175321.png
 userscript: true
 buttons:
