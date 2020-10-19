@@ -2,11 +2,12 @@
 title: EPF Secret HQ
 author:
   - Zizzle
-description: Changes tavern to the secret epf hq from the 2012 club penguin
-  party operation blackout
+description: Changes tavern to the secret epf hq from the 2012 club penguin party operation blackout
 date: 2020-04-26 23:00:00
 icon: /uploads/texturepacks/screenshot_2020-05-11_at_9.42.31_am.png
 code: eyJ2ZXJzaW9uIjoyLCJuYW1lIjoiRVBGIFNlY3JldCBIUSIsImF1dGhvciI6IlppenpsZSIsImRhdGUiOjE1ODkxNDU0MTUzMTUsImRlc2NyaXB0aW9uIjoiVGF2ZXJuIEJlY29tZXMgRVBGIFNlY3JldCByb29tIGZyb20gT1BFUkFUSU9OIEJMQUNLT1VUIiwidGF2ZXJuX2JnIjoiaHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNzAyNzQ5NjgzNTQxNjA2NDMxLzcwODgxNTQ4ODg0NjY1OTY0NC9iYWNrZ3JvdW5kLnBuZyIsInRhdmVybl9mZyI6Imh0dHBzOi8vY2RuLmRpc2NvcmRhcHAuY29tL2F0dGFjaG1lbnRzLzcwMjc0OTY4MzU0MTYwNjQzMS83MDg4MTU0OTk1MDg1ODA0MTcvZm9yZWdyb3VuZC5wbmciLCJ0YXZlcm5fc3ByaXRlcyI6Imh0dHBzOi8vY2RuLmRpc2NvcmRhcHAuY29tL2F0dGFjaG1lbnRzLzcwMzAyMDc2NDM1MzUyNzkxOC83MDU4NzAyNDcyOTg4NTkwNTkvbm9uZS5wbmciLCJwYWNrVmVyc2lvbiI6IjAuMSIsInVwZGF0ZVVSTCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS96aXp6bGU4MzgzL1RleHR1cmVQYWNrMi9tYXN0ZXIvUGlyYXRlSXNsYW5kLmJjdHAuanNvbiJ9
-install: https://raw.githubusercontent.com/zizzle8383/TexturePack2/master/PirateIsland.bctp.json
+buttons:
+  - name: Install
+    href: https://raw.githubusercontent.com/zizzle8383/TexturePack2/master/PirateIsland.bctp.json
 featured: false
 ---
