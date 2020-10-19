@@ -12,8 +12,8 @@ buttons:
     href: https://github.com/tumble1999/antenna
 unfinished: true
 userscript: false
-#require:
-#  - BCMacro API
+require:
+  - bcmacro-api
 customData:
   bcmacro-api: required
   cardboard: required
