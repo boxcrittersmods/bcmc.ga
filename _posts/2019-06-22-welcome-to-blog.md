@@ -2,8 +2,8 @@
 layout: post
 title: Welcome to Blog
 author:
-- TumbleGamer
-date: 2019-06-21T23:00:00.000Z
+  - TumbleGamer
+date: 2019-06-21
 category: News
 categories:
   - 'updates'

@@ -1,0 +1,36 @@
+{% assign item = include.item | default: page %}
+
+{% capture fullRow %}
+	{% assign primaryExists = false %}
+	{% for button in item.buttons %}
+		{% include modbutton.html button=button %}
+		{% unless button.type > 0 or button.type < 0 %}
+			{% assign primaryExists = true %}
+		{% endunless %}
+	{% endfor %}
+
+	{% if item.disclaimer %}
+		{% if item.disclaimer == true %}
+			{% assign type = site.collections | where:"label",item.collection | first %}
+			{% assign typeName = type.singular | downcase %}
+			{% if item.unfinished %}
+				<span class="text-muted">This {{typeName}} is not finished.</span>
+			{% elsif item.broken %}
+				<span class="text-muted">This {{typeName}} is broken.</span>
+			{% else %}
+				{% unless primaryExists %}
+					<span class="text-muted browser-none">This {{typeName}} is not supported for your browser.</span>
+				{% endunless %}
+			{% endif %}
+		{% else %}
+			<span class="text-muted">{{item.disclaimer}}</span>
+		{% endif %}
+	{% endif %}
+{% endcapture %}
+
+{% assign temp = fullRow | strip %}
+{% if temp != "" %}
+	<div class="list-group-item modrow-buttons">
+		{{fullRow}}
+	</div>
+{% endif %}

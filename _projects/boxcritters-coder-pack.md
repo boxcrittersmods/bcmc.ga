@@ -1,11 +1,11 @@
 ---
 title: BoxCritters Coder Pack
 author:
-  - Tumblegamer
+  - TumbleGamer
 description: A tool to help people create mods for box critters
-date: 2020-02-12T09:55:36.312Z
+date: 2020-02-12 09:55:36
 unfinished: true
-primary:
-- name: Source
-  href: 'https://github.com/boxcritters/boxcritters-coder-pack'
+buttons:
+  - name: Source
+    href: https://github.com/boxcritters/boxcritters-coder-pack
 ---

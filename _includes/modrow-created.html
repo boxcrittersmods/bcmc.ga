@@ -1,0 +1,49 @@
+{% assign item = include.item | default: page %}
+
+{% capture info %}
+	{% if item.date == "" %}
+		on {{ item.date | date: "%-d %B %Y"}}
+	{% endif %}
+	{% for author in item.author %}
+		{% if forloop.first %}
+			by 
+		{% else %}
+			{% if forloop.length > 2 %}
+				, 
+			{% endif %}
+			{% if forloop.last %}
+				 and 
+			{% endif %}
+		{% endif %}
+
+		{% if author.name or author.nickname %}
+			{% if author.custom %}
+				<b>
+					{% if author.href %}<a href="{{author.href}}">{{author.nickname|default:author.name}}</a>
+					{% else %}<span style="color:black">{{author.nickname|default:author.name}}</span>{% endif %}
+				</b>
+			{% else %}
+				{% assign AUTHOR = site.authors | where:"title", author.name | first %}
+				<b>
+					{% if AUTHOR %}<a href="{{author.href|default:AUTHOR.url}}">{{author.nickname|default:AUTHOR.title}}</a>
+					{% else %}<span style="color:red">{{author.nickname|default:author.name}}</span>{% endif %}
+				</b>
+			{% endif %}
+		{% else %}
+			{% assign AUTHOR = site.authors | where:"title", author | first %}
+			<b>
+				{% if AUTHOR %}<a href="{{AUTHOR.url}}">{{AUTHOR.title}}</a>
+				{% else %}<span style="color:red">{{author}}</span>{% endif %}
+			</b>
+		{% endif %}
+	{% endfor %}
+{% endcapture %}
+
+{% assign temp = info | strip %}
+{% if temp != "" %}
+	<div class="card-footer">
+		<small class="text-muted">
+			Created {{temp | strip_newlines | replace: "	",""}}
+		</small>
+	</div>
+{% endif %}

@@ -1,6 +1,94 @@
-<div class="container page-content">
-	{% assign items = site[page.listing] | reverse %}
-	{% for item in items %}
-	{% include listing.html item=item %}
+{% assign items = site[include.list] | sort: "date" | reverse %}
+
+{% assign working = "" | split: "" %}
+{% assign broken = "" | split: "" %}
+{% for item in items %}
+	{% if item.greyed == nil %}
+		{% assign greyed = false %}
+		{% for g in site.greyed %}
+			{% if item[g] %}
+				{% assign greyed = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	{% if greyed %}
+		{% assign broken = broken | push: item %}
+	{% else %}
+		{% assign working = working | push: item %}
+	{% endif %}
+{% endfor %}
+{% assign items = working | concat: broken %}
+
+{% assign finishedItems = 0 %}
+{% for item in items %}
+	{% assign passedFilter = true %}
+	{% for filter in include.filters %} {%comment%}item filter{%endcomment%}
+		{% assign params = "" | split: "" %}
+		{% for p in filter.params %}
+			{% assign s = p | slice: 0,2 %}
+			{% assign e = p | slice: -2,2 %}
+			{% if s == "{{" and e == "}}" %} {%comment%}var from string{%endcomment%}
+				{% assign var = p | remove: "{{" | remove: "}}" | split: "." %}
+				{% for seg in var %}
+					{% if forloop.first %}
+						{% if seg == "item" %} {%comment%}initial variable names{%endcomment%}
+							{% assign val = item %}
+						{% elsif seg == "page" %}
+							{% assign val = page %}
+						{% elsif seg == "site" %}
+							{% assign val = site %}
+						{% elsif seg == "include" %}
+							{% assign val = include %}
+						{% endif %}
+					{% else %}
+						{% assign val = val[seg] %}
+					{% endif %}
+				{% endfor %}
+				{% assign params = params | push: val %}
+			{% else %}
+				{% assign params = params | push: p %}
+			{% endif %}
+		{% endfor %}
+
+		{% if filter.type == "exists" %} {%comment%}filter types{%endcomment%}
+			{% unless params[0] %}
+				{% assign passedFilter = false %}
+			{% endunless %}
+		{% elsif filter.type == "match" %}
+			{% unless params[0] == params[1] or params[0] contains params[1] %}
+				{% assign passedFilter = false %}
+			{% endunless %}
+		{% else %}
+			<h2 style="color:red">invalid list filter</h2>
+			{% break %}
+		{% endif %}
+
+		{% if filter.not %}
+			{% if passedFilter %}
+				{% assign passedFilter = false %}
+			{% else %}
+				{% assign passedFilter = true %}
+			{% endif %}
+		{% endif %}
+		{% unless passedFilter %}
+			{% break %}
+		{% endunless %}
 	{% endfor %}
-</div>
+
+	{% if passedFilter %}
+		{% assign ws = working | size %} {%comment%}this only works because of the sorting{%endcomment%}
+		{% if forloop.index0 >= ws %}
+			{% assign greyed = true %}
+		{% else %}
+			{% assign greyed = false %}
+		{% endif %}
+		{% include listing-square.html item=item greyed=greyed %}
+		{% assign finishedItems = finishedItems | plus: 1 %}
+	{% endif %}
+
+	{% if finishedItems >= include.limit %}
+		{% break %}
+	{% endif %}
+{% endfor %}

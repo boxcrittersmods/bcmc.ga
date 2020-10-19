@@ -2,13 +2,14 @@
 title: CritterMod
 author:
   - Sked
-description: >-
-  CritterMod is a mod for Box Critters developed by sked adding multiple extra
-  features and fun/useful commands.
-date: 2019-06-19T16:51:38.167Z
+description: CritterMod is a mod for Box Critters developed by sked adding
+  multiple extra features and fun/useful commands.
+date: 2019-06-19 16:51:38
 icon: /uploads/purplebcl.png
-browser:
-  chrome: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
+buttons:
+  - browser: chrome
+    img: /uploads/browser/chrome.png
+    href: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
 ---
 - Current Command List:
   - /copy [username] -copies a user's outfit

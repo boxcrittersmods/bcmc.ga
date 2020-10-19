@@ -1,43 +1,30 @@
 ---
 layout: default
 title: Home
+header: false
 ---
-{% assign all=site.documents | sort: "date","last" | reverse %}
-{% assign carousel=all | where: "featured","true" %}
-{% include home-carousel.html %}
+{% assign carousel = site.documents | where: "featured","true" | sort: "date","last" | reverse %}
+{% include home-carousel.html items=carousel %}
 <div class="home container">
 	<div class="home-main">
-
-		<div class="card">
-			<div class="card-header"><h1>Recommended</h1></div>
-		</div>
-		<div class="content-list row">
-			{% assign items = site.documents | sort: "date","last" | reverse | where: "recommend","true" %}
-			{% assign l = items| size %}
-			{% for item in items limit: 4 %}
-			{% include listing-square.html item=item %}
-			{% endfor %}
-		</div>
-
-		{% for collection in site.collections %}
-		{% if collection.home %}
-		<div class="card">
-			{% assign normalTitle=collection.label|capitalize %}
-			<div class="card-header"><h1>{{collection.title|default:normalTitle}}</h1></div>
-		</div>
-		
-		<div class="content-list row">
-			{% assign items = site[collection.label] | sort: "date","last" | reverse %}
-			{% assign l = items | size %}
-			{% for item in items limit: 4 %}
-			{% include listing-square.html item=item %}
-			{% endfor %}
-
-		</div>
-		{% endif %}
+		{% assign homelists = site.lists | sort: "home" %}
+		{% for list in homelists %}
+			{% if list.home > 0 %}
+				<div class="card">
+					<div class="card-header"><h1>{{list.title}}</h1></div>
+				</div>
+				<div class="content-list row justify-content-center align-items-stretch mx-0" style="max-height: 350px">
+					{% if list.list == true %}
+						{% assign l = list.slug %}
+					{% else %}
+						{% assign l = list.list %}
+					{% endif %}
+					{% include list.html list=l filters=list.filters limit=4 %}
+				</div>
+			{% endif %}
 		{% endfor %}
 	</div>
 	<div class="sidebar">
-		{% include sidebar.html %}
+		{% include home-sidebar.html %}
 	</div>
 </div>

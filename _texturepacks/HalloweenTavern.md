@@ -1,12 +1,14 @@
 ---
 title: Halloween Tavern
 author: 
-- Icy
+  - Icy
 description: Happy October Box Critters players! Here is the long awaited Halloween background for the Hamster Tavern!
-date: 02-10-2019
+date: 2019-10-02
 icon: /uploads/halloweenpack/icon.png
 video: https://www.youtube.com/embed/RKNtoUaqRMc
 code: eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJIYWxsb3dlZW4gVGF2ZXJuIiwiYXV0aG9yIjoiSWN5IiwiZGVzY3JpcHRpb24iOiJIYXBweSBPY3RvYmVyIEJveCBDcml0dGVycyBwbGF5ZXJzISBIZXJlIGlzIHRoZSBsb25nIGF3YWl0ZWQgSGFsbG93ZWVuIGJhY2tncm91bmQgZm9yIHRoZSBIYW1zdGVyIFRhdmVybiEiLCJ0YXZlcm5CRyI6Imh0dHA6Ly93d3cuYmFja2dyb3VuZHMuYm94Y3JpdHRlcnNsaXZlLmNvbS9IYWxsb3dlZW5UYXZlcm4yMDE5L3RhdmVybl9iZy5wbmciLCJ0YXZlcm5GRyI6Imh0dHA6Ly93d3cuYmFja2dyb3VuZHMuYm94Y3JpdHRlcnNsaXZlLmNvbS9IYWxsb3dlZW5UYXZlcm4yMDE5L3RhdmVybl9zcy5wbmciLCJkYXRlIjoxNTY5OTcxNDg0Njg1LCJwYWNrVmVyc2lvbiI6IjAuMSJ9
 featured: true
-install: https://raw.githubusercontent.com/boxcritters/boxcrittersmods.ga/master/tp/HalloweenTavern.bctp.json
+buttons:
+  - name: Install
+    href: https://raw.githubusercontent.com/boxcritters/boxcrittersmods.ga/master/tp/HalloweenTavern.bctp.json
 ---

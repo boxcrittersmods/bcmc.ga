@@ -3,29 +3,23 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-
-{% for collection in site.collections %}
-<channel>
-{% assign current_collection=site[collection.label] %}
-  <title>{{ collection.label }}</title>
-  <link>{{site.url}}/{{ collection.label }}</link>
-  {% for item in current_collection %}
-<item>
-    <title>{{ item.title|slugify }}</title>
-    {% for author in item.author %}
-		<author><name>{{ author }}</name></author>
-    {% endfor %}
-		{% if item.date %}<date>{{item.date}}</date>{% endif %}
-		{% if item.excerpt %}<excerpt>
-			{{ item.excerpt }}
-		</excerpt>{% endif %}
-		<url>{{ item.url }}</url>
-		<content>
-			{{ item.content }}
-		</content>
-  </item>
-{% endfor %}
-</channel>
-  
-  {% endfor %}
+	{% for collection in site.collections %}
+		<channel>
+			{% assign current_collection=site[collection.label] %}
+			<title>{{ collection.label }}</title>
+			<link>{{site.url}}/{{ collection.label }}</link>
+			{% for item in current_collection %}
+				<item>
+					<title>{{ item.title|slugify }}</title>
+					{% for author in item.author %}
+						<author><name>{{ author }}</name></author>
+					{% endfor %}
+					{% if item.date %}<date>{{item.date}}</date>{% endif %}
+					{% if item.excerpt %}<excerpt>{{item.excerpt}}</excerpt>{% endif %}
+					<url>{{ item.url }}</url>
+					<content>{{ item.content }}</content>
+				</item>
+			{% endfor %}
+		</channel>
+	{% endfor %}
 </rss>

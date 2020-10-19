@@ -2,7 +2,7 @@
 title: dfgdfg
 author:
   - tumblegamer
-date: 2020-05-16T21:16:35.841Z
+date: 2020-05-16 21:16:35
 ---
 gdfgdfsgkjdfhklgdf
 

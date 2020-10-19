@@ -1,12 +1,13 @@
 ---
 title: Epic Face
 author:
-- TheHenryGuy
-description: >-
-  This transform every face (only hamster in the moment) in a EPIC FACE
-date: 11-10-2019
+  - TheHenryGuy
+description: This transform every face (only hamster in the moment) in a EPIC FACE
+date: 2019-10-11
 code: eyJ2ZXJzaW9uIjoiMiIsIm5hbWUiOiJFcGljIEZhY2UgIiwiYXV0aG9yIjoiVGhlSGVucnlHdXkiLCJkYXRlIjoxNTcwODQ0NjMyNzM1LCJwYWNrVmVyc2lvbiI6IjAuMSIsImRlc2NyaXB0aW9uIjoiVGhpcyB0cmFuc2Zvcm0gZXZlcnkgZmFjZSAob25seSBoYW1zdGVyIGluIHRoZSBtb21lbnQpIGluIGEgRVBJQyBGQUNFIiwiYmVhdmVyIjoiaHR0cHM6Ly9ib3hjcml0dGVycy5jb20vbWVkaWEvY3JpdHRlcnMvYmVhdmVyLnBuZyIsImhhbXN0ZXIiOiJodHRwczovL2Nkbi5kaXNjb3JkYXBwLmNvbS9hdHRhY2htZW50cy8zNjUyNjM5MTU0OTMzNTk2MTcvNjMyMzkxMTAwODkxNjYwMzE4L0VwaWNfZmFjZS5wbmciLCJsaXphcmQiOiJodHRwczovL2JveGNyaXR0ZXJzLmNvbS9tZWRpYS9jcml0dGVycy9saXphcmQucG5nIiwidXBkYXRlVVJMIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1RoZUhlbnJ5R3V5L0VwaWNGYWNlQm94Q3JpdHRlcnMvbWFzdGVyL0VwaWNGYWNlLmJjdHAuanNvbiJ9
-install: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/EpicFace.bctp.json
+buttons:
+  - name: Install
+    href: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/EpicFace.bctp.json
 icon: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/icon.png
 banner: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/banner.png
 ---

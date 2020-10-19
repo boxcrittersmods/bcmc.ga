@@ -1,0 +1,16 @@
+---
+layout: default
+description: all but it's sorted
+---
+<div class="page-content">
+	{% for collection in site.collections %}
+		<div class="card">
+			<div class="card-header">
+				<h1>{{collection.title}}</h1>
+			</div>
+		</div>
+		<div class="container page-content content-list flex-row flex-wrap justify-content-center align-items-stretch">
+			{% include list.html list=collection.label %}
+		</div>
+	{% endfor %}
+</div>

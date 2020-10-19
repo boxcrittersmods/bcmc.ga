@@ -4,10 +4,10 @@ author:
   - TumbleGamer
   - SArpnt
 description: Create shaders for boxcritters
-date: 2020-04-29T23:00:00.000Z
-primary:
-- name: install
-  href: https://github.com/boxcritters/bc-shaders/raw/master/bc-shaders.user.js
+date: 2020-04-29 23:00:00
+buttons:
+  - name: Install
+    href: https://github.com/boxcritters/bc-shaders/raw/master/bc-shaders.user.js
 featured: false
 userscript: true
 recommend: true

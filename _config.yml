@@ -1,56 +1,72 @@
 title: Box Critters Modding Community
-description: > # this means to ignore newlines until "baseurl:"
-  Install mods and texture packs to your favourite game
+description: Install mods and other add-ons to Box Critters
 base-url: ""
-url: "https://boxcrittersmods.ga" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://boxcrittersmods.ga
 repository: boxcritters/boxcrittersmods.ga
-
-#favicon: 
-
+bc-mod-api: api.boxcrittersmods.ga
+show-mod-versions: true
 collections:
+  other:
+    output: true
+    title: Other
+    singular: Other
   mods:
     output: true
-    home: true
+    title: Mods
+    singular: Mod
   texturepacks:
-    title: Texture Packs
     output: true
-    home: true
+    title: Texture Packs
+    singular: Texture Pack
   shaders:
     output: true
-    home: true
-  authors:
-    output: true
-    home: false
+    title: Shaders
+    singular: Shader
   projects:
-    output: false
-    home: true
+    output: true
+    title: Projects
+    singular: Project
   servers:
     output: true
-    home: false
-
+    title: Servers
+    singular: Server
+  authors:
+    output: true
+    title: Authors
+    singular: Author
+  posts:
+    output: true
+    title: Blog
+    singular: Post
+  lists:
+    output: true
+    title: Lists
+    singular: List
+    permalink: /:name/
 permalink: pretty
 production: true
-
-
 plugins:
- - jekyll-feed
- - jekyll-redirect-from
- - jekyll-seo-tag
- - jekyll-sitemap
- - jekyll-avatar
- - jemoji
- - jekyll-mention
-
- # Build settings
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mention
 markdown: kramdown
 theme: minima
-
 kramdown:
-  # Enable GitHub Flavored Markdown (fenced code blocks)
-  input: GFM
-  # Disable auto-generated ID's for headings
+  math-engine: mathjax
   auto_ids: false
-
+  input: GFM
+  entity-output: as_char
+  footnote-nr: "1"
+  toc-levels: 1..6
+  gfm-quirks: paragraph_end
+  syntax-highlighter-opts:
+    default-lang: plaintext
+  syntax-highlighter: rouge
+  smart-quotes: lsquo,rsquo,ldquo,rdquo
 excludes:
   - lib
   - Gemfile
@@ -62,65 +78,79 @@ excludes:
   - gulffile.js
   - package.json
   - vendor
-  - ".gitignore"
+  - .gitignore
   - CNAME
   - icomoon-selection.json
-
-
-
 defaults:
-- scope:
-    path: ""
-  values:
-    featured: false
-    layout: project
-    content: ""
-    list: false
-    show-nav: false
-- scope:
-    path: ""
-    type: mods
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: texturepacks
-  values:
-    comments: true
-    list: true
-    show-nav: true
-    require:
-    - texturepackselector
-- scope:
-    path: ""
-    type: shaders
-  values:
-    comments: true
-    list: true
-    show-nav: 
-    require:
-    - texturepackselector
-    - boxcritters-shaders
-- scope:
-    path: ""
-    type: authors
-  values:
-    layout: author
-    comments: true
-    show-nav: true
-- scope:
-    path: ""
-    type: projects
-  values:
-    comments: true
-    list: true
-    show-nav: true
-- scope:
-    path: ""
-    type: servers
-  values:
-    comments: true
-    list: true
-    show-nav: true
+  - scope:
+      path: ""
+    values:
+      layout: item
+      showNav: true
+      header: true
+      maincard: true
+      disclaimer: false
+      list: false
+      filters: []
+      home: 0
+      comments: true
+  - scope:
+      path: ""
+      type: mods
+    values:
+      disclaimer: true
+  - scope:
+      path: ""
+      type: texturepacks
+    values:
+      disclaimer: true
+      require:
+        - texture-pack-manager
+  - scope:
+      path: ""
+      type: shaders
+    values:
+      disclaimer: true
+      require:
+        - boxcritters-shaders
+        - texture-pack-manager
+  - scope:
+      path: ""
+      type: servers
+    values:
+      disclaimer: true
+  - scope:
+      path: ""
+      type: projects
+    values:
+      disclaimer: true
+  - scope:
+      path: ""
+      type: authors
+    values:
+      list: documents
+      filters:
+        - type: match
+          params:
+            - "{{item.author}}"
+            - "{{page.title}}"
+        - type: match
+          not: true
+          params:
+            - "{{page.hideCredit}}"
+            - "{{item.title}}"
+  - scope:
+      path: ""
+      type: posts
+    values: {}
+  - scope:
+      path: ""
+      type: lists
+    values:
+      maincard: false
+      list: true
+      comments: false
+greyed:
+  - broken
+  - unfinished
+userscriptManager: tampermonkey

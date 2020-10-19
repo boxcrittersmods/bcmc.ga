@@ -1,0 +1,47 @@
+{% assign i = include.button %}
+
+{% capture class %}
+	{% unless type == -1 or i.img %}
+		btn
+		{% unless i.type > 0 %}
+			btn-primary
+		{% endunless %}
+		{% if i.type == 1 %}
+			btn-secondary
+		{% endif %}
+
+		{% if i.type == 1 %}
+			btn-sm
+		{% endif %}
+	{% endunless %}
+
+	{% unless i.type > 0 %}
+		primary
+	{% endunless %}
+
+	{% if i.browser %}
+		browser-{{i.browser}}
+	{% endif %}
+
+	{{i.class}}
+{% endcapture %}
+
+{% capture style %}
+	{% if i.color %}
+		background-color:{{i.color}};
+		border-color:{{i.color}};
+	{% endif %}
+
+	{{i.style}}
+{% endcapture %}
+
+<a href="{{i.href}}"
+	class="{{class|newline_to_br|strip_newlines|replace:'<br />',' '|replace:'	',''|strip}}"
+	style="{{style|newline_to_br|strip_newlines|replace:'<br />',' '|replace:'	',''|strip}}"
+>
+	{% if i.img %}
+		<img src="{{i.img}}" alt="{{i.name}}">
+	{% else %}
+		{{i.name}}
+	{% endif %}
+</a>
