@@ -1,1 +1,0 @@
-{% assign label=include.name|capitalize %}{{include.label|default:label}}

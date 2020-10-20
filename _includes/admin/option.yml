@@ -1,1 +1,0 @@
-{ label: "{{include.label|default:option.value}}", value: "{{include.value}}" }
