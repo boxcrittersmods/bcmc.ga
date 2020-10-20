@@ -1,5 +1,8 @@
-let deferredPrompt;
-if (btnAdd) {
+'use strict';
+
+if (window.btnAdd) {
+	let deferredPrompt;
+
 	window.addEventListener("beforeinstallprompt", e => {
 		// Prevent Chrome 67 and earlier from automatically showing the prompt
 		e.preventDefault();

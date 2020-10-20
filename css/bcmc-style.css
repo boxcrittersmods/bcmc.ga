@@ -94,7 +94,7 @@ Platforms
 	margin-right: auto;
 }
 
-.bcmc-header {
+#bcmc-header {
 	position: fixed;
 	background-color: rgba(255, 255, 255, 0.4);
 	background-color: transparent;
@@ -102,7 +102,7 @@ Platforms
 	box-shadow: none;
 	width: 100%;
 }
-.bcmc-header.fixed, .bcmc-header.shown /*.bcmc-header:hover,*/ {
+#bcmc-header.fixed, #bcmc-header.shown /*#bcmc-header:hover,*/ {
 	position: fixed;
 	top: 0;
 	z-index: 100;
@@ -110,14 +110,14 @@ Platforms
 }
 
 
-.bcmc-header.fixed .bcmc-logo-white,
-/*.bcmc-header:hover .bcmc-logo-white,*/
-.bcmc-header .bcmc-logo {
+#bcmc-header.fixed .bcmc-logo-white,
+/*#bcmc-header:hover .bcmc-logo-white,*/
+#bcmc-header .bcmc-logo {
 	display: inline;
 }
-.bcmc-header.fixed .bcmc-logo,
-/*.bcmc-header:hover .bcmc-logo,*/
-.bcmc-header .bcmc-logo-white {
+#bcmc-header.fixed .bcmc-logo,
+/*#bcmc-header:hover .bcmc-logo,*/
+#bcmc-header .bcmc-logo-white {
 	display: none;
 }
 
