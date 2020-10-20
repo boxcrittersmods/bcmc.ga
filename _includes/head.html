@@ -3,7 +3,7 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65179236-3"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		var gtag = (...a) => dataLayer.push(...a);
+		let gtag = (...a) => dataLayer.push(...a);
 		gtag('js', new Date());
 		gtag('config', 'UA-65179236-3');
 	</script>
@@ -15,7 +15,7 @@
 	<meta name="wot-verification" content="be6d542d05874a9a996d" />
 	<meta name="yandex-verification" content="a0a0e2833527a48c" />
 
-	<!-- WEB APP  -->
+	<!-- WEB APP -->
 	<!-- Add to homescreen for Chrome on Android -->
 	<meta name="mobile-web-app-capable" content="yes">
 
@@ -32,7 +32,7 @@
 	<link rel="shortcut icon"
 		href="https://lh3.googleusercontent.com/MQEfkFYKXNELVopX-wIfDwLqW2wQ1Z3ooBpP-D8cUNpopX4TWFnddzW0Asn_2gfNZVuobObeifbN4tgS9TuZx13vnXQxXvMceb/ico/ms-icon-310x310.png">
 
-	<!-- /WEB APP  -->
+	<!-- /WEB APP -->
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
@@ -54,33 +54,35 @@
 	<meta name="theme-color" content="#53C81D">
 	<!-- noindex -->
 	{% if page.noindex %}
-	<meta name="robots" content="noindex" />
+		<meta name="robots" content="noindex" />
 	{% endif %}
-	<title>{% unless page.title == "Home" %}{{ page.title }} -
-		{% endunless %}{{ site.title }}{% if page.title == "Home" %} - {{site.description}}{% endif %}</title>
+	<title>
+		{% if page.title == "Home" %}
+			{{site.title}} - {{site.description}}
+		{% else %}
+			{{page.title}} - {{site.title}}
+		{% endif %}
+	</title>
 
-	<!--Stylesheets-->
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" href="/css/bcmc-style.css">
 	<link rel="stylesheet" href="/css/style.css">
 
-	{% capture seo %}
-	{% seo %}
-	{% endcapture %}
 	<meta name="twitter:card"
-		content="summary{% if page.image %}{% unless page.image == site.logo %}_large_image{% endunless %}{% endif %}">
-	{% if page.image %}{%if page.image == site.logo %}
-	{{ seo }}
+		content="summary{% if page.image and page.image != site.logo %}_large_image{% endif %}">
+
+	{% capture seo %}{% seo %}{% endcapture %}
+	{% if page.image and page.image != site.logo %}
+		{{seo | replace: "summary", "summary_large_image"}}
 	{% else %}
-	{{ seo | replace: "summary", "summary_large_image" }}
-	{% endif %}
-	{% else %}
-	{{ seo }}
+		{{seo}}
 	{% endif %}
 	<script>
-		const SITE_URL = "{{site.url}}";
-		const PAGE_AUTHOR = "{{page.author}}";
+		const
+			SITE_URL = "{{site.url}}",
+			PAGE_AUTHOR = "{{page.author}}";
 	</script>
 </head>
