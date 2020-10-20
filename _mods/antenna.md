@@ -13,8 +13,8 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/tumble1999/antenna
-unfinished: true
-userscript: false
+unfinished: false
+userscript: true
 require:
   - bcmacro-api
 customData:
