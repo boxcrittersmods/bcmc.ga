@@ -13,7 +13,6 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/tumble1999/antenna
-unfinished: false
 userscript: true
 require:
   - bcmacro-api

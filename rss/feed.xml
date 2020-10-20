@@ -15,9 +15,9 @@ layout: null
 						<author><name>{{ author }}</name></author>
 					{% endfor %}
 					{% if item.date %}<date>{{item.date}}</date>{% endif %}
-					{% if item.excerpt %}<excerpt>{{item.excerpt}}</excerpt>{% endif %}
+					{% if item.excerpt %}<excerpt>{{item.excerpt | replace: "<","&lt;" | replace: ">","&gt;"}}</excerpt>{% endif %}
 					<url>{{ item.url }}</url>
-					<content>{{ item.content }}</content>
+					<content>{{item.content | replace: "<","&lt;" | replace: ">","&gt;"}}</content>
 				</item>
 			{% endfor %}
 		</channel>
