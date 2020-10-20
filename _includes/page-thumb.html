@@ -1,13 +1,18 @@
-{% if page.video or page.image %}
-{% if include.card %}
-<div class="card">
-	<div class="card-body {% if page.video %}embed-responsive embed-responsive-16by9{% endif %}">{% endif %}
-		{% if page.video %}
-		<iframe src="{{page.video}}" frameborder="0"
+{% capture content %}
+	{% if page.video %}
+		<iframe src="{{page.video}}" frameborder="0" class="d-block w-100 {{include.pad}}" style="height: 400px;"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		{% elsif page.image %}
-		<img src="{{ page.image }}" class="img-fluid float-right" alt="">
-		{% endif %}
-		{% if include.card %}</div>
-</div>{% endif %}
+	{% elsif page.image %}
+		<img src="{{ page.image }}" style="max-height: 400px;" class="d-block mx-auto {{include.pad}}">
+	{% endif %}
+{% endcapture %}
+
+{% if content %}
+	{% if include.card %}
+		<div class="card">
+			{{content}}
+		</div>
+	{% else %}
+		{{content}}
+	{% endif %}
 {% endif %}

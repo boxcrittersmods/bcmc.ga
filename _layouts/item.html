@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-{% include page-thumb.html card=true %}
 <div class="page-content container">
+	{% include page-thumb.html pad="top-card-pad" %}
+
 	{% if page.maincard %}
 		<div class="card">
 			{% if page.maincard.body or page.maincard == true %}
