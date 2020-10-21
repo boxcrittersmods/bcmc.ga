@@ -20,10 +20,10 @@ buttons:
     href: https://addons.opera.com/en-gb/extensions/details/box-critters-texture-pack-manager/
   - type: 1
     name: Source
-	href: https://github.com/boxcritters/bc-texture-pack-manager
+    href: https://github.com/boxcritters/bc-texture-pack-manager
   - type: 1
-	name: "Test Beta"
-	href: https://github.com/boxcrittersmods/bc-texture-pack-manager/raw/develop/bc-tpm.user.js
+    name: "Test Beta"
+    href: https://github.com/boxcrittersmods/bc-texture-pack-manager/raw/develop/bc-tpm.user.js
 redirect_from:
   - /projects/texturepackselector/
   - /projects/texturepackmanager/
