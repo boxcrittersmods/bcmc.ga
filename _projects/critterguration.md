@@ -9,10 +9,7 @@ buttons:
     name: Source
     href: https://github.com/tumble1999/critterguration
 unfinished: true
-require:
-  - bcmacro-api
 customData:
-  bcmacro-api: required
   popper: required
   cardboard: required
 ---
