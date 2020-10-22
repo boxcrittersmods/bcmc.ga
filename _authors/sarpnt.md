@@ -1,8 +1,8 @@
 ---
 title: SArpnt
-icon: https://avatars.githubusercontent.com/u/36542932
-disclaimer: This person is not supported for your browser.
 description: i always have to fix everything
+disclaimer: This person is not supported for your browser.
+icon: https://avatars.githubusercontent.com/u/36542932
 buttons:
   - name: Github
     href: https://github.com/sarpnt/

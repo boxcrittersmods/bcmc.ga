@@ -1,10 +1,10 @@
 ---
 title: Greasemonkey
 description: A Firefox extension that allows you to customize the way webpages look and function.
+date: 2005-03-28
 author:
   - name: Aaron Boodman
     custom: true
-date: 2005-03-28
 buttons:
   - img: /uploads/browser/firefox.png
     browser: firefox

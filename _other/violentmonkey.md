@@ -1,12 +1,12 @@
 ---
 title: Violentmonkey
 description: An open source userscript manager.
+date: 2013-09-03
 author:
   - name: gera2ld
     custom: true
   - name: tophf
     custom: true
-date: 2013-09-03
 buttons:
   - browser: chrome
     img: /uploads/browser/chrome.png

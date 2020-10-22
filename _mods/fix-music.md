@@ -14,5 +14,5 @@ buttons:
     name: Source
     href: https://github.com/p1-BCMC/FixMusic
 ---
-This mod fixes music playback across all browsers; most notably Safari where it would not play at all. 
+This mod fixes music playback across all browsers; most notably Safari where it would not play at all.  
 In addition, it lowers the default volume of the music playback to 50%.

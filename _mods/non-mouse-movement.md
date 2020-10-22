@@ -16,7 +16,7 @@ buttons:
 customData:
   cardboard: optional
 ---
-Move with the arrow keys, WASD, or main joystick.\
+Move with the arrow keys, WASD, or main joystick.  
 Settings can be changed in the userscript (there's 6 consts, default settings are already fine)
 
 Known issues / Incomplete features:
