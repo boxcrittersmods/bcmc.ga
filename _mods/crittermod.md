@@ -6,10 +6,11 @@ icon: /uploads/mods/crittermod.png
 date: 2019-06-19 16:51:38
 author:
   - Sked
+broken: true
 buttons:
   - browser: chrome
     img: /uploads/browser/chrome.png
-    href: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke#update1456
+    href: https://chrome.google.com/webstore/detail/crittermod/lchomagmodnodipopfgejpbmlachhlke
 ---
 - Current Command List:
   - /copy [username] -copies a user's outfit
