@@ -1,6 +1,7 @@
 ---
 title: Cardboard
 description: Modding api
+icon: https://github.com/SArpnt/cardboard/raw/master/icon.png
 date: 2020-06-01
 author:
   - SArpnt
