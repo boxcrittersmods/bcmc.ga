@@ -6,7 +6,8 @@ date: 2020-07-22 21:00:00
 author:
   - p1
 userscript: true
-recommend: true
+#recommend: true
+broken: true
 buttons:
   - name: Install
     href: https://raw.githubusercontent.com/p1-BCMC/PerspectiveAdjustment/master/PerspectiveAdjustment.user.js
