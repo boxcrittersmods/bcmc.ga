@@ -2,7 +2,10 @@
 title: dfgdfg
 date: 2020-05-16 21:16:35
 author:
-  - tumblegamer
+  - TumbleGamer
+category: News
+categories:
+  - updates
 ---
 gdfgdfsgkjdfhklgdf
 

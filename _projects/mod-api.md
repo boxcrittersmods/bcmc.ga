@@ -1,9 +1,9 @@
 ---
 title: BoxCritters Mod API Server
+date: 2019-04-26
 author:
   - TumbleGamer
   - Alvarito050506
-date: 2019-04-26
 buttons:
   - name: Link
     href: https://api.boxcrittersmods.ga
@@ -26,10 +26,10 @@ Gets information on the current version of box critters.
 Example output:
 ```json
 {
-  "assetsFolder": "https://boxcritters.com/media/53-pickle/",
-  "version": "53-pickle",
-  "versionNum": "53",
-  "versionName": "pickle"
+	"assetsFolder": "https://boxcritters.com/media/53-pickle/",
+	"version": "53-pickle",
+	"versionNum": "53",
+	"versionName": "pickle"
 }
 ```
 
@@ -39,65 +39,65 @@ Retrives a list of versions.
 Example Output:
 ```json
 [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17-EX2",
-  "18-EX2",
-  "19-EX2",
-  "20-party",
-  "22-easter",
-  "23-beep",
-  "24-tech",
-  "25-egghunt",
-  "27-eggstatic",
-  "28-blue",
-  "29-bunny",
-  "30-black",
-  "31-baseball",
-  "32-dark",
-  "33-dark",
-  "34-dark",
-  "36-click",
-  "37-fast",
-  "38-moveit",
-  "39-monk",
-  "40-beaver",
-  "40-test",
-  "41-emit",
-  "44-float",
-  "45-3D",
-  "46-cool",
-  "47-backs",
-  "48-backs",
-  "49-slots",
-  "51-space",
-  "52-exp3",
-  "53-pickle"
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"10",
+	"11",
+	"12",
+	"13",
+	"14",
+	"15",
+	"16",
+	"17-EX2",
+	"18-EX2",
+	"19-EX2",
+	"20-party",
+	"22-easter",
+	"23-beep",
+	"24-tech",
+	"25-egghunt",
+	"27-eggstatic",
+	"28-blue",
+	"29-bunny",
+	"30-black",
+	"31-baseball",
+	"32-dark",
+	"33-dark",
+	"34-dark",
+	"36-click",
+	"37-fast",
+	"38-moveit",
+	"39-monk",
+	"40-beaver",
+	"40-test",
+	"41-emit",
+	"44-float",
+	"45-3D",
+	"46-cool",
+	"47-backs",
+	"48-backs",
+	"49-slots",
+	"51-space",
+	"52-exp3",
+	"53-pickle"
 ]
 ```
 #### GET `/version/:version-name`
 Example Output:
 ```json
 {
-  "assetsFolder": "https://boxcritters.com/media/51-space/",
-  "version": "51-space",
-  "versionNum": "51",
-  "versionName": "space",
-  "description": ""
+	"assetsFolder": "https://boxcritters.com/media/51-space/",
+	"version": "51-space",
+	"versionNum": "51",
+	"versionName": "space",
+	"description": ""
 }
 ```
 ### Scripts
@@ -108,7 +108,7 @@ List of Scripts:
 How to use:
 ```js
 getBCModAPI(function (versionData) {
-    console.log("Current Version", versionData.version);
+	console.log("Current Version", versionData.version);
 });
 ```
 

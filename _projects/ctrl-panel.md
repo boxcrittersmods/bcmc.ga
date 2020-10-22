@@ -1,9 +1,9 @@
 ---
 title: Ctrl Panel
-author:
-  - SArpnt
 description: Button api
 date: 2020-10-12
+author:
+  - SArpnt
 buttons:
   - name: Source
     href: https://github.com/SArpnt/ctrl-panel

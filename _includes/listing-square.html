@@ -40,5 +40,7 @@
 		</a>
 		<p class="card-text">{{include.item.description}}</p>
 	</div>
-	{% include modrow-created.html item=include.item %}
+	<div class="list-group list-group-flush">
+		{% include modrow-created.html item=include.item %}
+	</div>
 </div>

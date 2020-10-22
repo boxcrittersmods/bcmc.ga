@@ -1,16 +1,14 @@
 ---
 title: CritterSDK
+description: A Box Critters Software Development Kit.
+date: 2020-05-12 11:35:09
 author:
   - Alvarito050506
-description: A Box Critters Software Development Kit.
-disclamer: ""
-date: 2020-05-12 11:35:09
 buttons:
   - name: Source
-    type: 1
     href: https://github.com/boxcritters/crittersdk
-  - name: Documentation
-    type: null
+  - type: 1
+    name: Documentation
     href: https://sdk.boxcrittersmods.ga/
 ---
 # CritterSDK

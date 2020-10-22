@@ -1,5 +1,7 @@
 ---
 title: Private Box
+description: Private server
+date: 2019-10-14
 author:
   - SArpnt
   - flines
@@ -8,8 +10,6 @@ author:
   - Eribetra
   - Sponix
   - Alvarito050506
-description: Private server
-date: 2019-10-14
 unfinished: true
 buttons:
   - name: Install (client)

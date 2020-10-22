@@ -1,10 +1,10 @@
 ---
 title: boxcrittersmods.ga
+description: Box Critters Modding Community website
+date: 2009-05-15
 author:
   - TumbleGamer
   - SArpnt
-description: Box Critters Modding Community website
-date: 2009-05-15
 buttons:
   - name: Website
     href: https://boxcrittersmods.ga/

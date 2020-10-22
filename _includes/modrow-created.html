@@ -41,7 +41,7 @@
 
 {% assign temp = info | strip %}
 {% if temp != "" %}
-	<div class="card-footer">
+	<div class="card-footer" style="border-top: none">
 		<small class="text-muted">
 			Created {{temp | strip_newlines | replace: "	",""}}
 		</small>

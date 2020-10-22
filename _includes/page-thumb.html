@@ -3,7 +3,7 @@
 		<iframe src="{{page.video}}" frameborder="0" class="d-block w-100 {{include.pad}}" style="height: 400px;"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	{% elsif page.image %}
-		<img src="{{ page.image }}" style="max-height: 400px;" class="d-block mx-auto {{include.pad}}">
+		<img src="{{ page.image }}" style="max-width: 100%; max-height: 400px;" class="d-block mx-auto {{include.pad}}">
 	{% endif %}
 {% endcapture %}
 
