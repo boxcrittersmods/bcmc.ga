@@ -19,6 +19,8 @@ buttons:
 customData:
   ctrlPanel: required
   cardboard: optional
+  critterguration: required
+  modial: required
 
 list: documents
 filters:

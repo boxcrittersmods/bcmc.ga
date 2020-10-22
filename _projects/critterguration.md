@@ -11,7 +11,7 @@ buttons:
     name: Source
     href: https://github.com/tumble1999/critterguration
 customData:
-  popper: required
+  modial: required
   cardboard: required
 list: documents
 filters:
@@ -22,7 +22,7 @@ filters:
 ---
 ## Install
 ```js
-// @require      https://github.com/tumble1999/popper/raw/master/popper.js
+// @require      https://github.com/tumble1999/modial/raw/master/modial.js
 // @require      https://github.com/tumble1999/critterguration/raw/master/critterguration.js
 ```
 ## Usage

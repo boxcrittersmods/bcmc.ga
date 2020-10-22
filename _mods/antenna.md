@@ -18,6 +18,6 @@ require:
   - bcmacro-api
 customData:
   bcmacro-api: required
-  popper: required
+  modial: required
   cardboard: required
 ---
