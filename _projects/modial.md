@@ -1,27 +1,27 @@
 ---
-title: Popper
+title: Modial
 description: Modal API
 date: 2020-10-19 00:04:47
 author:
   - TumbleGamer
-unfinished: true
+
 buttons:
   - type: 1
     name: Source
-    href: https://github.com/tumble1999/popper/
+    href: https://github.com/tumble1999/modial/
 
 list: documents
 filters:
   - type: match
     params:
-      - "{{item.customData.popper}}"
+      - "{{item.customData.modial}}"
       - required
 ---
 ```js
-// @require      https://github.com/tumble1999/popper/raw/master/popper.js
+// @require      https://github.com/tumble1999/modial/raw/master/modial.js
 ```
 ```js
-let modal = new Popper();
+let modal = new Modial();
 // or
 modal.setContent("Body");
 // or

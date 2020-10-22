@@ -16,4 +16,5 @@ require:
   - bcmacro-api
 customData:
   bcmacro-api: required
+  modial: optional
 ---
