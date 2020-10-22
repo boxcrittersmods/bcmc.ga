@@ -10,7 +10,7 @@
 			<h3>
 				{{depPage.title}}
 				{% if depPage.userscript %}
-					<img src="https://{{site.bc-mod-api}}/button/{{depPage.slug}}">
+					<img src="https://{{site.bc-mod-api}}/button/{{depPage.slug}}" onerror="this.style.display='none'">
 				{% endif %}
 			</h3>
 		</a>

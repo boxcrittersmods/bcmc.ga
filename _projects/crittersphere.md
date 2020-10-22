@@ -1,15 +1,14 @@
 ---
 title: Crittersphere
+disclamer: Releasing on October 30th
+icon: /uploads/projects/crittersphere.png
+date: 2020-09-18 23:47:19
 author:
   - Alvarito050506
   - Blinking Berry
   - keffen/tekhion
   - p1
   - TumbleGamer
-description: A BoxCritters forum
-disclamer: Releasing on October 30th
-date: 2020-09-18 23:47:19
-logo: /uploads/projects/logo.png
 unfinished: true
 ---
 With the fall of CrittersForum and Box Critters Forum,

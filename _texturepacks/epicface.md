@@ -9,5 +9,5 @@ buttons:
   - name: Install
     href: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/EpicFace.bctp.json
 icon: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/icon.png
-banner: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/banner.png
+image: https://raw.githubusercontent.com/TheHenryGuy/EpicFaceBoxCritters/master/banner.png
 ---

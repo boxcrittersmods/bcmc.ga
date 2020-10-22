@@ -1,11 +1,11 @@
 ---
 title: Box Critters Texture Pack Manager
-author:
-  - TumbleGamer
-  - Zizzle
 description: This extention lets you easily switch between different themes, add
   new themes and create new themes.
 date: 2019-04-25
+author:
+  - TumbleGamer
+  - Zizzle
 recommend: true
 unfinished: true
 buttons:

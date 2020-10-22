@@ -12,4 +12,5 @@ buttons:
     name: Source
     href: 'https://github.com/boxcritters/project-sarpnt'
 disclaimer: Project archived, planned to be restarted eventually.
+unfinished: true
 ---

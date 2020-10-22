@@ -1,18 +1,18 @@
 ---
 title: Non-mouse Movement
+description: Move with keyboard or controller
+icon: https://github.com/SArpnt/non-mouse-movement/raw/master/icon.png
+date: 2020-10-03 22:48:00
 author:
   - SArpnt
-description: Move with keyboard or controller
-date: 2020-10-03 22:48:00
-icon: https://github.com/SArpnt/non-mouse-movement/raw/master/icon.png
+userscript: true
+recommend: true
 buttons:
   - name: Install
     href: https://github.com/SArpnt/non-mouse-movement/raw/master/non-mouse-movement.user.js
   - type: 1
     name: Source
     href: https://github.com/SArpnt/non-mouse-movement/
-userscript: true
-recommend: true
 customData:
   cardboard: optional
 ---

@@ -1,10 +1,13 @@
 {% assign item = include.item | default: page %}
 
-{% assign require = item.slug | split:',' %}
+{% assign require = '' | split:',' %}
+{% if include.inclusive %}
+	{% assign require = require | push: item.slug %}
+{% endif %}
 
 {% for dep in item.require %}
 	{% assign depPage = site.documents | where:'slug', dep | first %}
-	{% capture depList %}{% include require-list.html item=depPage %}{% endcapture %}
+	{% capture depList %}{% include require-list.html item=depPage inclusive=true %}{% endcapture %}
 	{% assign require = depList | strip | split:',' | concat: require %}
 {% endfor %}
 
