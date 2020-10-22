@@ -11,7 +11,6 @@ buttons:
     href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
 userscript: true
 #recommend: true
-broken: true
 require:
   - bcmacro-api
 customData:
