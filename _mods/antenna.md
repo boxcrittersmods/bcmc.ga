@@ -14,10 +14,8 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/tumble1999/antenna
-require:
-  - bcmacro-api
 customData:
-  bcmacro-api: required
   modial: required
   cardboard: required
+  critterguration: required
 ---

@@ -32,8 +32,5 @@ redirect_from:
   - /tools/texturepackmanager/
   - /tools/texture-pack-manager/
 customData:
-  bcmacro-api: required
-  modial: required
-  critterguration: required
   cardboard: required
 ---

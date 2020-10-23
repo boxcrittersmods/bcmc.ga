@@ -13,6 +13,8 @@ buttons:
 customData:
   modial: required
   cardboard: required
+  ctrlPanel: required
+  bcmacro-api: optional
 list: documents
 filters:
   - type: match
