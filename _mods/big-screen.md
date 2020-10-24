@@ -7,6 +7,7 @@ author:
   - SArpnt
 userscript: true
 recommend: true
+featured: true
 buttons:
   - name: Install
     href: https://github.com/SArpnt/Big-screen/raw/master/Big%20screen.user.js
