@@ -7,6 +7,7 @@ author:
   - TumbleGamer
 userscript: true
 recommend: true
+featured: true
 buttons:
   - name: Install
     href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
