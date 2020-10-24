@@ -10,6 +10,7 @@ author:
   - p1
   - TumbleGamer
 unfinished: true
+featured: true
 ---
 With the fall of CrittersForum and Box Critters Forum,
 we have decided to set out to create a whole new forum
