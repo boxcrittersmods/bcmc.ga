@@ -6,7 +6,7 @@ date: 2020-10-24 17:17:00
 author:
   - SArpnt
 userscript: true
-reccomend: true
+recommend: true
 featured: true
 buttons:
   - name: Install
