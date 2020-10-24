@@ -5,6 +5,7 @@ date: 2020-10-18 23:57:17
 author:
   - TumbleGamer
 userscript: true
+featured: true
 buttons:
   - name: Install
     href: https://github.com/tumble1999/antenna/raw/master/Antenna.user.js
