@@ -11,6 +11,7 @@ author:
   - Sponix
   - Alvarito050506
 unfinished: true
+featured: true
 buttons:
   - name: Install (client)
     href: https://github.com/boxcrittersmods/private-box/raw/master/client.user.js
