@@ -13,9 +13,9 @@
 						<iframe width="800" height="400" class="d-block mx-auto h-100" src="{{item.video}}" frameborder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
-					{% elsif item.image %}
+					{% elsif item.image or item.icon %}
 						<a href="{{item.url}}">
-							<img src="{{item.image}}" class="d-block h-100 mx-auto">
+							<img src="{{item.image | default: item.icon }}" class="d-block h-100 mx-auto">
 						</a>
 					{% endif %}
 					<div class="carousel-caption d-none d-md-block">
