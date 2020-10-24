@@ -1,6 +1,7 @@
 ---
 title: BetterChat
 description: Improved chat bubbles
+icon: https://github.com/SArpnt/betterchat/raw/master/icon.png
 date: 2020-04-24 17:17:00
 author:
   - SArpnt
