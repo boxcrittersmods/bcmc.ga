@@ -17,10 +17,9 @@ customData:
   bcmacro-api: optional
 list: documents
 filters:
-  - type: match
+  - type: exists
     params:
       - "{{item.customData.critterguration}}"
-      - required
 ---
 ## Install
 ```js
