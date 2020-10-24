@@ -14,6 +14,8 @@ buttons:
   - type: 1
     name: Source
     href: https://github.com/SArpnt/BetterChat
+customData:
+  cardboard: required
 ---
 Messages combine in the same bubble instead of covering each other.
 
