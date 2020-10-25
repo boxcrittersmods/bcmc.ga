@@ -2,6 +2,7 @@
 title: Critterguration
 description: Settings API that shows each mod's settings in its own tab
 image: https://github.com/tumble1999/critterguration/raw/master/screenshot.png
+icon: https://github.com/tumble1999/critterguration/raw/master/icon.png
 date: 2020-10-22 00:44:17
 author:
   - TumbleGamer
