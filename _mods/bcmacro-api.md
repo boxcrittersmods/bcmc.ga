@@ -3,7 +3,7 @@ title: BCMacro API
 description: Adds an API that lets mods create specific actions that can be
   bound to buttons or keys.
 date: 2020-05-16
-icon: https://github.com/boxcrittersmods/BCMacroAPI/raw/master/icon.png
+icon: https://github.com/boxcrittersmods/bcmacros/raw/master/icon.png
 author:
   - TumbleGamer
 userscript: true
@@ -11,7 +11,7 @@ recommend: true
 featured: true
 buttons:
   - name: Install
-    href: http://cdn.boxcrittersmods.ga/BCMacroAPI/master/bcmacro-api.user.js
+    href: http://cdn.boxcrittersmods.ga/bcmacros/master/bcmacro-api.user.js
   - name: Source
     href: https://github.com/boxcrittersmods/bcmacros
     type: 1
