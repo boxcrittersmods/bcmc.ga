@@ -12,6 +12,7 @@
 		dataLayer.push('js', new Date());
 		dataLayer.push('config', 'UA-65179236-3');
 	</script>
+	<script src="https://www.googleoptimize.com/optimize.js?id=OPT-M3KQZPH"></script>
 
 	<!-- WEB APP -->
 	<!-- Add to homescreen for Chrome on Android -->
@@ -51,13 +52,13 @@
 	<meta name="theme-color" content="#53C81D">
 	<!-- noindex -->
 	{% if page.noindex %}
-		<meta name="robots" content="noindex" />
+	<meta name="robots" content="noindex" />
 	{% endif %}
 	<title>
 		{% if page.title == "Home" %}
-			{{site.title}} - {{site.description}}
+		{{site.title}} - {{site.description}}
 		{% else %}
-			{{page.title}} - {{site.title}}
+		{{page.title}} - {{site.title}}
 		{% endif %}
 	</title>
 
@@ -68,14 +69,13 @@
 	<link rel="stylesheet" href="/css/bcmc-style.css">
 	<link rel="stylesheet" href="/css/style.css">
 
-	<meta name="twitter:card"
-		content="summary{% if page.image and page.image != site.logo %}_large_image{% endif %}">
+	<meta name="twitter:card" content="summary{% if page.image and page.image != site.logo %}_large_image{% endif %}">
 
 	{% capture seo %}{% seo %}{% endcapture %}
 	{% if page.image and page.image != site.logo %}
-		{{seo | replace: "summary", "summary_large_image"}}
+	{{seo | replace: "summary", "summary_large_image"}}
 	{% else %}
-		{{seo}}
+	{{seo}}
 	{% endif %}
 	<script>
 		const
