@@ -9,7 +9,6 @@ author:
   - keffen/tekhion
   - p1
   - TumbleGamer
-unfinished: true
 featured: true
 ---
 With the fall of CrittersForum and Box Critters Forum,
