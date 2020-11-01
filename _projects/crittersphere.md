@@ -12,6 +12,7 @@ author:
 featured: true
 buttons:
   - name: Go
+    type: 1
     href: https://crittersphere.proboards.com/
 ---
 With the fall of CrittersForum and Box Critters Forum,
