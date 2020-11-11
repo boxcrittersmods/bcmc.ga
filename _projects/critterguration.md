@@ -8,6 +8,8 @@ author:
   - TumbleGamer
 unfinished: true
 buttons:
+  - name: Install
+    href: https://github.com/tumble1999/critterguration/raw/master/critterguration.user.js
   - type: 1
     name: Source
     href: https://github.com/tumble1999/critterguration
