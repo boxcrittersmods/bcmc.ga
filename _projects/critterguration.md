@@ -8,11 +8,11 @@ author:
   - TumbleGamer
 unfinished: true
 buttons:
-  - name: Install
-    href: https://github.com/tumble1999/critterguration/raw/master/critterguration.user.js
-  - type: 1
-    name: Source
+  - name: Source
     href: https://github.com/tumble1999/critterguration
+  - type: 1
+    name: Install
+    href: https://github.com/tumble1999/critterguration/raw/master/critterguration.user.js
 customData:
   modial: required
   cardboard: required
