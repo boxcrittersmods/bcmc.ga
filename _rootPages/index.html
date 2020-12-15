@@ -2,6 +2,7 @@
 layout: default
 title: Home
 header: false
+permalink: /
 ---
 {% assign carousel = site.documents | where: "featured","true" | sort: "date","last" | reverse %}
 {% include home-carousel.html items=carousel %}

@@ -43,6 +43,11 @@ collections:
     title: Lists
     singular: List
     permalink: /:name/
+  rootPages:
+    output: true
+    title: Pages
+    singular: Page
+    permalink: /:name/
 permalink: pretty
 production: true
 plugins:
@@ -149,6 +154,14 @@ defaults:
     values:
       maincard: false
       list: true
+      comments: false
+  - scope:
+      path: ""
+      type: rootPages
+    values:
+      maincard:
+        title: false
+      list: false
       comments: false
 greyed:
   - broken
