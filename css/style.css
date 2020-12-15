@@ -12,6 +12,9 @@
 .card, .card-pad, .bottom-card-pad {
 	margin-bottom: 10px;
 }
+.card-body > p:last-child {
+	margin-bottom: 0;
+}
 
 .info-head {
 	display: flex;
