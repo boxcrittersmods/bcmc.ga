@@ -36,12 +36,12 @@ Read the [Box Critters Modding Handbook][bcmh]. Keep in mind modding generally i
 Contact us on [discord][discord] or [twitter][twitter]!
 
 [bc]: https://boxcritters.com "Box Critters"
-[um]: /other/tampermonkey/ "Tampermonkey"
+[um]: /other/tampermonkey "Tampermonkey"
 
-[hi-res]: /mods/hi-res/ "Hi-Res"
-[non-mouse]: /mods/non-mouse-movement/ "Non-mouse Movement"
-[antenna]: /mods/antenna/ "Antenna"
+[hi-res]: /mods/hi-res "Hi-Res"
+[non-mouse]: /mods/non-mouse-movement "Non-mouse Movement"
+[antenna]: /mods/antenna "Antenna"
 
 [bcmh]: https://docs.google.com/document/d/14o_HVlVJBy4nMkjitNQ10w8uCB56MvfzJCtSq0XMVJQ/view "Box Critters Modding Handbook"
-[discord]: https://discord.gg/D2ZpRUW "BCMC Discord"
+[discord]: /discord "BCMC Discord"
 [twitter]: https://twitter.com/BoxCrittersMods?ref_src=twsrc^tfw "BCMC Twitter"
