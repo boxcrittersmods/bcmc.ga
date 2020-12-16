@@ -142,7 +142,8 @@ defaults:
         - type: match
           not: true
           params:
-            - "{{item.title}}"
+            - "{{item.collection}}"
+            - "authors"
   - scope:
       path: ""
       type: posts
