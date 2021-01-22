@@ -1,0 +1,29 @@
+---
+title: RSS feed
+description: nobody uses these but everybody should
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	{% for collection in site.collections %}
+		<channel>
+			{% assign current_collection=site[collection.label] %}
+			<title>{{ collection.label }}</title>
+			<link>{{site.url}}/{{ collection.label }}</link>
+			{% for item in current_collection %}
+				{% if item.rss %}
+					<item>
+						<title>{{ item.title|slugify }}</title>
+						{% for author in item.author %}
+							<author><name>{{ author }}</name></author>
+						{% endfor %}
+						{% if item.date %}<date>{{item.date}}</date>{% endif %}
+						{% if item.excerpt %}<excerpt>{{item.excerpt | replace: "<","&lt;" | replace: ">","&gt;"}}</excerpt>{% endif %}
+						<url>{{ item.url }}</url>
+						<content>{{item.content | replace: "<","&lt;" | replace: ">","&gt;"}}</content>
+					</item>
+				{% endif %}
+			{% endfor %}
+		</channel>
+	{% endfor %}
+</rss>
