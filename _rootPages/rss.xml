@@ -6,12 +6,12 @@ permalink: /rss.xml
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-	{% for collection in site.collections %}
 		<channel>
-			{% assign current_collection=site[collection.label] %}
-			<title>{{ collection.label }}</title>
-			<link>{{site.url}}/{{ collection.label }}</link>
-			{% for item in current_collection %}
+			<title>Box Critters Modding Comminity</title>
+			<link>{{site.url}}</link>
+	{%comment%}{% for collection in site.collections %}
+			{% assign current_collection=site[collection.label] %}{%endcomment%}
+			{% for item in site.documents %}
 				{% if item.rss %}
 					<item>
 						<title>{{ item.title|slugify }}</title>
@@ -25,6 +25,6 @@ permalink: /rss.xml
 					</item>
 				{% endif %}
 			{% endfor %}
+	{%comment%}{% endfor %}{%endcomment%}
 		</channel>
-	{% endfor %}
 </rss>
