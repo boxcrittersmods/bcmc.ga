@@ -7,7 +7,7 @@ permalink: /rss.xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 		<channel>
-			</link><generator uri="https://github.com/boxcrittersmods/boxcrittersmods.ga/blob/master/_rootPages/rss.xml">Github Pages</generator>
+			<generator uri="https://github.com/boxcrittersmods/boxcrittersmods.ga/blob/master/_rootPages/rss.xml">Github Pages</generator>
 <link href="{{site.url}}/rss.xml" rel="self" type="application/atom+xml"/>
 <link href="{{site.url}}" rel="alternate" type="text/html"/>
 <updated>{{site.time||date_to_xmlschema}}</updated>
