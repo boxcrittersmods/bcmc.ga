@@ -9,8 +9,6 @@ permalink: /rss.xml
 		<channel>
 			<title>Box Critters Modding Comminity</title>
 			<link>{{site.url}}</link>
-	{%comment%}{% for collection in site.collections %}
-			{% assign current_collection=site[collection.label] %}{%endcomment%}
 			{% for item in site.documents %}
 				{% if item.rss %}
 					<item>
@@ -25,6 +23,5 @@ permalink: /rss.xml
 					</item>
 				{% endif %}
 			{% endfor %}
-	{%comment%}{% endfor %}{%endcomment%}
 		</channel>
 </rss>
