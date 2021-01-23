@@ -17,7 +17,7 @@ permalink: /rss.xml
 						{% for author in item.author %}
 							<author><name>{%if author.custom%}{{ author.name | xml_escape }}{%else%}{{author|xml_escape}}{%endif%}</name></author>
 						{% endfor %}
-						{% if item.date %}<published>{{item.date| date_to_xmlschema }}</published>{% endif %}
+						{% if item.date %}<published>{{item.date| date_to_xmlschema }}</published><updated>{{item.date| date_to_xmlschema }}</updated>{% endif %}
 						{% if item.description %}<summary type="html">{{item.description | xml_escape}}</summary>{% endif %}
 						<id>{{ item.url }}</id>
 						<content type="html" xml:base="{{ item.url }}">{{item.content |  | xml_escape}}</content>
