@@ -21,7 +21,9 @@ permalink: /rss.xml
 						{% if item.description %}<summary type="html">{{item.description | replace: "<","&lt;" | replace: ">","&gt;"}}</summary>{% endif %}
 						<id>{{ item.url }}</id>
 						<content type="html" xml:base="{{ item.url }}">{{item.content | replace: "<","&lt;" | replace: ">","&gt;"}}</content>
-							<category term="News"/>
+							{% for cat in item.categories %}
+							<category term="{{cat}}"/>
+							{%endfor%}
 					</item>
 				{% endif %}
 			{% endfor %}
