@@ -12,14 +12,16 @@ permalink: /rss.xml
 			{% for item in site.documents %}
 				{% if item.rss %}
 					<item>
-						<title>{{ item.title|slugify }}</title>
+						<title type="html">{{ item.title }}</title>
+						<link href="{{ item.url }}" rel="alternate" type="text/html" title="{{ item.title|slugify }}"/>
 						{% for author in item.author %}
 							<author><name>{{ author }}</name></author>
 						{% endfor %}
-						{% if item.date %}<date>{{item.date}}</date>{% endif %}
-						{% if item.excerpt %}<excerpt>{{item.excerpt | replace: "<","&lt;" | replace: ">","&gt;"}}</excerpt>{% endif %}
-						<url>{{ item.url }}</url>
-						<content>{{item.content | replace: "<","&lt;" | replace: ">","&gt;"}}</content>
+						{% if item.date %}<published>{{item.date| date_to_xmlschema }}</published>{% endif %}
+						{% if item.description %}<summary type="html">{{item.description | replace: "<","&lt;" | replace: ">","&gt;"}}</summary>{% endif %}
+						<id>{{ item.url }}</id>
+						<content type="html" xml:base="{{ item.url }}">{{item.content | replace: "<","&lt;" | replace: ">","&gt;"}}</content>
+							<category term="News"/>
 					</item>
 				{% endif %}
 			{% endfor %}
