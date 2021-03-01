@@ -3,7 +3,7 @@
 		<img class="bcmc-logo" src="/uploads/bcmc-logo.png" alt="{{site.title}}">
 		<img class="bcmc-logo-white" src="/uploads/bcmc-white.png" alt="{{site.title}}">
 	</a>
-	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+	<nav class="collapse navbar-collapse">
 		<ul class="navbar-nav mt-2 mt-lg-0">
 			{% for nav in site.data.menus.nav %}
 			<li class="nav-item {% if page.url contains nav.href %} active{% endif %}">
@@ -12,8 +12,7 @@
 			</li>
 			{% endfor %}
 		</ul>
-
-	</div>
+	</nav>
 
 	<span class="dropdown">
 		<a href="https://create.boxcrittersmods.ga" class="btn align-right"><i class="fas fa-edit text-white"></i></a>

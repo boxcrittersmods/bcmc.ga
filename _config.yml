@@ -99,6 +99,7 @@ defaults:
       filters: []
       home: 0
       comments: true
+      rss: true
   - scope:
       path: ""
       type: mods
@@ -163,6 +164,7 @@ defaults:
         title: false
       list: false
       comments: false
+      rss: false
 greyed:
   - broken
   - unfinished
