@@ -18,5 +18,5 @@ let
 	authCode = params.get("code");
 */
 document.getElementById("loginout").addEventListener('click', e => {
-	location.href = "https://api.utteranc.es/authorize?redirect_uri=https%3A%2F%2Fboxcrittersmods.ga";
+	location.href = "https://api.utteranc.es/authorize?redirect_uri=https%3A%2F%2Fbcmc.ga";
 });

@@ -11,12 +11,12 @@ recommend: true
 featured: true
 buttons:
   - name: Install
-    href: http://cdn.boxcrittersmods.ga/bcmacros/master/bcmacro-api.user.js
+    href: http://cdn.bcmc.ga/bcmacros/master/bcmacro-api.user.js
   - name: Source
     href: https://github.com/boxcrittersmods/bcmacros
     type: 1
   - name: Documentation
-    href: http://docs.boxcrittersmods.ga/bcmacros
+    href: http://docs.bcmc.ga/bcmacros
     type: 1
 customData:
   ctrlPanel: required

@@ -13,6 +13,6 @@ author:
 broken: true
 buttons:
   - name: Install
-    href: https://raw.githubusercontent.com/boxcritters/boxcrittersmods.ga/master/tp/CuteCritters.bctp.json
+    href: https://raw.githubusercontent.com/boxcritters/bcmc.ga/master/tp/CuteCritters.bctp.json
 code: eyJ2ZXJzaW9uIjoiMCIsIm5hbWUiOiJDdXRlQ3JpdHRlcnMiLCJkZXNjcmlwdGlvbiI6InRoaXMgdGV4dHVyZSBwYWNrIGhhcyBiZWVuIGluIHRoZSBtYWtpbmcgZm9yIGFsbW9zdCAyIGRheXMgbm93LiBpdCBpcyBteSBhdHRlbXB0IHRvIHJlY3JlYXRlIHRoZSBwaW5rIGNyaXR0ZXIuIGkgaG9wZSB5b3UgZW5qb3kuIGluc3BpcmVkIGJ5IEBDdXRpZWplYSdzIHByb2ZpbGUgcGljdHVyZSEiLCJoYW1zdGVyIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9JWFdCQVlVLnBuZyIsInNuYWlsIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTHFFVUV5LnBuZyIsIml0ZW1zIjoiIiwidGF2ZW5Qcm9wcyI6IiJ9
 ---

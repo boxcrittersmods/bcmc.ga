@@ -6,7 +6,7 @@ author:
   - Alvarito050506
 buttons:
   - name: Link
-    href: https://api.boxcrittersmods.ga
+    href: https://api.bcmc.ga
   - type: 1
     name: Source
     href: https://github.com/boxcritters/bc-mod-api

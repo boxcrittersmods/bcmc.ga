@@ -8,7 +8,7 @@ author:
   - TumbleGamer
 buttons:
   - name: Install
-    href: https://cdn.boxcrittersmods.ga/CrittersPlus/master/crittersplus.user.js
+    href: https://cdn.bcmc.ga/CrittersPlus/master/crittersplus.user.js
 userscript: true
 #recommend: true
 require:

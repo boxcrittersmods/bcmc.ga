@@ -22,4 +22,4 @@ User-agent: *
 	{% endif %}
 {% endif %}
 
-Sitemap: https://boxcrittersmods.ga/sitemap.xml
+Sitemap: https://bcmc.ga/sitemap.xml

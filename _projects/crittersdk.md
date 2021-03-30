@@ -9,7 +9,7 @@ buttons:
     href: https://github.com/boxcritters/crittersdk
   - type: 1
     name: Documentation
-    href: https://sdk.boxcrittersmods.ga/
+    href: https://sdk.bcmc.ga/
 ---
 # CritterSDK
 [![npm package version](https://img.shields.io/npm/v/crittersdk)](https://npmjs.org/package/crittersdk)
@@ -49,7 +49,7 @@ crittersdk publish
 It will ask you for your SDK password, after answering your project Gist will be created or updated. If you project isn't still published, it will enter in revision phase. Then, if you script follows the BCMC mod distribution politics, someone of the Staff will approve and publish it.
 
 ## API reference
-All the library API reference is avaiable [here](https://sdk.boxcrittersmods.ga/).
+All the library API reference is avaiable [here](https://sdk.bcmc.ga/).
 
 ### Examples
 You can view simple usage examples [here](https://github.com/boxcritters/crittersdk/tree/master/test).
