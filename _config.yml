@@ -72,7 +72,7 @@ kramdown:
     default-lang: plaintext
   syntax-highlighter: rouge
   smart-quotes: lsquo,rsquo,ldquo,rdquo
-excludes:
+exclude:
   - lib
   - Gemfile
   - Gemfile.lock
