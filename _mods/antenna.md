@@ -6,7 +6,8 @@ icon: https://github.com/tumble1999/antenna/raw/master/icon.png
 author:
   - TumbleGamer
 userscript: true
-featured: true
+featured: false
+broken: true
 buttons:
   - name: Install
     href: https://github.com/tumble1999/antenna/raw/master/Antenna.user.js
