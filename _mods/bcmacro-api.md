@@ -11,7 +11,7 @@ recommend: true
 featured: true
 buttons:
   - name: Install
-    href: http://cdn.bcmc.ga/bcmacros/master/bcmacro-api.user.js
+    href: https://github.com/boxcrittersmods/bcmacros/raw/master/bcmacro-api.user.js
   - name: Source
     href: https://github.com/boxcrittersmods/bcmacros
     type: 1
