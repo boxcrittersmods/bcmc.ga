@@ -13,7 +13,8 @@ buttons:
     href: https://github.com/boxcrittersmods/CrittersPlus
     type: 1
 userscript: true
-#recommend: true
+recommend: true
+featured: true
 customData:
   bcmacro-api: required
   modial: optional

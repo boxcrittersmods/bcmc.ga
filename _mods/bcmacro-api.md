@@ -7,8 +7,8 @@ icon: https://github.com/boxcrittersmods/bcmacros/raw/master/icon.png
 author:
   - TumbleGamer
 userscript: true
-recommend: true
-featured: true
+#recommend: true
+#featured: true
 buttons:
   - name: Install
     href: https://github.com/boxcrittersmods/bcmacros/raw/master/bcmacro-api.user.js
