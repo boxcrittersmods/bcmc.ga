@@ -14,8 +14,6 @@ buttons:
     type: 1
 userscript: true
 #recommend: true
-require:
-  - bcmacro-api
 customData:
   bcmacro-api: required
   modial: optional

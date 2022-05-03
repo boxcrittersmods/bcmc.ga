@@ -23,11 +23,9 @@ customData:
   cardboard: optional
   critterguration: required
   modial: required
-
 list: documents
 filters:
-  - type: match
+  - type: exists
     params:
       - "{{item.customData.bcmacro-api}}"
-      - required
 ---
