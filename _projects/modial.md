@@ -13,10 +13,9 @@ buttons:
 
 list: documents
 filters:
-  - type: match
+  - type: exists
     params:
       - "{{item.customData.modial}}"
-      - required
 ---
 ```js
 // @require      https://github.com/tumble1999/modial/raw/master/modial.js

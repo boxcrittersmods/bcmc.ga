@@ -14,9 +14,8 @@ buttons:
 
 list: documents
 filters:
-  - type: match
+  - type: exists
     params:
       - "{{item.customData.cardboard}}"
-      - required
 ---
 Modding api that can be `@require`d in userscript header (no install neccecary)

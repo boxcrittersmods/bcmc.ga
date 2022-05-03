@@ -15,9 +15,8 @@ customData:
 
 list: documents
 filters:
-  - type: match
+  - type: exists
     params:
       - "{{item.customData.ctrlPanel}}"
-      - required
 ---
 Button api that can be `@require`d in userscript header (no install neccecary)
