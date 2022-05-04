@@ -11,8 +11,6 @@ permalink: /rss.xml
 <link href="{{site.url}}" rel="alternate" type="text/html"/>
 <id>https://bcmc.ga/rss.xml</id>
 <subtitle>Install mods and other add-ons to Box Critters</subtitle>
-{% comment %}
-{% endcomment %}
 <title  type="text" xml:lang="en">Box Critters Modding Community</title>
 <updated>{{site.time|date_to_xmlschema}}</updated>
 			{% for item in site.documents %}
