@@ -8,7 +8,7 @@ author:
   - Blinking Berry
   - keffen/tekhion
   - p1
-  - TumbleGamer
+  - Tumble
 featured: true
 buttons:
   - name: Go

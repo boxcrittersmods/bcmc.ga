@@ -5,7 +5,7 @@ image: https://github.com/tumble1999/critterguration/raw/master/screenshot.png
 icon: https://github.com/tumble1999/critterguration/raw/master/icon.png
 date: 2020-10-22 00:44:17
 author:
-  - TumbleGamer
+  - Tumble
 buttons:
   - name: Source
     href: https://github.com/tumble1999/critterguration

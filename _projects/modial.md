@@ -4,7 +4,7 @@ description: Modal API
 date: 2020-10-19 00:04:47
 icon: https://github.com/tumble1999/modial/raw/master/icon.png
 author:
-  - TumbleGamer
+  - Tumble
 
 buttons:
   - type: 1

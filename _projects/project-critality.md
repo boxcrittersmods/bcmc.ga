@@ -3,7 +3,7 @@ title: 'Project: Critality'
 description: VR Client for box critters.
 date: 2019-10-14
 author:
-  - TumbleGamer
+  - Tumble
 unfinished: true
 buttons:
   - type: 1

@@ -5,7 +5,7 @@ image: /uploads/mods/fps.png
 icon: https://github.com/boxcritters/fps/raw/master/icon.png
 date: 2020-05-27 10:42:35
 author:
-  - TumbleGamer
+  - Tumble
 userscript: true
 buttons:
   - name: Install

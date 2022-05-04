@@ -3,7 +3,7 @@ title: NES Shader
 description: Box Critters now looks like an NES
 date: 2020-05-14 15:56:40
 author:
-  - TumbleGamer
+  - Tumble
   - SArpnt
 buttons:
   - name: Install

@@ -5,7 +5,7 @@ description: This extention lets you easily switch between different themes, add
 icon: https://github.com/boxcritters/bc-texture-pack-manager/raw/develop/icon.png
 date: 2019-04-25
 author:
-  - TumbleGamer
+  - Tumble
   - Zizzle
 recommend: true
 unfinished: true

@@ -3,7 +3,7 @@ title: GameBoy
 description: Make it look like a GameBoy
 date: 2020-05-14 15:53:56
 author:
-  - TumbleGamer
+  - Tumble
   - SArpnt
 buttons:
   - name: Install

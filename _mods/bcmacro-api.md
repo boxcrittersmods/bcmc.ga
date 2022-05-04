@@ -5,7 +5,7 @@ description: Adds an API that lets mods create specific actions that can be
 date: 2020-05-16
 icon: https://github.com/boxcrittersmods/bcmacros/raw/master/icon.png
 author:
-  - TumbleGamer
+  - Tumble
 userscript: true
 #recommend: true
 #featured: true

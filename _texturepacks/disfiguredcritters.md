@@ -5,7 +5,7 @@ icon: /uploads/texturepacks/disfiguredicon.png
 image: /uploads/texturepacks/disfiguredimage.png
 date: 2019-12-23 16:26:32
 author:
-  - TumbleGamer
+  - Tumble
 broken: true
 buttons:
   - name: Install

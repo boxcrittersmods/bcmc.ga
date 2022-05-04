@@ -4,7 +4,7 @@ description: Create shaders for boxcritters
 icon: https://raw.githubusercontent.com/boxcrittersmods/bc-shaders/new-changes/icon.png
 date: 2020-04-29 23:00:00
 author:
-  - TumbleGamer
+  - Tumble
   - SArpnt
 userscript: true
 recommend: true

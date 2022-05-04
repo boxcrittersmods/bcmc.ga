@@ -6,11 +6,10 @@ permalink: /rss.xml
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-		<channel>
 			<generator uri="https://github.com/boxcrittersmods/bcmc.ga/blob/master/_rootPages/rss.xml">Github Pages</generator>
 <link href="{{site.url}}/rss.xml" rel="self" type="application/atom+xml"/>
 <link href="{{site.url}}" rel="alternate" type="text/html"/>
-<updated>{{site.time||date_to_xmlschema}}</updated>
+<updated>{{site.time|date_to_xmlschema}}</updated>
 <id>https://bcmc.ga/rss.xml</id>
 <title type="html">Box Critters Modding Community</title>
 <subtitle>Install mods and other add-ons to Box Critters</subtitle>
@@ -33,5 +32,4 @@ permalink: /rss.xml
 					</entry>
 				{% endif %}
 			{% endfor %}
-		</channel>
 </rss>

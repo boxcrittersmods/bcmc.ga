@@ -4,7 +4,7 @@ description: 3D Web-based peer to peer voice chat
 date: 2020-10-18 23:57:17
 icon: https://github.com/tumble1999/antenna/raw/master/icon.png
 author:
-  - TumbleGamer
+  - Tumble
 userscript: true
 featured: false
 broken: true

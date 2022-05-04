@@ -5,7 +5,7 @@ icon: /uploads/texturepacks/greenScreenIcon.png
 image: /uploads/texturepacks/greenScreenImage.png
 date: 2019-06-17 12:35:02
 author:
-  - TumbleGamer
+  - Tumble
 broken: true
 buttons:
   - name: Install

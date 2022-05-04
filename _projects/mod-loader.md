@@ -2,7 +2,7 @@
 title: Box Critters Mod Loader
 date: 2019-08-01
 author:
-  - TumbleGamer
+  - Tumble
   - flines
 unfinished: true
 buttons:

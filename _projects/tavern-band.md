@@ -7,7 +7,7 @@ author:
   - SArpnt
   - flines
   - Kinju
-  - TumbleGamer
+  - Tumble
 unfinished: true
 buttons:
   - type: 1

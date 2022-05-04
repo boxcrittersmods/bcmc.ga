@@ -4,7 +4,7 @@ description: Box Critters Modding Community website
 icon: /uploads/bcmc-logo.png
 date: 2009-05-15
 author:
-  - TumbleGamer
+  - Tumble
   - SArpnt
 buttons:
   - name: Website

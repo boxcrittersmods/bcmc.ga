@@ -2,7 +2,7 @@
 title: BoxCritters Mod API Server
 date: 2019-04-26
 author:
-  - TumbleGamer
+  - Tumble
   - Alvarito050506
 buttons:
   - name: Link

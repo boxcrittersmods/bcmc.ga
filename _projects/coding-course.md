@@ -2,7 +2,7 @@
 title: 'Learn To Code'
 date: 2019-10-27
 author:
-  - TumbleGamer
+  - Tumble
 broken: true
 buttons:
   - name: Link

@@ -3,7 +3,7 @@ title: Critterchive
 description: A project to archive BoxCritter's Past
 date: 2020-02-06
 author:
-  - TumbleGamer
+  - Tumble
   - flines
 buttons:
   - name: Discord

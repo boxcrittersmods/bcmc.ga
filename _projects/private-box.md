@@ -5,7 +5,7 @@ date: 2019-10-14
 author:
   - SArpnt
   - flines
-  - TumbleGamer
+  - Tumble
   - Slaggo
   - Eribetra
   - Sponix
