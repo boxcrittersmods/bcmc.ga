@@ -12,4 +12,7 @@ customData:
 buttons:
   - name: Install
     href: https://github.com/tumble1999/character-limit/raw/master/character-limit.user.js
+  - type: 1
+    name: Source
+    href: https://github.com/tumble1999/character-limit
 ---
