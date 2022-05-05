@@ -1,9 +1,9 @@
 {% assign item = include.item | default: page %}
 
 {% capture info %}
-	{% if item.date == "" %}
-		on {{ item.date | date: "%-d %B %Y"}}
-	{% endif %}
+	{% unless item.date == "" %}
+		on {{ item.date | date: "%-d %B %Y "}} 
+	{% endunless %}
 	{% for author in item.author %}
 		{% if forloop.first %}
 			by 
