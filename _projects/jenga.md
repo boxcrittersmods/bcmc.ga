@@ -17,7 +17,10 @@ filters:
     params:
       - "{{item.customData.jenga}}"
 ---
-Modding api for CritterClimb that can be `@require`d in userscript header (no install neccecary)
+A fork of cardboard this mod lets people create mods for critter climb using the event handlers in the jenga object
+If you decide to install this by its self without a mod that uses it, this mod also exposes a game variable that lets you mess about with things similar to the world object in the main game
+
+
 
 
 > A fork of Cardboard for creating mods of CritterClimb
