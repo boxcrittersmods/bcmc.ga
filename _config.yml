@@ -1,7 +1,7 @@
 title: Box Critters Modding Community
 description: Install mods and other add-ons to Box Critters
 base-url: ""
-url: https://boxcrittersmods.github.io/website/
+url: //boxcrittersmods.github.io
 repository: boxcritters/bcmc.ga
 bc-mod-api: api.bcmc.ga
 show-mod-versions: true
